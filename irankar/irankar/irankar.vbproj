@@ -1886,6 +1886,7 @@
     <Content Include="jquery\jquery-3.4.1.slim.min.js" />
     <Content Include="pagesHtml\Blog.html" />
     <Content Include="pagesHtml\BlogPost.html" />
+    <Content Include="pagesHtml\Gallery.html" />
     <Content Include="pagesHtml\Home.html" />
     <Content Include="pagesHtml\search.html" />
     <Content Include="Style\Default.css" />
