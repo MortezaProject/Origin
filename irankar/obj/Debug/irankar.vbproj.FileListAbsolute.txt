@@ -1,0 +1,16 @@
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\bin\irankar.dll
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\bin\irankar.pdb
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\bin\irankar.xml
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\obj\Debug\irankar.Resources.resources
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\obj\Debug\irankar.vbproj.GenerateResource.Cache
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\obj\Debug\irankar.dll
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\obj\Debug\irankar.xml
+c:\users\hamraz\documents\visual studio 2012\Projects\irankar\irankar\obj\Debug\irankar.pdb
+E:\project\irankaran\irankar\irankar\bin\irankar.dll
+E:\project\irankaran\irankar\irankar\bin\irankar.pdb
+E:\project\irankaran\irankar\irankar\bin\irankar.xml
+E:\project\irankaran\irankar\irankar\obj\Debug\irankar.Resources.resources
+E:\project\irankaran\irankar\irankar\obj\Debug\irankar.vbproj.GenerateResource.Cache
+E:\project\irankaran\irankar\irankar\obj\Debug\irankar.dll
+E:\project\irankaran\irankar\irankar\obj\Debug\irankar.xml
+E:\project\irankaran\irankar\irankar\obj\Debug\irankar.pdb
