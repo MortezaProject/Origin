@@ -14,3 +14,11 @@ E:\project\irankaran\irankar\irankar\obj\Debug\irankar.vbproj.GenerateResource.C
 E:\project\irankaran\irankar\irankar\obj\Debug\irankar.dll
 E:\project\irankaran\irankar\irankar\obj\Debug\irankar.xml
 E:\project\irankaran\irankar\irankar\obj\Debug\irankar.pdb
+E:\project\irankar\irankaran\irankar\irankar\bin\irankar.dll
+E:\project\irankar\irankaran\irankar\irankar\bin\irankar.pdb
+E:\project\irankar\irankaran\irankar\irankar\bin\irankar.xml
+E:\project\irankar\irankaran\irankar\irankar\obj\Debug\irankar.Resources.resources
+E:\project\irankar\irankaran\irankar\irankar\obj\Debug\irankar.vbproj.GenerateResource.Cache
+E:\project\irankar\irankaran\irankar\irankar\obj\Debug\irankar.dll
+E:\project\irankar\irankaran\irankar\irankar\obj\Debug\irankar.xml
+E:\project\irankar\irankaran\irankar\irankar\obj\Debug\irankar.pdb
