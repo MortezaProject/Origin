@@ -1,8 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-
+    <title>جستجوی</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
@@ -14,14 +13,13 @@
     <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
-    <script src="../Script/Utility.js"></script>
 </head>
 <body>
     <div id="wrraper">
+
         <!-- -Begin-Gap-Area -->
         <div id="Gap_Area" class="sticky-top"></div>
         <!-- End-Gap-Area -->
-
 
         <!-- Begin-Menu -->
         <div id="menu">
@@ -37,7 +35,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
-                        <li class="nav-item active nav-item-Custom">
+                        <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item nav-item-Custom">
@@ -46,7 +44,7 @@
                         <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">کتابخانه</a>
                         </li>
-                        <li class="nav-item  nav-item-Custom">
+                        <li class="nav-item active nav-item-Custom">
                             <a class="nav-link" href="#">بلاگ</a>
                         </li>
                         <li class="nav-item nav-item-Custom-last">
@@ -73,435 +71,418 @@
         </div>
         <!-- End-Menu -->
 
+        <!-- Begin-Content-Blog -->
 
-        <!--Begin-Header -->
-        <div id="header">
-            <!--Carousel Wrapper-->
-            <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
-                <div>
-                    <!--Slides-->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog1.png" alt="First slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog2.png" alt="Second slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog3.png" alt="Third slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog4.png" alt="ss slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog5.png" alt="aa slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog6.png" alt="dd slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="../Images/blog7.png" alt="dd slide">
-                                <div class="mask rgba-black-light"></div>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Slides-->
-
-                    <!--Controls-->
-                    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    <!--/.Controls-->
-                </div>
-                <div class=" row Indicator-footer mx-0 d-flex align-items-center indicator-padding">
-                    <div class="col-md-10 col-sm-8">
-                        ضرورت همکاری ایران برای پیشبرد طرح های تحقیقاتی قرآنی در اروپا
-                    </div>
-                    <div class="col-md-2 col-sm-4 d-flex align-items-center">
-                        <!--Indicators-->
-                        <ol class="carousel-indicators carousel-indicators-Cust">
-                            <li data-target="#carousel-example-2" data-slide-to="0" class="active indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="1" class="indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="2" class="indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="3" class="indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="4" class="indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="5" class="indicator-shape"></li>
-                            <li data-target="#carousel-example-2" data-slide-to="6" class="indicator-shape"></li>
-                        </ol>
-                        <!--/.Indicators-->
-                    </div>
-
-                </div>
-            </div>
-            <!--/.Carousel Wrapper-->
+        <div class="py-5 container-fluid container-fluid-Cust" style="background-color: #f5f5f5;">
+            <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <img src="../Images/Content.png" />
+                      <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">جستجوی پیشرفته</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">نسخه ها</li>
+                    </ol>
+                </nav>
         </div>
-        <!-- End-Header -->
 
-        <!-- Begin-Content -->
-        <div id="contents" class="">
-            <div style="background-color: fcfaf7;">
-                <div class="container-fluid py-5">
-                    <div class="text-secondary px-5">
-                        <img src="../Images/Content.png" />
-                        <span>فهرست</span>
-                    </div>
-                </div>
-                <div id="Content-Map" class="">
-                    <div class="row mx-0">
-                        <div class="Parent-Tab col-md-9 col-sm-6">
-                            <ul class="nav nav-pills" id="Pills-Tab" role="tablist">
-                                <li class="nav-item mx-md-2">
-                                    <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab" aria-controls="pills-Location" aria-selected="true">موقعیت</a>
-                                </li>
-                                <li class="nav-item mx-md-2">
-                                    <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab" aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
-                                </li>
-                                <li class="nav-item mx-md-2">
-                                    <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab" aria-controls="pills-prescription" aria-selected="false">نسخه</a>
-                                </li>
-                            </ul>
+        <div id="MainContentSearch" class="container-fluid container-fluid-cust Parent-Tab" style="background-color: #f5f5f5;">
+         <!-- Start-Content-->
+                     <ul class="nav nav-tabs nav-pills" id="advanced-search-gf" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions" role="tab" aria-controls="menu1" aria-selected="false">نسخه ها</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#advanced-search-library" role="tab" aria-controls="menu2" aria-selected="true">کتابخانه</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#advanced-search-blog" role="tab" aria-controls="menu3" aria-selected="false">بلاگ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#advanced-search-site" role="tab" aria-controls="menu4" aria-selected="false">کل سایت</a>
+                </li>
+            </ul>   
+           <div class="tab-content">
+
+                <div id="advanced-search-versions" class="tab-pane show active fade container-fluid container-fluid-blog" >
+                    <!--  -->
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header row col-md-9" id="headingOne">
+									<div class="col-md-6 search-inner-header">
+                                        <span>شناسه نسخه خطی</span>
+                                    </div>
+                                    <div class="col-md-6 text-left">
+                                        <button class="btn btn-link search-inner-header-arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i class="fas fa-angle-down"></i>
+                                        </button>
+                                    </div>
 
                         </div>
-                        <div class="Parent-Tab col-md-3 col-sm-6">
-                            <ul class="nav nav-pills" id="PillsTab-left" role="tablist">
-
-                                <li class="nav-item mx-md-2">
-                                    <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="width: 46px;">
-                                        <img src="../Images/view.svg" style="height: 148%;" /></a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item p-0" href="#">
-                                            <img src="../Images/hierarchy.svg" style="width: 40px;" /></a>
-                                        <a class="dropdown-item p-0" href="#">
-                                            <img src="../Images/map.svg" style="width: 40px;" /></a>
-                                        <a class="dropdown-item p-0" href="#">
-                                            <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
-                                    </div>
-                                </li>
-                                <li class="nav-item mx-md-2">
-                                    <a class="nav-link dropdown-toggle" href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter" aria-selected="true">فیلتر</a>
-                                </li>
-                            </ul>
-
+                    
+                        <div id="collapseOne" class="collapse show search-inner-content col-md-9 show" aria-labelledby="headingOne" data-parent="#accordion" >
+                          <div class="card-body field-spacing">
+                            <!--  -->
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">شناسه</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">نام</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">نام شناخته شده/جایگزین</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">بخش</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">محل نگهداری/مالک</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+									<span> (موسسه / مجموعه / گردآورنده خصوصی) </span>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">تاریخ ثبت/خرید</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">محل نگهداری/مالک قبلی</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                    
+                            <!--  -->
+                          </div>
                         </div>
-                        <div class="tab-content text-secondary w-100" id="pills-tabContent">
-
-                            <div class="tab-pane fade show active" id="pills-Location" role="tabpanel" aria-labelledby="pills-Location-tab">
-                                <div class="container-fluid d-flex justify-content-center my-4">
-                                    <div name="maps" style="height: 461px; width: 90%; border: solid 1px green;">
-                                    </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header col-md-9" id="headingTwo">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed search-inner-header" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              نوع نسخه خطی
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse search-inner-content col-md-9 show" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body field-spacing">
+                            <!--  -->
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">قرآن</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">ترجمه (ومترجم)</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-sm-4 col-form-label">تفسیر (ومفسر)</label>
+                              <div class="col-sm-8">
+                                <input type="text" class="form-control form-control-search">
+                              </div>
+                            </div>
+                            
+                            <!--  -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed search-inner-header" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              وصف نسخه خطی
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse search-inner-content col-md-9 show" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body field-spacing">
+                            <!-- ش -->
+                            <ul class="nav nav-tabs nav-pills" id="Ul1" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions-request" role="tab" aria-controls="menu1" aria-selected="false">خاستگاه</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-physic" role="tab" aria-controls="menu2" aria-selected="true">وصف فیزیکی</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-content" role="tab" aria-controls="menu3" aria-selected="false">محتوا</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-date" role="tab" aria-controls="menu4" aria-selected="false">تاریخ گذاری</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-book" role="tab" aria-controls="menu5" aria-selected="false">کتابشناسی</a>
+                              </li>
+                          </ul>
+                          <div class="tab-content">
+              
+                              <div id="advanced-search-versions-request" class="container-fluid tab-pane show active fade field-spacing-second" >
+                                <!--  -->
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">انجامه / ترقیم</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-Collection" role="tabpanel" aria-labelledby="pills-Collection-tab">
-                                <div class="container-fluid d-flex justify-content-start my-4">
-                                    <div name="" class="" style="height: 461px; width: 27%; border: solid 1px green;">
-                                    </div>
-                                    <div name="" style="height: 461px; width: 65%; border: solid 1px green;">
-                                    </div>
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">مهر</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade show" id="pills-prescription" role="tabpanel" aria-labelledby="pills-prescription-tab">
-                                <div class="container-fluid d-flex justify-content-start my-4">
-                                    <div name="" style="height: 461px; width: 95%; border: solid 1px green;">
-                                    </div>
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">کاتب</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
                                 </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Begin-Blog -->
-            <div style="background-color: #f3f3f0;">
-                <div class="container-fluid pt-5">
-                    <div class="text-secondary px-5">
-                        <img src="../Images/Content.png" />
-                        <span>بلاگ</span>
-                    </div>
-                </div>
-                <div id="Content-Blog" class="">
-                    <!-- Slider--Blog -->
-                    <div class="container-fluid-cust row px-0 mx-0">
-                        <div class="col-md-1 d-flex justify-content-end align-items-center">
-                            <!--Controls-->
-
-                            <a class="" href="#multi-item-example" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            <!--/.Controls-->
-                        </div>
-                        <div class="col-md-10">
-                            <!--Carousel Wrapper-->
-                            <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
-
-
-
-                                <!--Slides-->
-                                <div class="carousel-inner carousel-inner-cust" role="listbox">
-
-                                    <!--First slide-->
-                                    <div class="carousel-item active">
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>
-                                                            درآمدی بر قرآن پژوهی مستشرقان و
-                                                            آسیب شناسی آن
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>
-                                                            دائره المعارف اسلام، معرفی ویرایشهای اول، دوم و سوم
-                                                            (لایدن، انتشارات بریل)
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>ضروروت همکاری ایران برای پیشردطرح های تحقیقاتی قرآنی در اروپا</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>قرآن از نظر دانشمندان غربی</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!--/.First slide-->
-
-                                    <!--Two slide-->
-                                    <div class="carousel-item">
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>
-                                                            درآمدی بر قرآن پژوهی مستشرقان و
-                                                            آسیب شناسی آن
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>
-                                                            دائره المعارف اسلام، معرفی ویرایشهای اول، دوم و سوم
-                                                            (لایدن، انتشارات بریل)
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>ضروروت همکاری ایران برای پیشردطرح های تحقیقاتی قرآنی در اروپا</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()()">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" >
-                                                        <p>قرآن از نظر دانشمندان غربی</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                    <!--/.Two slide-->
-
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">تاریخ کتابت</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
                                 </div>
-                                <!--/.Slides-->
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">محل کتابت</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-4 col-form-label">محل نگهداری/مالک قبلی</label>
+                                  <div class="col-sm-8">
+                                    <input type="text" class="form-control form-control-search">
+                                  </div>
+                                </div>
+                                <!--  -->
+                              </div>
+                              <div id="advanced-search-versions-physic" class="container-fluid tab-pane fade field-spacing-second" >
+                                  <!--  -->
+                                  <ul class="nav nav-tabs nav-pills" id="advanced-search-versions-physic-child" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions-physic-child-material" role="tab" aria-controls="menu1" aria-selected="false">مواد</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-physic-child-dimension" role="tab" aria-controls="menu2" aria-selected="true">ابعاد</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-physic-child-detail" role="tab" aria-controls="menu3" aria-selected="false">اجزا</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-physic-child-book" role="tab" aria-controls="menu4" aria-selected="false">کتابت</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-toggle="tab" href="#advanced-search-versions-physic-child-illumination" role="tab" aria-controls="menu5" aria-selected="false">تذهیب</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+              
+                                  <div id="advanced-search-versions-physic-child-material" class="container-fluid tab-pane show active fade field-spacing-second" >
+                                    <!--  -->
+                                    <div class="form-group row">
+                                      <label for="" class="col-sm-4 col-form-label">جنس</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-search">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="" class="col-sm-4 col-form-label">نوع</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-search">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="" class="col-sm-4 col-form-label">وضعیت</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-search">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                      <label for="" class="col-sm-4 col-form-label">ته نقش و نشان</label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-search">
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    </div>
+                                    <div id="advanced-search-versions-physic-child-dimension" class="container-fluid tab-pane fade" >
+                                    </div>
+                                    <div id="advanced-search-versions-physic-child-detail" class="container-fluid tab-pane fade" >
+                                    </div>
+                                    <div id="advanced-search-versions-physic-child-book" class="container-fluid tab-pane fade" >
+                                    </div>
+                                    <div id="advanced-search-versions-physic-child-illumination" class="container-fluid tab-pane fade" >
+                                    </div>
+                                    </div>
+                                  <!--  -->
+                              </div>
+                              <div id="advanced-search-versions-content" class="container-fluid tab-pane fade" >
 
-                            </div>
-                            <!--/.Carousel Wrapper-->
+                              </div>
+                              <div id="advanced-search-versions-date" class="container-fluid tab-pane fade" >
+
+                              </div>
+                              <div id="advanced-search-versions-book" class="container-fluid tab-pane fade" >
+
+                              </div>
+                          </div>
+                            <!-- ش -->
+                            <!--  -->
+                            
+                            
+                           
+                            <!--  -->
+                          </div>
                         </div>
-
-                        <div class="col-md-1 d-flex justify-content-start align-items-center">
-
-                            <a class="" href="#multi-item-example" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </div>
-
+                      </div>
                     </div>
-                    <!-- Slider--Blog -->
+                    <!--  -->
 
-                    <div class="container-fluid">
-                        <div id="description-blog" class="col-md-9 px-5 mx-5 d-none">
-                            <span>استانبول، پایتخت باشکوه خلافت عثمانی بی‌تردید یکی از مهمترین و غنی‌ترین مراکزی است که آثار مهمی از تاریخ بشری و مخصوصا میراث مسلمانان در آن است. کتابخانه‌ها، کاخ‌ها، موزه‌ها و حتی خانقاه‌ها و مزارات نیز هرکدام سهمی از این گنجینه بی‌بها را در خود جای داده‌اند. شاید بتوان گفت خوشبختانه تاکنون تمام یا بخش عظیمی از آن از گزند بلایای طبیعی و انسانی جان سالم به در برده و محفوظ مانده ‌اند.
-شهر استانبول، به خودی خود موزه ای بزرگ است که با قدم زدن در کوچه ها و خیابان های آن، می توان بخشی از تاریخ جهان از عصر بیزانس تا امروز را نه تنها به چشم دید بلکه می توان حس کرد. این از آن روست که زمامداران امور در ترکیه، از زمان عثمانی تاکنون، به جمع آوری و حفظ آثار تاریخی همت گمارده و توانسته اند صنعت گردشگری را نه تنها تقویت کنند، بل آن را به یکی از منابع مهم مالی خود بدل کنند.</span>
-                        </div>
-                    </div>
+                    
+
+
+
+
+
+                    
                 </div>
-            </div>
-            <!-- End-Blog -->
-
-            <!-- Start-About -->
-            <div style="background-color: #fcfaf7;">
-                <div class="container-fluid py-5">
-                    <div class="text-secondary px-5">
-                        <img src="../Images/Content.png" />
-                        <span>درباره</span>
-                    </div>
-                </div>
-
-                <div id="Content-About" class="container-fluid row">
-                    <div class="col-md-8 mb-5">
-                        <p>یک موسسه تحقیقاتی - آموزشی و یکی از جدیدترین مراکز حوزوی دانشگاهی است که با همین رویکرد مبارک، در سال ۱۳۶۸ هجری خورشیدی در شهر مقدس قم، در جوار یکی از برزرگترین حوزه های علوم انسانی بنیانگذاری شده است.</p>
-
-                        <div class="container-fluid row about-menu">
-                            <div class="col-md-3 px-0">
-                                <a class="nav-link" href="#">
-                                    <img src="../Images/chevron.png" style="width: 18px; padding-left: 5px;" />معرفی پروژه</a>
-                            </div>
-                            <div class="col-md-3 px-0">
-                                <a class="nav-link" href="#">
-                                    <img src="../Images/chevron.png" style="width: 18px; padding-left: 5px;" />نقشه سایت</a>
-                            </div>
-                            <div class="col-md-3 px-0">
-                                <a class="nav-link" href="#">
-                                    <img src="../Images/chevron.png" style="width: 18px; padding-left: 5px;" />مفاهیم پایه</a>
-                            </div>
-                            <div class="col-md-3 px-0">
-                                <a class="nav-link" href="#">
-                                    <img src="../Images/chevron.png" style="width: 18px; padding-left: 5px;" />همکاران</a>
-                            </div>
+                <div id="advanced-search-library" class="tab-pane fade">
+                  <!--  -->
+                  <div class="row field-spacing-second container-fluid-blog">
+                    <div class="col-sm-6 search-inner-content">
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">جستجو</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
                         </div>
-
+                        
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">عنوان</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">نام مولف/پدیدآورنده</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">موضوع</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">ناشر</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">تاریخ نشر</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">شماره رده</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="" class="col-sm-4 col-form-label">کلید واژگان</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control form-control-search">
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-md-3">
-                        <h4 class="text-secondary">پیوندها</h4>
-                        <hr class="line">
-                        <p>
-                            سلام بر روح 
-							<br />
-                            سلام بر روح
-							<br />
-                            سلام بر روح
-                        </p>
+                    <div class="col-sm-6">
+                      <!-- <div class="form-group row"> -->
+                        <!-- <label for="" class="col-sm-4 col-form-label"></label> -->
+                        <!-- <div class="col-sm-12 col-md-12"> -->
+                          <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle col-12" style="text-align: right;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              همه موارد
+                            </button>
+                            <div class="dropdown-menu col-12" style="text-align: right;" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">نسخه</a>
+                              <a class="dropdown-item" href="#">مجموعه</a>
+                              <a class="dropdown-item" href="#">منابع آنلاین</a>
+                              <a class="dropdown-item" href="#">همه موارد</a>
+                            </div>
+                          </div>
+                        <!-- </div> -->
+                      <!-- </div> -->
                     </div>
-
+                  </div>
+                  
+                  <!--  -->
                 </div>
-            </div>
+                <div id="advanced-search-blog" class="tab-pane fade search-inner-content field-spacing-second">
+                  <div class="form-group row">
+                    <label for="" class="col-sm-4 col-form-label">دسته های خبر</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control form-control-search">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-4 col-form-label">موضوع خبر</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control form-control-search">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-4 col-form-label">کلمات کلیدی</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control form-control-search">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-4 col-form-label">تاریخ و زمان ارسال مطلب</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control form-control-search">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-4 col-form-label">منبع خبر</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control form-control-search">
+                    </div>
+                  </div>
+                </div>
+                <div id="advanced-search-site" class="tab-pane fade">
+                    <h3>Menu 4</h3>
+                    <p>Some content in menu 4.</p>
+                  </div>
+              </div>
 
-            <!-- End-About -->
+        <!-- End-Content-Blog -->
 
-<!-- Start-Brand -->
+        </div>
+
+
+        <!-- Start-Brand -->
         <div class="brand-background">
             <div class="container-fluid row d-flex justify-content-between">
                 <div class="col-md-3 d-flex justify-content-center mb-4">
@@ -532,7 +513,7 @@
         </div>
         <!-- End-Brand -->
         <!-- Begin-Footer -->
-        <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center px-0 mx-0">
+        <div id="Footer" name="Footer" class="container-fluid container-fluid-blog row footer d-flex align-items-center px-0 mx-0">
             <div class="col-md-8">
                 <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
             </div>
