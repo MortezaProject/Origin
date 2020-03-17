@@ -563,7 +563,15 @@ background-color:#eae8e8;
   outline: 0;
   box-shadow: 0 0 0 0.2rem #00a693!important;
 }
-
+.MapMarker{
+  width: 30px;
+  height: 30px;
+  background-color: #00a693;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  font-size: large;
+}
 
 
 

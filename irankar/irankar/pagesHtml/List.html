@@ -11,6 +11,10 @@
     <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet">
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet">
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    
 </head>
 <body>
     <div id="wrraper">
@@ -126,8 +130,8 @@
 
                         <div class="tab-pane fade show active" id="pills-Location" role="tabpanel" aria-labelledby="pills-Location-tab">
                             <div class="container-fluid d-flex justify-content-center my-4">
-                                <div name="maps" style="height: 461px; width: 90%; border: solid 1px green;">
-                                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=50.93205928802491%2C35.80129652898649%2C50.97222805023194%2C35.82562255682101&amp;layer=mapnik&amp;marker=35.81346047447103%2C50.95214366912842" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.8135&amp;mlon=50.9521#map=15/35.8135/50.9521&amp;layers=N">View Larger Map</a></small>
+                                <div id="mapid" name="maps" style="height: 461px; width: 90%; border: solid 1px green;">
+                                    <!-- <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=50.93205928802491%2C35.80129652898649%2C50.97222805023194%2C35.82562255682101&amp;layer=mapnik&amp;marker=35.81346047447103%2C50.95214366912842" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=35.8135&amp;mlon=50.9521#map=15/35.8135/50.9521&amp;layers=N">View Larger Map</a></small> -->
                                 </div>
                             </div>
                         </div>
@@ -198,6 +202,6 @@
         </div>
         <!-- End-Footer -->
     </div>
-
+    <script src="../Script/Map.js"></script>
 
 </body></html>
