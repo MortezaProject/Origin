@@ -13,6 +13,7 @@
     <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
+    <script src="../Script/Utility.js"></script>
 </head>
 <body>
     <div id="wrraper">
@@ -27,7 +28,7 @@
                 <span class="navbar-brand">
                     <img src="../Images/logo.png" />
                     <br />
-                    <span>فهرستواره دست‌نوشته‌های ایرانی قرآن</span>
+                    <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -72,8 +73,8 @@
         <!-- End-Menu -->
 
         <!-- Begin-Content-Blog -->
-
-        <div class="py-5" style="background-color: #f5f5f5;">
+        <div id="parent-blog">
+        <div class="py-5">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb container-fluid-Cust">
                     <img src="../Images/Content.png" />
@@ -84,7 +85,7 @@
             </nav>
         </div>
 
-        <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;">
+        <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between">
             <!-- Start-Content-Right -->
             <div id="Right-Content" class="col-md-8">
                 <!-- Post -->
@@ -93,15 +94,16 @@
                         <div>
                             <h4 class="post-header">شبیه نامه های تاریخی منبع ارزشمندتکمیل تاریخ ادبیات نمایشی ایران اند</h4>
                         </div>
-                        <div class="row">
+                        <div class="row header-detail-post">
                             <div class="col-md-6">
                                 <span class="text-view">27 شهریور</span>
                                 <span class="text-view">|</span>
                                 <span class="text-view">09:12 </span>
                             </div>
                             <div class="text-left col-md-6">
-                                <a href="#"><i class="fas fa-share-alt"></i></a>
-                                <a href="#"><i class="fas fa-file-pdf"></i></a>
+                                <a href="#">
+                                    <img src="../Images/Share.svg" /></a>
+                                <a href="#"><img src="../Images/Pdf.svg" /></a>
                                 <span class="text-view">تعداد بازدید:</span>
                                 <span class="text-view">201</span>
                             </div>
@@ -159,8 +161,8 @@
                                         <span>دیدگاه شما</span>
                                     </div>
                                     <div class="col-md-6 text-left">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsecomment" aria-expanded="false" aria-controls="collapsecomment">
-                                            <i class="fas fa-angle-down"></i>
+                                        <button class="btn btn-link collapsed px-md-1" data-toggle="collapse" data-target="#collapsecomment" aria-expanded="false" aria-controls="collapsecomment" onclick="ChangeIconCollapse(this)">
+                                            <img src="../Images/Arrow-up.svg" style="height:8px;">
                                         </button>
                                     </div>
                                 </div>
@@ -193,7 +195,7 @@
 
                                                 </div>
                                                 <div class="col-md-6 text-left">
-                                                    <button type="submit" class="btn btn-primary mb-2">ارسال</button>
+                                                    <button type="submit" class="btn btn-primary mb-2" style="width:20%;">ارسال</button>
                                                 </div>
                                             </div>
 
@@ -215,22 +217,22 @@
 
             <!-- Start-Menu-Left -->
             <div id="Left-Content" class="col-md-3 ml-4">
-                <div id="Left-Menu" class="tab-pane show active fade">
+                <div id="Left-Menu" class="container-fluid tab-pane show active fade">
                     <!--  -->
                     <div id="accordion">
 
-                        <div class="card">
+                        <div class="card mb-md-3">
                             <div class="card-header card-header-cust row mx-0 p-0" id="headingOne">
-                                <div class="col-md-6">
+                                <div class="col-md-6 px-md-0 d-felx align-self-end">
                                     <span>مهمترین خبرها</span>
                                 </div>
-                                <div class="col-md-6 text-left">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        <i class="fas fa-angle-down"></i>
+                                <div class="col-md-6 px-2 text-left">
+                                    <button class="btn btn-link collapsed p-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
+                                        <img src="../Images/Arrow-down.svg">
                                     </button>
                                 </div>
                             </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="">
                                 <div class="card-body-cust">
                                     <!--  -->
 
@@ -242,35 +244,34 @@
 
                         <div class="card">
                             <div class="card-header card-header-cust row mx-0 p-0" id="headingTwo">
-                                <div class="col-md-6">
+                                <div class="col-md-6 px-md-0 d-felx align-self-end">
                                     <span>آرشیو</span>
                                 </div>
-                                <div class="col-md-6 text-left">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <i class="fas fa-angle-down"></i>
+                               <div class="col-md-6 px-md-2 text-left">
+                                    <button class="btn btn-link collapsed p-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
+                                        <img src="../Images/Arrow-up.svg">
                                     </button>
                                 </div>
                             </div>
-                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body-cust">
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="">
+                                <div class="card-body-cust p-0">
                                     <!--  -->
-
                                     <div id="Archive-Child" class="container-fluid tab-pane show active fade">
                                         <!--  -->
                                         <div id="accordion-archive">
                                             <div class="card">
                                                 <div class="card-header card-header-cust row mx-0 p-0" id="headingThree">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6 px-md-0 d-felx align-self-end">
                                                         <span>تاریخی</span>
                                                     </div>
-                                                    <div class="col-md-6 text-left">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                            <i class="fas fa-angle-down"></i>
+                                                    <div class="col-md-6 px-2 text-left">
+                                                        <button class="btn btn-link collapsed p-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="ChangeIconCollapseChild(this)">
+                                                            <img src="../Images/Arrow-up-small.svg">
                                                         </button>
                                                     </div>
 
                                                 </div>
-                                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion-archive">
+                                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="">
                                                     <div class="card-body-cust">
                                                         <!--  -->
                                                         <ul class="item-ul">
@@ -278,14 +279,19 @@
                                                             <li><a href="#">1395 (98)</a></li>
                                                             <li><a href="#">1396 (41)</a></li>
                                                             <li><a href="#">1397 (54)</a></li>
-                                                            <li><a href="#">1398 (88)</a></li>
-                                                            <li><a href="#">_ فروردین (21)</a></li>
-                                                            <li><a href="#">_ اردیبهشت (14)</a></li>
-                                                            <li><a href="#">_ خرداد (12)</a></li>
-                                                            <li><a href="#">_ تیر (8)</a></li>
-                                                            <li><a href="#">_ مرداد (15)</a></li>
-                                                            <li><a href="#">_ شهریور  (10)</a></li>
-                                                            <li><a href="#">_ مهر (8)</a></li>
+                                                            <li><a href="#">1398 (88)</a>
+                                                                <ul class="px-md-2">
+                                                            <li><a href="#"> فروردین (21)</a></li>
+                                                            <li><a href="#"> اردیبهشت (14)</a></li>
+                                                            <li><a href="#"> خرداد (12)</a></li>
+                                                            <li><a href="#"> تیر (8)</a></li>
+                                                            <li><a href="#"> مرداد (15)</a></li>
+                                                            <li><a href="#"> شهریور  (10)</a></li>
+                                                            <li><a href="#"> مهر (8)</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            
+
                                                         </ul>
 
 
@@ -298,16 +304,15 @@
 
                                             <div class="card">
                                                 <div class="card-header card-header-cust row mx-0 p-0" id="headingfour">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-6 px-md-0 d-felx align-self-end">
                                                         <span>موضوعی</span>
                                                     </div>
-                                                    <div class="col-md-6 text-left">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                                                            <i class="fas fa-angle-down"></i>
+                                                    <div class="col-md-6 px-md-2 text-left">
+                                                        <button class="btn btn-link collapsed p-0" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour" onclick="ChangeIconCollapseChild(this)">
+                                                            <img src="../Images/Arrow-down-small.svg">
                                                         </button>
                                                     </div>
-                                                </div>
-                                                <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion-archive">
+                                                </div>">
                                                     <div class="card-body-cust">
                                                         <!--  -->
 
@@ -324,6 +329,7 @@
                         </div>
 
 
+
                     </div>
                     <!--  -->
 
@@ -333,13 +339,13 @@
 
 
         </div>
-
+            </div>
         <!-- End-Content-Blog -->
 
         <!-- Start-Brand -->
         <div class="brand-background">
-            <div class="container-fluid row d-flex justify-content-between">
-                <div class="col-md-3 d-flex justify-content-center mb-4">
+            <div class="container-fluid row">
+                <div class="col-md-3 mb-4">
                     <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
                 </div>
                 <div class="col-md-6 text-center">
@@ -348,7 +354,7 @@
                         جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
                         تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
                     </p>
-                    <div>
+                    <div class="three-logo">
                         <a href="#">
                             <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
                         </a>
@@ -374,7 +380,7 @@
             <div class="col-md-3 text-left">
                 <span>طراحی سایت:‌ گروه هنری نقطه</span>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-1 d-flex justify-content-end">
                 <img src="../Images/design_by.png" />
             </div>
         </div>
