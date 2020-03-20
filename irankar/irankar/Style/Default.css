@@ -929,20 +929,9 @@ hr.line {
     background-color: #f5f5f5;
 }
 
-<<<<<<< HEAD #accordion .card .card-body .form-group .col-sm-3 {
+#accordion .card .card-body .form-group .col-sm-3 {
     padding-left: 0px!important;
     padding-right: 0px!important;
-    ======= .MapMarker;
-
-{
-    width: 30px;
-    height: 30px;
-    background-color: #00a693;
-    color: #fff;
-    border-radius: 15px;
-    text-align: center;
-    font-size: large;
-    >>>>>>> 0f46783231872e538b827c90076ad74cc8d5940e;
 }
 
 #accordion .card .card-body .form-group span {
@@ -978,7 +967,17 @@ hr.line {
         border-color: #d3d2d2!important;
     }
 
-
+.jstree-default .jstree-themeicon {
+        background-position: -260px -4px;
+}
+.jstree-default.jstree-rtl>.jstree-no-dots .jstree-closed>.jstree-ocl {
+    background-position: -3px -23px!important;
+    background-image: url("../Images/PlusMinus.png");
+  }
+  .jstree-default.jstree-rtl>.jstree-no-dots .jstree-open>.jstree-ocl {
+    background-position: -3px -2px!important;
+    background-image: url("../Images/PlusMinus.png");
+  }
 
 
 
