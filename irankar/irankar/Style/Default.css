@@ -167,6 +167,12 @@ a:hover {
     font-size: 18px;
 }
 
+.map_contain {
+    height: 461px;
+    width: 92%;
+    border: solid 1px green;
+}
+
 .Parent-Tab {
     border-bottom-style: solid;
     border-color: #d3d3d5;
@@ -276,7 +282,9 @@ width:93%!important;
 .item-blog-desc {
     height: 100px;
 }
-
+.carousel-blog-right img, .carousel-blog-left img {
+height:33px;
+}
 .zoom {
     transition: transform .2s;
     top: 26px;
@@ -642,6 +650,47 @@ hr.line {
         padding: 2% 0;
         height: unset;
     }
+
+    .titr {
+        padding-right: 3%;
+    }
+
+    .space {
+        padding: 3% 0;
+    }
+
+    .map_contain {
+        height: 461px;
+        width: 100%;
+        border: solid 1px green;
+    }
+
+    #Content-Map .Parent-Tab {
+        padding: 0;
+    }
+
+        #Content-Map .Parent-Tab.col-md-9 {
+            width: 55%!important;
+        }
+
+        #Content-Map .Parent-Tab.col-md-3 {
+            width: 45%!important;
+        }
+
+        #Content-Map .Parent-Tab .nav-item {
+            padding: 0 1%!important;
+        }
+
+    .nav-pills .nav-link {
+        height: 25px;
+        width: 68px;
+        font-size: 16px!important;
+    }
+
+    #Content-Map #Pills-Tab {
+        padding: 0 4%;
+    }
+    
 }
 
 /*Responsive  For Mobile*/
@@ -834,12 +883,13 @@ hr.line {
     border-radius: 0!important;
 }
 
-.form-control-search:focus {
-    background-color: #eae8e8;
-    border-color: #00a693!important;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem #00a693!important;
-}
+    .form-control-search:focus {
+        background-color: #eae8e8;
+        border-color: #00a693!important;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem #00a693!important;
+    }
+
 .MapMarker {
     width: 30px;
     height: 30px;
@@ -878,21 +928,21 @@ hr.line {
 #wrraper-search {
     background-color: #f5f5f5;
 }
-<<<<<<< HEAD
 
-#accordion .card .card-body .form-group .col-sm-3 {
+<<<<<<< HEAD #accordion .card .card-body .form-group .col-sm-3 {
     padding-left: 0px!important;
     padding-right: 0px!important;
-=======
-.MapMarker{
-  width: 30px;
-  height: 30px;
-  background-color: #00a693;
-  color: #fff;
-  border-radius: 15px;
-  text-align: center;
-  font-size: large;
->>>>>>> 0f46783231872e538b827c90076ad74cc8d5940e
+    ======= .MapMarker;
+
+{
+    width: 30px;
+    height: 30px;
+    background-color: #00a693;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: large;
+    >>>>>>> 0f46783231872e538b827c90076ad74cc8d5940e;
 }
 
 #accordion .card .card-body .form-group span {
