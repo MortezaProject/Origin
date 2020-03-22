@@ -5,7 +5,7 @@
         
         ///////////////////////////////////
         
-        
+        if(!element || !setMap) return;
         var map = L.map(element).setView([setMap.view.lat,setMap.view.lon], setMap.view.scale);
         var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';

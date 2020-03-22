@@ -163,8 +163,11 @@
             //   r.push(data.instance.get_node(data.selected[i]).text);
             // }
             debugger
-            map.remove();
-            new CreateMap("mapid", data.instance.element.find('li[aria-selected=true]').prop('setMap'));
+            if(data.instance.element.find('li[aria-selected=true]').prop('setMap')){
+                map.remove();
+                new CreateMap("mapid", data.instance.element.find('li[aria-selected=true]').prop('setMap'));
+            }
+
             // $('#event_result').html('Selected: ' + r.join(', '));
           })
           .on('open_node.jstree', function (e, data) {
