@@ -23,20 +23,20 @@
         <!-- End-Gap-Area -->
 
         <!-- Begin-Menu -->
-        <div id="menu">
-            <nav class="navbar navbar-expand-lg navbar-light bg-wight">
-                <span class="navbar-brand">
+        <div id="menu" class="align-parent">
+            <nav class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0">
+                <span class="navbar-brand mx-0">
                     <img src="../Images/logo.png" />
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
-                        <li class="nav-item nav-item-Custom">
+                        <li class="nav-item active nav-item-Custom">
                             <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item nav-item-Custom">
@@ -45,7 +45,7 @@
                         <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">کتابخانه</a>
                         </li>
-                        <li class="nav-item active nav-item-Custom">
+                        <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">بلاگ</a>
                         </li>
                         <li class="nav-item nav-item-Custom-last">
@@ -53,6 +53,10 @@
                         </li>
                     </ul>
 
+
+
+                </div>
+                <div class="order-search-navbar">
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
                             <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
@@ -62,13 +66,16 @@
                             <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
                         </div>
 
+
+
                         <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
                             <img src="../Images/search_advance.png" />
                         </div> -->
                     </form>
-
                 </div>
+
             </nav>
+
         </div>
         <!-- End-Menu -->
 
@@ -85,9 +92,9 @@
             </nav>
         </div>
 
-        <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between">
+        <div id="MainContentBlog" class="container-fluid row mx-0 align-parent justify-content-between">
             <!-- Start-Content-Right -->
-            <div id="Right-Content" class="col-md-8">
+            <div id="Right-Content" class="col-md-8 pr-0 pl-4">
                 <!-- Post -->
                 <div id="PostMain" class="mainpost">
                     <div id="Header-Post">
@@ -95,12 +102,12 @@
                             <h4 class="post-header">شبیه نامه های تاریخی منبع ارزشمندتکمیل تاریخ ادبیات نمایشی ایران اند</h4>
                         </div>
                         <div class="row header-detail-post">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-6">
                                 <span class="text-view">27 شهریور</span>
                                 <span class="text-view">|</span>
                                 <span class="text-view">09:12 </span>
                             </div>
-                            <div class="text-left col-md-6">
+                            <div class="text-left col-md-6 col-6">
                                 <a href="#">
                                     <img src="../Images/Share.svg" /></a>
                                 <a href="#"><img src="../Images/Pdf.svg" /></a>
@@ -155,7 +162,7 @@
                         <div id="accordion-comment">
 
                             <div class="card">
-                                <div class="card-header card-header-cust row mx-0 p-0" id="Comment-Card">
+                                <div class="card-header card-header-cust row mx-0 p-0 pt-3" id="Comment-Card">	<!-- Updated 04 -->
                                     <div class="col-md-6">
 									<img src="../Images/Content.png" />
                                         <span>دیدگاه شما</span>
@@ -183,19 +190,19 @@
                                                 <textarea class="form-control-comment" id="Input-Comment" placeholder="دیدگاه شما" rows="3"></textarea>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-8">
                                                     <div class="row">
-                                                        <div class="form-group col-md-9">
+                                                        <div class="form-group col-md-9 col-8">
                                                             <input type="text" class="form-control-comment" id="Secret-Code" placeholder="کد امنیتی">
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-3 col-4">
                                                             <img src="#" alt="CPTCHA" />
                                                         </div>
                                                     </div>
 
                                                 </div>
-                                                <div class="col-md-6 text-left">
-                                                    <button type="submit" class="btn btn-primary mb-2" style="width:20%;">ارسال</button>
+                                                <div class="col-md-6 col-4 text-left">
+                                                    <button type="submit" class="btn btn-primary mb-2 send-btn-blog">ارسال</button>
                                                 </div>
                                             </div>
 
@@ -216,8 +223,8 @@
             <!-- End-Content-Right -->
 
             <!-- Start-Menu-Left -->
-            <div id="Left-Content" class="col-md-3 ml-4">
-                <div id="Left-Menu" class="container-fluid tab-pane show active fade">
+            <div id="Left-Content" class="col-md-4 pl-0 pr-0 pr-md-5">
+                <div id="Left-Menu" class="container-fluid pl-0 pr-0 pr-md-5 tab-pane show active fade">
                     <!--  -->
                     <div id="accordion">
 
@@ -280,7 +287,7 @@
                                                             <li><a href="#">1396 (41)</a></li>
                                                             <li><a href="#">1397 (54)</a></li>
                                                             <li><a href="#">1398 (88)</a>
-                                                                <ul class="px-md-2">
+                                                                <ul class="px-md-2 dash">	<!-- Updated 04 -->
                                                             <li><a href="#"> فروردین (21)</a></li>
                                                             <li><a href="#"> اردیبهشت (14)</a></li>
                                                             <li><a href="#"> خرداد (12)</a></li>
@@ -342,49 +349,50 @@
             </div>
         <!-- End-Content-Blog -->
 
-        <!-- Start-Brand -->
-        <div class="brand-background">
-            <div class="container-fluid row">
-                <div class="col-md-3 mb-4">
-                    <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
-                </div>
-                <div class="col-md-6 text-center">
-                    <p class="text-tertiary">
-                        فرهنگستان علوم برلین - برندبورگ<br />
-                        جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
-                        تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
-                    </p>
-                    <div class="three-logo">
-                        <a href="#">
-                            <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
-                        </a>
-                        <a href="#">
-                            <img src="../Images/twitter.svg" style="width: 35px; height: 35px;" />
-                        </a>
-                        <a href="#">
-                            <img src="../Images/facebook.svg" style="width: 35px; height: 35px;" />
-                        </a>
+            <!-- Start-Brand -->
+            <div class="brand-background">
+                <div class="align-parent row mx-0">
+                    <div class="col-md-3 px-0 mb-4 order2-mob">
+                        <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                    </div>
+                    <div class="col-md-6 text-center order1-mob">
+                        <p class="text-tertiary">
+                            فرهنگستان علوم برلین - برندبورگ<br />
+                            جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
+                            تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
+                        </p>
+                        <div class="three-logo">
+                            <a href="#">
+                                <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                            <a href="#">
+                                <img src="../Images/twitter.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                            <a href="#">
+                                <img src="../Images/facebook.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-end order2-mob">
+                        <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
                     </div>
                 </div>
-                <div class="col-md-3 d-flex justify-content-end">
-                    <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+            </div>
+            <!-- End-Brand -->
+            <!-- Begin-Footer -->
+            <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
+                <!-- Updated (kolle footer) -->
+                <div class="col-md-8 col-6 px-0">
+                    <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+                </div>
+                <div class="col-md-3 col-4 px-0 text-left">
+                    <span>طراحی سایت:‌ گروه هنری نقطه</span>
+                </div>
+                <div class="col-md-1 col-2 d-flex justify-content-end">
+                    <img src="../Images/design_by.png" />
                 </div>
             </div>
-        </div>
-        <!-- End-Brand -->
-        <!-- Begin-Footer -->
-        <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center px-0 mx-0">
-            <div class="col-md-8">
-                <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
-            </div>
-            <div class="col-md-3 text-left">
-                <span>طراحی سایت:‌ گروه هنری نقطه</span>
-            </div>
-            <div class="col-md-1 d-flex justify-content-end">
-                <img src="../Images/design_by.png" />
-            </div>
-        </div>
-        <!-- End-Footer -->
+            <!-- End-Footer -->
     </div>
 </body>
 </html>
