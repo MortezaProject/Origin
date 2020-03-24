@@ -1914,7 +1914,12 @@
     <Content Include="pagesHtml\BlogPost.html" />
     <Content Include="pagesHtml\Gallery.html" />
     <Content Include="pagesHtml\Home.html" />
+    <Content Include="pagesHtml\List.html" />
     <Content Include="pagesHtml\search.html" />
+    <Content Include="Script\Map.js" />
+    <Content Include="Script\mdb.min.css" />
+    <Content Include="Script\mdb.min.js" />
+    <Content Include="Script\tree.js" />
     <Content Include="Script\Utility.js" />
     <Content Include="Style\Default.css" />
     <Content Include="Web.config" />
