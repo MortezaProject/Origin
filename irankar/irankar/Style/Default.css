@@ -144,10 +144,20 @@ a:hover {
 }
 
 #carousel-sticky {
+<<<<<<< HEAD
     font-size: 22px;
     font-weight: bold;
 }
 
+=======
+font-size:22px;
+font-weight:bold;
+height:500px;
+}
+     #carousel-sticky .carousel-item img {
+    height: 500px;
+    }
+>>>>>>> 3ff6d792d93fbb51aa7e636561dcc7b4d84b86ff
 .carousel-indicators-Cust {
     bottom: 0px !important;
     margin-top: 16px !important;
@@ -803,6 +813,13 @@ hr.line {
     .send-btn-blog {
         width: 50%;
     }
+    #carousel-sticky {
+    font-size: 20px;
+    height: 225px;
+    }
+     #carousel-sticky .carousel-item img {
+    height: 225px!important;
+    }
 }
 
 /*Responsive  For Mobile*/
@@ -1042,6 +1059,7 @@ hr.line {
     margin-top: 40px;
 }
 
+<<<<<<< HEAD
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -1066,6 +1084,31 @@ hr.line {
     -webkit-align-items: center;
     align-items: center;
 }
+=======
+    	.swiper-container {	
+    width: 100%;	
+    height: 100%;	
+}	
+.swiper-slide {	
+    text-align: center;	
+    font-size: 18px;	
+    background: #fff;	
+    /* Center slide text vertically */	
+    display: -webkit-box;	
+    display: -ms-flexbox;	
+    display: -webkit-flex;	
+    display: flex;	
+    -webkit-box-pack: center;	
+    -ms-flex-pack: center;	
+    -webkit-justify-content: center;	
+    justify-content: center;	
+    -webkit-box-align: center;	
+    -ms-flex-align: center;	
+    -webkit-align-items: center;	
+    align-items: center;	
+}
+
+>>>>>>> 3ff6d792d93fbb51aa7e636561dcc7b4d84b86ff
 
 /*------------------------------------------------------*/
 
