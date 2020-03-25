@@ -34,6 +34,23 @@
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
+                <div class="order-search-navbar" style="order:3;">
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <div class="input-group-append">
+                                <img src="../Images/search.png" />
+                            </div>
+                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
+                        </div>
+
+
+
+                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
+                            <img src="../Images/search_advance.png" />
+                        </div> -->
+                    </form>
+                </div>
                 <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -60,26 +77,10 @@
 
 
                 </div>
-                <div class="order-search-navbar">
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
-                            <div class="input-group-append">
-                                <img src="../Images/search.png" />
-                            </div>
-                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
-                        </div>
-
-
-
-                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
-                            <img src="../Images/search_advance.png" />
-                        </div> -->
-                    </form>
-                </div>
+                
 
             </nav>
-
+            
         </div>
         <!-- End-Menu -->
 
@@ -289,7 +290,7 @@
                     </div>
                     <div class="col-md-12 btn-slider-blog">
                         <div class="swiper-button-next pr-md-5"></div>
-                        <div class="swiper-button-prev pl-md-5 ml-md-2"></div>
+                        <div class="swiper-button-prev pl-md-5"></div>
                     </div>
 
 
@@ -320,7 +321,7 @@
                 </div>
 
                 <div id="Content-About" class="container-fluid row mx-0 align-parent">
-                    <div class="col-md-8 mb-5 px-0">
+                    <div class="col-xl-8 col-md-12 mb-5 px-0">
                         <p>یک موسسه تحقیقاتی - آموزشی و یکی از جدیدترین مراکز حوزوی دانشگاهی است که با همین رویکرد مبارک، در سال ۱۳۶۸ هجری خورشیدی در شهر مقدس قم، در جوار یکی از برزرگترین حوزه های علوم انسانی بنیانگذاری شده است.</p>
 
                         <div class="container-fluid row about-menu mx-0">
@@ -343,7 +344,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-4 pl-0 pr-0 pr-md-5">
+                    <div class="col-xl-4 col-md-12 pl-0 pr-0 pr-lg-5">
                         <h4 class="text-secondary">پیوندها</h4>
                         <hr class="line">
                         <p>
@@ -472,7 +473,8 @@
             ]	
             for (let i = 0; i < data.length; i++) {	
                 let div = document.createElement('div');	
-                div.classList.add('swiper-slide');	
+                div.classList.add('swiper-slide');
+                div.classList.add('swiper-slide-cust');
                 div.innerHTML = '<div class="view zoom" desc=' + data[i].desc +	
                     ' onmouseover="ShowDescriptionBlog(this)" onmouseout="HideDescriptionBlog(this)"><div class="item-blog d-flex flex-column justify-content-between"><div><img src=' +	
                     data[i].src +	
