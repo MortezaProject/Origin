@@ -340,7 +340,7 @@ width:93%!important;
     /* IE 9 */
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
-    transform: scale(1.05);
+    transform: scale(1.049);
     z-index: 10000;
 }
 
@@ -681,13 +681,18 @@ hr.line {
     }
 
     .order-search-navbar {
-        order: 2;
+        order: unset!important;
         width: 42%;
+        position: sticky;
+    /* bottom: 178px; */
+    right: 206px;
     }
-
-    .order-menu-navbar {
+    .nav-item-Custom-last {
+    padding:0 30px!important;
+    }
+    /*.order-menu-navbar {
         order: 3;
-    }
+    }*/
 
     .navbar-brand span {
         font-size: 10px;
@@ -819,6 +824,29 @@ hr.line {
     }
      #carousel-sticky .carousel-item img {
     height: 225px!important;
+    }
+     .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background: #fff;*/
+    width:408!important;
+    margin-left: 24px!important;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+    .swiper-container {
+        padding: 2% 6.2%!important;
     }
 }
 
@@ -1062,9 +1090,9 @@ hr.line {
     	.swiper-container {	
     width: 100%;	
     height: 100%;
-    padding: 0 1.2%!important;	
+    padding: 2% 1.2%!important;	
 }	
-.swiper-slide {	
+.swiper-slide-cust {	
     text-align: center;	
     font-size: 18px;
     margin-left:unset!important;	
