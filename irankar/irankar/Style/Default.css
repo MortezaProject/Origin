@@ -363,6 +363,9 @@ width:93%!important;
     padding-bottom: 15px;
     text-align: justify;
 }
+#description-blog img {
+height: 22px;
+}
 /* swiper */
 .swiper-container {
     width: 100%;
