@@ -340,7 +340,7 @@ width:93%!important;
     /* IE 9 */
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
-    transform: scale(1.10);
+    transform: scale(1.05);
     z-index: 10000;
 }
 
@@ -361,7 +361,14 @@ width:93%!important;
     padding-bottom: 15px;
     text-align: justify;
 }
-
+.slider-blog {
+padding: 0 4%;
+}
+.btn-slider-blog {
+    bottom: 236px;
+    position: relative;
+    --swiper-theme-color:#636261;
+}
 /*Classes content-blog*/
 
 /*classes content-about*/
@@ -1054,12 +1061,15 @@ hr.line {
 
     	.swiper-container {	
     width: 100%;	
-    height: 100%;	
+    height: 100%;
+    padding: 0 1.2%!important;	
 }	
 .swiper-slide {	
     text-align: center;	
-    font-size: 18px;	
-    background: #fff;	
+    font-size: 18px;
+    margin-left:unset!important;	
+    width:321.75px!important;
+    /*background: #fff;*/	
     /* Center slide text vertically */	
     display: -webkit-box;	
     display: -ms-flexbox;	
