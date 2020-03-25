@@ -364,6 +364,31 @@ width:93%!important;
     text-align: justify;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
 .slider-blog {
     padding: 0 4%;
 }
@@ -645,247 +670,6 @@ hr.line {
 }
 
 /*--**********************---------------------------------END BLOG CSS---------------------------**************************************--*/
-
-
-/*--*********************----------------------------------Custom Class Bootstrap-----------------*************************************--*/
-.card {
-    border: unset !important;
-    border-radius: 0px !important;
-    background-color: #f5f3f0 !important;
-}
-
-.card-header {
-    background-color: unset !important;
-}
-
-.btn-link {
-    color: #929292 !important;
-}
-
-/*--*********************----------------------------------Custom Class Bootstrap-----------------*************************************--*/
-
-@media (min-width: 768px) {
-    .carousel-multi-item-2 .col-md-3 {
-        float: left;
-        width: 25%;
-        max-width: 100%;
-    }
-}
-
-.carousel-multi-item-2 .card img {
-    border-radius: 2px;
-}
-
-
-
-/*Responsive  For Mobile*/
-
-@media screen and (max-width: 600px) and (min-width: 300px) {
-    .order-brand-navbar {
-        order: 1;
-    }
-
-    .order-search-navbar {
-        order: unset !important;
-        width: 42%;
-        position: sticky;
-        /* bottom: 178px; */
-        right: 206px;
-    }
-
-    .nav-item-Custom-last {
-        padding: 0 30px !important;
-    }
-
-    /*.order-menu-navbar {
-        order: 3;
-    }*/
-
-    .navbar-brand span {
-        font-size: 10px;
-    }
-
-    .navbar-brand img {
-        height: 31px;
-    }
-
-    .navbar-light .navbar-toggler {
-        border: 0;
-    }
-
-    /*#menu {
-        padding-right: 0;
-        padding-left: 0;
-    }*/
-
-    .show>.nav-link,
-    .active>.nav-link {
-        border-bottom: unset;
-    }
-
-    .nav-item-Custom-last {
-        padding: 0;
-    }
-
-    .nav-item-Custom {
-        border-left-style: none;
-        border-left-width: 0;
-        border-color: unset;
-    }
-
-    .carousel-inner {
-        height: 223px;
-    }
-
-    .carousel-indicators.carousel-indicators-Cust {
-        display: none;
-    }
-
-    .indicator-padding {
-        font-size: 15px !important;
-        padding: 2% 0;
-        height: unset;
-    }
-
-    .titr {
-        padding-right: 3%;
-    }
-
-    .space {
-        padding: 3% 0;
-    }
-
-    .map_contain {
-        height: 461px;
-        width: 100%;
-        border: solid 1px green;
-    }
-
-    #Content-Map .Parent-Tab {
-        padding: 0;
-    }
-
-    /*#Content-Map .Parent-Tab.col-md-9 {
-            width: 55%!important;
-        }*/
-
-    #Content-Map .Parent-Tab.col-md-3 {
-        padding-right: 5% !important;
-    }
-
-    /*#Content-Map .Parent-Tab .nav-item {
-            padding: 0 1%!important;
-        }*/
-
-    .nav-pills .nav-link {
-        height: 25px;
-        width: 68px;
-        font-size: 16px !important;
-    }
-
-    #Content-Map #Pills-Tab {
-        padding: 0 4%;
-    }
-
-    .pc {
-        display: none;
-    }
-
-    .mobile {
-        display: flex;
-    }
-
-    .zoom {
-        transform: scale(1.06);
-    }
-
-    .size-mob {
-        width: 97%;
-    }
-
-    .brand-background .order1-mob {
-        order: 1 !important;
-        border-bottom: 1px solid #d3d3d5;
-        padding-bottom: 15px;
-    }
-
-    .brand-background .order2-mob {
-        order: 2 !important;
-        width: 50%;
-    }
-
-    #Footer {
-        font-size: 10px !important;
-    }
-
-    .about-mob {
-        text-align: unset !important;
-    }
-
-    .send-btn-blog {
-        width: 50%;
-    }
-
-    #carousel-sticky {
-        font-size: 20px;
-        height: 225px;
-    }
-
-    #carousel-sticky .carousel-item img {
-        height: 225px !important;
-    }
-
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-container-cust {
-        padding: 2% 6.2% !important;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-
-    .swiper-slide-cust {
-        background: unset!important;
-        width: 408 !important;
-        margin-left: 24px !important;
-    }
-
-}
-
-/*Responsive  For Mobile*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .breadcrumb {
     margin-bottom: -3rem !important;
@@ -1237,3 +1021,203 @@ hr.line {
 .nav-tabs .nav-link {
     border: 0 !important;
 }
+
+/*--*********************----------------------------------Custom Class Bootstrap-----------------*************************************--*/
+.card {
+    border: unset !important;
+    border-radius: 0px !important;
+    background-color: #f5f3f0 !important;
+}
+
+.card-header {
+    background-color: unset !important;
+}
+
+.btn-link {
+    color: #929292 !important;
+}
+
+.carousel-multi-item-2 .card img {
+    border-radius: 2px;
+}
+/*--*********************----------------------------------Custom Class Bootstrap-----------------*************************************--*/
+
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%;
+    }
+}
+
+/*Responsive  For Mobile*/
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .order-brand-navbar {
+        order: 1;
+    }
+
+    .order-search-navbar {
+        order: unset !important;
+        width: 42%;
+        position: sticky;
+        /* bottom: 178px; */
+        right: 206px;
+    }
+
+    .nav-item-Custom-last {
+        padding: 0 30px !important;
+    }
+
+    /*.order-menu-navbar {
+        order: 3;
+    }*/
+
+    .navbar-brand span {
+        font-size: 10px;
+    }
+
+    .navbar-brand img {
+        height: 31px;
+    }
+
+    .navbar-light .navbar-toggler {
+        border: 0;
+    }
+
+    /*#menu {
+        padding-right: 0;
+        padding-left: 0;
+    }*/
+
+    .show>.nav-link,
+    .active>.nav-link {
+        border-bottom: unset;
+    }
+
+    .nav-item-Custom-last {
+        padding: 0;
+    }
+
+    .nav-item-Custom {
+        border-left-style: none;
+        border-left-width: 0;
+        border-color: unset;
+    }
+
+    .carousel-inner {
+        height: 223px;
+    }
+
+    .carousel-indicators.carousel-indicators-Cust {
+        display: none;
+    }
+
+    .indicator-padding {
+        font-size: 15px !important;
+        padding: 2% 0;
+        height: unset;
+    }
+
+    .titr {
+        padding-right: 3%;
+    }
+
+    .space {
+        padding: 3% 0;
+    }
+
+    .map_contain {
+        height: 461px;
+        width: 100%;
+        border: solid 1px green;
+    }
+
+    #Content-Map .Parent-Tab {
+        padding: 0;
+    }
+
+    /*#Content-Map .Parent-Tab.col-md-9 {
+            width: 55%!important;
+        }*/
+
+    #Content-Map .Parent-Tab.col-md-3 {
+        padding-right: 5% !important;
+    }
+
+    /*#Content-Map .Parent-Tab .nav-item {
+            padding: 0 1%!important;
+        }*/
+
+    .nav-pills .nav-link {
+        height: 25px;
+        width: 68px;
+        font-size: 16px !important;
+    }
+
+    #Content-Map #Pills-Tab {
+        padding: 0 4%;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .zoom {
+        transform: scale(1.06);
+    }
+
+    .size-mob {
+        width: 97%;
+    }
+
+    .brand-background .order1-mob {
+        order: 1 !important;
+        border-bottom: 1px solid #d3d3d5;
+        padding-bottom: 15px;
+    }
+
+    .brand-background .order2-mob {
+        order: 2 !important;
+        width: 50%;
+    }
+
+    #Footer {
+        font-size: 10px !important;
+    }
+
+    .about-mob {
+        text-align: unset !important;
+    }
+
+    .send-btn-blog {
+        width: 50%;
+    }
+
+    #carousel-sticky {
+        font-size: 20px;
+        height: 225px;
+    }
+
+    #carousel-sticky .carousel-item img {
+        height: 225px !important;
+    }
+
+    .swiper-container-cust {
+        padding: 2% 6.2% !important;
+    }
+
+    .swiper-slide-cust {
+        background: unset!important;
+        width: 408 !important;
+        margin-left: 24px !important;
+    }
+
+
+}
+
+/*Responsive  For Mobile*/
