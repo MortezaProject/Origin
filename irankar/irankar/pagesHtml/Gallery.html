@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <title></title>
-    
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
     <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
     <link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -14,203 +16,141 @@
     <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
+    <script src="../Script/Utility.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../swiper/swiper.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
 </head>
+
 <body>
-                <!-- Begin-Blog -->
-            <div style="background-color: #f3f3f0;">
-                <div class="container-fluid pt-5">
-                    <div class="text-secondary px-5">
-                        <img src="../Images/Content.png" />
-                        <span>بلاگ</span>
+    <!-- <div style="width: 100%;height: calc(100% - 31.4px);background-color:#000;opacity: 0.8;margin: auto;padding: 40px;"> -->
+    <div class="swiper-button-next" style="outline: unset;right: 3px;"></div>
+    <div id="SliderID" class="swiper-container"
+        style="width: 100%;height: calc(100% - 31.4px);background-color:rgba(0, 0, 0, 0.8);margin: auto;padding: 40px;">
+        <div class="swiper-wrapper" id="SwiperSlider"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- <div class="swiper-scrollbar "></div> -->
+    </div>
+    <div class="swiper-button-prev" style="outline: unset;left: 3px;"></div>
+    <!-- </div> -->
+
+    <div style="height: 31.4px;background-color:rgba(66, 66, 66, 0.6)">
+        <!-- view mode -->
+        <div class="col-md-3 col-5 ">
+            <ul class="nav nav-pills" id="PillsTab-left" role="tablist">
+                <li class="nav-item">
+                    <img class="nav-link" style="width: 50px;background: unset;" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
+                    <div class="dropdown-menu" x-placement="bottom-start"
+                        style="background-color: #d6d6d6;min-width: unset;padding: 0;position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a onclick="fullpage()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
+                        <a onclick="fullpageWithThumb()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
+                        <a onclick="TwoSlide()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
+                        <a onclick="MultiSlide()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
+                        <a style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#"></a>
                     </div>
-                </div>
-                <div id="Content-Blog" class="">
-                    <!-- Slider--Blog -->
-                    <div class="container-fluid-cust row px-0 mx-0">
-                        <div class="col-md-1 d-flex justify-content-end align-items-center">
-                            <!--Controls-->
+                </li>
+            </ul>
 
-                            <a class="" href="#multi-item-example" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                            <!--/.Controls-->
-                        </div>
-                        <div class="col-md-10">
-                            <!--Carousel Wrapper-->
-                            <div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+        </div>
+        <!-- view mode -->
+    </div>
+    <script>
+        let data = [{
+                src: "../Images/img1.jpg",
+                title: "1قرآن از نظر دانشمندان غربی",
+                desc: "متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "2قرآن از نظر دانشمندان غربی",
+                desc: "متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "3قرآن از نظر دانشمندان غربی",
+                desc: "متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "4قرآن از نظر دانشمندان غربی",
+                desc: "متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "5قرآن از نظر دانشمندان غربی",
+                desc: "متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "6قرآن از نظر دانشمندان غربی",
+                desc: "متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
+        ]
 
+        var swiper = new Swiper('#SliderID', {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            setWrapperSize: true,
+            // init: false,	
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            // breakpoints: {
+            //     640: {
+            //         slidesPerView: 2,
+            //         spaceBetween: 40,
+            //     },
+            //     768: {
+            //         slidesPerView: 2,
+            //         spaceBetween: 40,
+            //     },
+            //     1024: {
+            //         slidesPerView: 4,
+            //         spaceBetween: 50,
 
+            //     },
+            // }
+        });
 
-                                <!--Slides-->
-                                <div class="carousel-inner carousel-inner-cust" role="listbox">
+        for (let i = 0; i < data.length; i++) {
+            // let slide = '<div class="swiper-slide"><img src=' + data[i].src + ' class="blog-image" /></div>'
+            let slide = '<div class="swiper-slide" style="background-image:url('+data[i].src+');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            swiper.appendSlide(slide);
+        }
 
-                                    <!--First slide-->
-                                    <div class="carousel-item active">
+        let fullpage = function(){
 
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>
-                                                            درآمدی بر قرآن پژوهی مستشرقان و
-                                                            آسیب شناسی آن
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+        }
+        let fullpageWithThumb = function(){
+            
+        }
+        let TwoSlide = function(){
+            
+        }
+        let MultiSlide = function(){
+            
+        }
 
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>
-                                                            دائره المعارف اسلام، معرفی ویرایشهای اول، دوم و سوم
-                                                            (لایدن، انتشارات بریل)
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>ضروروت همکاری ایران برای پیشردطرح های تحقیقاتی قرآنی در اروپا</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>قرآن از نظر دانشمندان غربی</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!--/.First slide-->
-
-<!--                                    <!--Two slide-->
-                                    <div class="carousel-item">
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>
-                                                            درآمدی بر قرآن پژوهی مستشرقان و
-                                                            آسیب شناسی آن
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog  d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>
-                                                            دائره المعارف اسلام، معرفی ویرایشهای اول، دوم و سوم
-                                                            (لایدن، انتشارات بریل)
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()">
-                                                        <p>ضروروت همکاری ایران برای پیشردطرح های تحقیقاتی قرآنی در اروپا</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                        <div class="col-md-3 zoom">
-                                            <div class="view">
-                                                <div class="item-blog d-flex flex-column justify-content-between">
-                                                    <div>
-                                                        <img src="../Images/img1.jpg" class="blog-image" />
-                                                    </div>
-                                                    <div class="p-2 text-center item-blog-desc" onmouseover="ShowDescriptionBlog()" onmouseout="HideDescriptionBlog()()">
-                                                        <p>قرآن از نظر دانشمندان غربی</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                    <!--/.Two slide-->-->
-
-                                </div>
-                                <!--/.Slides-->
-
-                            </div>
-                            <!--/.Carousel Wrapper-->
-                        </div>
-
-                        <div class="col-md-1 d-flex justify-content-start align-items-center">
-
-                            <a class="" href="#multi-item-example" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </div>
-
-                    </div>
-                    <!-- Slider--Blog -->
-
-                    <div class="container-fluid">
-                        <div id="description-blog" class="col-md-9 px-5 mx-5 d-none">
-                            <span>استانبول، پایتخت باشکوه خلافت عثمانی بی‌تردید یکی از مهمترین و غنی‌ترین مراکزی است که آثار مهمی از تاریخ بشری و مخصوصا میراث مسلمانان در آن است. کتابخانه‌ها، کاخ‌ها، موزه‌ها و حتی خانقاه‌ها و مزارات نیز هرکدام سهمی از این گنجینه بی‌بها را در خود جای داده‌اند. شاید بتوان گفت خوشبختانه تاکنون تمام یا بخش عظیمی از آن از گزند بلایای طبیعی و انسانی جان سالم به در برده و محفوظ مانده ‌اند.
-شهر استانبول، به خودی خود موزه ای بزرگ است که با قدم زدن در کوچه ها و خیابان های آن، می توان بخشی از تاریخ جهان از عصر بیزانس تا امروز را نه تنها به چشم دید بلکه می توان حس کرد. این از آن روست که زمامداران امور در ترکیه، از زمان عثمانی تاکنون، به جمع آوری و حفظ آثار تاریخی همت گمارده و توانسته اند صنعت گردشگری را نه تنها تقویت کنند، بل آن را به یکی از منابع مهم مالی خود بدل کنند.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End-Blog -->
+    </script>
 </body>
+
 </html>
