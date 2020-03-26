@@ -427,16 +427,16 @@ width:93%!important;
     box-sizing: border-box;
     padding: 10px 0;
   }
-  .gallery-thumbs-fullpageWithThumb .swiper-slide-fullpageWithThumb {
+  .gallery-thumbs-fullpageWithThumb .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
   }
-  .gallery-thumbs-fullpageWithThumb .swiper-slide-thumb-active-fullpageWithThumb {
+  .gallery-thumbs-fullpageWithThumb .swiper-slide {
     opacity: 1;
   }
   /* MultiSlide */
-  
+
 /* End swiper */
 /*Classes content-blog*/
 

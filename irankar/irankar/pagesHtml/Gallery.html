@@ -38,7 +38,9 @@
     </div>
     <div class="swiper-button-prev" style="outline: unset;left: 3px;"></div>
     <!-- </div> -->
-
+    <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
+        <div class="swiper-wrapper" id="SwiperSlider"></div>
+    </div>
     <div style="height: 31.4px;background-color:rgba(66, 66, 66, 0.6)">
         <!-- view mode -->
         <div class="col-md-3 col-5 ">
@@ -48,11 +50,20 @@
                         role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
                     <div class="dropdown-menu" x-placement="bottom-start"
                         style="background-color: #d6d6d6;min-width: unset;padding: 0;position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a onclick="fullpage()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
-                        <a onclick="fullpageWithThumb()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
-                        <a onclick="TwoSlide()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
-                        <a onclick="MultiSlide()" style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#">
-                        <a style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;height: 40px;width: 40px;padding: 0;" class="dropdown-item" href="#"></a>
+                        <a onclick="fullpage()"
+                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                            class="dropdown-item" href="#"></a>
+                        <a onclick="fullpageWithThumb()"
+                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                            class="dropdown-item" href="#"></a>
+                        <a onclick="TwoSlide()"
+                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                            class="dropdown-item" href="#"></a>
+                        <a onclick="MultiSlide()"
+                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                            class="dropdown-item" href="#"></a>
+                        <a style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;;padding: 0;"
+                            class="dropdown-item" href="#"></a>
                     </div>
                 </li>
             </ul>
@@ -99,7 +110,7 @@
         ]
 
         var swiper = new Swiper('#SliderID', {
-            slidesPerView: 4,
+            slidesPerView: 1,
             spaceBetween: 40,
             setWrapperSize: true,
             // init: false,	
@@ -133,23 +144,51 @@
 
         for (let i = 0; i < data.length; i++) {
             // let slide = '<div class="swiper-slide"><img src=' + data[i].src + ' class="blog-image" /></div>'
-            let slide = '<div class="swiper-slide" style="background-image:url('+data[i].src+');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
+                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
             swiper.appendSlide(slide);
         }
 
-        let fullpage = function(){
+        let fullpage = function () {
 
         }
-        let fullpageWithThumb = function(){
-            
+        let fullpageWithThumb = function () {
+            document.querySelector("#fullpageWithThumb").classList.remove('d-none');
+            document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
+            document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
+            document.querySelector("#SliderID").style.height = "calc(100% - 212px)";
+            document.querySelector("#SliderID .swiper-wrapper").innerHTML="";
+            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML="";
+            var galleryThumbs = new Swiper('#fullpageWithThumb', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('#SliderID', {
+                spaceBetween: 40,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
+            for (let i = 0; i < data.length; i++) {
+                let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
+                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+                galleryThumbs.appendSlide(slide);
+                galleryTop.appendSlide(slide);
+            }
         }
-        let TwoSlide = function(){
-            
-        }
-        let MultiSlide = function(){
-            
-        }
+        let TwoSlide = function () {
 
+        }
+        let MultiSlide = function () {
+
+        }
     </script>
 </body>
 
