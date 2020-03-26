@@ -34,10 +34,10 @@
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-                <div class="order-search-navbar" style="order:3;">
+                <div class="order-search-navbar" style="order: 3;">
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <input class="form-control mr-sm-2 br-0 py-0  d-md-none d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
                             <div class="input-group-append">
                                 <img src="../Images/search.png" />
                             </div>
@@ -77,10 +77,10 @@
 
 
                 </div>
-                
+
 
             </nav>
-            
+
         </div>
         <!-- End-Menu -->
 
@@ -98,7 +98,9 @@
                                 <div class="mask rgba-black-light"></div>
                             </div>
                             <div class="carousel-caption carousel-caption-cust text-right">
-                                ضرورت همکاری ایران برای پیشبرد طرح های تحقیقاتی قرآنی در اروپا
+                                <div style="opacity: 1;">
+                                    ضرورت همکاری ایران برای پیشبرد طرح های تحقیقاتی قرآنی در اروپا
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -160,11 +162,13 @@
 
                     <!--Controls-->
                     <a class="carousel-control-prev" href="#carousel-sticky" role="button" data-slide="prev">
-                        <span class="carousel-blog-left" aria-hidden="true"><img src="../Images/Arrow-blog-left.svg"></span>
+                        <span class="carousel-blog-left" aria-hidden="true">
+                            <img src="../Images/Arrow-blog-left.svg"></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carousel-sticky" role="button" data-slide="next">
-                        <span class="carousel-blog-right" aria-hidden="true"><img src="../Images/Arrow-blog-right.svg"></span>
+                        <span class="carousel-blog-right" aria-hidden="true">
+                            <img src="../Images/Arrow-blog-right.svg"></span>
                         <span class="sr-only">Next</span>
                     </a>
                     <!--/.Controls-->
@@ -223,17 +227,18 @@
                                     <li class="nav-item mx-md-2 mx-1">
                                         <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="width: 46px;">
                                             <img src="../Images/view.svg" style="height: 148%;" /></a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item p-0" href="#">
+                                        <div class="dropdown-menu margin-item-dropdown">
+                                            <a class="dropdown-item  p-0" href="#">
                                                 <img src="../Images/hierarchy.svg" style="width: 40px;" /></a>
+                                            <hr />
                                             <a class="dropdown-item p-0" href="#">
-                                                <img src="../Images/map.svg" style="width: 40px;" /></a>
+                                                <img src="../Images/map.svg" style="width: 40px;" /></a><hr />
                                             <a class="dropdown-item p-0" href="#">
                                                 <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
                                         </div>
                                     </li>
                                     <li class="nav-item mr-md-2 mr-1">
-                                        <a class="nav-link dropdown-toggle" href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter" aria-selected="true">فیلتر</a>
+                                        <a class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between" href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter" aria-selected="true"><div class="pl-lg-3 pl-0">فیلتر</div></a>
                                     </li>
                                 </ul>
 
@@ -269,7 +274,7 @@
             </div>
 
             <!-- Begin-Blog -->
-            <div style="background-color: #f3f3f0;">
+            <div style="background-color: #f5f4f6;">
                 <div class="align-parent pt-5">
                     <div class="text-secondary">
                         <img src="../Images/Content.png" />
@@ -280,6 +285,7 @@
                     <!-- Slider--Blog -->
 
                     <div class="col-md-12 slider-blog">
+                        <div class="swiper-button-next btn-slider-blog" style="outline: unset;right: 2.8%;"></div>
                         <div id="SliderID" class="swiper-container swiper-container-cust" style="height: 400px;">
                             <div class="swiper-wrapper" id="SwiperSlider">
                             </div>
@@ -287,11 +293,9 @@
 
                             <!-- <div class="swiper-scrollbar "></div> -->
                         </div>
+                        <div class="swiper-button-prev btn-slider-blog" style="outline: unset;left: 2.8%;"></div>
                     </div>
-                    <div class="col-md-12 btn-slider-blog">
-                        <div class="swiper-button-next pr-md-5"></div>
-                        <div class="swiper-button-prev pl-md-5"></div>
-                    </div>
+
 
 
 
@@ -301,8 +305,8 @@
                             <span></span>
                             <img src="../Images/Arrow-blog-left.svg" />
                         </div>
-                        <div class="col-lg-3 px-0" >
-                           <span> جمعه 24 خرداد</span>
+                        <div class="col-lg-3 px-0">
+                            <span>جمعه 24 خرداد</span>
                         </div>
                     </div>
 
@@ -429,16 +433,14 @@
                 <div class="col-md-8 col-6 px-0">
                     <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
                 </div>
-                <div class="col-md-3 col-4 px-0 text-left">
-                    <span>طراحی سایت:‌ گروه هنری نقطه</span>
-                </div>
-                <div class="col-md-1 col-2 d-flex justify-content-end">
-                    <img src="../Images/design_by.png" />
+                <div class="col-md-4 col-6 px-0 text-left">
+                    <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+                    <img src="../Images/design_by.png" style="padding-right: 8%;">
                 </div>
             </div>
             <!-- End-Footer -->
         </div>
-        <script>	
+        <script>
             window.CreateBlogHome();
         </script>
 </body>
