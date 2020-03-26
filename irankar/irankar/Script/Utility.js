@@ -2,11 +2,18 @@
 ShowDescriptionBlog = function (param) {
     document.querySelector('#description-blog span').textContent = param.getAttribute('desc');
     $("#description-blog").removeClass("d-none");
+    for (var i = 0; i < $("#SwiperSlider").children().length; i++) {
+        if ($("#SwiperSlider").children()[i].textContent != param.textContent )
+            $("#SwiperSlider").children()[i].style.opacity = "0.4";
+    }
 }
 
 HideDescriptionBlog = function (param) {
     //$("#description-blog").removeClass("d-none");
     $("#description-blog").addClass("d-none")
+    for (var i = 0; i < $("#SwiperSlider").children().length; i++) {
+            $("#SwiperSlider").children()[i].style.opacity = "1";
+    }
 }
 ChangeIconCollapse = function (e) {
     debugger;
@@ -88,13 +95,13 @@ CreateBlogHome = function () {
                 slidesPerView: 2,	
                 spaceBetween: 20,	
             },	
-            768: {	
-                slidesPerView: 4,	
+            1024: {	
+                slidesPerView: 3,	
                 spaceBetween: 40,	
             },	
-            1024: {	
+            1440: {	
                 slidesPerView: 4,	
-                spaceBetween: 50,	
+                spaceBetween: 27,	
             },	
         }	
     });	
