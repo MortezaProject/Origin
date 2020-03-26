@@ -107,6 +107,31 @@
                 title: "7قرآن از نظر دانشمندان غربی",
                 desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
             },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
+            {
+                src: "../Images/img1.jpg",
+                title: "7قرآن از نظر دانشمندان غربی",
+                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+            },
         ]
 
         var swiper = new Swiper('#SliderID', {
@@ -157,16 +182,16 @@
             document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
             document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
             document.querySelector("#SliderID").style.height = "calc(100% - 212px)";
-            document.querySelector("#SliderID .swiper-wrapper").innerHTML="";
-            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML="";
-            var galleryThumbs = new Swiper('#fullpageWithThumb', {
+            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+            let galleryThumbs = new Swiper('#fullpageWithThumb', {
                 spaceBetween: 10,
                 slidesPerView: 4,
                 freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
             });
-            var galleryTop = new Swiper('#SliderID', {
+            let galleryTop = new Swiper('#SliderID', {
                 spaceBetween: 40,
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -187,7 +212,24 @@
 
         }
         let MultiSlide = function () {
-
+            document.querySelector("#fullpageWithThumb").classList.add('d-none');
+            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+            let swiper = new Swiper('#SliderID', {
+                slidesPerView: 4,
+                slidesPerColumn: 3,
+                spaceBetween: 10,
+                // slidesPerGroup:3,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+            for (let i = 0; i < data.length; i++) {
+                let slide = '<div class="swiper-slide swiper-slide-MultiSlide" style="background-image:url(' + data[i].src +
+                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+                swiper.appendSlide(slide);
+            }
         }
     </script>
 </body>

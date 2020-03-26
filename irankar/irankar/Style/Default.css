@@ -416,6 +416,11 @@ height: 22px;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
   }
   .swiper-slide-fullpageWithThumb {
     background-size: cover;
@@ -439,6 +444,10 @@ height: 22px;
     opacity: 1;
   }
   /* MultiSlide */
+  .swiper-slide-MultiSlide {
+    height: calc((100% - 30px) / 3)!important;
+  }
+
 
 /* End swiper */
 /*Classes content-blog*/
