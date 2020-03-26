@@ -65,8 +65,21 @@ a:hover {
 
 .search {
     background-color: #f1f2f2 !important;
+    
+}
+.form-control-navbar-search { /* Added 04 - jaygozine kelas haye edit shodeye khode bootstrap */
+    border: 0!important;
+    border-radius: 0!important;
 }
 
+.form-control-navbar-search:focus { /* Added 04 - jaygozine kelas haye edit shodeye khode bootstrap */
+        border-color: #00a693!important;
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem #00a693!important;
+}
+.form-control-navbar-search::-webkit-input-placeholder {	/* Added 04 */
+	color : #d6d5d5!important;
+}
 .br-0 {
     border-radius: 0px !important;
 }
@@ -261,13 +274,15 @@ a:hover {
 }
 
 .Parent-Tab a {
-    color: #495057 !important;
+    color: white;
     font-weight: 500;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-
+.drop-down-color a {
+color:#58595b!important;
+}
 .Parent-Tab .nav-item {
     text-align: center;
 }
