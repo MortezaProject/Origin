@@ -3,14 +3,14 @@
 <head>
     <title>جستجوی</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--    <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
+    <!--<script src="../jquery/jquery-3.4.1.slim.min.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
     <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
-    <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>-->
-    <!--<link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" />-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../bootstrap-4.0.0/dist/js/bootstrap.js"></script>
     <link href="../Style/Default.css" rel="stylesheet" />
     <link href="../fontawesome-5.12.1/css/fontawesome.min.css" rel="stylesheet" />
@@ -18,6 +18,8 @@
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
     <script src="../Script/Utility.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../swiper/swiper.min.js"></script>
 </head>
 <body>
     <div id="wrraper-search">
@@ -34,13 +36,30 @@
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
+                <div class="order-search-navbar" style="order: 3;">
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2 br-0 py-0  d-md-none d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <div class="input-group-append">
+                                <img src="../Images/search.png" />
+                            </div>
+                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
+                        </div>
+
+
+
+                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
+                            <img src="../Images/search_advance.png" />
+                        </div> -->
+                    </form>
+                </div>
                 <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
-                        <li class="nav-item nav-item-Custom">
+                        <li class="nav-item active nav-item-Custom">
                             <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item nav-item-Custom">
@@ -60,23 +79,7 @@
 
 
                 </div>
-                <div class="order-search-navbar">
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <input class="form-control form-control-navbar-search mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
-                            <div class="input-group-append">
-                                <img src="../Images/search.png" />
-                            </div>
-                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
-                        </div>
 
-
-
-                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
-                            <img src="../Images/search_advance.png" />
-                        </div> -->
-                    </form>
-                </div>
 
             </nav>
 
@@ -98,9 +101,9 @@
 
         <div id="MainContentSearch" class="px-0 Parent-Tab">
             <!-- Start-Content-->
-            <div class="nav-tabs">
+            <div class="nav-tabs align-parent" style="border-bottom: 0.35mm solid #dee2e6;">
                 <ul class="nav nav-pills px-0" id="advanced-search-gf" role="tablist">
-                    <li class="nav-item mr-md-2 mr-sm-4">
+                    <li class="nav-item mr-md-0 mr-sm-0">
                         <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions" role="tab" aria-controls="menu1" aria-selected="false">نسخه ها</a>
                     </li>
                     <li class="nav-item">
@@ -117,15 +120,15 @@
             <div>
                 <div class="tab-content">
 
-                    <div id="advanced-search-versions" class="tab-pane show active fade container-fluid container-fluid-blog">
+                    <div id="advanced-search-versions" class="tab-pane show active fade container-fluid align-parent">
                         <!--  -->
                         <div id="accordion">
-                            <div class="card px-md-5" style="background-color: unset!important;">
+                            <div class="card px-md-3" style="background-color: unset!important;">
                                 <div class="card-header row p-0 col-md-9" id="headingOne">
                                     <div class="col-md-6 search-inner-header px-md-0">
                                         <span>شناسه نسخه خطی</span>
                                     </div>
-                                    <div class="col-md-6 px-0 text-left">
+                                    <div class="col-md-6 px-0 text-left d-flex align-items-end justify-content-end">
                                         <button class="btn btn-link p-0 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
                                             <img class="key-accardion" src="../Images/Arrow-up.svg" style="height: 10px;">
                                         </button>
@@ -204,12 +207,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card px-md-5" style="background-color: unset!important;">
+                            <div class="card px-md-3" style="background-color: unset!important;">
                                 <div class="card-header row p-0 col-md-9" id="headingTwo">
                                     <div class="col-md-6 search-inner-header px-md-0">
                                         <span>نوع نسخه خطی</span>
                                     </div>
-                                    <div class="col-md-6 px-0 text-left">
+                                    <div class="col-md-6 px-0 text-left d-flex align-items-end justify-content-end">
                                         <button class="btn btn-link p-0 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
                                             <img src="../Images/Arrow-up.svg" style="height: 10px;">
                                         </button>
@@ -241,12 +244,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-md-4" style="background-color: unset!important;">
-                                <div class="card-header row py-0 pl-2 pr-4 col-md-9" id="headingThree" style="border-bottom: unset;">
-                                    <div class="col-md-6 search-inner-header px-md-0" style="border-bottom: 1px solid rgba(0,0,0,.125);">
-                                        <span>وصف نسخه خطی</span>
+                            <div class="card mx-md-0" style="background-color: unset!important;">
+                                <div class="card-header row py-0 pl-2 pr-3 col-md-9" id="headingThree" style="border-bottom: unset;">
+                                    <div class="col-md-6 px-0" style="border-bottom: 1px solid rgba(0,0,0,.125);">
+                                        <div class=" search-inner-header px-md-0">
+                                            <span>وصف نسخه خطی</span>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 px-0 text-left" style="border-bottom: 1px solid rgba(0,0,0,.125);">
+                                    <div class="col-md-6 px-0 text-left d-flex align-items-end justify-content-end" style="border-bottom: 1px solid rgba(0,0,0,.125);">
                                         <button class="btn btn-link p-0 ml-1 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" onclick="ChangeIconCollapse(this)">
                                             <img src="../Images/Arrow-up.svg" style="height: 10px;">
                                         </button>
@@ -256,7 +261,7 @@
                                     <div class="card-body field-spacing px-md-0">
                                         <!-- ش -->
                                         <ul class="nav nav-tabs nav-pills px-md-0 col-md-9" id="Ul1" role="tablist">
-                                            <li class="nav-item">
+                                            <li class="nav-item mr-0">
                                                 <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions-request" role="tab" aria-controls="menu1" aria-selected="false">خاستگاه</a>
                                             </li>
                                             <li class="nav-item">
@@ -316,7 +321,8 @@
                                             </div>
                                             <div id="advanced-search-versions-physic" class="tab-pane fade field-spacing-second">
                                                 <!--  -->
-                                                <ul class="nav nav-tabs nav-tabs-cust nav-pills px-md-0" id="advanced-search-versions-physic-child" role="tablist">	<!-- Updated 05 -->
+                                                <ul class="nav nav-tabs nav-tabs-cust nav-pills px-md-0" id="advanced-search-versions-physic-child" role="tablist">
+                                                    <!-- Updated 05 -->
                                                     <li class="nav-item">
                                                         <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions-physic-child-material" role="tab" aria-controls="menu1" aria-selected="false">مواد</a>
                                                     </li>
@@ -401,18 +407,19 @@
 
 
                     </div>
-                    <div id="advanced-search-library" class="container-fluid tab-pane fade">
+                    <div id="advanced-search-library" class="container-fluid tab-pane fade align-parent">
                         <!--  -->
-                        <div class="row field-spacing-second px-md-5">
+                        <div class="row field-spacing-second">
                             <div class="col-sm-12 search-inner-content mx-md-3">
                                 <div class="form-group row">
                                     <label for="" class="col-sm-3 col-form-label">جستجو</label>
                                     <div class="col-sm-6">
-                                        <div class="dropdown Parent-Tab-cust">	<!-- Updated 05 -->
+                                        <div class="dropdown Parent-Tab-cust">
+                                            <!-- Updated 05 -->
                                             <button class="btn btn-secondary-cust dropdown-toggle col-12" style="text-align: right;" type="button" id="Button1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 همه موارد
                                             </button>
-                                            <div class="dropdown-menu col-12 drop-down-color"  aria-labelledby="dropdownMenuButton">
+                                            <div class="dropdown-menu col-12 drop-down-color" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="#">نسخه</a>
                                                 <a class="dropdown-item" href="#">مجموعه</a>
                                                 <a class="dropdown-item" href="#">منابع آنلاین</a>
@@ -520,13 +527,14 @@
 
         </div>
 
-        <div id="buttons-advance-search" class="container row py-md-5 mb-md-4">
+        <div id="buttons-advance-search" class="container-fluid mx-0 row py-md-5 mb-md-4 align-parent">
             <div class="col-md-9">
+                <div class="col-lg-4 px-0" style="float:left;">
+                    <button type="button" class="btn btn-primary btn-md btn-search-advance ml-1">شروع دوباره</button>
+                    <button type="button" class="btn btn-primary btn-md btn-search-advance mr-1">جستجو</button>
+                </div>
             </div>
-            <div class="col-md-3 d-flex justify-content-between">
-                <button type="button" class="btn btn-secondary btn-md btn-search-advance">شروع دوباره</button>
-                <button type="button" class="btn btn-primary btn-md btn-search-advance">جستجو</button>
-            </div>
+
 
 
         </div>
