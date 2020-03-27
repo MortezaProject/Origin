@@ -154,7 +154,7 @@ a:hover {
     /*height: 59.2px;
     background-color: rgb(101,100,98);*/
     position: relative;
-    top: -45px;
+    top: -50px;
     z-index: 1000;
 }
 
@@ -205,6 +205,7 @@ a:hover {
     padding-top: 8px;
     padding-bottom: 8px;
     color: #fff;
+    height: 11.5%;
 }
 
 /*Classes Sticky*/
@@ -318,21 +319,22 @@ a:hover {
 }
 
 .item-blog {
-    height: 336px;
+    height: 382px;
     max-width: 100%;
     border: solid 2px #d1d3d4;
     background-color: #f1f2f2;
 }
 
     .item-blog img {
-        height: 250.5px;
+        height: 278.5px;
     }
 
 .blog-image {
     width: 100%;
     height: 100%;
-    padding: 7px;
+    padding: 10px;
 }
+
 
 .carousel-control-next,
 .carousel-control-prev {
