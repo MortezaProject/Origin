@@ -3,9 +3,18 @@
     direction: rtl;
     color: white;
     text-align: right;
-    font-family: iransansweb;
-}
+    font-family: IRANSansWeb;
+    font-family:IRANSansWeb Medium Regular;
 
+}
+@font-face {font-family: "IRANSansWeb Medium Regular";
+  src: url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.eot"); /* IE9*/
+  src: url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.svg#IRANSansWeb Medium Regular") format("svg"); /* iOS 4.1- */
+}
 /*a {
     color: #929292!important;
 }*/
@@ -839,7 +848,7 @@ hr.line {
 
 .btn-primary {
     color: #fff;
-    background-color: #00a693 !important;
+    /*background-color: #00a693 !important;*/
     border-color: 0 !important;
     border-radius: 0 !important;
     border-width: 0 !important;
@@ -907,7 +916,7 @@ hr.line {
     font-weight: bold !important;
     font-size: 19px;
     margin-top: 40px;
-    margin-bottom: 2px;
+    margin-bottom: 7px;
 }
 
 .search-inner-content {
@@ -928,7 +937,7 @@ hr.line {
         background-color: #eae8e8;
         border-color: #00a693 !important;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem #00a693 !important;
+        box-shadow: 0 0 0 0.35mm #00a693 !important;
     }
 
 .MapMarker {
@@ -961,15 +970,17 @@ hr.line {
     }
 
     #MainContentSearch .field-spacing-second {
-        margin-top: 40px;
+        margin-top: 80px;
     }
 
-
+.search-inner-content .form-group {
+margin-bottom:0.75rem!important;
+}
 
 /*------------------------------------------------------*/
 
 #wrraper-search {
-    background-color: #f5f5f5;
+    background-color: #fbfaf6;
 }
 
 #accordion .card .card-body .form-group .col-sm-3 {
@@ -987,8 +998,8 @@ hr.line {
 }
 
 #MainContentSearch .nav-item {
-    margin-left: .5rem !important;
-    margin-right: .5rem !important;
+    margin-left: .5rem;
+    margin-right: .5rem ;
 }
 
     #MainContentSearch .nav-item a {
@@ -1005,12 +1016,24 @@ hr.line {
     /* Updated */
     height: 33px;
     padding: 0px;
+    background-color:#d1d3d4;
 }
+    .btn-search-advance:hover {
+    background-color:#00a693;
+    }
+        .btn-search-advance:active {
+    background-color:#00a693!important;
+    box-shadow:0 0 0 0!important;
 
-    .btn-search-advance.btn-secondary {
+    }
+        .btn-search-advance:focus {
+    background-color:#00a693;
+    box-shadow:0 0 0 0;
+    }
+    /*.btn-search-advance.btn-secondary {
         background-color: #d3d2d2 !important;
         border-color: #d3d2d2 !important;
-    }
+    }*/
 
 .jstree-default .jstree-themeicon {
     background-position: -260px -4px;
