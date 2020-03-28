@@ -1922,6 +1922,8 @@
     <Content Include="Script\tree.js" />
     <Content Include="Script\Utility.js" />
     <Content Include="Style\Default.css" />
+    <Content Include="swiper\swiper.min.css" />
+    <Content Include="swiper\swiper.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
