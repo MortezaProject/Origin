@@ -266,7 +266,7 @@ a:hover {
     justify-content: right !important;
 }
 
-.dropdown-menu {
+.dropdown-menu-filter {
     float: left !important;
     min-width: 3rem !important;
     background-color: #d1d3d4 !important;
@@ -275,7 +275,7 @@ a:hover {
 }
 
 
-.nav-pills .nav-link {
+#Content-Map .nav-pills .nav-link ,#MainContentSearch .nav-pills .nav-link {
     border-radius: 0 !important;
     height: 33px;
     width: 108px;
