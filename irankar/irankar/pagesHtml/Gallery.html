@@ -31,44 +31,76 @@
     <div style="width: 100%;height: 100%;">
 
         <div id="SliderID" class="swiper-container"
-            style="width: 100%;height: calc(100% - 31.4px);background-color:rgba(0, 0, 0, 0.8);margin: auto;padding: 40px;">
+            style="width: 100%;height: calc(100% - 31.4px);background-color:rgba(0, 0, 0, 0.8);margin: auto;padding: 52px 141px;">
             <div class="swiper-wrapper" id="SwiperSlider"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <!-- <div class="swiper-pagination"></div> -->
             <!-- <div class="swiper-scrollbar "></div> -->
         </div>
-        <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
+        <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none"
+        style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="swiper-wrapper" id="SwiperSlider"></div>
         </div>
-        <div style="height: 31.4px;background-color:rgba(66, 66, 66, 0.6)">
-            <!-- view mode -->
-            <div class="col-md-3 col-5 ">
-                <ul class="nav nav-pills" id="PillsTab-left" role="tablist">
-                    <li class="nav-item">
-                        <img class="nav-link" style="width: 50px;background: unset;" data-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
-                        <div class="dropdown-menu" x-placement="bottom-start"
-                            style="background-color: #d6d6d6;min-width: unset;padding: 0;position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a onclick="fullpage()"
-                                style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
-                                class="dropdown-item" href="#"></a>
-                            <a onclick="fullpageWithThumb()"
-                                style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
-                                class="dropdown-item" href="#"></a>
-                            <a onclick="TwoSlide()"
-                                style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
-                                class="dropdown-item" href="#"></a>
-                            <a onclick="MultiSlide()"
-                                style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
-                                class="dropdown-item" href="#"></a>
+        <!-- toolbar -->
+        <div class="container-fluid" id="gallery-toolbar">
+            <div class="row" style="margin: 0 6rem;" >
+                <div class="col-md-2">
+                    <div class="gallery-toolbar-desc">الفتح: 29/33 - الفتح: 29/54</div>
+                </div>
+                <div class="col-md-2">
+                    <div class="input-group gallery-toolbar-pages">
+                        <div class="input-group-prepend">
+                            <div class="gallery-toolbar-pages-text">برگه</div>
                         </div>
-                    </li>
-                </ul>
-
+                        <!-- <div class="input-group-prepend"> -->
+                            <div class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">45</div>
+                            <div class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">پشت</div>
+                            <div class="gallery-toolbar-pages-text">از 215</div>
+                        <!-- </div> -->
+                       
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" class="form-control-range gallery-toolbar-range" id="formControlRange">
+                </div>
+                <div class="col-md-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <ul class="nav nav-pills" id="PillsTab-left" role="tablist">
+                                <li class="nav-item" style="width: 30px;height: 30px;">
+                                    <img class="nav-link" style="padding: unset;" data-toggle="dropdown" href="#"
+                                        role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
+                                    <div class="dropdown-menu" x-placement="bottom-start"
+                                        style="background-color: #d6d6d6;min-width: unset;padding: 0;position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                        <a onclick="fullpage()"
+                                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                                            class="dropdown-item" href="#"></a>
+                                        <a onclick="fullpageWithThumb()"
+                                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                                            class="dropdown-item" href="#"></a>
+                                        <a onclick="TwoSlide()"
+                                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                                            class="dropdown-item" href="#"></a>
+                                        <a onclick="MultiSlide()"
+                                            style="background-image: url(../Images/hierarchy.svg);background-repeat: no-repeat;background-size: contain;background-position: center;height: 40px;padding: 0;"
+                                            class="dropdown-item" href="#"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <img class="img" src="../Images/view.svg"/>  
+                        <img class="img" src="../Images/view.svg"/>  
+                        <img class="img" src="../Images/view.svg"/> 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-toolbar-license">© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران می‌باشد.</div>
+                </div>
             </div>
-            <!-- view mode -->
         </div>
+        
+        <!-- toolbar -->
     </div>
     <script>
         let data = [{
@@ -135,7 +167,7 @@
 
         var swiper = new Swiper('#SliderID', {
             slidesPerView: 1,
-            spaceBetween: 40,
+            spaceBetween: 150,
             setWrapperSize: true,
             // init: false,	
             pagination: {
@@ -180,7 +212,7 @@
             document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
             var swiper = new Swiper('#SliderID', {
                 slidesPerView: 1,
-                spaceBetween: 40,
+                spaceBetween: 150,
                 setWrapperSize: true,
                 // init: false,	
                 pagination: {
@@ -212,13 +244,13 @@
             document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
             let galleryThumbs = new Swiper('#fullpageWithThumb', {
                 spaceBetween: 10,
-                slidesPerView: 4,
+                slidesPerView: 10,
                 freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
             });
             let galleryTop = new Swiper('#SliderID', {
-                spaceBetween: 40,
+                spaceBetween: 150,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -241,7 +273,7 @@
             document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
             var swiper = new Swiper('#SliderID', {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                spaceBetween: 150,
                 setWrapperSize: true,
                 // init: false,	
                 pagination: {

@@ -15,6 +15,18 @@
   url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.svg#IRANSansWeb Medium Regular") format("svg"); /* iOS 4.1- */
 }
+@font-face {
+    font-family: 'BYekan';
+    src: url('../fonts/BYekan/Yekan.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/BYekan/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/BYekan/Yekan.woff2') format('woff2'), /* Modern Browsers */
+    url('../fonts/BYekan/Yekan.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/BYekan/Yekan.otf') format('opentype'), /* Open Type Font */
+    url('../fonts/BYekan/Yekan.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/BYekan/Yekan.svg#Yekan') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
 /*a {
     color: #929292!important;
 }*/
@@ -403,6 +415,58 @@ width:93%!important;
         height: 22px;
     }
 /* swiper */
+#gallery-toolbar{
+    height: 31.4px;
+    background-color:rgba(66, 66, 66, 0.6)
+}
+#gallery-toolbar img{
+    width: 15px;
+    height: 15px;
+    margin: 0.5rem;
+}
+#gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-text{
+    margin:5px;
+    font-family: BYekan;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: right;
+    color: #f5f5f5;
+}
+#gallery-toolbar .gallery-toolbar-license {
+    margin:5px;
+    font-family: BYekan;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f5f5f5;
+  }
+  #gallery-toolbar .gallery-toolbar-range{margin:5px;}
+  #gallery-toolbar .gallery-toolbar-desc{
+    margin:5px;
+    font-family: BYekan;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: normal;
+    text-align: right;
+    color: #333333;
+  }
+#gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-btn{
+    background-color: #f5f5f5;
+    width: 33px;
+    color: #929292;
+    text-align: center;
+}
 #SliderID .swiper-button-next{outline: unset;left: 90px;}
 #SliderID .swiper-button-prev{outline: unset;right: 90px;}
 .swiper-container {
