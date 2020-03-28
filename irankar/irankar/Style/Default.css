@@ -424,6 +424,9 @@ width:93%!important;
     #description-blog img {
         height: 22px;
     }
+        .about-mob-img {
+    display:none;
+    }
 /* swiper */
 #gallery-toolbar {
     height: 31.4px;
@@ -1330,6 +1333,9 @@ hr.line {
     }
     #description-blog img {
     float:left;
+    }
+    .about-mob-img {
+    display:inline-block;
     }
     .show > .nav-link,
     .active > .nav-link {
