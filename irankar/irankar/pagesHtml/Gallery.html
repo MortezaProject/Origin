@@ -156,12 +156,13 @@
             },
         ]
         document.querySelector("#formControlRange").min= 0;
-        document.querySelector("#formControlRange").max= data.length;
+        document.querySelector("#formControlRange").max= data.length-1;
         let changeRange = function(e){
             let mySwiper = document.querySelector('#SliderID').swiper;
-            if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
-            else mySwiper.slidePrev();
-            e.setAttribute("oldval",e.valueAsNumber)            
+            // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
+            // else mySwiper.slidePrev();
+            mySwiper.slideTo(e.valueAsNumber);
+            // e.setAttribute("oldval",e.valueAsNumber)            
         }
         var swiper = new Swiper('#SliderID', {
             slidesPerView: 1,
