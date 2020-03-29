@@ -204,6 +204,7 @@
         }
 
         let fullpage = function () {
+            document.querySelector("#SliderID").classList.remove('py-10');
             document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
             document.querySelector("#fullpageWithThumb").classList.add('d-none');
             document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
@@ -233,6 +234,7 @@
             }
         }
         let fullpageWithThumb = function () {
+            document.querySelector("#SliderID").classList.remove('py-10');
             document.querySelector("#fullpageWithThumb").classList.remove('d-none');
             document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
             document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
@@ -265,6 +267,7 @@
             }
         }
         let TwoSlide = function () {
+            document.querySelector("#SliderID").classList.add('py-10');
             document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
             document.querySelector("#fullpageWithThumb").classList.add('d-none');
             document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
@@ -294,6 +297,7 @@
             }
         }
         let MultiSlide = function () {
+            document.querySelector("#SliderID").classList.remove('py-10');
             document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
             document.querySelector("#fullpageWithThumb").classList.add('d-none');
             document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";

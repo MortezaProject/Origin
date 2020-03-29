@@ -29,6 +29,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.py-10{
+    padding-top: 10rem!important;
+    padding-bottom: 10rem!important;
+}
 /*a {
     color: #929292!important;
 }*/
