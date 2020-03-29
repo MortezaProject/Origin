@@ -89,7 +89,9 @@ a:hover {
 .search {
     background-color: #f1f2f2 !important;
 }
-
+.w-border {
+width:73.3%;
+}
 .form-control-navbar-search { /* Added 04 - jaygozine kelas haye edit shodeye khode bootstrap */
     border: 0!important;
     border-radius: 0!important;
@@ -1281,6 +1283,9 @@ hr.line {
 /*Responsive  For Mobile*/
 
 @media screen and (max-width: 600px) and (min-width: 300px) {
+    .align-parent-mob {
+    padding-left:1%;
+    }
     .order-brand-navbar {
         order: 1;
     }
@@ -1293,9 +1298,7 @@ hr.line {
         right: 206px;
     }
 
-    .nav-item-Custom-last {
-        padding: 0 30px !important;
-    }
+
 
     /*.order-menu-navbar {
         order: 3;
@@ -1396,7 +1399,7 @@ hr.line {
             padding: 0 1%!important;
         }*/
 
-    #Content-Map .nav-pills .nav-link {
+    #Content-Map .nav-pills .nav-link, #MainContentSearch .nav-pills .nav-link {
         height: 25px;
         width: 68px;
         font-size: 16px !important;
@@ -1461,6 +1464,39 @@ hr.line {
     .footer img {
         height: 25px;
     }
+    .w-border {
+        width:95%;
+    }
+    #MainContentSearch .nav-item {
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+    .width-tab-mob-search {
+    width:90px!important;
+    }
+    #advanced-search-versions-request {
+    padding-left: 4.75% !important;
+}
+    .padding-r-l {
+    padding-left:0px;
+    padding-right:0px;
+    }
+    #advanced-search-library .search-inner-content .form-group {
+        padding-left: 1rem!important;
+        padding-right: 1rem!important;
+    }
+        #advanced-search-blog .search-inner-content .form-group {
+        padding-left: 1rem!important;
+        padding-right: 1rem!important;
+    }
+    .search-inner-content {
+    font-size:15px;
+    }
+
+    .padding-menu ,.padding-menu .nav-item {
+    padding:0px;
+    }
+
 }
 
 /*Responsive  For Mobile*/
