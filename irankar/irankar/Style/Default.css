@@ -599,9 +599,9 @@ width:93%!important;
 }
 
 .gallery-thumbs-fullpageWithThumb {
-    height: 20%;
+    height: 15%;
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: 20px 0;
   }
   .gallery-thumbs-fullpageWithThumb .swiper-slide {
     width: 25%;
