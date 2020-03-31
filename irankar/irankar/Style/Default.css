@@ -550,6 +550,7 @@ width:93%!important;
 
 .swiper-container-cust {
     padding: 2% 1.2% !important;
+    background-color:#F5F4F6!important;
 }
 
 .swiper-slide {
@@ -645,7 +646,9 @@ a {
 hr.line {
     border-top: 2px solid #d3d3d5;
 }
-
+.peyvandha {
+padding-right:3rem;
+}
 .about-menu {
     border-bottom: solid;
     border-top: solid;
@@ -1455,7 +1458,10 @@ hr.line {
     #Footer {
         font-size: 10px !important;
     }
-
+    .peyvandha {
+padding-right:0rem;
+padding-left:0rem;
+}
     .about-mob {
         text-align: unset !important;
     }
@@ -1538,5 +1544,11 @@ hr.line {
 
     .navbar-light .navbar-toggler {
         border: 0;
+    }
+
+}
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+        .peyvandha {
+    padding-right:0rem!important;
     }
 }
