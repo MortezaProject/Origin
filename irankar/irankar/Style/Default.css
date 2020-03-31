@@ -1291,6 +1291,20 @@ padding-right:3rem;
 }
 /*--*********************----------------------------------Custom Class Bootstrap-----------------*************************************--*/
 
+/*searchresult*/
+#Ul1-Sresult .nav-item {
+width:21%;
+}
+#Ul1-Sresult .nav-item button {
+width:100%;
+}
+#SearchResult label {
+margin:0!important;
+    display: flex!important;
+    align-items: center!important;
+    color:#939598;
+}
+/*searchresult*/
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-3 {
         float: left;
