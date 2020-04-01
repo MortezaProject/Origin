@@ -10,7 +10,7 @@ ShowDescriptionBlog = function (param) {
 }
 
 HideDescriptionBlog = function (param) {
-    //$("#description-blog").removeClass("d-none");
+    //morteza $("#description-blog").removeClass("d-none");
     //$("#description-blog").addClass("d-none")
     for (var i = 0; i < $("#SwiperSlider").children().length; i++) {
             $("#SwiperSlider").children()[i].style.opacity = "1";
