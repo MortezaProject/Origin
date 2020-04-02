@@ -1386,7 +1386,8 @@ main-tab-searchr {
   color: #000000;
 }
 .versin-detail-data-text .versin-detail-data-text-subject{color:#929292;}
-.versin-detail-data-img .container > div{
+.versin-detail-data-img .versin-detail-data-img-title{
+    display: none;
     position: absolute;
     bottom: 8px;
     font-family: BYekan;
@@ -1399,6 +1400,7 @@ main-tab-searchr {
     text-align: right;
     color: white;
 }
+.versin-detail-data-img:hover .versin-detail-data-img-title[mode="gallery"]{display:block;}
 /* end list page */
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-3 {

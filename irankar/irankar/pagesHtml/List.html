@@ -556,7 +556,14 @@
                 _child.classList.add('versin-detail-data-parent');
                 _child.innerHTML='<div class="container-fluid">'+
                     '<div class="row">'+
-                    '<div class="col-md-6 versin-detail-data-img"><div class="container"><img style="height:230px;width:95%;" class="img" src="'+ dt.src +'"/><div>test</div></div></div>'+
+                    '<div class="col-md-6 versin-detail-data-img"><div class="container"><img style="height:230px;width:95%;" class="img" src="'+ dt.src +'"/>'+
+                        '<div class="versin-detail-data-img-title mr-3">'+
+                            '<div class="container-fluid">'+
+                                '<div class="row"><div> نسخه شماره </div><div>'+dt.id+'</div></div>'+
+                                '<div class="row"><div> محل نگهداری: </div><div>'+dt.place+'</div></div>'+
+                            '</div>'+    
+                        '</div>'+
+                    '</div></div>'+
                     '<div class="col-md-6 versin-detail-data-text">'+
                         '<div class="row mb-3"><div> نسخه شماره </div><div>'+dt.id+'</div></div>'+
                         '<div class="row"><div class="versin-detail-data-text-subject"> محل نگهداری: </div><div>'+dt.place+'</div></div>'+
@@ -579,9 +586,14 @@
         }
         version_childs();
         let Version_ListViewMode_Onclick = function(){
-            
+            document.querySelectorAll('.versin-detail-data-img-title').forEach(function(el,i){
+                el.setAttribute('mode','list')
+            })
         }
         let Version_GalleryViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-img-title').forEach(function(el,i){
+                el.setAttribute('mode','gallery')
+            })
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.add('col-md-3');
                 el.classList.remove('col-md-6');
@@ -599,20 +611,28 @@
             })
         }
         let Version_OneViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-img-title').forEach(function(el,i){
+                el.setAttribute('mode','one')
+            })
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.remove('col-md-6');
                 el.classList.add('col-md-12');
             })
             document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
                 el.classList.remove('col-md-6');
+                el.classList.remove('col-md-12');
                 el.classList.add('col-md-3');
             })
             document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
+                el.classList.remove('d-none');
                 el.classList.remove('col-md-6');
                 el.classList.add('col-md-9');
             })
         }
         let Version_TwoViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-img-title').forEach(function(el,i){
+                el.setAttribute('mode','two')
+            })
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.add('col-md-6');
                 el.classList.remove('col-md-12');
@@ -620,8 +640,10 @@
             document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
                 el.classList.add('col-md-6');
                 el.classList.remove('col-md-3');
+                el.classList.remove('col-md-12');
             })
             document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
+                el.classList.remove('d-none');
                 el.classList.add('col-md-6');
                 el.classList.remove('col-md-9');
             })
