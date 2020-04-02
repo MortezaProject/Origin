@@ -146,8 +146,6 @@
                                     x-placement="bottom-start"
                                     style="position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <!-- موقعیت -->
-                                    <a id="TreeMode" class="dropdown-item  p-0 show_position_dropdown" href="#" onclick="TreeMode_Onclick()">
-                                        <img src="../Images/hierarchy.svg" style="width: 40px;" /></a>
                                     <a id="MapMode" class="dropdown-item p-0 show_position_dropdown" href="#" onclick="MapMode_Onclick()">
                                         <img src="../Images/map.svg" style="width: 40px;" /></a>
                                     <a id="TreeMapMode" class="dropdown-item p-0 show_position_dropdown" href="#"
@@ -193,14 +191,8 @@
                     <div class="tab-pane fade show active" id="pills-Location" role="tabpanel"
                         aria-labelledby="pills-Location-tab">
                         <div class="container-fluid d-flex justify-content-center my-4">
-                            <div id="treeid" class="swiper-container col-12" style="height: 336px;">
-                                <div class="swiper-wrapper" id="TreeSwiperSlider"></div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-scrollbar "></div>
-                            </div>
-                            <div id="mapid" name="maps" class="col-8 d-none" style="height: 336px;"></div>
+                            <div id="treeid" class="swiper-container col-3" style="height: 336px;overflow:auto;"></div>
+                            <div id="mapid" name="maps" class="col-9" style="height: 336px;"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-Collection" role="tabpanel"
@@ -317,34 +309,14 @@
             })
         }
         //first tab
-        let swiper = new CreateSlider({
-            ContainerID: 'treeid',
-            ChildNode: document.getElementById('TreeSwiperSlider'),
-            NumberOfEachSlider: 1,
-            NumberOfTree: 6,
-            ID: "SingleTreeID"
-        });
-        let TreeMode_Onclick = function () {
-            document.getElementById('treeid').classList.remove('d-none');
-            document.getElementById('treeid').classList.add('col-12');
-            document.getElementById('mapid').classList.add('d-none');
-        }
-        let MapMode_Onclick = function () {
-            document.getElementById('mapid').classList.add('col-12');
-            document.getElementById('mapid').classList.remove('col-8');
-            document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('treeid').classList.add('d-none');
-
-        }
-        let TreeMapMode_Onclick = function () {
-            document.getElementById('mapid').classList.remove('col-12');
-            document.getElementById('mapid').classList.add('col-8');
-            document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('treeid').classList.remove('d-none');
-            document.getElementById('treeid').classList.add('col-4');
-            document.getElementById('treeid').classList.remove('col-12');
-            swiper.update();
-        }
+        // let swiper = new CreateSlider({
+        //     ContainerID: 'treeid',
+        //     ChildNode: document.getElementById('TreeSwiperSlider'),
+        //     NumberOfEachSlider: 1,
+        //     NumberOfTree: 6,
+        //     ID: "SingleTreeID"
+        // });
+        
         let setMap = {
             view: {
                 lat: 32.306,
@@ -354,9 +326,25 @@
             marker: []
         }
         let map = new CreateMap("mapid", setMap);
-        for (let i = 0; i < 6; i++) {
-            let setTree = null;
-            new CreateTree("SingleTreeID" + i, setTree, map);
+        let setTree = null;
+        new CreateTree("treeid", setTree, map);
+
+        let MapMode_Onclick = function () {
+            document.getElementById('mapid').classList.add('col-12');
+            document.getElementById('mapid').classList.remove('col-9');
+            document.getElementById('mapid').classList.remove('d-none');
+            document.getElementById('treeid').classList.add('d-none');
+            map.invalidateSize();
+        }
+        let TreeMapMode_Onclick = function () {
+            document.getElementById('mapid').classList.remove('col-12');
+            document.getElementById('mapid').classList.add('col-9');
+            document.getElementById('mapid').classList.remove('d-none');
+            document.getElementById('treeid').classList.remove('d-none');
+            document.getElementById('treeid').classList.add('col-3');
+            document.getElementById('treeid').classList.remove('col-12');
+            map.invalidateSize();
+            // swiper.update();
         }
         //second tab
 
