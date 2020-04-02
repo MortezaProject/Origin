@@ -215,16 +215,16 @@
                     <div class="tab-pane fade" id="pills-prescription" role="tabpanel"
                         aria-labelledby="pills-prescription-tab">
                         <div class="container-fluid d-flex justify-content-start my-4">
-                            <div class="">
+                            <div style="width: 100%;">
                                 <div style="height: 50px;"></div>
                                 <div id="version_childs"></div>
-                                <div style="width: 100%;">
+                                <!-- <div> -->
                                     <div id="version_childs_slider" class="swiper-container">
                                         <div id="version_childs_slider_wrapper" class="swiper-wrapper" ></div>
                                         <div class="swiper-button-next"></div>
                                         <div class="swiper-button-prev"></div>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                             </div>
 
                         </div>
@@ -624,7 +624,7 @@
             let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
                 itemChild="";
             for (let i = 0; i < versionData.length; i++) {
-                if(i % 4 == 0){
+                if(i % 12 == 0){
                     let swiper_slide = document.createElement("div");
                     swiper_slide.classList.add("swiper-slide");
                     _div.append(swiper_slide);
@@ -634,11 +634,12 @@
                 }
             
                 let slide = document.createElement("div");
-                slide.textContent = versionData[i].id;
+                slide.classList.add('version_childs_slider_ListMode_text')
+                slide.textContent = "نسخه شماره "+versionData[i].id;
                 itemChild.append(slide)
             }
             let swiper = new Swiper('#version_childs_slider', {
-                slidesPerView: 4,
+                slidesPerView: 1,
                 spaceBetween: 10,
                 // setWrapperSize: true,
                 // init: false,	
@@ -664,20 +665,26 @@
                     },
                     1024: {
                         slidesPerView: 4,
-                        spaceBetween: 100,
+                        spaceBetween: 50,
 
                     },
                 }
             });
             
         }
-        version_childs_slider();
+        
         let Version_ListViewMode_Onclick = function(){
+            let swiper = document.querySelector('#version_childs_slider')
+            if(swiper.querySelector('.swiper-wrapper').children.length == 0) version_childs_slider();
+            swiper.classList.remove('d-none');
+            document.querySelector('#version_childs').classList.add('d-none');
             document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
                 el.setAttribute('mode','list')
             })
         }
         let Version_GalleryViewMode_Onclick = function(){
+            document.querySelector('#version_childs_slider').classList.add('d-none');
+            document.querySelector('#version_childs').classList.remove('d-none');
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.add('col-md-3');
                 el.classList.remove('col-md-6');
@@ -696,6 +703,8 @@
             })
         }
         let Version_OneViewMode_Onclick = function(){
+            document.querySelector('#version_childs_slider').classList.add('d-none');
+            document.querySelector('#version_childs').classList.remove('d-none');
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.remove('col-md-6');
                 el.classList.add('col-md-12');
@@ -713,6 +722,8 @@
             })
         }
         let Version_TwoViewMode_Onclick = function(){
+            document.querySelector('#version_childs_slider').classList.add('d-none');
+            document.querySelector('#version_childs').classList.remove('d-none');
             document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
                 el.classList.add('col-md-6');
                 el.classList.remove('col-md-12');
