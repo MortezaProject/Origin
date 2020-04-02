@@ -1400,7 +1400,9 @@ main-tab-searchr {
     text-align: right;
     color: white;
 }
-.versin-detail-data-img:hover .versin-detail-data-img-title[mode="gallery"]{display:block;}
+.versin-detail-data-img[mode="gallery"]:hover .versin-detail-data-img-title{display:block;}
+.versin-detail-data-img[mode="gallery"]:hover img{filter: brightness(50%);}
+
 /* end list page */
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-3 {
