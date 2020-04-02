@@ -161,25 +161,22 @@
                                         <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
                                     <!-- نسخه -->
                                     <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
+                                        onclick="Version_ListViewMode_Onclick()">
                                         <img src="../Images/list-view.svg" style="width: 40px;" />
                                     </a>
                                     <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
+                                        onclick="Version_GalleryViewMode_Onclick()">
+                                        <img src="../Images/gallery-view.svg" style="width: 40px;" />
+                                    </a>
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="Version_OneViewMode_Onclick()">
                                         <img src="../Images/one-row-view.svg" style="width: 40px;" />
                                     </a>
                                     <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
+                                        onclick="Version_TwoViewMode_Onclick()">
                                         <img src="../Images/two-row-view.svg" style="width: 40px;" />
                                     </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
-                                        <img src="../Images/tree-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
-                                        <img src="../Images/map-view.svg" style="width: 40px;" />
-                                    </a>
+
                                 </div>
                             </li>
                             <li class="nav-item mr-md-2 mr-1">
@@ -193,7 +190,7 @@
 
                     </div>
                 </div>
-                <div class="tab-content text-secondary w-100" id="pills-tabContent">
+                <div class="tab-content text-secondary w-100" id="">
 
                     <div class="tab-pane fade show active" id="pills-Location" role="tabpanel"
                         aria-labelledby="pills-Location-tab">
@@ -217,10 +214,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade show" id="pills-prescription" role="tabpanel"
+                    <div class="tab-pane fade" id="pills-prescription" role="tabpanel"
                         aria-labelledby="pills-prescription-tab">
                         <div class="container-fluid d-flex justify-content-start my-4">
-                            <div name="" style="height: 461px; width: 95%; border: solid 1px green;">
+                            <div style="height: 50px;"></div>
+                            <div id="version_childs">
+                            <!-- flag -->
                             </div>
                         </div>
                     </div>
@@ -312,6 +311,7 @@
                 el.classList.add('d-none');
             })
         }
+        //first tab
         let swiper = new CreateSlider({
             ContainerID: 'treeid',
             ChildNode: document.getElementById('TreeSwiperSlider'),
@@ -352,6 +352,279 @@
         for (let i = 0; i < 6; i++) {
             let setTree = null;
             new CreateTree("SingleTreeID" + i, setTree, map);
+        }
+        //second tab
+
+        //third tab
+        let versionData = [
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog1.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog2.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog3.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog4.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog5.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog6.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog7.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog8.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog9.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog10.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog11.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog12.png",
+            },
+        ]
+        let version_childs = function(){
+            
+            let elem = document.querySelector('#version_childs'),
+                _div = "";
+            
+            versionData.forEach(function(dt,i){
+                debugger;
+                if(i % 4 == 0) {
+                    _div = document.createElement('div');
+                    _div.classList.add('row');
+                    elem.appendChild(_div)
+                } 
+                let _child = document.createElement('div');
+                _child.classList.add('col-md-6');
+                _child.classList.add('mb-4');
+                _child.classList.add('versin-detail-data-parent');
+                _child.innerHTML='<div class="container-fluid">'+
+                    '<div class="row">'+
+                    '<div class="col-md-6 versin-detail-data-img"><div class="container"><img style="height:230px;width:95%;" class="img" src="'+ dt.src +'"/><div>test</div></div></div>'+
+                    '<div class="col-md-6 versin-detail-data-text">'+
+                        '<div class="row mb-3"><div> نسخه شماره </div><div>'+dt.id+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> محل نگهداری: </div><div>'+dt.place+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> شماره اموال: </div><div>'+dt.state+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> تعداد صفحات: </div><div>'+dt.pages+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> پدید آورندگان: </div><div>'+dt.creator+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> موضوع اثر: </div><div>'+dt.subject+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> تاریخ خلق: </div><div>'+dt.date+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> رنگ: </div><div>'+dt.color+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> جنس: </div><div>'+dt.material+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> تکنیک: </div><div>'+dt.technique+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> ابعاد: </div><div>'+dt.dimension+'</div></div>'+
+                        '<div class="row"><div class="versin-detail-data-text-subject"> واقف: </div><div>'+dt.benefactor+'</div></div>'+
+                    '</div>'+
+                    '</div>'+
+                    '</div>';
+                _div.appendChild(_child);    
+
+            })
+        }
+        version_childs();
+        let Version_ListViewMode_Onclick = function(){
+            
+        }
+        let Version_GalleryViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
+                el.classList.add('col-md-3');
+                el.classList.remove('col-md-6');
+                el.classList.remove('col-md-12');
+            })
+            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
+                el.classList.add('col-md-12');
+                el.classList.remove('col-md-3');
+                el.classList.remove('col-md-6');
+            })
+            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
+                el.classList.add('d-none');
+                el.classList.remove('col-md-6');
+                el.classList.remove('col-md-9');
+            })
+        }
+        let Version_OneViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
+                el.classList.remove('col-md-6');
+                el.classList.add('col-md-12');
+            })
+            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
+                el.classList.remove('col-md-6');
+                el.classList.add('col-md-3');
+            })
+            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
+                el.classList.remove('col-md-6');
+                el.classList.add('col-md-9');
+            })
+        }
+        let Version_TwoViewMode_Onclick = function(){
+            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
+                el.classList.add('col-md-6');
+                el.classList.remove('col-md-12');
+            })
+            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
+                el.classList.add('col-md-6');
+                el.classList.remove('col-md-3');
+            })
+            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
+                el.classList.add('col-md-6');
+                el.classList.remove('col-md-9');
+            })
         }
     </script>
 
