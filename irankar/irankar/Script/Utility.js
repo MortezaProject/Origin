@@ -13,7 +13,7 @@ HideDescriptionBlog = function (param) {
     //morteza $("#description-blog").removeClass("d-none");
     //$("#description-blog").addClass("d-none")
     for (var i = 0; i < $("#SwiperSlider").children().length; i++) {
-            $("#SwiperSlider").children()[i].style.opacity = "1";
+        $("#SwiperSlider").children()[i].style.opacity = "1";
     }
 }
 ChangeIconCollapse = function (e) {
@@ -27,6 +27,9 @@ ChangeIconCollapseChild = function (e) {
     if ($($(e)[0].dataset.target).hasClass("show"))
         $(e).children("img").attr("src", "../Images/Arrow-down-small.svg")
     else $(e).children("img").attr("src", "../Images/Arrow-up-small.svg")
+}
+OpenDilogComment=function(e){
+    debugger;
 }
 CreateBlogHome = function () {
     let data = [{	
@@ -114,4 +117,58 @@ CreateBlogHome = function () {
         }	
     });	
 
+}
+LoadCommentsUsers =function(){
+    debugger;
+    let data_comments=[
+        {
+            commentid:"1",
+            parent_comment_id:"",
+            comment:"نحوه دسترسی به این منابع چگونه است؟",
+            comment_sender_name:"مهسا:",
+            date:"9:12- 29 شهریور 98"
+        },
+            {
+                commentid:"2",
+                parent_comment_id:"1",
+                comment:"نحوه دسترسی به این منابع چگونه است؟",
+                comment_sender_name:"ادمین:",
+                date:"9:12- 29 شهریور 98"
+            },
+                {
+                    commentid:"3",
+                    parent_comment_id:"",
+                    comment:"نحوه دسترسی به این منابع چگونه است؟",
+                    comment_sender_name:"علی:",
+                    date:"9:12- 29 شهریور 98"
+                },
+                        {
+                            commentid:"5",
+                            parent_comment_id:"4",
+                            comment:"نحوه دسترسی به این منابع چگونه است؟",
+                            comment_sender_name:"علی:",
+                            date:"9:12- 29 شهریور 98"
+                        },
+                    {
+                        commentid:"4",
+                        parent_comment_id:"3",
+                        comment:"لطفا برای اطلاع دقیق در ساعات اداری با شماره های مرکز تماس بگیرید",
+                        comment_sender_name:"ادمین:",
+                        date:"9:12- 29 شهریور 98"
+                    }
+
+    ]
+    data_comments.sort((a, b) => (a.parent_comment_id > b.parent_comment_id) ? 1 : -1)
+    for (var i = 0; i < data_comments.length; i++) {
+        if(data_comments[i].parent_comment_id =="")
+        {
+            $("#collapsecommentsuser .card-body-comment").append('<div class="media border_comments pr-3 py-3"><div class="media-body" comment_id="'+data_comments[i].commentid +'"><h4 class="d-flex justify-content-between pl-3">'+ data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter">پاسخ دهید</a></h4><h4>'+ data_comments[i].date +'</h4><p>'+ data_comments[i].comment+'</p></div></div>');
+        }
+        else{
+                if ($('[comment_id="'+data_comments[i].parent_comment_id +'"]').length >= 1) {
+                    $('[comment_id="'+data_comments[i].parent_comment_id +'"]').append('<div class="media pr-3 py-3"><div class="media-body" comment_id="'+data_comments[i].commentid+'"><h4 class="d-flex justify-content-between pl-3">'+data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter">پاسخ دهید</a></h4><h4>'+data_comments[i].date+'</h4><p>'+data_comments[i].comment+'</p></div></div>');
+                }
+                
+        }
+    }
 }

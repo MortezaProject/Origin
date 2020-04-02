@@ -945,6 +945,18 @@ hr.line {
     width: 20%;
     background-color:#00a693!important;
 }
+#collapsecommentsuser h4 {
+    color: #939598;
+}
+#collapsecommentsuser p {
+    color: black;
+}
+#collapsecommentsuser a {
+    cursor: pointer;
+}
+.border_comments {
+border-bottom: 0.35mm solid #d1d3d4;
+}
 
 /*--**********************---------------------------------END BLOG CSS---------------------------**************************************--*/
 
