@@ -1385,6 +1385,37 @@ main-tab-searchr {
     box-shadow: 0 0 0 0;
 }
 /*searchresult*/
+/* list page */
+.versin-detail-data-text > div{
+  font-family: BYekan;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: right;
+  color: #000000;
+}
+.versin-detail-data-text .versin-detail-data-text-subject{color:#929292;}
+.versin-detail-data-img .versin-detail-data-img-title{
+    display: none;
+    position: absolute;
+    bottom: 8px;
+    font-family: BYekan;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: right;
+    color: white;
+}
+.versin-detail-data-img[mode="gallery"]:hover .versin-detail-data-img-title{display:block;}
+.versin-detail-data-img[mode="gallery"]:hover img{filter: brightness(50%);}
+
+/* end list page */
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-3 {
         float: left;
