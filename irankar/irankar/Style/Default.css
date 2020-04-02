@@ -821,6 +821,7 @@ hr.line {
 
 .card-header-cust {
     color: #666666;
+    padding: 0 0 0 0 !important;
 }
 
 /* Classes content-right*/
@@ -942,6 +943,7 @@ hr.line {
 
 .send-btn-blog {
     width: 20%;
+    background-color:#00a693!important;
 }
 
 /*--**********************---------------------------------END BLOG CSS---------------------------**************************************--*/
@@ -985,7 +987,7 @@ hr.line {
 }
 
 #Left-Menu .card-header {
-    padding: 0 !important;
+    
     margin-bottom: 0;
     /*background-color: #f5f3f0!important;*/
     border-bottom: 1.2px solid #dcdada;
@@ -1613,7 +1615,7 @@ main-tab-searchr {
     }
 
     .short-desc {
-        display: unset;
+        display: inline-block;
         position: unset;
     }
 
@@ -1637,6 +1639,10 @@ main-tab-searchr {
         padding-right: 0;
         padding-left: 0;
     }
+    .card-header-cust {
+    padding:8px 0 0 0!important;
+}
+
 }
 
 /*Responsive  For Mobile*/
