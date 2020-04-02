@@ -1,11 +1,14 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
     <title>بلاگ</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- <script src="../jquery/jquery-3.4.1.slim.min.js"></script> -->
-    
+
     <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
     <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
     <link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,16 +19,27 @@
     <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet">
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+
+    <!-- <script src="../swiper/swiper.min.css"></script> -->
+    <!-- <script src="../swiper/swiper.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
     <script src="../Script/Map.js"></script>
     <script src="../Script/tree.js"></script>
     <script src="../Script/slider.js"></script>
+
 </head>
+
 <body>
     <div id="wrraper">
 
@@ -41,7 +55,9 @@
                     <br>
                     <span>فهرستواره دست&zwnj;نوشته&zwnj;های ایرانی قرآن</span>
                 </span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -66,11 +82,13 @@
 
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch"
+                                placeholder="جستجو..." aria-label="Search">
                             <div class="input-group-append">
                                 <img src="../Images/search.png">
                             </div>
-                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;">
+                            <img src="../Images/search_advance.png" name="BtnSearch"
+                                style="padding-right: 10px!important;">
                         </div>
 
                         <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
@@ -98,98 +116,119 @@
         </div>
 
         <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
-            <!-- start tabs -->
-            <div id="Content-Map" class="">
-                <div class="row mx-0">
-                    <div class="Parent-Tab col-md-9 col-sm-6">
-                        <ul class="nav nav-pills" id="Pills-Tab" role="tablist">
-                            <li class="nav-item mx-md-2">
-                                <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab" aria-controls="pills-Location" aria-selected="true">موقعیت</a>
+        <!-- start tabs -->
+        <div id="Content-Map" class="">
+            <div class="row mx-0">
+                <div class="container-fluid row mx-0 align-parent border-bottom">
+                    <div class="Parent-Tab col-md-9 col-7 px-0">
+                        <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
+                            <li class="nav-item ml-md-2 ml-1" onclick="show_position_dropdown()">
+                                <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab"
+                                    aria-controls="pills-Location" aria-selected="true">موقعیت</a>
                             </li>
-                            <li class="nav-item mx-md-2">
-                                <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab" aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
+                            <li class="nav-item mx-md-2 mx-1" onclick="show_collection_dropdown()">
+                                <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab"
+                                    aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
                             </li>
-                            <li class="nav-item mx-md-2">
-                                <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab" aria-controls="pills-prescription" aria-selected="false">نسخه</a>
+                            <li class="nav-item mx-md-2 mx-1" onclick="show_version_dropdown()">
+                                <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab"
+                                    aria-controls="pills-prescription" aria-selected="false">نسخه</a>
                             </li>
                         </ul>
 
                     </div>
-                    <div class="Parent-Tab col-md-3 col-sm-6">
-                        <ul class="nav nav-pills" id="PillsTab-left" role="tablist">
+                    <div class="Parent-Tab col-md-3 col-5 d-flex justify-content-end">
+                        <ul class="nav nav-pills pr-0" id="PillsTab-left" role="tablist">
 
-                            <li class="nav-item mx-md-2">
-                                <a class="nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="width: 46px;">
+                            <li class="nav-item mx-md-2 mx-1">
+                                <a class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
                                     <img src="../Images/view.svg" style="height: 148%;"></a>
-                                <div class="dropdown-menu">
-                                    <a id="TreeMode" class="dropdown-item p-0" href="#" onclick="TreeMode_Onclick()">
-                                        <img src="../Images/hierarchy.svg" style="width: 40px;"></a>
-                                    <a id="MapMode" class="dropdown-item p-0" href="#" onclick="MapMode_Onclick()">
-                                        <img src="../Images/map.svg" style="width: 40px;"></a>
-                                    <a id="TreeMapMode" class="dropdown-item p-0" href="#" onclick="TreeMapMode_Onclick()">
-                                        <img src="../Images/hi-map.svg" style="width: 40px;"></a>
+                                <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown"
+                                    x-placement="bottom-start"
+                                    style="position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <!-- موقعیت -->
+                                    <a id="TreeMode" class="dropdown-item  p-0 show_position_dropdown" href="#" onclick="TreeMode_Onclick()">
+                                        <img src="../Images/hierarchy.svg" style="width: 40px;" /></a>
+                                    <a id="MapMode" class="dropdown-item p-0 show_position_dropdown" href="#" onclick="MapMode_Onclick()">
+                                        <img src="../Images/map.svg" style="width: 40px;" /></a>
+                                    <a id="TreeMapMode" class="dropdown-item p-0 show_position_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                    <!-- مجموعه -->
+                                    <a id="TreeMapMode" class="dropdown-item p-0 d-none show_collection_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                    <!-- نسخه -->
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/list-view.svg" style="width: 40px;" />
+                                    </a>
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/one-row-view.svg" style="width: 40px;" />
+                                    </a>
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/two-row-view.svg" style="width: 40px;" />
+                                    </a>
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/tree-view.svg" style="width: 40px;" />
+                                    </a>
+                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick()">
+                                        <img src="../Images/map-view.svg" style="width: 40px;" />
+                                    </a>
                                 </div>
                             </li>
-                            <li class="nav-item mx-md-2">
-                                <a class="nav-link dropdown-toggle" href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter" aria-selected="true">فیلتر</a>
+                            <li class="nav-item mr-md-2 mr-1">
+                                <a class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between active show"
+                                    href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter"
+                                    aria-selected="true">
+                                    <div class="pl-lg-3 pl-0">فیلتر</div>
+                                </a>
                             </li>
                         </ul>
-
-                    </div>
-                    <div class="tab-content text-secondary w-100" id="pills-tabContent">
-
-                        <div class="tab-pane fade show active" id="pills-Location" role="tabpanel" aria-labelledby="pills-Location-tab">
-                            <div class="container-fluid d-flex justify-content-center my-4">
-                                <div id="SingleTree" class="carousel slide col-4" style="height: 336px;" data-wrap="false">
-                                    <div class="carousel-inner"  id="SingleCoraselSlider"></div>
-                                    <a class="carousel-control-prev" href="#SingleTree" role="button" data-slide="prev">
-                                      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-                                      <span class="fas fa-chevron-left" style="color: black;"></span>
-                                      <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#SingleTree" role="button" data-slide="next">
-                                      <span class="fas fa-chevron-right" style="color: black;"></span>
-                                      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-                                      <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                                <!-- start slider data-ride="carousel"-->
-                                <div id="MultiTree" class="carousel slide col-12 d-none" style="height: 336px;" data-wrap="false">
-                                    <div class="carousel-inner"  id="MultiCoraselSlider"></div>
-                                    <a class="carousel-control-prev" href="#MultiTree" role="button" data-slide="prev">
-                                      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-                                      <span class="fas fa-chevron-left" style="color: black;"></span>
-                                      <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#MultiTree" role="button" data-slide="next">
-                                      <span class="fas fa-chevron-right" style="color: black;"></span>
-                                      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-                                      <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                                <!-- end slider -->
-                                <div id="mapid" name="maps" class="col-8" style="height: 336px;"></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-Collection" role="tabpanel" aria-labelledby="pills-Collection-tab">
-                            <div class="container-fluid d-flex justify-content-start my-4">
-                                <div name="" class="" style="height: 461px; width: 27%; border: solid 1px green;">
-                                </div>
-                                <div name="" style="height: 461px; width: 65%; border: solid 1px green;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade show" id="pills-prescription" role="tabpanel" aria-labelledby="pills-prescription-tab">
-                            <div class="container-fluid d-flex justify-content-start my-4">
-                                <div name="" style="height: 461px; width: 95%; border: solid 1px green;">
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
+                <div class="tab-content text-secondary w-100" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="pills-Location" role="tabpanel"
+                        aria-labelledby="pills-Location-tab">
+                        <div class="container-fluid d-flex justify-content-center my-4">
+                            <div id="treeid" class="swiper-container col-12" style="height: 336px;">
+                                <div class="swiper-wrapper" id="TreeSwiperSlider"></div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-scrollbar "></div>
+                            </div>
+                            <div id="mapid" name="maps" class="col-8 d-none" style="height: 336px;"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Collection" role="tabpanel"
+                        aria-labelledby="pills-Collection-tab">
+                        <div class="container-fluid d-flex justify-content-start my-4">
+                            <div name="" class="" style="height: 461px; width: 27%; border: solid 1px green;">
+                            </div>
+                            <div name="" style="height: 461px; width: 65%; border: solid 1px green;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show" id="pills-prescription" role="tabpanel"
+                        aria-labelledby="pills-prescription-tab">
+                        <div class="container-fluid d-flex justify-content-start my-4">
+                            <div name="" style="height: 461px; width: 95%; border: solid 1px green;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <!-- end tabs -->
+        </div>
+        <!-- end tabs -->
         <!-- </div> -->
 
         <!-- End-Content-Blog -->
@@ -239,64 +278,83 @@
         <!-- End-Footer -->
     </div>
     <script>
-        new CreateSlider({
-            parent : document.getElementById("MultiCoraselSlider"),
-            NumberOfEachSlider : 4,
-            NumberOfTree : 6,
-            ID : "MultiTreeID"
-        });
-        new CreateSlider({
-            parent : document.getElementById("SingleCoraselSlider"),
-            NumberOfEachSlider : 1,
-            NumberOfTree : 6,
-            ID : "SingleTreeID"
-        });
-        let TreeMode_Onclick = function(){
-            // document.getElementById('MultiTree').classList.add('col-12');
-            // document.getElementById('MultiTree').classList.remove('col-4');
-            // document.getElementById('MultiTree').classList.remove('d-none');
-            // new CreateSlider({
-            //     parent : document.getElementById("coraselSlider"),
-            //     NumberOfEachSlider : 4,
-            //     NumberOfTree : 6,
-            // });
-            // document.getElementById('mapid').classList.add('d-none');
-            document.getElementById('MultiTree').classList.remove('d-none');
-            document.getElementById('mapid').classList.add('d-none');
-            document.getElementById('SingleTree').classList.add('d-none');
+        let show_position_dropdown = function(){
+            
+            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
+                el.classList.remove('d-none');
+            })
+            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
+            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
         }
-        let MapMode_Onclick = function(){
+        let show_collection_dropdown = function(){
+            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
+                el.classList.remove('d-none');
+            })
+            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
+            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
+        }
+        let show_version_dropdown = function(){
+            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
+                el.classList.remove('d-none');
+            })
+            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
+            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
+                el.classList.add('d-none');
+            })
+        }
+        let swiper = new CreateSlider({
+            ContainerID: 'treeid',
+            ChildNode: document.getElementById('TreeSwiperSlider'),
+            NumberOfEachSlider: 1,
+            NumberOfTree: 6,
+            ID: "SingleTreeID"
+        });
+        let TreeMode_Onclick = function () {
+            document.getElementById('treeid').classList.remove('d-none');
+            document.getElementById('treeid').classList.add('col-12');
+            document.getElementById('mapid').classList.add('d-none');
+        }
+        let MapMode_Onclick = function () {
             document.getElementById('mapid').classList.add('col-12');
             document.getElementById('mapid').classList.remove('col-8');
             document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('MultiTree').classList.add('d-none');
-            document.getElementById('SingleTree').classList.add('d-none');
+            document.getElementById('treeid').classList.add('d-none');
+
         }
-        let TreeMapMode_Onclick = function(){
-            // new CreateSlider({
-            //     parent : document.getElementById("coraselSlider"),
-            //     NumberOfEachSlider : 1,
-            //     NumberOfTree : 6,
-            // });
-            document.getElementById('SingleTree').classList.remove('col-12');
-            document.getElementById('SingleTree').classList.add('col-4');
+        let TreeMapMode_Onclick = function () {
             document.getElementById('mapid').classList.remove('col-12');
             document.getElementById('mapid').classList.add('col-8');
             document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('SingleTree').classList.remove('d-none');
-            document.getElementById('MultiTree').classList.add('d-none');
+            document.getElementById('treeid').classList.remove('d-none');
+            document.getElementById('treeid').classList.add('col-4');
+            document.getElementById('treeid').classList.remove('col-12');
+            swiper.update();
         }
         let setMap = {
-            view : {lat:32.306,lon:51.240,scale:6},
-            marker : []
+            view: {
+                lat: 32.306,
+                lon: 51.240,
+                scale: 6
+            },
+            marker: []
         }
         let map = new CreateMap("mapid", setMap);
         for (let i = 0; i < 6; i++) {
             let setTree = null;
-            new CreateTree("SingleTreeID"+i, setTree, map);
-            new CreateTree("MultiTreeID"+i, setTree, map);
+            new CreateTree("SingleTreeID" + i, setTree, map);
         }
-        
     </script>
-    
-</body></html>
+
+</body>
+
+</html>
