@@ -235,11 +235,11 @@
                                 <div class="card">
                                     <div class="card-header card-header-cust row mx-0 p-0 pt-3" id="Comment-commentsuser">
                                         <!-- Updated 04 -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-6 px-0">
                                             <img src="../Images/Content.png" />
                                             <span>دیدگاه ها</span>
                                         </div>
-                                        <div class="col-md-6 text-left">
+                                        <div class="col-md-6 px-0 text-left">
                                             <button class="btn btn-link collapsed px-md-1" data-toggle="collapse" data-target="#collapsecommentsuser" aria-expanded="false" aria-controls="collapsecomment" onclick="ChangeIconCollapse(this)">
                                                 <img src="../Images/Arrow-up.svg" style="height: 8px;">
                                             </button>
@@ -269,16 +269,32 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="row">
-                                            <div class="form-group col-md-12">
+                                            <div class="form-group col-md-6 col-6">
                                                 <input type="text" class="form-control-comment" id="Text1" placeholder="نام">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="email" class="form-control-comment" id="Email2" placeholder="ایمیل">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <textarea class="form-control-comment" id="Textarea1" placeholder="دیدگاه شما" rows="3"></textarea>
                                         </div>
-                                        <div class="col-md-12 px-0 text-left">
-                                            <button type="submit" class="btn btn-primary mb-2 send-btn-blog">ارسال</button>
+                                        <div class="row">
+                                            <div class="col-md-6 col-8">
+                                                <div class="row">
+                                                    <div class="form-group col-md-9 col-8">
+                                                        <input type="text" class="form-control-comment" id="Text2" placeholder="کد امنیتی">
+                                                    </div>
+                                                    <div class="col-md-3 col-4">
+                                                        <img src="#" alt="CPTCHA" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-6 col-4 text-left">
+                                                <button type="submit" class="btn btn-primary mb-2 send-btn-blog">ارسال</button>
+                                            </div>
                                         </div>
 
                                     </form>
