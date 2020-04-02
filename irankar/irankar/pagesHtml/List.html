@@ -29,10 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
 
-    <!-- <script src="../swiper/swiper.min.css"></script> -->
-    <!-- <script src="../swiper/swiper.min.js"></script> -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../swiper/swiper.min.js"></script>
 
     <script src="../Script/Map.js"></script>
     <script src="../Script/tree.js"></script>
@@ -217,13 +215,20 @@
                     <div class="tab-pane fade" id="pills-prescription" role="tabpanel"
                         aria-labelledby="pills-prescription-tab">
                         <div class="container-fluid d-flex justify-content-start my-4">
-                            <div style="height: 50px;"></div>
-                            <div id="version_childs">
-                            <!-- flag -->
+                            <div class="">
+                                <div style="height: 50px;"></div>
+                                <div id="version_childs"></div>
+                                <div style="width: 100%;">
+                                    <div id="version_childs_slider" class="swiper-container">
+                                        <div id="version_childs_slider_wrapper" class="swiper-wrapper" ></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -537,6 +542,36 @@
                 "benefactor":"حاج حسین آقا ملک",
                 "src": "../Images/blog12.png",
             },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog12.png",
+            },
+            {
+                "id":"4257",
+                "place":"ایران/تهران/موزه ملک",
+                "state":"1393/04/06037",
+                "pages":"256 صفحه",
+                "creator":"عبدالرحمن",
+                "subject":"نجوم اسلامی",
+                "date":"1 ذیحجه 1006قمری",
+                "color":"نخودی",
+                "material":"دست ساز",
+                "technique":"دست ساز آهار مهره",
+                "dimension":"طول (26 سانتیمتر)",
+                "benefactor":"حاج حسین آقا ملک",
+                "src": "../Images/blog12.png",
+            },
         ]
         let version_childs = function(){
             
@@ -544,7 +579,7 @@
                 _div = "";
             
             versionData.forEach(function(dt,i){
-                debugger;
+                
                 if(i % 4 == 0) {
                     _div = document.createElement('div');
                     _div.classList.add('row');
@@ -585,6 +620,58 @@
             })
         }
         version_childs();
+        let version_childs_slider = function(){
+            let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
+                itemChild="";
+            for (let i = 0; i < versionData.length; i++) {
+                if(i % 4 == 0){
+                    let swiper_slide = document.createElement("div");
+                    swiper_slide.classList.add("swiper-slide");
+                    _div.append(swiper_slide);
+                    itemChild = document.createElement("div");
+                    // itemChild.style.width = "200px";
+                    swiper_slide.append(itemChild);
+                }
+            
+                let slide = document.createElement("div");
+                slide.textContent = versionData[i].id;
+                itemChild.append(slide)
+            }
+            let swiper = new Swiper('#version_childs_slider', {
+                slidesPerView: 4,
+                spaceBetween: 10,
+                // setWrapperSize: true,
+                // init: false,	
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     clickable: true,
+                // },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // scrollbar: {
+                //     el: '.swiper-scrollbar',
+                // },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 100,
+
+                    },
+                }
+            });
+            
+        }
+        version_childs_slider();
         let Version_ListViewMode_Onclick = function(){
             document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
                 el.setAttribute('mode','list')
