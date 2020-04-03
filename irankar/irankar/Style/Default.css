@@ -1188,7 +1188,9 @@ border-bottom: 0.35mm solid #d1d3d4;
 .search-inner-content .form-group {
     margin-bottom: 0.75rem!important;
 }
-
+.placeholder::-webkit-input-placeholder {
+color:#eae8e8;
+}
 /*------------------------------------------------------*/
 
 #wrraper-search {
@@ -1699,7 +1701,13 @@ main-tab-searchr {
     .card-header-cust {
     padding:8px 0 0 0!important;
 }
-
+.placeholder::-webkit-input-placeholder {
+color:#b6b4b4;
+font-size:13px;
+}
+#MainContentSearch .field-spacing-second {
+    margin-top: 28px;
+}
 }
 
 /*Responsive  For Mobile*/
