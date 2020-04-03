@@ -1359,8 +1359,15 @@ color:#eae8e8;
 
     #Ul1-Sresult .nav-item button {
         width: 100%;
+        color:#58595b;
+        background-color:#d1d3d4;
+            border-radius: 0
     }
-
+#Ul2-Sresult .nav-item button {
+color:#58595b;  
+background-color:#d1d3d4;
+    border-radius: 0
+}
 #SearchResult label {
     margin: 0!important;
     display: flex!important;
@@ -1371,10 +1378,13 @@ color:#eae8e8;
 main-tab-searchr {
     color: white;
 }
-
+.btn-qty {
+width:65px;
+background-color:unset;
+}
 .btn-searchresult {
-    background-color: unset;
-    color: #939598;
+    background-color: unset!important;
+    color: #939598!important;
 }
 .btn-searchresult:hover{
     color:#00a693;
