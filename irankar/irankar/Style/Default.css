@@ -1429,6 +1429,18 @@ main-tab-searchr {
   color: #000000;
   cursor: pointer;
 }
+.collection_childs_slider_ListMode_text{
+    font-family: BYekan;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: right;
+    color: #000000;
+    cursor: pointer;
+  }
 /* end list page */
 @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-3 {
