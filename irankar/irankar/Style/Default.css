@@ -945,6 +945,9 @@ hr.line {
     width: 20%;
     background-color:#00a693!important;
 }
+#exampleModalCenter .send-btn-blog {
+    width: 29%;
+}
 #collapsecommentsuser h4 {
     color: #939598;
 }

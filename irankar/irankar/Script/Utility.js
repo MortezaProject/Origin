@@ -162,13 +162,25 @@ LoadCommentsUsers =function(){
     for (var i = 0; i < data_comments.length; i++) {
         if(data_comments[i].parent_comment_id =="")
         {
-            $("#collapsecommentsuser .card-body-comment").append('<div class="media border_comments pr-3 py-3"><div class="media-body" comment_id="'+data_comments[i].commentid +'"><h4 class="d-flex justify-content-between pl-3">'+ data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter">پاسخ دهید</a></h4><h4>'+ data_comments[i].date +'</h4><p>'+ data_comments[i].comment+'</p></div></div>');
+            $("#collapsecommentsuser .card-body-comment").append('<div class="media border_comments pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid +'"><h4 class="d-flex justify-content-between pl-3">'+ data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter" style="color:#00a693;">پاسخ دهید</a></h4><h4>'+ data_comments[i].date +'</h4><p>'+ data_comments[i].comment+'</p></div></div>');
         }
         else{
+            let parent = $('[comment_id="'+data_comments[i].parent_comment_id +'"]');
+            let padding = "0";
+            if($(parent).children().attr('child') != undefined)
+                padding = Number($(parent).children()[0].style.paddingRight.substring(0,1))+1;
                 if ($('[comment_id="'+data_comments[i].parent_comment_id +'"]').length >= 1) {
-                    $('[comment_id="'+data_comments[i].parent_comment_id +'"]').append('<div class="media pr-3 py-3"><div class="media-body" comment_id="'+data_comments[i].commentid+'"><h4 class="d-flex justify-content-between pl-3">'+data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter">پاسخ دهید</a></h4><h4>'+data_comments[i].date+'</h4><p>'+data_comments[i].comment+'</p></div></div>');
+                    $('[comment_id="'+data_comments[i].parent_comment_id +'"]').append('<div class="media pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid+'"><div child style="padding-right:' +(padding == "0" ? "1rem" : padding+"rem")+';"><h4 class="d-flex justify-content-between pl-3">'+data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter" style="color:#00a693;">پاسخ دهید</a></h4><h4>'+data_comments[i].date+'</h4><p>'+data_comments[i].comment+'</p></div></div></div>');
                 }
                 
         }
+    }
+    parent = $("#collapsecommentsuser .card-body-comment .border_comments");
+    for (var i = 0; i < parent.length; i++) {
+        for (var j = 0; j < $(parent[i]).find(".media").length; j++) {
+            if(j%2 == 0)
+                $(parent[i]).find(".media")[j].style.backgroundColor = "#d1d3d4"
+            else $(parent[i]).find(".media")[j].style.backgroundColor = "#f5f3f0"
+        }  
     }
 }
