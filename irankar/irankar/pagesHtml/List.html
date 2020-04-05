@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>بلاگ</title>
@@ -45,21 +45,36 @@
         <!-- End-Gap-Area -->
 
         <!-- Begin-Menu -->
-        <div id="menu">
-            <nav class="navbar navbar-expand-lg navbar-light bg-wight">
-                <span class="navbar-brand">
-                    <img src="../Images/logo.png">
-                    <br>
-                    <span>فهرستواره دست&zwnj;نوشته&zwnj;های ایرانی قرآن</span>
+        <div id="menu" class="align-parent">
+            <nav class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0">
+                <span class="navbar-brand mx-0">
+                    <img src="../Images/logo.png" />
+                    <br />
+                    <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <div class="order-search-navbar" style="order: 3;">
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2 br-0 py-0  d-md-none d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <div class="input-group-append">
+                                <img src="../Images/search.png" />
+                            </div>
+                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
+                        </div>
+
+
+
+                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
+                            <img src="../Images/search_advance.png" />
+                        </div> -->
+                    </form>
+                </div>
+                <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav m-auto padding-menu">
                         <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
                         </li>
@@ -77,24 +92,13 @@
                         </li>
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch"
-                                placeholder="جستجو..." aria-label="Search">
-                            <div class="input-group-append">
-                                <img src="../Images/search.png">
-                            </div>
-                            <img src="../Images/search_advance.png" name="BtnSearch"
-                                style="padding-right: 10px!important;">
-                        </div>
 
-                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
-                            <img src="../Images/search_advance.png" />
-                        </div> -->
-                    </form>
 
                 </div>
+
+
             </nav>
+
         </div>
         <!-- End-Menu -->
 
@@ -102,7 +106,7 @@
 
         <div class="py-5" style="background-color: #f5f5f5;">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb container-fluid-Cust">
+                <ol class="breadcrumb container-fluid-Cust" style="background-color: unset!important;">
                     <img src="../Images/Content.png">
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">فهرست</a></li>
@@ -114,7 +118,7 @@
 
         <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
         <!-- start tabs -->
-        <div id="Content-Map" class="">
+        <div id="Content-Map" class="" style="background-color: #f5f4f6;">
             <div class="row mx-0">
                 <div class="container-fluid row mx-0 align-parent border-bottom">
                     <div class="Parent-Tab col-md-9 col-7 px-0">
@@ -191,13 +195,13 @@
 
                     </div>
                 </div>
-                <div class="tab-content text-secondary w-100">
+                <div class="tab-content text-secondary w-100 align-parent">
 
                     <div class="tab-pane fade show active" id="pills-Location" role="tabpanel"
                         aria-labelledby="pills-Location-tab">
-                        <div class="container-fluid d-flex justify-content-center my-4">
-                            <div id="treeid" class="swiper-container col-3" style="height: 336px;overflow:auto;"></div>
-                            <div id="mapid" name="maps" class="col-9" style="height: 336px;"></div>
+                        <div class="container-fluid px-0 d-flex justify-content-center my-4">
+                                <div id="treeid" class="swiper-container col-3" style="height: 443px; overflow: auto; background-color: #f1f2f2;"></div>
+                            <div id="mapid" name="maps" class="col-9" style="height: 443px;"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-Collection" role="tabpanel"
@@ -283,7 +287,327 @@
         </div>
         <!-- End-Footer -->
     </div>
-   <script src="../Script/list.js"></script>
+    <script src="../Script/list.js"></script>
+
+    <script>
+        let collectionData = [{
+            "title": "آکادمی سلطانی هنر",
+            "established": "1768 میلادی",
+            "position": "پیکادلی،لندن،انگلند",
+            "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+            "src": "../Images/blog1.png",
+        },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog4.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog5.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog6.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog7.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog8.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog9.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog10.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog11.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
+        ]
+
+
+
+
+        let versionData = [{
+            "id": "4257",
+            "place": "ایران/تهران/موزه ملک",
+            "state": "1393/04/06037",
+            "pages": "256 صفحه",
+            "creator": "عبدالرحمن",
+            "subject": "نجوم اسلامی",
+            "date": "1 ذیحجه 1006قمری",
+            "color": "نخودی",
+            "material": "دست ساز",
+            "technique": "دست ساز آهار مهره",
+            "dimension": "طول (26 سانتیمتر)",
+            "benefactor": "حاج حسین آقا ملک",
+            "src": "../Images/blog1.png",
+        },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog3.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog4.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog5.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog6.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog7.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog8.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog9.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog10.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog11.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
+        ]
+
+        collection_childs(collectionData);
+        version_childs(versionData);
+    </script>
 
 </body>
 
