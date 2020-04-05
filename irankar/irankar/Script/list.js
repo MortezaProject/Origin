@@ -81,8 +81,9 @@ let collection_childs = function (collectionData) {
         let _child = document.createElement('div');
         _child.classList.add('col-md-6');
         _child.classList.add('mb-4');
+        _child.classList.add('px-0');
         _child.classList.add('versin-detail-data-parent');
-        _child.innerHTML = '<div class="container-fluid">' +
+        _child.innerHTML = '<div class="container-fluid pr-0">' +
             '<div class="row">' +
             '<div class="col-md-6 versin-detail-data-img mb-2"><div class="container" style="padding:unset;"><img style="height:230px;width:100%;" class="img" src="' +
             dt.src + '"/>' +
@@ -208,8 +209,9 @@ let version_childs = function (versionData) {
         let _child = document.createElement('div');
         _child.classList.add('col-md-6');
         _child.classList.add('mb-4');
+        _child.classList.add('pr-0');
         _child.classList.add('versin-detail-data-parent');
-        _child.innerHTML = '<div class="container-fluid">' +
+        _child.innerHTML = '<div class="container-fluid pr-0">' +
             '<div class="row">' +
             '<div class="col-md-6 versin-detail-data-img mb-2"><div class="container" style="padding:unset;"><img style="height:230px;width:100%;" class="img" src="' +
             dt.src + '"/>' +
