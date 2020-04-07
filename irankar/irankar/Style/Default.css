@@ -92,6 +92,12 @@ a:hover {
     padding-top: 25px;
 }
 
+.text-tree-map {
+    font-weight: regular !important;
+    font-size: 14pt !important;
+	color: black!important;
+}
+
 .search {
     background-color: #f1f2f2 !important;
 }
