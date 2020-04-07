@@ -132,7 +132,7 @@ let collection_childs_slider = function () {
             $(view).addClass("view w-100")
             swiper_slide.append(view);
             itemChild = document.createElement("div");
-            $(itemChild).addClass("item-blog d-flex flex-column justify-content-between p-3");
+            $(itemChild).addClass("item-list d-flex flex-column justify-content-between p-3");		/* Updated 06 */
             // itemChild.style.width = "200px";
             view.append(itemChild);
         }
@@ -340,7 +340,7 @@ let version_childs_slider = function () {
         $(view).addClass("view w-100")
         swiper_slide.append(view);
         itemChild = document.createElement("div");
-        $(itemChild).addClass("item-blog d-flex flex-column justify-content-between p-3");
+        $(itemChild).addClass("item-list d-flex flex-column justify-content-between p-3");		/* Updated 06 */
         // itemChild.style.width = "200px";
         view.append(itemChild);
         }
