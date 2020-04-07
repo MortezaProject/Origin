@@ -135,7 +135,7 @@ let collection_childs_slider = function (collectionData) {
             $(view).addClass("view w-100")
             swiper_slide.append(view);
             itemChild = document.createElement("div");
-            $(itemChild).addClass("item-list d-flex flex-column justify-content-between p-3");		/* Updated 06 */
+            $(itemChild).addClass("item-list d-flex flex-column justify-content-start p-3");		/* Updated 06 */
             // itemChild.style.width = "200px";
             view.append(itemChild);
         }
