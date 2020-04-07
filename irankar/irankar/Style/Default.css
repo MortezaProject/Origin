@@ -1495,6 +1495,7 @@ main-tab-searchr {
 #treeid > ul {
     background-color: #e7e6e6!important;
     height: 100%;
+    padding:4% 1.5%;
 }
 /* end list page */
 @media (min-width: 768px) {
