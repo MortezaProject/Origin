@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>بلاگ</title>
@@ -34,33 +34,47 @@
 
     <script src="../Script/Map.js"></script>
     <script src="../Script/tree.js"></script>
-    <script src="../Script/slider.js"></script>
 
 </head>
 
 <body>
-    <div id="wrraper">
+    <div>
 
         <!-- -Begin-Gap-Area -->
         <div id="Gap_Area" class="sticky-top"></div>
         <!-- End-Gap-Area -->
 
         <!-- Begin-Menu -->
-        <div id="menu">
-            <nav class="navbar navbar-expand-lg navbar-light bg-wight">
-                <span class="navbar-brand">
-                    <img src="../Images/logo.png">
-                    <br>
-                    <span>فهرستواره دست&zwnj;نوشته&zwnj;های ایرانی قرآن</span>
+        <div id="menu" class="align-parent">
+            <nav class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0">
+                <span class="navbar-brand mx-0">
+                    <img src="../Images/logo.png" />
+                    <br />
+                    <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <div class="order-search-navbar" style="order: 3;">
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2 br-0 py-0  d-md-none d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <div class="input-group-append">
+                                <img src="../Images/search.png" />
+                            </div>
+                            <img src="../Images/search_advance.png" name="BtnSearch" style="padding-right: 10px!important;" />
+                        </div>
+
+
+
+                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
+                            <img src="../Images/search_advance.png" />
+                        </div> -->
+                    </form>
+                </div>
+                <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav m-auto padding-menu">
                         <li class="nav-item nav-item-Custom">
                             <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
                         </li>
@@ -78,24 +92,13 @@
                         </li>
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 search" type="search" name="TxtSearch"
-                                placeholder="جستجو..." aria-label="Search">
-                            <div class="input-group-append">
-                                <img src="../Images/search.png">
-                            </div>
-                            <img src="../Images/search_advance.png" name="BtnSearch"
-                                style="padding-right: 10px!important;">
-                        </div>
 
-                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
-                            <img src="../Images/search_advance.png" />
-                        </div> -->
-                    </form>
 
                 </div>
+
+
             </nav>
+
         </div>
         <!-- End-Menu -->
 
@@ -103,7 +106,7 @@
 
         <div class="py-5" style="background-color: #f5f5f5;">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb container-fluid-Cust">
+                <ol class="breadcrumb container-fluid-Cust" style="background-color: unset!important;">
                     <img src="../Images/Content.png">
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">فهرست</a></li>
@@ -115,7 +118,7 @@
 
         <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
         <!-- start tabs -->
-        <div id="Content-Map" class="">
+        <div id="Content-Map" class="" style="background-color: #f5f4f6;">
             <div class="row mx-0">
                 <div class="container-fluid row mx-0 align-parent border-bottom">
                     <div class="Parent-Tab col-md-9 col-7 px-0">
@@ -136,48 +139,56 @@
 
                     </div>
                     <div class="Parent-Tab col-md-3 col-5 d-flex justify-content-end">
-                        <ul class="nav nav-pills pr-0" id="PillsTab-left" role="tablist">
+                        <ul class="nav nav-pills pr-0" role="tablist">
 
                             <li class="nav-item mx-md-2 mx-1">
-                                <a class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
+                                <a id="views" class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false">
                                     <img src="../Images/view.svg" style="height: 148%;"></a>
                                 <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown"
                                     x-placement="bottom-start"
                                     style="position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
                                     <!-- موقعیت -->
-                                    <a id="MapMode" class="dropdown-item p-0 show_position_dropdown" href="#" onclick="MapMode_Onclick()">
+                                    <a class="dropdown-item p-0 show_position_dropdown" href="#"
+                                        onclick="MapMode_Onclick(this)">
                                         <img src="../Images/map.svg" style="width: 40px;" /></a>
-                                    <a id="TreeMapMode" class="dropdown-item p-0 show_position_dropdown" href="#"
-                                        onclick="TreeMapMode_Onclick()">
+                                    <hr class="show_position_dropdown" />
+                                    <a class="dropdown-item p-0 show_position_dropdown" href="#"
+                                        onclick="TreeMapMode_Onclick(this)">
                                         <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                    <hr class="show_position_dropdown" />
                                     <!-- مجموعه -->
-                                    <a id="" class="dropdown-item p-0 d-none show_collection_dropdown" href="#"
-                                        onclick="collection_TwoViewMode_Onclick()">
+                                    <a class="dropdown-item p-0 d-none show_collection_dropdown" href="#"
+                                        onclick="collection_TwoViewMode_Onclick(this)">
                                         <img src="../Images/two-row-view.svg" style="width: 40px;" />
                                     </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_collection_dropdown" href="#"
-                                        onclick="collection_ListViewMode_Onclick()">
+                                    <hr class="show_collection_dropdown d-none" />
+                                    <a class="dropdown-item p-0 d-none show_collection_dropdown" href="#"
+                                        onclick="collection_ListViewMode_Onclick(this)">
                                         <img src="../Images/list-view.svg" style="width: 40px;" />
                                     </a>
+                                    <hr class="show_collection_dropdown d-none" />
                                     <!-- نسخه -->
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="Version_ListViewMode_Onclick()">
+                                    <a class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="Version_ListViewMode_Onclick(this)">
                                         <img src="../Images/list-view.svg" style="width: 40px;" />
                                     </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="Version_GalleryViewMode_Onclick()">
+                                    <hr class="show_version_dropdown d-none" />
+                                    <a class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="Version_GalleryViewMode_Onclick(this)">
                                         <img src="../Images/gallery-view.svg" style="width: 40px;" />
                                     </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="Version_OneViewMode_Onclick()">
+                                    <hr class="show_version_dropdown d-none" />
+                                    <a class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="Version_OneViewMode_Onclick(this)">
                                         <img src="../Images/one-row-view.svg" style="width: 40px;" />
                                     </a>
-                                    <a id="" class="dropdown-item p-0 d-none show_version_dropdown" href="#"
-                                        onclick="Version_TwoViewMode_Onclick()">
+                                    <hr class="show_version_dropdown d-none" />
+                                    <a class="dropdown-item p-0 d-none show_version_dropdown" href="#"
+                                        onclick="Version_TwoViewMode_Onclick(this)">
                                         <img src="../Images/two-row-view.svg" style="width: 40px;" />
                                     </a>
-
+                                    <hr class="show_version_dropdown d-none" />
                                 </div>
                             </li>
                             <li class="nav-item mr-md-2 mr-1">
@@ -191,44 +202,47 @@
 
                     </div>
                 </div>
-                <div class="tab-content text-secondary w-100" id="">
+                <div class="tab-content text-tree-map w-100">		<!-- Updated 06 -->
 
-                    <div class="tab-pane fade show active" id="pills-Location" role="tabpanel"
+                    <div class="tab-pane fade show active align-parent" id="pills-Location" role="tabpanel"
                         aria-labelledby="pills-Location-tab">
-                        <div class="container-fluid d-flex justify-content-center my-4">
-                            <div id="treeid" class="swiper-container col-3" style="height: 336px;overflow:auto;"></div>
-                            <div id="mapid" name="maps" class="col-9" style="height: 336px;"></div>
+                        <div class="container-fluid px-0 d-flex justify-content-center my-4">
+                            <div id="treeid" class="swiper-container col-3" style="height: 443px; overflow: auto; background-color: #e7e6e6;"></div>
+                            <div id="mapid" name="maps" class="col-9" style="height: 443px;"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-Collection" role="tabpanel"
                         aria-labelledby="pills-Collection-tab">
-                        <div class="container-fluid d-flex justify-content-start my-4">
+                        <div class="container-fluid d-flex justify-content-start my-4" style="padding:0 6% 0 5%">
                             <div style="width: 100%;">
-                                <div style="height: 50px;"></div>
+                                <!--<div style="height: 50px;"></div>-->
                                 <div id="collection_childs"></div>
-                                <div id="collection_childs_slider" class="swiper-container">
-                                    <div id="collection_childs_slider_wrapper" class="swiper-wrapper" ></div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
+
                             </div>
+                        </div>
+                        <div class="col-md-12 slider-blog">
+                            <div class="swiper-button-next btn-slider-blog" style="outline: unset;right: 2.8%;"></div>
+                            <div id="collection_childs_slider" class="swiper-container swiper-container-cust">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset;left: 2.8%;"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-prescription" role="tabpanel"
                         aria-labelledby="pills-prescription-tab">
-                        <div class="container-fluid d-flex justify-content-start my-4">
+                        <div class="container-fluid d-flex justify-content-start my-4" style="padding:0 6% 0 5%">
                             <div style="width: 100%;">
                                 <div style="height: 50px;"></div>
                                 <div id="version_childs"></div>
-                                <!-- <div> -->
-                                    <div id="version_childs_slider" class="swiper-container">
-                                        <div id="version_childs_slider_wrapper" class="swiper-wrapper" ></div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                <!-- </div> -->
                             </div>
 
+                        </div>
+                        <div class="col-md-12 slider-blog">
+                            <div class="swiper-button-next btn-slider-blog" style="outline: unset;right: 2.8%;"></div>
+                            <div id="version_childs_slider" class="swiper-container swiper-container-cust">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset;left: 2.8%;"></div>
                         </div>
                     </div>
                 </div>
@@ -240,728 +254,1010 @@
         <!-- End-Content-Blog -->
 
         <!-- Start-Brand -->
-        <div class="brand-background">
-            <div class="container-fluid row d-flex justify-content-between">
-                <div class="col-md-3 d-flex justify-content-center mb-4">
-                    <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;">
-                </div>
-                <div class="col-md-6 text-center">
-                    <p class="text-tertiary">
-                        فرهنگستان علوم برلین - برندبورگ<br>
-                        جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br>
-                        تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
-                    </p>
-                    <div>
-                        <a href="#">
-                            <img src="../Images/instagram.svg" style="width: 35px; height: 35px;">
-                        </a>
-                        <a href="#">
-                            <img src="../Images/twitter.svg" style="width: 35px; height: 35px;">
-                        </a>
-                        <a href="#">
-                            <img src="../Images/facebook.svg" style="width: 35px; height: 35px;">
-                        </a>
+ <div class="brand-background">
+                <div class="align-parent row mx-0">
+                    <div class="col-md-3 px-0 mb-4 order2-mob">
+                        <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                    </div>
+                    <div class="col-md-6 text-center order1-mob">
+                        <p class="text-tertiary">
+                            فرهنگستان علوم برلین - برندبورگ<br />
+                            جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
+                            تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
+                        </p>
+                        <div class="three-logo">
+                            <a href="#">
+                                <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                            <a href="#">
+                                <img src="../Images/twitter.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                            <a href="#">
+                                <img src="../Images/facebook.svg" style="width: 35px; height: 35px;" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-end order2-mob">
+                        <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
                     </div>
                 </div>
-                <div class="col-md-3 d-flex justify-content-end">
-                    <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;">
-                </div>
             </div>
-        </div>
         <!-- End-Brand -->
         <!-- Begin-Footer -->
-        <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center px-0 mx-0">
-            <div class="col-md-8">
-                <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+            <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
+                <!-- Updated (kolle footer) -->
+                <div class="col-md-8 col-6 px-0">
+                    <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+                </div>
+                <div class="col-md-4 col-6 px-0 text-left">
+                    <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+                    <img src="../Images/design_by.png" style="padding-right: 8%;">
+                </div>
             </div>
-            <div class="col-md-3 text-left">
-                <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
-            </div>
-            <div class="col-md-1">
-                <img src="../Images/design_by.png">
-            </div>
-        </div>
         <!-- End-Footer -->
     </div>
+    <script src="../Script/list.js"></script>
+
     <script>
-        let show_position_dropdown = function(){
-            
-            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
-                el.classList.remove('d-none');
-            })
-            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-        }
-        let show_collection_dropdown = function(){
-            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
-                el.classList.remove('d-none');
-            })
-            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-        }
-        let show_version_dropdown = function(){
-            document.querySelectorAll('.show_version_dropdown').forEach(function(el){
-                el.classList.remove('d-none');
-            })
-            document.querySelectorAll('.show_position_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-            document.querySelectorAll('.show_collection_dropdown').forEach(function(el){
-                el.classList.add('d-none');
-            })
-        }
-        //first tab
-        // let swiper = new CreateSlider({
-        //     ContainerID: 'treeid',
-        //     ChildNode: document.getElementById('TreeSwiperSlider'),
-        //     NumberOfEachSlider: 1,
-        //     NumberOfTree: 6,
-        //     ID: "SingleTreeID"
-        // });
-        
-        let setMap = {
-            view: {
-                lat: 32.306,
-                lon: 51.240,
-                scale: 6
-            },
-            marker: []
-        }
-        let map = new CreateMap("mapid", setMap);
-        let setTree = null;
-        new CreateTree("treeid", setTree, map);
+        let collectionData = [{
+            "title": "آکادمی سلطانی هنر",
+            "established": "1768 میلادی",
+            "position": "پیکادلی،لندن،انگلند",
+            "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+            "src": "../Images/blog1.png",
+        },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog4.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog5.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog6.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog7.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog8.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog9.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog10.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog11.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog12.png",
+    },
 
-        let MapMode_Onclick = function () {
-            document.getElementById('mapid').classList.add('col-12');
-            document.getElementById('mapid').classList.remove('col-9');
-            document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('treeid').classList.add('d-none');
-            map.invalidateSize();
-        }
-        let TreeMapMode_Onclick = function () {
-            document.getElementById('mapid').classList.remove('col-12');
-            document.getElementById('mapid').classList.add('col-9');
-            document.getElementById('mapid').classList.remove('d-none');
-            document.getElementById('treeid').classList.remove('d-none');
-            document.getElementById('treeid').classList.add('col-3');
-            document.getElementById('treeid').classList.remove('col-12');
-            map.invalidateSize();
-            // swiper.update();
-        }
-        //second tab
-        let collectionData = [
+
+
+
         {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog1.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog2.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog3.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog4.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog5.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog6.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog7.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog8.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog9.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog10.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog11.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog12.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog12.png",
-            },
-            {
-                "title":"آکادمی سلطانی هنر",
-                "established":"1768 میلادی",
-                "position":"پیکادلی،لندن،انگلند",
-                "desc":"یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-                "src": "../Images/blog12.png",
-            },
+            "title": "آکادمی سلطانی هنر",
+            "established": "1768 میلادی",
+            "position": "پیکادلی،لندن،انگلند",
+            "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+            "src": "../Images/blog2.png",
+        },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "title": "آکادمی سلطانی هنر",
+        "established": "1768 میلادی",
+        "position": "پیکادلی،لندن،انگلند",
+        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+        "src": "../Images/blog3.png",
+    },
         ]
-        let collection_childs = function(){
-            
-            let elem = document.querySelector('#collection_childs'),
-                _div = "";
-            
-            collectionData.forEach(function(dt,i){
-                
-                if(i % 4 == 0) {
-                    _div = document.createElement('div');
-                    _div.classList.add('row');
-                    elem.appendChild(_div)
-                } 
-                let _child = document.createElement('div');
-                _child.classList.add('col-md-6');
-                _child.classList.add('mb-4');
-                _child.classList.add('versin-detail-data-parent');
-                _child.innerHTML='<div class="container-fluid">'+
-                    '<div class="row">'+
-                    '<div class="col-md-6 versin-detail-data-img mb-2"><div class="container" style="padding:unset;"><img style="height:230px;width:100%;" class="img" src="'+ dt.src +'"/>'+
-                        '<div class="versin-detail-data-img-title mr-3">'+
-                            '<div class="container-fluid">'+
-                                '<div class="row"><div>'+dt.title+'</div></div>'+
-                                '<div class="row"><div> موقعیت: </div><div>'+dt.position+'</div></div>'+
-                            '</div>'+    
-                        '</div>'+
-                    '</div></div>'+
-                    '<div class="col-md-6 versin-detail-data-text">'+
-                        '<div class="container-fluid">'+
-                            '<div class="row mb-3"><div>'+dt.title+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> تاسیس: </div><div>'+dt.established+'</div></div>'+
-                            '<div class="row mb-3"><div class="versin-detail-data-text-subject"> موقعیت: </div><div>'+dt.position+'</div></div>'+
-                            '<div class="row"><div>'+dt.desc+'</div></div>'+
-                        '</div>'+    
-                    '</div>'+
-                    '</div>'+
-                    '</div>';
-                _div.appendChild(_child);    
 
-            })
-        }
-        collection_childs();
-        let collection_childs_slider = function(){
-            let _div = document.querySelector('#collection_childs_slider .swiper-wrapper'),
-                itemChild="";
-            for (let i = 0; i < collectionData.length; i++) {
-                if(i % 12 == 0){
-                    let swiper_slide = document.createElement("div");
-                    swiper_slide.classList.add("swiper-slide");
-                    _div.append(swiper_slide);
-                    itemChild = document.createElement("div");
-                    // itemChild.style.width = "200px";
-                    swiper_slide.append(itemChild);
-                }
-            
-                let slide = document.createElement("div");
-                slide.classList.add('collection_childs_slider_ListMode_text')
-                slide.textContent = collectionData[i].title;
-                itemChild.append(slide)
-            }
-            let swiper = new Swiper('#collection_childs_slider', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                // setWrapperSize: true,
-                // init: false,	
-                // pagination: {
-                //     el: '.swiper-pagination',
-                //     clickable: true,
-                // },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                // scrollbar: {
-                //     el: '.swiper-scrollbar',
-                // },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 50,
 
-                    },
-                }
-            });
-            
-        }
-        let collection_ListViewMode_Onclick = function(){
-            let swiper = document.querySelector('#collection_childs_slider')
-            if(swiper.querySelector('.swiper-wrapper').children.length == 0) collection_childs_slider();
-            swiper.classList.remove('d-none');
-            document.querySelector('#collection_childs').classList.add('d-none');
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','list')
-            })
-        }
-        
-        
-        let collection_TwoViewMode_Onclick = function(){
-            document.querySelector('#collection_childs_slider').classList.add('d-none');
-            document.querySelector('#collection_childs').classList.remove('d-none');
-            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','two')
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-3');
-                el.classList.remove('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
-                el.classList.remove('d-none');
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-9');
-            })
-        }
-        //third tab
-        let versionData = [
-        {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog1.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog2.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog3.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog4.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog5.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog6.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog7.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog8.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog9.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog10.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog11.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog12.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog12.png",
-            },
-            {
-                "id":"4257",
-                "place":"ایران/تهران/موزه ملک",
-                "state":"1393/04/06037",
-                "pages":"256 صفحه",
-                "creator":"عبدالرحمن",
-                "subject":"نجوم اسلامی",
-                "date":"1 ذیحجه 1006قمری",
-                "color":"نخودی",
-                "material":"دست ساز",
-                "technique":"دست ساز آهار مهره",
-                "dimension":"طول (26 سانتیمتر)",
-                "benefactor":"حاج حسین آقا ملک",
-                "src": "../Images/blog12.png",
-            },
+
+
+        let versionData = [{
+            "id": "4257",
+            "place": "ایران/تهران/موزه ملک",
+            "state": "1393/04/06037",
+            "pages": "256 صفحه",
+            "creator": "عبدالرحمن",
+            "subject": "نجوم اسلامی",
+            "date": "1 ذیحجه 1006قمری",
+            "color": "نخودی",
+            "material": "دست ساز",
+            "technique": "دست ساز آهار مهره",
+            "dimension": "طول (26 سانتیمتر)",
+            "benefactor": "حاج حسین آقا ملک",
+            "src": "../Images/blog1.png",
+        },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog2.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog3.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog4.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog5.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog6.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog7.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog8.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog9.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog10.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog11.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
+    {
+        "id": "4257",
+        "place": "ایران/تهران/موزه ملک",
+        "state": "1393/04/06037",
+        "pages": "256 صفحه",
+        "creator": "عبدالرحمن",
+        "subject": "نجوم اسلامی",
+        "date": "1 ذیحجه 1006قمری",
+        "color": "نخودی",
+        "material": "دست ساز",
+        "technique": "دست ساز آهار مهره",
+        "dimension": "طول (26 سانتیمتر)",
+        "benefactor": "حاج حسین آقا ملک",
+        "src": "../Images/blog12.png",
+    },
         ]
-        let version_childs = function(){
-            
-            let elem = document.querySelector('#version_childs'),
-                _div = "";
-            
-            versionData.forEach(function(dt,i){
-                
-                if(i % 4 == 0) {
-                    _div = document.createElement('div');
-                    _div.classList.add('row');
-                    elem.appendChild(_div)
-                } 
-                let _child = document.createElement('div');
-                _child.classList.add('col-md-6');
-                _child.classList.add('mb-4');
-                _child.classList.add('versin-detail-data-parent');
-                _child.innerHTML='<div class="container-fluid">'+
-                    '<div class="row">'+
-                    '<div class="col-md-6 versin-detail-data-img mb-2"><div class="container" style="padding:unset;"><img style="height:230px;width:100%;" class="img" src="'+ dt.src +'"/>'+
-                        '<div class="versin-detail-data-img-title mr-3">'+
-                            '<div class="container-fluid">'+
-                                '<div class="row"><div> نسخه شماره </div><div>'+dt.id+'</div></div>'+
-                                '<div class="row"><div> محل نگهداری: </div><div>'+dt.place+'</div></div>'+
-                            '</div>'+    
-                        '</div>'+
-                    '</div></div>'+
-                    '<div class="col-md-6 versin-detail-data-text">'+
-                        '<div class="container-fluid">'+
-                            '<div class="row mb-3"><div> نسخه شماره </div><div>'+dt.id+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> محل نگهداری: </div><div>'+dt.place+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> شماره اموال: </div><div>'+dt.state+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> تعداد صفحات: </div><div>'+dt.pages+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> پدید آورندگان: </div><div>'+dt.creator+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> موضوع اثر: </div><div>'+dt.subject+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> تاریخ خلق: </div><div>'+dt.date+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> رنگ: </div><div>'+dt.color+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> جنس: </div><div>'+dt.material+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> تکنیک: </div><div>'+dt.technique+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> ابعاد: </div><div>'+dt.dimension+'</div></div>'+
-                            '<div class="row"><div class="versin-detail-data-text-subject"> واقف: </div><div>'+dt.benefactor+'</div></div>'+
-                        '</div>'+    
-                    '</div>'+
-                    '</div>'+
-                    '</div>';
-                _div.appendChild(_child);    
 
-            })
-        }
-        version_childs();
-        let version_childs_slider = function(){
-            let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
-                itemChild="";
-            for (let i = 0; i < versionData.length; i++) {
-                if(i % 12 == 0){
-                    let swiper_slide = document.createElement("div");
-                    swiper_slide.classList.add("swiper-slide");
-                    _div.append(swiper_slide);
-                    itemChild = document.createElement("div");
-                    // itemChild.style.width = "200px";
-                    swiper_slide.append(itemChild);
-                }
-            
-                let slide = document.createElement("div");
-                slide.classList.add('version_childs_slider_ListMode_text')
-                slide.textContent = "نسخه شماره "+versionData[i].id;
-                itemChild.append(slide)
-            }
-            let swiper = new Swiper('#version_childs_slider', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                // setWrapperSize: true,
-                // init: false,	
-                // pagination: {
-                //     el: '.swiper-pagination',
-                //     clickable: true,
-                // },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                // scrollbar: {
-                //     el: '.swiper-scrollbar',
-                // },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 50,
-
-                    },
-                }
-            });
-            
-        }
-        
-        let Version_ListViewMode_Onclick = function(){
-            let swiper = document.querySelector('#version_childs_slider')
-            if(swiper.querySelector('.swiper-wrapper').children.length == 0) version_childs_slider();
-            swiper.classList.remove('d-none');
-            document.querySelector('#version_childs').classList.add('d-none');
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','list')
-            })
-        }
-        let Version_GalleryViewMode_Onclick = function(){
-            document.querySelector('#version_childs_slider').classList.add('d-none');
-            document.querySelector('#version_childs').classList.remove('d-none');
-            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
-                el.classList.add('col-md-3');
-                el.classList.remove('col-md-6');
-                el.classList.remove('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','gallery')
-                el.classList.add('col-md-12');
-                el.classList.remove('col-md-3');
-                el.classList.remove('col-md-6');
-            })
-            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
-                el.classList.add('d-none');
-                el.classList.remove('col-md-6');
-                el.classList.remove('col-md-9');
-            })
-        }
-        let Version_OneViewMode_Onclick = function(){
-            document.querySelector('#version_childs_slider').classList.add('d-none');
-            document.querySelector('#version_childs').classList.remove('d-none');
-            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
-                el.classList.remove('col-md-6');
-                el.classList.add('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','one')
-                el.classList.remove('col-md-6');
-                el.classList.remove('col-md-12');
-                el.classList.add('col-md-3');
-            })
-            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
-                el.classList.remove('d-none');
-                el.classList.remove('col-md-6');
-                el.classList.add('col-md-9');
-            })
-        }
-        let Version_TwoViewMode_Onclick = function(){
-            document.querySelector('#version_childs_slider').classList.add('d-none');
-            document.querySelector('#version_childs').classList.remove('d-none');
-            document.querySelectorAll('.versin-detail-data-parent').forEach(function(el,i){
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-img').forEach(function(el,i){
-                el.setAttribute('mode','two')
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-3');
-                el.classList.remove('col-md-12');
-            })
-            document.querySelectorAll('.versin-detail-data-text').forEach(function(el,i){
-                el.classList.remove('d-none');
-                el.classList.add('col-md-6');
-                el.classList.remove('col-md-9');
-            })
-        }
+        collection_childs(collectionData);
+        version_childs(versionData);
     </script>
 
 </body>
