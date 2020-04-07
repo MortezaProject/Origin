@@ -202,47 +202,85 @@
 
                     </div>
                 </div>
-                <div class="tab-content text-tree-map w-100">		<!-- Updated 06 -->
+                <div class="tab-content text-tree-map w-100">
+                    <!-- Updated 06 -->
 
                     <div class="tab-pane fade show active align-parent" id="pills-Location" role="tabpanel"
                         aria-labelledby="pills-Location-tab">
-                        <div class="container-fluid px-0 d-flex justify-content-center my-4">
-                            <div id="treeid" class="swiper-container col-3" style="height: 443px; overflow: auto; background-color: #e7e6e6;"></div>
-                            <div id="mapid" name="maps" class="col-9" style="height: 443px;"></div>
+                        <div class="container-fluid px-0 d-flex justify-content-center" style="padding: 4.5% 0 0 5%">
+                            <div id="treeid" class="swiper-container" style="height: 443px; overflow: auto; padding-left: 3%;"></div>
+                            <div id="mapid" name="maps" class="col-12" style="height: 443px;"></div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-Collection" role="tabpanel"
+                    <div class="tab-pane fade show active" id="pills-Collection" role="tabpanel"
                         aria-labelledby="pills-Collection-tab">
-                        <div class="container-fluid d-flex justify-content-start my-4" style="padding:0 6% 0 5%">
-                            <div style="width: 100%;">
-                                <!--<div style="height: 50px;"></div>-->
-                                <div id="collection_childs"></div>
+                        <div id="collection_childs_parent" class="d-none">
+                            <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 5%">
+                                <div style="width: 100%;">
+                                    <div id="collection_childs"></div>
 
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-12 slider-blog">
-                            <div class="swiper-button-next btn-slider-blog" style="outline: unset;right: 2.8%;"></div>
+                        <div id="collection_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
+                            <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
                             <div id="collection_childs_slider" class="swiper-container swiper-container-cust">
                                 <div class="swiper-wrapper"></div>
                             </div>
-                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset;left: 2.8%;"></div>
+                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-prescription" role="tabpanel"
+                    <div class="tab-pane fade show active" id="pills-prescription" role="tabpanel"
                         aria-labelledby="pills-prescription-tab">
-                        <div class="container-fluid d-flex justify-content-start my-4" style="padding:0 6% 0 5%">
-                            <div style="width: 100%;">
-                                <div style="height: 50px;"></div>
-                                <div id="version_childs"></div>
-                            </div>
+                        <div id="version_childs_parent">
+                            <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 4%">
+                                <div style="width: 100%;">
+                                    <div id="version_childs"></div>
+                                    <div class="py-5">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination px-md-4 justify-content-center">
+                                                <!-- Updated 04 -->
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="LastPrevious">
+                                                        <span aria-hidden="true"><<</span>
+                                                        <span class="sr-only">LastPrevious</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true"><</span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="LastNext">
+                                                        <span aria-hidden="true">>></span>
+                                                        <span class="sr-only">LastNext</span>
+                                                    </a>
+                                                </li>
 
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="col-md-12 slider-blog">
-                            <div class="swiper-button-next btn-slider-blog" style="outline: unset;right: 2.8%;"></div>
+                        <div id="version_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
+                            <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
                             <div id="version_childs_slider" class="swiper-container swiper-container-cust">
                                 <div class="swiper-wrapper"></div>
                             </div>
-                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset;left: 2.8%;"></div>
+                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
                         </div>
                     </div>
                 </div>
@@ -254,46 +292,46 @@
         <!-- End-Content-Blog -->
 
         <!-- Start-Brand -->
- <div class="brand-background">
-                <div class="align-parent row mx-0">
-                    <div class="col-md-3 px-0 mb-4 order2-mob">
-                        <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
-                    </div>
-                    <div class="col-md-6 text-center order1-mob">
-                        <p class="text-tertiary">
-                            فرهنگستان علوم برلین - برندبورگ<br />
-                            جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
-                            تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
-                        </p>
-                        <div class="three-logo">
-                            <a href="#">
-                                <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
-                            </a>
-                            <a href="#">
-                                <img src="../Images/twitter.svg" style="width: 35px; height: 35px;" />
-                            </a>
-                            <a href="#">
-                                <img src="../Images/facebook.svg" style="width: 35px; height: 35px;" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 d-flex justify-content-end order2-mob">
-                        <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+        <div class="brand-background">
+            <div class="align-parent row mx-0">
+                <div class="col-md-3 px-0 mb-4 order2-mob">
+                    <img src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                </div>
+                <div class="col-md-6 text-center order1-mob">
+                    <p class="text-tertiary">
+                        فرهنگستان علوم برلین - برندبورگ<br />
+                        جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
+                        تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
+                    </p>
+                    <div class="three-logo">
+                        <a href="#">
+                            <img src="../Images/instagram.svg" style="width: 35px; height: 35px;" />
+                        </a>
+                        <a href="#">
+                            <img src="../Images/twitter.svg" style="width: 35px; height: 35px;" />
+                        </a>
+                        <a href="#">
+                            <img src="../Images/facebook.svg" style="width: 35px; height: 35px;" />
+                        </a>
                     </div>
                 </div>
+                <div class="col-md-3 d-flex justify-content-end order2-mob">
+                    <img src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                </div>
             </div>
+        </div>
         <!-- End-Brand -->
         <!-- Begin-Footer -->
-            <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
-                <!-- Updated (kolle footer) -->
-                <div class="col-md-8 col-6 px-0">
-                    <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
-                </div>
-                <div class="col-md-4 col-6 px-0 text-left">
-                    <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
-                    <img src="../Images/design_by.png" style="padding-right: 8%;">
-                </div>
+        <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
+            <!-- Updated (kolle footer) -->
+            <div class="col-md-8 col-6 px-0">
+                <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
             </div>
+            <div class="col-md-4 col-6 px-0 text-left">
+                <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+                <img src="../Images/design_by.png" style="padding-right: 8%;">
+            </div>
+        </div>
         <!-- End-Footer -->
     </div>
     <script src="../Script/list.js"></script>
@@ -1256,8 +1294,8 @@
     },
         ]
 
-        collection_childs(collectionData);
-        version_childs(versionData);
+        collection_childs_slider(collectionData);
+        version_childs_slider(versionData);
     </script>
 
 </body>
