@@ -289,6 +289,7 @@ a:hover {
     background-color: #d1d3d4 !important;
     border: 0 !important;
     border-radius: 0 !important;
+    padding-bottom:0!important;
 }
 
 .dropdown-btn {
