@@ -370,6 +370,12 @@ a:hover {
     padding: 10px;
 }
 
+.item-list { 		/* Added 06 */
+    height: 382px;
+    max-width: 100%;
+    background-color: #e7e6e6;
+}
+
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -1393,35 +1399,38 @@ main-tab-searchr {
 /*searchresult*/
 /* list page */
 .versin-detail-data-text > div{
-  font-family: BYekan;
-  font-size: 14px;
+  font-family: Iransans;		/* Updated 06 */
+  font-size: 13px;		/* Updated 06 */
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1.4;		/* Updated 06 */
   letter-spacing: normal;
-  text-align: right;
+  text-align: justify;		/* Updated 06 */
   color: #000000;
 }
-.versin-detail-data-text .versin-detail-data-text-subject{color:#929292;}
+.versin-detail-data-text .versin-detail-data-text-subject{
+	color:#929292;
+	font-weight: bold;		/* Added 06 */
+}
 .versin-detail-data-img .versin-detail-data-img-title{
     display: none;
     position: absolute;
     bottom: 8px;
-    font-family: BYekan;
+    font-family: Iransans;		/* Updated 06 */
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.2;
+    line-height: 1.4;		/* Updated 06 */
     letter-spacing: normal;
     text-align: right;
     color: white;
 }
 .versin-detail-data-img[mode="gallery"]:hover .versin-detail-data-img-title{display:block;}
-.versin-detail-data-img[mode="gallery"]:hover img{filter: brightness(50%);}
+.versin-detail-data-img[mode="gallery"]:hover img{filter: brightness(60%);}		/* Updated 06 */
 .version_childs_slider_ListMode_text{
-  font-family: BYekan;
+  font-family: Iransans;		/* Updated 06 */
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -1433,7 +1442,7 @@ main-tab-searchr {
   cursor: pointer;
 }
 .collection_childs_slider_ListMode_text{
-    font-family: BYekan;
+    font-family: Iransans;		/* Updated 06 */
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
