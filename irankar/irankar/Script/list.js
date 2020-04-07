@@ -48,6 +48,7 @@ let setMap = {
     marker: []
 }
 let map = new CreateMap("mapid", setMap);
+document.getElementById('treeid').classList.add('d-none');
 let setTree = null;
 new CreateTree("treeid", setTree, map);
 
@@ -72,7 +73,7 @@ let TreeMapMode_Onclick = function (elem) {
 }
 //second tab
 
-let collection_childs = function (collectionData) {
+let collection_childs = function () {
 
     let elem = document.querySelector('#collection_childs'),
         _div = "";
@@ -119,10 +120,12 @@ let collection_childs = function (collectionData) {
 
 
 
-let collection_childs_slider = function () {
+let collection_childs_slider = function (collectionData) {
     let _div = document.querySelector('#collection_childs_slider .swiper-wrapper'),
     //$("#collection_childs_slider").addClass("swiper-container-cust");
         itemChild = "";
+    let tab = document.getElementById('pills-Collection');
+    //tab.classList.add('show active');
     for (let i = 0; i < collectionData.length; i++) {
         if (i % 12 == 0) {
             let swiper_slide = document.createElement("div");
@@ -173,70 +176,18 @@ let collection_childs_slider = function () {
             },	
         }
     });
-
+    //tab.classList.remove('show active');
 }
 
 
 
 
-let collection_childs_slider1 = function () {
-    let _div = document.querySelector('#collection_childs_slider .swiper-wrapper'),
-        itemChild = "";
-    for (let i = 0; i < collectionData.length; i++) {
-        if (i % 12 == 0) {
-            let swiper_slide = document.createElement("div");
-            swiper_slide.classList.add("swiper-slide");
-            _div.append(swiper_slide);
-            itemChild = document.createElement("div");
-            // itemChild.style.width = "200px";
-            swiper_slide.append(itemChild);
-        }
-
-        let slide = document.createElement("div");
-        slide.classList.add('collection_childs_slider_ListMode_text')
-        slide.textContent = collectionData[i].title;
-        itemChild.append(slide)
-    }
-    let swiper = new Swiper('#collection_childs_slider', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        // setWrapperSize: true,
-        // init: false,	
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-
-            },
-        }
-    });
-
-}
 let collection_ListViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
     let swiper = document.querySelector('#collection_childs_slider')
-    if (swiper.querySelector('.swiper-wrapper').children.length == 0) collection_childs_slider();
-    swiper.classList.remove('d-none');
-    document.querySelector('#collection_childs').classList.add('d-none');
+    document.querySelector("#collection_childs_show").classList.remove('d-none');
+    //if (swiper.querySelector('.swiper-wrapper').children.length == 0) collection_childs_slider();
+    document.querySelector('#collection_childs_parent').classList.add('d-none');
     document.querySelectorAll('.versin-detail-data-img').forEach(function (el, i) {
         el.setAttribute('mode', 'list')
     })
@@ -245,8 +196,9 @@ let collection_ListViewMode_Onclick = function (elem) {
 
 let collection_TwoViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
-    document.querySelector('#collection_childs_slider').classList.add('d-none');
-    document.querySelector('#collection_childs').classList.remove('d-none');
+    document.querySelector('#collection_childs_show').classList.add('d-none');
+    document.querySelector('#collection_childs_parent').classList.remove('d-none');
+    if (document.querySelector('#collection_childs').children.length == 0) collection_childs();
     document.querySelectorAll('.versin-detail-data-parent').forEach(function (el, i) {
         el.classList.add('col-md-6');
         el.classList.remove('col-md-12');
@@ -265,7 +217,7 @@ let collection_TwoViewMode_Onclick = function (elem) {
 }
 //third tab
 
-let version_childs = function (versionData) {
+let version_childs = function () {
 
     let elem = document.querySelector('#version_childs'),
         _div = "";
@@ -325,10 +277,14 @@ let version_childs = function (versionData) {
         _div.appendChild(_child);
 
     })
+    document.getElementById('version_childs_parent').classList.add('d-none');
+    document.getElementById('pills-prescription').classList.remove('show', 'active')
+    document.getElementById('pills-Collection').classList.remove('show', 'active')
+
 }
 
 
-let version_childs_slider = function () {
+let version_childs_slider = function (versionData) {
     let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
         itemChild = "";
     for (let i = 0; i < versionData.length; i++) {
@@ -385,78 +341,25 @@ let version_childs_slider = function () {
             },
         }
     });
-
+    version_childs();
 }
 
-
-
-let version_childs_slider1 = function () {
-    let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
-        itemChild = "";
-    for (let i = 0; i < versionData.length; i++) {
-        if (i % 12 == 0) {
-            let swiper_slide = document.createElement("div");
-            swiper_slide.classList.add("swiper-slide");
-            _div.append(swiper_slide);
-            itemChild = document.createElement("div");
-            // itemChild.style.width = "200px";
-            swiper_slide.append(itemChild);
-        }
-
-        let slide = document.createElement("div");
-        slide.classList.add('version_childs_slider_ListMode_text')
-        slide.textContent = "نسخه شماره " + versionData[i].id;
-        itemChild.append(slide)
-    }
-    let swiper = new Swiper('#version_childs_slider', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        // setWrapperSize: true,
-        // init: false,	
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-
-            },
-        }
-    });
-
-}
 
 let Version_ListViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
     let swiper = document.querySelector('#version_childs_slider')
+    document.querySelector("#version_childs_show").classList.remove('d-none');
     if (swiper.querySelector('.swiper-wrapper').children.length == 0) version_childs_slider();
-    swiper.classList.remove('d-none');
-    document.querySelector('#version_childs').classList.add('d-none');
+    
+    document.querySelector('#version_childs_parent').classList.add('d-none');
     document.querySelectorAll('.versin-detail-data-img').forEach(function (el, i) {
         el.setAttribute('mode', 'list')
     })
 }
 let Version_GalleryViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
-    document.querySelector('#version_childs_slider').classList.add('d-none');
-    document.querySelector('#version_childs').classList.remove('d-none');
+    document.querySelector('#version_childs_show').classList.add('d-none');
+    document.querySelector('#version_childs_parent').classList.remove('d-none');
     document.querySelectorAll('.versin-detail-data-parent').forEach(function (el, i) {
         el.classList.add('col-md-3');
         el.classList.remove('col-md-6');
@@ -476,8 +379,8 @@ let Version_GalleryViewMode_Onclick = function (elem) {
 }
 let Version_OneViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
-    document.querySelector('#version_childs_slider').classList.add('d-none');
-    document.querySelector('#version_childs').classList.remove('d-none');
+    document.querySelector('#version_childs_show').classList.add('d-none');
+    document.querySelector('#version_childs_parent').classList.remove('d-none');
     document.querySelectorAll('.versin-detail-data-parent').forEach(function (el, i) {
         el.classList.remove('col-md-6');
         el.classList.add('col-md-12');
@@ -496,8 +399,8 @@ let Version_OneViewMode_Onclick = function (elem) {
 }
 let Version_TwoViewMode_Onclick = function (elem) {
     $("#views img")[0].src = $(elem).children()[0].src
-    document.querySelector('#version_childs_slider').classList.add('d-none');
-    document.querySelector('#version_childs').classList.remove('d-none');
+    document.querySelector('#version_childs_show').classList.add('d-none');
+    document.querySelector('#version_childs_parent').classList.remove('d-none');
     document.querySelectorAll('.versin-detail-data-parent').forEach(function (el, i) {
         el.classList.add('col-md-6');
         el.classList.remove('col-md-12');
