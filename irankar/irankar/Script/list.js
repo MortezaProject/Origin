@@ -296,7 +296,7 @@ let version_childs_slider = function (versionData) {
         $(view).addClass("view w-100")
         swiper_slide.append(view);
         itemChild = document.createElement("div");
-        $(itemChild).addClass("item-list d-flex flex-column justify-content-between p-3");		/* Updated 06 */
+        $(itemChild).addClass("item-list d-flex flex-column justify-content-start p-3");		/* Updated 06 */
         // itemChild.style.width = "200px";
         view.append(itemChild);
         }
@@ -326,19 +326,18 @@ let version_childs_slider = function (versionData) {
         //     el: '.swiper-scrollbar',
         // },
         breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-            },
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-
-            },
+            640: {	
+                slidesPerView: 2,	
+                spaceBetween: 20,	
+            },	
+            1024: {	
+                slidesPerView: 3,	
+                spaceBetween: 40,	
+            },	
+            1440: {	
+                slidesPerView: 4,	
+                spaceBetween: 27,	
+            },	
         }
     });
     version_childs();
