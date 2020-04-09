@@ -1,6 +1,8 @@
 let imagefilter={
     src:$("#views img")[0].src
 }
+
+let datagallery = [];
 let show_position_dropdown = function () {
     $("#views img")[0].src = imagefilter.src;
     $("#views").css("background-color","#d6d6d6");
@@ -311,6 +313,7 @@ let version_childs_slider = function (versionData) {
 
         let slide = document.createElement("div");
         slide.classList.add('version_childs_slider_ListMode_text')
+        slide.setAttribute("onclick","CreateGallery()")
         slide.textContent = "نسخه شماره " + versionData[i].id;
         itemChild.append(slide)
 
@@ -432,3 +435,284 @@ let Version_TwoViewMode_Onclick = function (elem) {
         el.classList.remove('col-md-9');
     })
 }
+
+let CreateGallery = function(){
+    document.getElementById('version_childs_show').classList.add('d-none')
+    document.getElementById('version_childs_parent').classList.add('d-none')
+    document.getElementById('gallery').classList.remove('d-none')
+    document.getElementById('pills-prescription').style.height = "660px";
+     datagallery = [{
+        src: "../Images/blog1.png",
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
+    },
+    {
+        src: "../Images/blog2.png"
+    },
+    {
+        src: "../Images/blog3.png"
+
+    },
+    {
+        src: "../Images/blog4.png",
+        title: "4قرآن از نظر دانشمندان غربی",
+        desc: "متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4"
+    },
+    {
+        src: "../Images/blog5.png",
+        title: "5قرآن از نظر دانشمندان غربی",
+        desc: "متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5"
+    },
+    {
+        src: "../Images/blog6.png",
+        title: "6قرآن از نظر دانشمندان غربی",
+        desc: "متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6"
+    },
+    {
+        src: "../Images/blog7.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    {
+        src: "../Images/blog8.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    {
+        src: "../Images/blog9.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    {
+        src: "../Images/blog10.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    {
+        src: "../Images/blog11.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    {
+        src: "../Images/blog12.png",
+        title: "7قرآن از نظر دانشمندان غربی",
+        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+    },
+    ]
+    let changeRange = function(e){
+        let mySwiper = document.querySelector('#SliderID').swiper;
+        // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
+        // else mySwiper.slidePrev();
+        mySwiper.slideTo(e.valueAsNumber);
+        // e.setAttribute("oldval",e.valueAsNumber)            
+    }
+    //var swiper = new Swiper('#SliderID', {
+    //    slidesPerView: 1,
+    //    spaceBetween: 100,
+    //    setWrapperSize: true,
+    //    // init: false,	
+    //    pagination: {
+    //        el: '.swiper-pagination',
+    //        clickable: true,
+    //    },
+    //    navigation: {
+    //        nextEl: '.swiper-button-next',
+    //        prevEl: '.swiper-button-prev',
+    //    },
+    //    scrollbar: {
+    //        el: '.swiper-scrollbar',
+    //    },
+    //    // breakpoints: {
+    //    //     640: {
+    //    //         slidesPerView: 2,
+    //    //         spaceBetween: 40,
+    //    //     },
+    //    //     768: {
+    //    //         slidesPerView: 2,
+    //    //         spaceBetween: 40,
+    //    //     },
+    //    //     1024: {
+    //    //         slidesPerView: 4,
+    //    //         spaceBetween: 50,
+
+    //    //     },
+    //    // }
+    //});
+    //for (let i = 0; i < data.length; i++) {
+    //    // let slide = '<div class="swiper-slide"><img src=' + data[i].src + ' class="blog-image" /></div>'
+    //    let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
+    //        ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+    //    swiper.appendSlide(slide);
+    //}
+
+
+    document.querySelector("#SliderID").classList.remove('py-10');
+    document.querySelector("#fullpageWithThumb").classList.remove('d-none');
+    document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
+    document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
+    document.querySelector("#SliderID").style.height = "calc(85% - 31.4px)";
+    document.querySelector("#fullpageWithThumb").style.height = "20%";
+    document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+    document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+    var galleryThumbs = new Swiper('#fullpageWithThumb', {
+        spaceBetween: 32,
+        slidesPerView: 5,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('#SliderID', {
+        spaceBetween: 150,
+     
+        loopedSlides: 5, //looped slides should be the same
+
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+
+    for (let i = 0; i < datagallery.length; i++) {
+        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+        galleryThumbs.appendSlide(slide);
+        galleryTop.appendSlide(slide);
+        for (let obj in datagallery[i] ) {
+            if (document.getElementById(obj) !=null) {
+            document.getElementById(obj).innerHTML = datagallery[i][obj];
+    
+        }
+    }
+    }
+
+
+    let tableone = document.getElementById('table-one');
+    //tableone.innerHTML = ''
+
+
+    let goToSlide_onkeyup = function(e){
+        if(e.valueAsNumber>datagallery.length){
+            e.value = "";
+            return;
+        }
+        if(window.event.keyCode == 13){
+            let val = parseInt(e.value-1) ;
+            let mySwiper = document.querySelector('#SliderID').swiper;
+            mySwiper.slideTo(val);
+        }
+            
+    }
+
+    let goToSlide_onclick = function(e){
+        e.select();
+    }
+
+
+    let fullpageWithThumb = function () {
+
+    }
+
+
+}
+
+    let fullpage = function () {
+        document.querySelector("#SliderID").classList.remove('py-10');
+        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+        document.querySelector("#fullpageWithThumb").classList.add('d-none');
+        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+        var swiper = new Swiper('#SliderID', {
+            slidesPerView: 1,
+            spaceBetween: 150,
+            setWrapperSize: true,
+            // init: false,	
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        for (let i = 0; i < datagallery.length; i++) {
+            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            swiper.appendSlide(slide);
+        }
+    }
+
+
+    let TwoSlide = function () {
+        document.querySelector("#SliderID").classList.add('py-10');
+        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+        document.querySelector("#fullpageWithThumb").classList.add('d-none');
+        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+        var swiper = new Swiper('#SliderID', {
+            slidesPerView: 2,
+            spaceBetween: 150,
+            setWrapperSize: true,
+            // init: false,	
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+        for (let i = 0; i < datagallery.length; i++) {
+            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            swiper.appendSlide(slide);
+        }
+    }
+    let MultiSlide = function () {
+        document.querySelector("#SliderID").classList.remove('py-10');
+        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+        document.querySelector("#fullpageWithThumb").classList.add('d-none');
+        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+        let swiper = new Swiper('#SliderID', {
+            slidesPerView: 4,
+            slidesPerColumn: 3,
+            spaceBetween: 10,
+            // slidesPerGroup:3,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        for (let i = 0; i < datagallery.length; i++) {
+            let slide = '<div class="swiper-slide swiper-slide-MultiSlide" style="background-image:url(' + datagallery[
+                    i].src +
+                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            swiper.appendSlide(slide);
+        }
+    }
