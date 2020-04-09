@@ -602,6 +602,7 @@ let CreateGallery = function(){
     }
 
 
+
     let tableone = document.getElementById('table-one');
     //tableone.innerHTML = ''
 
