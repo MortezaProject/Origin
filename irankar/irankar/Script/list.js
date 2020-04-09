@@ -624,9 +624,7 @@ let CreateGallery = function(){
     }
 
 
-    let fullpageWithThumb = function () {
 
-    }
 
 
 }
@@ -661,8 +659,6 @@ let CreateGallery = function(){
             swiper.appendSlide(slide);
         }
     }
-
-
     let TwoSlide = function () {
         document.querySelector("#SliderID").classList.add('py-10');
         document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
@@ -693,6 +689,7 @@ let CreateGallery = function(){
             swiper.appendSlide(slide);
         }
     }
+
     let MultiSlide = function () {
         document.querySelector("#SliderID").classList.remove('py-10');
         document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
@@ -715,4 +712,45 @@ let CreateGallery = function(){
                 ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
             swiper.appendSlide(slide);
         }
+    }
+
+
+
+    let fullpageWithThumb = function () {
+        document.querySelector("#fullpageWithThumb").classList.remove('d-none');
+
+        var galleryThumbs = new Swiper('#fullpageWithThumb', {
+            spaceBetween: 32,
+            slidesPerView: 5,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            freeMode: true,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('#SliderID', {
+            spaceBetween: 150,
+     
+            loopedSlides: 5, //looped slides should be the same
+
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
+        for (let i = 0; i < datagallery.length; i++) {
+            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            galleryThumbs.appendSlide(slide);
+            galleryTop.appendSlide(slide);
+            for (let obj in datagallery[i] ) {
+                if (document.getElementById(obj) !=null) {
+                document.getElementById(obj).innerHTML = datagallery[i][obj];
+    
+            }
+        }
+        }
+        
     }
