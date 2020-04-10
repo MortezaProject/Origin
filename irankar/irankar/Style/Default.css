@@ -614,6 +614,7 @@ width:93%!important;
 
 .btn-slider-blog {
     --swiper-theme-color: #636261;
+    outline: unset;
 }
 
 /* fullpageWithThumb */
@@ -649,7 +650,11 @@ width:93%!important;
     right: 1px;
     outline: unset;
 }
-#left-status .swiper-button-prev::after ,.swiper-button-next::after {
+#left-status .swiper-button-prev::after  {
+font-size:18px!important;
+color:white!important;
+}
+#left-status .swiper-button-next::after {
 font-size:18px!important;
 color:white!important;
 }
