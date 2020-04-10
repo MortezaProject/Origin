@@ -1,7 +1,12 @@
-﻿
+﻿let datablog=[];
 ShowDescriptionBlog = function (param) {
-    document.querySelector('#description-blog span').textContent = param.getAttribute('desc');
-    document.querySelector('#dateblog span').textContent = param.getAttribute('dateblog');
+    let bid = param.attributes.bid.value || "";
+    datablog.forEach(function(itm){
+        if (itm.bid == bid) {
+            document.querySelector('#description-blog span').textContent = itm.desc;
+            document.querySelector('#dateblog span').textContent = itm.date;
+        }
+    });
     $("#description-blog").removeClass("d-none");
     for (var i = 0; i < $("#SwiperSlider").children().length; i++) {
         if ($("#SwiperSlider").children()[i].textContent != param.textContent )
@@ -32,15 +37,15 @@ OpenDilogComment=function(e){
     debugger;
 }
 CreateBlogHome = function (data) {
-
-    for (let i = 0; i < data.length; i++) {	
+    datablog = data || {};
+    for (let i = 0; i < datablog.length; i++) {	
         let div = document.createElement('div');	
         div.classList.add('swiper-slide');
         div.classList.add('swiper-slide-cust');
-        div.innerHTML = '<div class="view zoom" desc=' + data[i].desc +' dateblog='+ data[i].date +
+        div.innerHTML = '<div class="view zoom" bid=' + datablog[i].bid +
             ' onmouseover="ShowDescriptionBlog(this)" onmouseout="HideDescriptionBlog(this)"><div class="item-blog d-flex flex-column justify-content-between"><div><img src=' +	
-            data[i].src +	
-            ' class="blog-image" /></div><div class="p-2 text-center item-blog-desc"><p>' + data[i]	
+            datablog[i].src +	
+            ' class="blog-image" /></div><div class="p-2 text-center item-blog-desc"><p>' + datablog[i]	
             .title + '</p></div></div></<div>';	
         document.getElementById('SwiperSlider').append(div);	
     }	
@@ -81,7 +86,7 @@ LoadCommentsUsers =function(data_comments){
     for (var i = 0; i < data_comments.length; i++) {
         if(data_comments[i].parent_comment_id =="")
         {
-            $("#collapsecommentsuser .card-body-comment").append('<div class="media border_comments pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid +'"><h4 class="d-flex justify-content-between pl-3">'+ data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter" style="color:#00a693;">پاسخ دهید</a></h4><h4>'+ data_comments[i].date +'</h4><p>'+ data_comments[i].comment+'</p></div></div>');
+            $("#collapsecommentsuser .card-body-comment").append('<div class="media border_comments pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid +'"><h4 class="pl-3">'+ data_comments[i].comment_sender_name +'</h4><h4>'+ data_comments[i].date +'</h4><p>'+ data_comments[i].comment+'</p></div></div>');
         }
         else{
             let parent = $('[comment_id="'+data_comments[i].parent_comment_id +'"]');
@@ -89,7 +94,7 @@ LoadCommentsUsers =function(data_comments){
             if($(parent).children().attr('child') != undefined)
                 padding = Number($(parent).children()[0].style.paddingRight.substring(0,1))+1;
                 if ($('[comment_id="'+data_comments[i].parent_comment_id +'"]').length >= 1) {
-                    $('[comment_id="'+data_comments[i].parent_comment_id +'"]').append('<div class="media pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid+'"><div child style="padding-right:' +(padding == "0" ? "1rem" : padding+"rem")+';"><h4 class="d-flex justify-content-between pl-3">'+data_comments[i].comment_sender_name +'<a src="#" data-toggle="modal" data-target="#exampleModalCenter" style="color:#00a693;">پاسخ دهید</a></h4><h4>'+data_comments[i].date+'</h4><p>'+data_comments[i].comment+'</p></div></div></div>');
+                    $('[comment_id="'+data_comments[i].parent_comment_id +'"]').append('<div class="media pt-3"><div class="media-body" comment_id="'+data_comments[i].commentid+'"><div child style="padding-right:' +(padding == "0" ? "1rem" : padding+"rem")+';"><h4 class="pl-3">'+data_comments[i].comment_sender_name +'</h4><h4>'+data_comments[i].date+'</h4><p>'+data_comments[i].comment+'</p></div></div></div>');
                 }
                 
         }
