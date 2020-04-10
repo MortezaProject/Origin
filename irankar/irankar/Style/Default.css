@@ -1452,7 +1452,7 @@ main-tab-searchr {
 /*searchresult*/
 /* list page */
 .versin-detail-data-text > div {
-    font-family: Iransans; /* Updated 06 */
+    /*font-family: IRANSansWeb;*/ /* Updated 06 */
     font-size: 13px; /* Updated 06 */
     font-weight: normal;
     font-stretch: normal;
@@ -1472,7 +1472,7 @@ main-tab-searchr {
     display: none;
     position: absolute;
     bottom: 8px;
-    font-family: Iransans; /* Updated 06 */
+    /*font-family: IRANSansWeb;*/ /* Updated 06 */
     font-size: 14px;
     font-weight: normal;
     font-stretch: normal;
@@ -1492,7 +1492,7 @@ main-tab-searchr {
 }
 /* Updated 06 */
 .version_childs_slider_ListMode_text {
-    font-family: Iransans; /* Updated 06 */
+    /*font-family: IRANSansWeb;*/ /* Updated 06 */
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -1505,7 +1505,7 @@ main-tab-searchr {
 }
 
 .collection_childs_slider_ListMode_text {
-    font-family: Iransans; /* Updated 06 */
+    /*font-family: Iransans;*/ /* Updated 06 */
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -1561,8 +1561,17 @@ padding:0;
 border:0;
 }
 
-    #accordion label{
+    #table-two label{
     color:#939598!important;
+    }
+        #table-one label{
+    color:#939598!important;
+    }
+            #table-two span{
+    font-weight:400;
+    }
+        #table-one span{
+   font-weight:400;
     }
 /*tabld fehrest*/
 
