@@ -455,7 +455,7 @@ let CreateGallery = function(elem){
     document.getElementById('version_childs_show').classList.add('d-none')
     document.getElementById('version_childs_parent').classList.add('d-none')
     document.getElementById('gallery').classList.remove('d-none')
-    document.getElementById('pills-prescription').style.height = "33%";
+    document.getElementById('left-status').style.height = "668px";
     datagallery = [{
         id:"1",
         src: "../Images/blog1.png",
@@ -899,7 +899,7 @@ let fullpageWithThumb = function () {
     });
     for (let i = 0; i < datagallery.length; i++) {
         let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
-            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
         galleryThumbs.appendSlide(slide);
         galleryTop.appendSlide(slide);
         for (let obj in datagallery[i] ) {
