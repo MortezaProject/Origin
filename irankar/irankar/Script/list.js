@@ -154,19 +154,19 @@ let collection_childs_slider = function (collectionData) {
     let swiper = new Swiper('#collection_childs_slider', {
         slidesPerView: 1,
         spaceBetween: 10,
-         //setWrapperSize: true,
-         //init: false,	
-         pagination: {
-             el: '.swiper-pagination',
-             clickable: true,
-         },
+        //setWrapperSize: true,
+        //init: false,	
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-         scrollbar: {
-             el: '.swiper-scrollbar',
-         },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
         breakpoints: {
             640: {	
                 slidesPerView: 2,	
@@ -247,7 +247,7 @@ let version_childs = function () {
         _child.innerHTML = '<div class="container-fluid pr-0">' +
             '<div class="row">' +
             '<div class="col-md-6 versin-detail-data-img mb-2"><div class="container" style="padding:unset;"><img style="height:230px;width:100%;" class="img" src="' +
-            dt.src + '"/>' +
+            dt.src + '" onclick="CreateGallery(this)"/>' +
             '<div class="versin-detail-data-img-title mr-3">' +
             '<div class="container-fluid">' +
             '<div class="row"><div> نسخه شماره </div><div>' + dt.id + '</div></div>' +
@@ -299,21 +299,21 @@ let version_childs_slider = function (versionData) {
         itemChild = "";
     for (let i = 0; i < versionData.length; i++) {
         if (i % 12 == 0) {
-        let swiper_slide = document.createElement("div");
-        swiper_slide.classList.add("swiper-slide");
-        _div.append(swiper_slide);
-        let view = document.createElement("div");
-        $(view).addClass("view w-100")
-        swiper_slide.append(view);
-        itemChild = document.createElement("div");
-        $(itemChild).addClass("item-list d-flex flex-column justify-content-start p-3");		/* Updated 06 */
-        // itemChild.style.width = "200px";
-        view.append(itemChild);
+            let swiper_slide = document.createElement("div");
+            swiper_slide.classList.add("swiper-slide");
+            _div.append(swiper_slide);
+            let view = document.createElement("div");
+            $(view).addClass("view w-100")
+            swiper_slide.append(view);
+            itemChild = document.createElement("div");
+            $(itemChild).addClass("item-list d-flex flex-column justify-content-start p-3");		/* Updated 06 */
+            // itemChild.style.width = "200px";
+            view.append(itemChild);
         }
 
         let slide = document.createElement("div");
         slide.classList.add('version_childs_slider_ListMode_text')
-        slide.setAttribute("onclick","CreateGallery()")
+        slide.setAttribute("onclick","CreateGallery(this)")
         slide.textContent = "نسخه شماره " + versionData[i].id;
         itemChild.append(slide)
 
@@ -356,6 +356,8 @@ let version_childs_slider = function (versionData) {
 
 
 let Version_ListViewMode_Onclick = function (elem) {
+
+
     $("#views").children("img").attr("src", "../Images/list-view-selected.svg")
     //$("#views img")[0].src = $(elem).children()[0].src
     $("#views").css("background-color","#00a693");
@@ -369,6 +371,8 @@ let Version_ListViewMode_Onclick = function (elem) {
     })
 }
 let Version_GalleryViewMode_Onclick = function (elem) {
+
+
     $("#views").children("img").attr("src", "../Images/gallery-view-selected.svg")
     //$("#views img")[0].src = $(elem).children()[0].src
     $("#views").css("background-color","#00a693");
@@ -392,6 +396,7 @@ let Version_GalleryViewMode_Onclick = function (elem) {
     })
 }
 let Version_OneViewMode_Onclick = function (elem) {
+    
     $("#views").children("img").attr("src", "../Images/one-row-view-selected.svg")
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
@@ -436,12 +441,23 @@ let Version_TwoViewMode_Onclick = function (elem) {
     })
 }
 
-let CreateGallery = function(){
+let CreateGallery = function(elem){
+    let param = elem.innerHTML; // get parameter elements for request server
+    // request to server 
+    // after excute under code
+    document.querySelectorAll('.show-dropdown-gallery').forEach(function (el, i) {
+        el.classList.remove('d-none');
+    })
+    document.querySelectorAll('.show_version_dropdown').forEach(function (el, i) {
+        el.classList.add('d-none');
+    })
+    document.querySelector('#back').classList.remove('d-none');
     document.getElementById('version_childs_show').classList.add('d-none')
     document.getElementById('version_childs_parent').classList.add('d-none')
     document.getElementById('gallery').classList.remove('d-none')
-    document.getElementById('pills-prescription').style.height = "660px";
-     datagallery = [{
+    document.getElementById('pills-prescription').style.height = "33%";
+    datagallery = [{
+        id:"1",
         src: "../Images/blog1.png",
         keepplace:"ایران/تهران",
         propertynum:"1393/04/1254",
@@ -458,57 +474,204 @@ let CreateGallery = function(){
         soreinfo:"الفتح 45-11",
         verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
+   {
+       id:"2",
+       src: "../Images/blog2.png",
+       keepplace:"ایران/رشت",
+       propertynum:"1393/04/1254",
+       countpages:"256",
+       creators:"عبدالرحمان صوفی",
+       subject:"اخلاق",
+       createdate:"1 ذیحجه",
+       color:"نخودی",
+       gender:"دست ساز ترمه آهار مهره ومقواااا",
+       teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+       demensions:"طول 35 و عرض 15 سانتیمتر و",
+       waqf:"حاج حسین آقا ملک",
+       tabpage:"برگگه 45 پشت از برگه 245",
+       soreinfo:"الفتح 45-11",
+       verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
+   },
     {
-        src: "../Images/blog2.png"
-    },
-    {
-        src: "../Images/blog3.png"
+        id:"3",
+        src: "../Images/blog3.png",
+        keepplace:"ایران/کرج",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
 
     },
     {
+        id:"4",
         src: "../Images/blog4.png",
-        title: "4قرآن از نظر دانشمندان غربی",
-        desc: "متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4"
+        keepplace:"ایران/اهواز",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"5",
         src: "../Images/blog5.png",
-        title: "5قرآن از نظر دانشمندان غربی",
-        desc: "متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"6",
         src: "../Images/blog6.png",
-        title: "6قرآن از نظر دانشمندان غربی",
-        desc: "متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"7",
         src: "../Images/blog7.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"8",
         src: "../Images/blog8.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"9",
         src: "../Images/blog9.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"10",
         src: "../Images/blog10.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"11",
         src: "../Images/blog11.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     {
+        id:"12",
         src: "../Images/blog12.png",
-        title: "7قرآن از نظر دانشمندان غربی",
-        desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
+        keepplace:"ایران/تهران",
+        propertynum:"1393/04/1254",
+        countpages:"256",
+        creators:"عبدالرحمان صوفی",
+        subject:"اخلاق",
+        createdate:"1 ذیحجه",
+        color:"نخودی",
+        gender:"دست ساز ترمه آهار مهره ومقواااا",
+        teqnique:"دست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااادست ساز ترمه آهار مهره ومقواااا",
+        demensions:"طول 35 و عرض 15 سانتیمتر و",
+        waqf:"حاج حسین آقا ملک",
+        tabpage:"برگگه 45 پشت از برگه 245",
+        soreinfo:"الفتح 45-11",
+        verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     ]
     let changeRange = function(e){
@@ -518,45 +681,6 @@ let CreateGallery = function(){
         mySwiper.slideTo(e.valueAsNumber);
         // e.setAttribute("oldval",e.valueAsNumber)            
     }
-    //var swiper = new Swiper('#SliderID', {
-    //    slidesPerView: 1,
-    //    spaceBetween: 100,
-    //    setWrapperSize: true,
-    //    // init: false,	
-    //    pagination: {
-    //        el: '.swiper-pagination',
-    //        clickable: true,
-    //    },
-    //    navigation: {
-    //        nextEl: '.swiper-button-next',
-    //        prevEl: '.swiper-button-prev',
-    //    },
-    //    scrollbar: {
-    //        el: '.swiper-scrollbar',
-    //    },
-    //    // breakpoints: {
-    //    //     640: {
-    //    //         slidesPerView: 2,
-    //    //         spaceBetween: 40,
-    //    //     },
-    //    //     768: {
-    //    //         slidesPerView: 2,
-    //    //         spaceBetween: 40,
-    //    //     },
-    //    //     1024: {
-    //    //         slidesPerView: 4,
-    //    //         spaceBetween: 50,
-
-    //    //     },
-    //    // }
-    //});
-    //for (let i = 0; i < data.length; i++) {
-    //    // let slide = '<div class="swiper-slide"><img src=' + data[i].src + ' class="blog-image" /></div>'
-    //    let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-    //        ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-    //    swiper.appendSlide(slide);
-    //}
-
 
     document.querySelector("#SliderID").classList.remove('py-10');
     document.querySelector("#fullpageWithThumb").classList.remove('d-none');
@@ -566,6 +690,192 @@ let CreateGallery = function(){
     document.querySelector("#fullpageWithThumb").style.height = "20%";
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+    var galleryThumbs = new Swiper('#fullpageWithThumb', {
+        spaceBetween: 32,
+        slidesPerView: 5,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        on: {
+            click: function (e) {
+                datagallery.forEach(function(itm){
+                    if (itm.id == e.target.attributes.iid.value) {
+                        for (let obj in itm ) {
+                        if (document.getElementById(obj) !=null) {
+                            document.getElementById(obj).innerHTML = itm[obj];
+    
+                        }
+                    }
+                }
+                });
+            },
+        }
+    });
+    var galleryTop = new Swiper('#SliderID', {
+        spaceBetween: 150,
+     
+        loopedSlides: 5, //looped slides should be the same
+
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+        on: {
+            click: function (e) {
+                datagallery.forEach(function(itm){
+                    if (itm.id == e.target.attributes.iid.value) {
+                        for (let obj in itm ) {
+                        if (document.getElementById(obj) !=null) {
+                            document.getElementById(obj).innerHTML = itm[obj];
+    
+                        }
+                    }
+                }
+                });
+            },
+        }
+    });
+
+    for (let i = 0; i < datagallery.length; i++) {
+        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
+        galleryThumbs.appendSlide(slide);
+        galleryTop.appendSlide(slide);
+        for (let obj in datagallery[i] ) {
+            if (document.getElementById(obj) !=null) {
+            document.getElementById(obj).innerHTML = datagallery[i][obj];
+    
+        }
+    }
+}
+
+
+
+let tableone = document.getElementById('table-one');
+//tableone.innerHTML = ''
+
+
+let goToSlide_onkeyup = function(e){
+    if(e.valueAsNumber>datagallery.length){
+        e.value = "";
+        return;
+    }
+    if(window.event.keyCode == 13){
+        let val = parseInt(e.value-1) ;
+        let mySwiper = document.querySelector('#SliderID').swiper;
+        mySwiper.slideTo(val);
+    }
+            
+}
+
+let goToSlide_onclick = function(e){
+    e.select();
+}
+
+
+
+
+
+}
+
+let fullpage = function () {
+    document.querySelector("#SliderID").classList.remove('py-10');
+    document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+    document.querySelector("#fullpageWithThumb").classList.add('d-none');
+    document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+    document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+    var swiper = new Swiper('#SliderID', {
+        slidesPerView: 1,
+        spaceBetween: 150,
+        setWrapperSize: true,
+        // init: false,	
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    for (let i = 0; i < datagallery.length; i++) {
+        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+        swiper.appendSlide(slide);
+    }
+}
+let TwoSlide = function () {
+    document.querySelector("#SliderID").classList.add('py-10');
+    document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+    document.querySelector("#fullpageWithThumb").classList.add('d-none');
+    document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+    document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+    var swiper = new Swiper('#SliderID', {
+        slidesPerView: 2,
+        spaceBetween: 150,
+        setWrapperSize: true,
+        // init: false,	
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+    for (let i = 0; i < datagallery.length; i++) {
+        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+        swiper.appendSlide(slide);
+    }
+}
+
+let MultiSlide = function () {
+    document.querySelector("#SliderID").classList.remove('py-10');
+    document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+    document.querySelector("#fullpageWithThumb").classList.add('d-none');
+    document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+    document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+    let swiper = new Swiper('#SliderID', {
+        slidesPerView: 4,
+        slidesPerColumn: 3,
+        spaceBetween: 10,
+        // slidesPerGroup:3,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+    for (let i = 0; i < datagallery.length; i++) {
+        let slide = '<div class="swiper-slide swiper-slide-MultiSlide" style="background-image:url(' + datagallery[
+                i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+        swiper.appendSlide(slide);
+    }
+}
+
+
+
+let fullpageWithThumb = function () {
+    document.querySelector("#fullpageWithThumb").classList.remove('d-none');
+
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
         spaceBetween: 32,
         slidesPerView: 5,
@@ -587,7 +897,6 @@ let CreateGallery = function(){
             swiper: galleryThumbs,
         },
     });
-
     for (let i = 0; i < datagallery.length; i++) {
         let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
             ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
@@ -599,159 +908,19 @@ let CreateGallery = function(){
     
         }
     }
-    }
-
-
-
-    let tableone = document.getElementById('table-one');
-    //tableone.innerHTML = ''
-
-
-    let goToSlide_onkeyup = function(e){
-        if(e.valueAsNumber>datagallery.length){
-            e.value = "";
-            return;
-        }
-        if(window.event.keyCode == 13){
-            let val = parseInt(e.value-1) ;
-            let mySwiper = document.querySelector('#SliderID').swiper;
-            mySwiper.slideTo(val);
-        }
-            
-    }
-
-    let goToSlide_onclick = function(e){
-        e.select();
-    }
-
-
-
-
-
+}
+        
 }
 
-    let fullpage = function () {
-        document.querySelector("#SliderID").classList.remove('py-10');
-        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-        document.querySelector("#fullpageWithThumb").classList.add('d-none');
-        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-        var swiper = new Swiper('#SliderID', {
-            slidesPerView: 1,
-            spaceBetween: 150,
-            setWrapperSize: true,
-            // init: false,	
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-
-        for (let i = 0; i < datagallery.length; i++) {
-            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
-                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-            swiper.appendSlide(slide);
-        }
-    }
-    let TwoSlide = function () {
-        document.querySelector("#SliderID").classList.add('py-10');
-        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-        document.querySelector("#fullpageWithThumb").classList.add('d-none');
-        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-        var swiper = new Swiper('#SliderID', {
-            slidesPerView: 2,
-            spaceBetween: 150,
-            setWrapperSize: true,
-            // init: false,	
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-
-        for (let i = 0; i < datagallery.length; i++) {
-            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
-                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-            swiper.appendSlide(slide);
-        }
-    }
-
-    let MultiSlide = function () {
-        document.querySelector("#SliderID").classList.remove('py-10');
-        document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-        document.querySelector("#fullpageWithThumb").classList.add('d-none');
-        document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-        document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-        let swiper = new Swiper('#SliderID', {
-            slidesPerView: 4,
-            slidesPerColumn: 3,
-            spaceBetween: 10,
-            // slidesPerGroup:3,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-        for (let i = 0; i < datagallery.length; i++) {
-            let slide = '<div class="swiper-slide swiper-slide-MultiSlide" style="background-image:url(' + datagallery[
-                    i].src +
-                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-            swiper.appendSlide(slide);
-        }
-    }
-
-
-
-    let fullpageWithThumb = function () {
-        document.querySelector("#fullpageWithThumb").classList.remove('d-none');
-
-        var galleryThumbs = new Swiper('#fullpageWithThumb', {
-            spaceBetween: 32,
-            slidesPerView: 5,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            freeMode: true,
-            loopedSlides: 5, //looped slides should be the same
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
-        var galleryTop = new Swiper('#SliderID', {
-            spaceBetween: 150,
-     
-            loopedSlides: 5, //looped slides should be the same
-
-            thumbs: {
-                swiper: galleryThumbs,
-            },
-        });
-        for (let i = 0; i < datagallery.length; i++) {
-            let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
-                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-            galleryThumbs.appendSlide(slide);
-            galleryTop.appendSlide(slide);
-            for (let obj in datagallery[i] ) {
-                if (document.getElementById(obj) !=null) {
-                document.getElementById(obj).innerHTML = datagallery[i][obj];
-    
-            }
-        }
-        }
-        
-    }
+let backto = function(){
+    document.querySelector('#back').classList.add('d-none');
+    document.querySelector('#gallery').classList.add('d-none');
+    document.getElementById('pills-prescription').style.height = "unset";
+    document.querySelector("#version_childs_show").classList.remove('d-none');
+    document.querySelectorAll('.show-dropdown-gallery').forEach(function (el, i) {
+        el.classList.add('d-none');
+    })
+    document.querySelectorAll('.show_version_dropdown').forEach(function (el, i) {
+        el.classList.remove('d-none');
+    })
+}
