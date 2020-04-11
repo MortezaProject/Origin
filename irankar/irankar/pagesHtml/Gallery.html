@@ -28,21 +28,23 @@
 </head>
 
 <body>
-    <div style="width: 100%;height: 100%;">
+    <div style="width: 100%; height: 100%;">
 
         <div id="SliderID" class="swiper-container">
             <div class="swiper-wrapper" id="SwiperSlider"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next btn-shape-Swiper"></div>
+            <div class="swiper-button-prev btn-shape-Swiper"></div>
             <!-- <div class="swiper-pagination"></div> -->
             <!-- <div class="swiper-scrollbar "></div> -->
         </div>
         <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
             <div class="swiper-wrapper" id="SwiperSlider"></div>
+            <div class="swiper-button-next btn-shape-Thumb"></div>
+            <div class="swiper-button-prev btn-shape-Thumb"></div>
         </div>
         <!-- toolbar -->
         <div class="container-fluid" id="gallery-toolbar">
-            <div class="row" style="margin: 0 6rem;" >
+            <div class="row" style="margin: 0 6rem;">
                 <div class="col-md-2">
                     <div class="gallery-toolbar-desc">الفتح: 29/33 - الفتح: 29/54</div>
                 </div>
@@ -52,16 +54,16 @@
                             <div class="gallery-toolbar-pages-text">برگه</div>
                         </div>
                         <!-- <div class="input-group-prepend"> -->
-                            <input type="number" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn" value="1" onclick="goToSlide_onclick(this)" onkeyup="goToSlide_onkeyup(this)"/>
-                            <!-- <input type="text" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"/> -->
-                            <select class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">
-                                <option value="back">پشت</option>
-                                <option value="front">رو</option>
-                            </select>
-                            <div class="gallery-toolbar-pages-text">از</div>
-                            <div id="gallery-toolbar-AllPages" class="gallery-toolbar-pages-text">215</div>
+                        <input type="number" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn" value="1" onclick="goToSlide_onclick(this)" onkeyup="goToSlide_onkeyup(this)" />
+                        <!-- <input type="text" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"/> -->
+                        <select class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">
+                            <option value="back">پشت</option>
+                            <option value="front">رو</option>
+                        </select>
+                        <div class="gallery-toolbar-pages-text">از</div>
+                        <div id="gallery-toolbar-AllPages" class="gallery-toolbar-pages-text">215</div>
                         <!-- </div> -->
-                       
+
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -69,13 +71,14 @@
                 </div>
                 <div class="col-md-2 gallery-toolbar-dropdown">
                     <div class="input-group justify-content-center">
-                        <div style="width: 30px;" class="input-group-prepend" >
-                            <ul class="nav nav-pills" style="padding: unset;" role="tablist"><!-- id="PillsTab-left" -->
-                                <li class="nav-item" style="width: 30px;height: 30px;">
-                                    <img class="nav-link" style="padding: unset;margin: 0 7px;height: 30px; background-color:unset;" data-toggle="dropdown" href="#"
+                        <div style="width: 30px;" class="input-group-prepend">
+                            <ul class="nav nav-pills" style="padding: unset;" role="tablist">
+                                <!-- id="PillsTab-left" -->
+                                <li class="nav-item" style="width: 30px; height: 30px;">
+                                    <img class="nav-link" style="padding: unset; margin: 0 7px; height: 30px; background-color: unset;" data-toggle="dropdown" href="#"
                                         role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
                                     <div class="dropdown-menu" x-placement="top-start"
-                                        style="background-color: #d6d6d6;min-width: unset;padding: 0;position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                        style="background-color: #d6d6d6; min-width: unset; padding: 0; position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
                                         <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one" href="#" onclick="fullpage()"></a>
                                         <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail" href="#" onclick="fullpageWithThumb()"></a>
                                         <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under" href="#" onclick=""></a>
@@ -85,9 +88,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <img class="img" src="../Images/minimize.svg"/>  
-                        <img class="img" src="../Images/magnifier.svg"/>  
-                        <img class="img" src="../Images/i.svg"/> 
+                        <img class="img" src="../Images/minimize.svg" />
+                        <img class="img" src="../Images/magnifier.svg" />
+                        <img class="img" src="../Images/i.svg" />
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -95,15 +98,15 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- toolbar -->
     </div>
     <script>
         let data = [{
-                src: "../Images/blog1.png",
-                title: "1قرآن از نظر دانشمندان غربی",
-                desc: "متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1"
-            },
+            src: "../Images/blog1.png",
+            title: "1قرآن از نظر دانشمندان غربی",
+            desc: "متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1"
+        },
             {
                 src: "../Images/blog2.png",
                 title: "2قرآن از نظر دانشمندان غربی",
@@ -214,12 +217,12 @@
             if(e.valueAsNumber>data.length){
                 e.value = "";
                 return;
-            }
+        }
             if(window.event.keyCode == 13){
                 let val = parseInt(e.value-1) ;
                 let mySwiper = document.querySelector('#SliderID').swiper;
                 mySwiper.slideTo(val);
-            }
+        }
             
         }
 
@@ -227,37 +230,43 @@
             e.select();
         }
 
-        let fullpage = function () {
-            document.querySelector("#SliderID").classList.remove('py-10');
-            document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-            document.querySelector("#fullpageWithThumb").classList.add('d-none');
-            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-            var swiper = new Swiper('#SliderID', {
-                slidesPerView: 1,
-                spaceBetween: 150,
-                setWrapperSize: true,
-                // init: false,	
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-            });
+            let fullpage = function () {
+                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+                    el.classList.remove('d-none');
+                })
+                document.querySelector("#SliderID").classList.remove('py-10');
+                document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
+                document.querySelector("#fullpageWithThumb").classList.add('d-none');
+                document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+                document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
+                var swiper = new Swiper('#SliderID', {
+                    slidesPerView: 1,
+                    spaceBetween: 150,
+                    setWrapperSize: true,
+                    // init: false,	
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
 
-            for (let i = 0; i < data.length; i++) {
-                let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-                swiper.appendSlide(slide);
+                for (let i = 0; i < data.length; i++) {
+                    let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
+                        ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
+                    swiper.appendSlide(slide);
+                }
             }
-        }
-        let fullpageWithThumb = function () {
+            let fullpageWithThumb = function () {
+                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+                    el.classList.add('d-none');
+                })
             document.querySelector("#SliderID").classList.remove('py-10');
             document.querySelector("#fullpageWithThumb").classList.remove('d-none');
             document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
@@ -267,8 +276,12 @@
             document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
             document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
             let galleryThumbs = new Swiper('#fullpageWithThumb', {
-                spaceBetween: 10,
-                slidesPerView: 10,
+                spaceBetween: 21,
+                slidesPerView: 9,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                 freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
@@ -290,7 +303,10 @@
                 galleryTop.appendSlide(slide);
             }
         }
-        let TwoSlide = function () {
+            let TwoSlide = function () {
+                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+                    el.classList.remove('d-none');
+                })
             document.querySelector("#SliderID").classList.add('py-10');
             document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
             document.querySelector("#fullpageWithThumb").classList.add('d-none');
@@ -320,7 +336,10 @@
                 swiper.appendSlide(slide);
             }
         }
-        let MultiSlide = function () {
+            let MultiSlide = function () {
+                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+                    el.classList.remove('d-none');
+                })
             document.querySelector("#SliderID").classList.remove('py-10');
             document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
             document.querySelector("#fullpageWithThumb").classList.add('d-none');

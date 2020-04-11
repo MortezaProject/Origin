@@ -24,14 +24,14 @@ HideDescriptionBlog = function (param) {
 ChangeIconCollapse = function (e) {
     debugger;
     if ($($(e)[0].dataset.target).hasClass("show"))
-        $(e).children("img").attr("src", "../Images/Arrow-down.svg")
-    else $(e).children("img").attr("src", "../Images/Arrow-up.svg")
+        $(e).children("img").attr("src", window.imagesource.Arrowdown)
+    else $(e).children("img").attr("src", window.imagesource.Arrowup)
 }
 ChangeIconCollapseChild = function (e) {
     debugger;
     if ($($(e)[0].dataset.target).hasClass("show"))
-        $(e).children("img").attr("src", "../Images/Arrow-down-small.svg")
-    else $(e).children("img").attr("src", "../Images/Arrow-up-small.svg")
+        $(e).children("img").attr("src", window.imagesource.Arrowdownsmall)
+    else $(e).children("img").attr("src",window.imagesource.Arrowupsmall)
 }
 OpenDilogComment=function(e){
     debugger;

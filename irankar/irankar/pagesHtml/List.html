@@ -155,42 +155,50 @@
                                         <!-- موقعیت -->
                                         <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
                                             onclick="MapMode_Onclick(this)">
-                                            <img src="../Images/map.svg" style="width: 40px;" /></a>
+                                            <img src="../Images/map.svg" style="width: 33px;" /></a>
                                         <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
                                             onclick="TreeMapMode_Onclick(this)">
-                                            <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                            <img src="../Images/hi-map.svg" style="width: 33px;" /></a>
                                         <!-- مجموعه -->
                                         <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
                                             onclick="collection_ListViewMode_Onclick(this)">
-                                            <img src="../Images/list-view.svg" style="width: 40px;" />
+                                            <img src="../Images/list-view.svg" style="width: 33px;" />
                                         </a>
                                         <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
                                             onclick="collection_TwoViewMode_Onclick(this)">
-                                            <img src="../Images/two-row-view.svg" style="width: 40px;" />
+                                            <img src="../Images/two-row-view.svg" style="width: 33px;" />
                                         </a>
                                         <!-- نسخه -->
                                         <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
                                             onclick="Version_ListViewMode_Onclick(this)">
-                                            <img src="../Images/list-view.svg" style="width: 40px;" />
+                                            <img src="../Images/list-view.svg" style="width: 33px;" />
                                         </a>
                                         <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
                                             onclick="Version_GalleryViewMode_Onclick(this)">
-                                            <img src="../Images/gallery-view.svg" style="width: 40px;" />
+                                            <img src="../Images/gallery-view.svg" style="width: 33px;" />
                                         </a>
                                         <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
                                             onclick="Version_OneViewMode_Onclick(this)">
-                                            <img src="../Images/one-row-view.svg" style="width: 40px;" />
+                                            <img src="../Images/one-row-view.svg" style="width: 33px;" />
                                         </a>
                                         <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
                                             onclick="Version_TwoViewMode_Onclick(this)">
-                                            <img src="../Images/two-row-view.svg" style="width: 40px;" />
+                                            <img src="../Images/two-row-view.svg" style="width: 33px;" />
                                         </a>
                                         <!-- گالری -->
-                                        <a class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpage()"></a>
-                                        <a class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpageWithThumb()"></a>
-                                        <a class="dropdown-item view-gallery-under gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick=""></a>
-                                        <a class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="TwoSlide()"></a>
-                                        <a class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="MultiSlide()"></a>
+                                        <a class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpageWithThumb()">
+                                            <img src="../Images/thumbnail.svg" style="width: 26px;" />
+                                        </a>
+                                        <a class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpage()">
+                                             <img src="../Images/one.svg" style="width: 26px;" />
+                                        </a>
+                                        
+                                        <a class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="TwoSlide()">
+                                             <img src="../Images/two.svg" style="width: 26px;" />
+                                        </a>
+                                        <a class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="MultiSlide()">
+                                             <img src="../Images/view.svg" style="width: 26px;" />
+                                        </a>
                                         <!--  -->
                                     </div>
                                 </li>
@@ -410,8 +418,8 @@
                                 <div id="left-status" class="col-9 pl-0">
                                     <div id="SliderID" class="swiper-container">
                                         <div class="swiper-wrapper" id="SwiperSlider"></div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next btn-shape-Swiper"></div>
+                                        <div class="swiper-button-prev btn-shape-Swiper"></div>
                                         <div class="glyphicon glyphicon-camera" onclick="expandgallery()" style="position: absolute; z-index: 100000; bottom: 15px; left: 0; padding-left: 2%;">weee</div>
 
                                     </div>
@@ -481,6 +489,14 @@
     <script src="../Script/list.js"></script>
 
     <script>
+       
+    window.imagesource = {
+        Arrowdown: "../Images/Arrow-down.svg",
+        Arrowup: "../Images/Arrow-up.svg",
+        Arrowdownsmall: "../Images/Arrow-down-small.svg",
+        Arrowupsmall: "../Images/Arrow-up-small.svg"
+    }
+
         let collectionData = [{
             "title": "آکادمی سلطانی هنر",
             "established": "1768 میلادی",
@@ -936,9 +952,7 @@
         collection_childs_slider(collectionData);
         version_childs_slider(versionData);
     </script>
-    <script>
 
-    </script>
     <div id="myModal" class="modal">
                 <span class="close">&times;</span>
                 <div class="modal-content" id="expandgallery">

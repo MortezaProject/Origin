@@ -4,6 +4,12 @@ let imagefilter={
 
 let datagallery = [];
 let show_position_dropdown = function () {
+    if (!$('#gallery').hasClass('d-none')) {
+        document.querySelectorAll('.show-dropdown-gallery').forEach(function (el, i) {
+            el.classList.add('d-none');
+        })
+        document.querySelector('#back').classList.add('d-none');
+    }
     $("#views img")[0].src = imagefilter.src;
     $("#views").css("background-color","#d6d6d6");
     document.querySelectorAll('.show_position_dropdown').forEach(function (el) {
@@ -17,6 +23,12 @@ let show_position_dropdown = function () {
     })
 }
 let show_collection_dropdown = function () {
+    if (!$('#gallery').hasClass('d-none')) {
+        document.querySelectorAll('.show-dropdown-gallery').forEach(function (el, i) {
+            el.classList.add('d-none');
+        })
+        document.querySelector('#back').classList.add('d-none');
+    }
     $("#views img")[0].src = imagefilter.src;
     $("#views").css("background-color","#d6d6d6");
     document.querySelectorAll('.show_collection_dropdown').forEach(function (el) {
@@ -30,6 +42,9 @@ let show_collection_dropdown = function () {
     })
 }
 let show_version_dropdown = function () {
+    if (!$('#gallery').hasClass('d-none')) {
+        backto();
+    }
     $("#views img")[0].src = imagefilter.src;
     $("#views").css("background-color","#d6d6d6");
     document.querySelectorAll('.show_version_dropdown').forEach(function (el) {
@@ -456,6 +471,9 @@ let CreateGallery = function(elem){
     document.getElementById('version_childs_parent').classList.add('d-none')
     document.getElementById('gallery').classList.remove('d-none')
     document.getElementById('left-status').style.height = "668px";
+    document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+        el.classList.add('d-none');
+    })
     datagallery = [{
         id:"1",
         src: "../Images/blog1.png",
@@ -783,6 +801,11 @@ let goToSlide_onclick = function(e){
 }
 
 let fullpage = function () {
+    document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+        el.classList.remove('d-none');
+    })
+    $("#views").css("background-color","#00a693");
+    $("#views").children("img").attr("src", "../Images/one-selected.svg") 
     document.querySelector("#SliderID").classList.remove('py-10');
     document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
     document.querySelector("#fullpageWithThumb").classList.add('d-none');
@@ -813,6 +836,11 @@ let fullpage = function () {
     }
 }
 let TwoSlide = function () {
+    document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+        el.classList.remove('d-none');
+    })
+    $("#views").css("background-color","#00a693");
+    $("#views").children("img").attr("src", "../Images/two-selected.svg") 
     document.querySelector("#SliderID").classList.add('py-10');
     document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
     document.querySelector("#fullpageWithThumb").classList.add('d-none');
@@ -844,6 +872,11 @@ let TwoSlide = function () {
 }
 
 let MultiSlide = function () {
+    document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+        el.classList.remove('d-none');
+    })
+    $("#views").css("background-color","#00a693");
+    $("#views").children("img").attr("src", "../Images/view-selected.svg") 
     document.querySelector("#SliderID").classList.remove('py-10');
     document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
     document.querySelector("#fullpageWithThumb").classList.add('d-none');
@@ -874,6 +907,11 @@ let MultiSlide = function () {
 
 
 let fullpageWithThumb = function () {
+    document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
+        el.classList.add('d-none');
+    })
+    $("#views").css("background-color","#00a693");
+    $("#views").children("img").attr("src", "../Images/thumbnail-selected.svg")
     document.querySelector("#fullpageWithThumb").classList.remove('d-none');
 
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
