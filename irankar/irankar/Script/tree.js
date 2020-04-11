@@ -132,7 +132,6 @@
           function createTreeDom(node) {
             if (node.length==0)return;
             let ul = document.createElement('ul');
-            
             for (let i = 0; i < node.length; i++) {
               let li = document.createElement('li');
               li.innerHTML = node[i].text;

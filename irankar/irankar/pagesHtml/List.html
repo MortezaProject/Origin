@@ -102,338 +102,339 @@
 
         </div>
         <!-- End-Menu -->
+        <div id="maincontain">
+            <!-- Begin-Content-Blog -->
 
-        <!-- Begin-Content-Blog -->
-
-        <div class="py-5" style="background-color: #f5f5f5;">
-            <nav aria-label="breadcrumb" class=" align-parent">
-                <ol class="breadcrumb px-0" style="background-color: unset!important;">
-                    <img src="../Images/Content.png">
-                    <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">فهرست</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">ایران</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">تهران</li>
-                </ol>
-                <div id="back" class="d-none" style="float:left;color:#939598;cursor:pointer;" onclick="backto()">
-                    <a>بازگشت</a>
-                </div>
-            </nav>
-        </div>
-
-        <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
-        <!-- start tabs -->
-        <div id="Content-Map" class="" style="background-color: #f5f4f6;">
-            <div class="row mx-0">
-                <div class="container-fluid row mx-0 align-parent border-bottom">
-                    <div class="Parent-Tab col-md-9 col-7 px-0">
-                        <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
-                            <li class="nav-item ml-md-2 ml-1" onclick="show_position_dropdown()">
-                                <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab"
-                                    aria-controls="pills-Location" aria-selected="true">موقعیت</a>
-                            </li>
-                            <li class="nav-item mx-md-2 mx-1" onclick="show_collection_dropdown()">
-                                <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab"
-                                    aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
-                            </li>
-                            <li class="nav-item mx-md-2 mx-1" onclick="show_version_dropdown()">
-                                <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab"
-                                    aria-controls="pills-prescription" aria-selected="false">نسخه</a>
-                            </li>
-                        </ul>
-
+            <div class="py-5" style="background-color: #f5f5f5;">
+                <nav aria-label="breadcrumb" class=" align-parent">
+                    <ol class="breadcrumb px-0" style="background-color: unset!important;">
+                        <img src="../Images/Content.png">
+                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">فهرست</a></li>
+                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">ایران</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">تهران</li>
+                    </ol>
+                    <div id="back" class="d-none" style="float: left; color: #939598; cursor: pointer;" onclick="backto()">
+                        <a>بازگشت</a>
                     </div>
-                    <div class="Parent-Tab col-md-3 col-5 d-flex justify-content-end">
-                        <ul class="nav nav-pills pr-0" role="tablist">
+                </nav>
+            </div>
 
-                            <li class="nav-item mx-md-2 mx-1">
-                                <a id="views" class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <img src="../Images/view.svg" style="height: 148%;"></a>
-                                <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown"
-                                    x-placement="bottom-start"
-                                    style="position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                    <!-- موقعیت -->
-                                    <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
-                                        onclick="MapMode_Onclick(this)">
-                                        <img src="../Images/map.svg" style="width: 40px;" /></a>
-                                    <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
-                                        onclick="TreeMapMode_Onclick(this)">
-                                        <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
-                                    <!-- مجموعه -->
-                                    <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
-                                        onclick="collection_ListViewMode_Onclick(this)">
-                                        <img src="../Images/list-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
-                                        onclick="collection_TwoViewMode_Onclick(this)">
-                                        <img src="../Images/two-row-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <!-- نسخه -->
-                                    <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                        onclick="Version_ListViewMode_Onclick(this)">
-                                        <img src="../Images/list-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                        onclick="Version_GalleryViewMode_Onclick(this)">
-                                        <img src="../Images/gallery-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                        onclick="Version_OneViewMode_Onclick(this)">
-                                        <img src="../Images/one-row-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                        onclick="Version_TwoViewMode_Onclick(this)">
-                                        <img src="../Images/two-row-view.svg" style="width: 40px;" />
-                                    </a>
-                                    <!-- گالری -->
-                                    <a class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpage()"></a>
-                                    <a class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpageWithThumb()"></a>
-                                    <a class="dropdown-item view-gallery-under gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick=""></a>
-                                    <a class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="TwoSlide()"></a>
-                                    <a class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="MultiSlide()"></a>
-                                    <!--  -->
-                                </div>
-                            </li>
-                            <li class="nav-item mr-md-2 mr-1">
-                                <a class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between active show"
-                                    href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter"
-                                    aria-selected="true">
-                                    <div class="pl-lg-3 pl-0">فیلتر</div>
-                                </a>
-                            </li>
-                        </ul>
+            <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
+            <!-- start tabs -->
+            <div id="Content-Map" class="" style="background-color: #f5f4f6;">
+                <div class="row mx-0">
+                    <div class="container-fluid row mx-0 align-parent border-bottom">
+                        <div class="Parent-Tab col-md-9 col-7 px-0">
+                            <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
+                                <li class="nav-item ml-md-2 ml-1" onclick="show_position_dropdown()">
+                                    <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab"
+                                        aria-controls="pills-Location" aria-selected="true">موقعیت</a>
+                                </li>
+                                <li class="nav-item mx-md-2 mx-1" onclick="show_collection_dropdown()">
+                                    <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab"
+                                        aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
+                                </li>
+                                <li class="nav-item mx-md-2 mx-1" onclick="show_version_dropdown()">
+                                    <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab"
+                                        aria-controls="pills-prescription" aria-selected="false">نسخه</a>
+                                </li>
+                            </ul>
 
-                    </div>
-                </div>
-                <div class="tab-content text-tree-map w-100">
-                    <!-- Updated 06 -->
+                        </div>
+                        <div class="Parent-Tab col-md-3 col-5 d-flex justify-content-end">
+                            <ul class="nav nav-pills pr-0" role="tablist">
 
-                    <div class="tab-pane fade show active align-parent" id="pills-Location" role="tabpanel"
-                        aria-labelledby="pills-Location-tab">
-                        <div class="container-fluid px-0 d-flex justify-content-center" style="padding: 4.5% 0 0 5%; margin-bottom: 5%;">
-                            <div id="treeid" class="swiper-container" style="height: 443px; overflow: auto; padding-left: 3%;"></div>
-                            <div id="mapid" name="maps" class="col-12" style="height: 443px;"></div>
+                                <li class="nav-item mx-md-2 mx-1">
+                                    <a id="views" class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img src="../Images/view.svg" style="height: 148%;"></a>
+                                    <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown"
+                                        x-placement="bottom-start"
+                                        style="position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                        <!-- موقعیت -->
+                                        <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
+                                            onclick="MapMode_Onclick(this)">
+                                            <img src="../Images/map.svg" style="width: 40px;" /></a>
+                                        <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
+                                            onclick="TreeMapMode_Onclick(this)">
+                                            <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                        <!-- مجموعه -->
+                                        <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
+                                            onclick="collection_ListViewMode_Onclick(this)">
+                                            <img src="../Images/list-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
+                                            onclick="collection_TwoViewMode_Onclick(this)">
+                                            <img src="../Images/two-row-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <!-- نسخه -->
+                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
+                                            onclick="Version_ListViewMode_Onclick(this)">
+                                            <img src="../Images/list-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
+                                            onclick="Version_GalleryViewMode_Onclick(this)">
+                                            <img src="../Images/gallery-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
+                                            onclick="Version_OneViewMode_Onclick(this)">
+                                            <img src="../Images/one-row-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
+                                            onclick="Version_TwoViewMode_Onclick(this)">
+                                            <img src="../Images/two-row-view.svg" style="width: 40px;" />
+                                        </a>
+                                        <!-- گالری -->
+                                        <a class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpage()"></a>
+                                        <a class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpageWithThumb()"></a>
+                                        <a class="dropdown-item view-gallery-under gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick=""></a>
+                                        <a class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="TwoSlide()"></a>
+                                        <a class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="MultiSlide()"></a>
+                                        <!--  -->
+                                    </div>
+                                </li>
+                                <li class="nav-item mr-md-2 mr-1">
+                                    <a class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between active show"
+                                        href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter"
+                                        aria-selected="true">
+                                        <div class="pl-lg-3 pl-0">فیلتر</div>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
-                    <div class="tab-pane fade show active" id="pills-Collection" role="tabpanel"
-                        aria-labelledby="pills-Collection-tab">
-                        <div id="collection_childs_parent" class="d-none">
-                            <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 5%">
-                                <div style="width: 100%;">
-                                    <div id="collection_childs"></div>
+                    <div class="tab-content text-tree-map w-100">
+                        <!-- Updated 06 -->
 
-                                </div>
+                        <div class="tab-pane fade show active align-parent" id="pills-Location" role="tabpanel"
+                            aria-labelledby="pills-Location-tab">
+                            <div class="container-fluid px-0 d-flex justify-content-center" style="padding: 4.5% 0 0 5%; margin-bottom: 5%;">
+                                <div id="treeid" class="swiper-container" style="height: 443px; overflow: auto; padding-left: 3%;"></div>
+                                <div id="mapid" name="maps" class="col-12" style="height: 443px;"></div>
                             </div>
                         </div>
-                        <div id="collection_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
-                            <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
-                            <div id="collection_childs_slider" class="swiper-container swiper-container-cust">
-                                <div class="swiper-wrapper"></div>
-                            </div>
-                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade show active" id="pills-prescription" role="tabpanel"
-                        aria-labelledby="pills-prescription-tab">
-                        <!--<div id="main-noskhe" class="">-->
-                        <div id="version_childs_parent">
-                            <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 4%">
-                                <div style="width: 100%;">
-                                    <div id="version_childs"></div>
-                                    <div class="py-5">
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination px-md-4 justify-content-center">
-                                                <!-- Updated 04 -->
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="LastPrevious">
-                                                        <span aria-hidden="true"><<</span>
-                                                        <span class="sr-only">LastPrevious</span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true"><</span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="Next">
-                                                        <span aria-hidden="true">></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#" aria-label="LastNext">
-                                                        <span aria-hidden="true">>></span>
-                                                        <span class="sr-only">LastNext</span>
-                                                    </a>
-                                                </li>
+                        <div class="tab-pane fade show active" id="pills-Collection" role="tabpanel"
+                            aria-labelledby="pills-Collection-tab">
+                            <div id="collection_childs_parent" class="d-none">
+                                <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 5%">
+                                    <div style="width: 100%;">
+                                        <div id="collection_childs"></div>
 
-                                            </ul>
-                                        </nav>
                                     </div>
                                 </div>
-
+                            </div>
+                            <div id="collection_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
+                                <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
+                                <div id="collection_childs_slider" class="swiper-container swiper-container-cust">
+                                    <div class="swiper-wrapper"></div>
+                                </div>
+                                <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
                             </div>
                         </div>
-                        <div id="version_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
-                            <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
-                            <div id="version_childs_slider" class="swiper-container swiper-container-cust">
-                                <div class="swiper-wrapper"></div>
-                            </div>
-                            <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
-                        </div>
-                        <!--</div>-->
+                        <div class="tab-pane fade show active" id="pills-prescription" role="tabpanel"
+                            aria-labelledby="pills-prescription-tab">
+                            <!--<div id="main-noskhe" class="">-->
+                            <div id="version_childs_parent">
+                                <div class="container-fluid d-flex justify-content-start" style="padding: 4.5% 6% 0 4%">
+                                    <div style="width: 100%;">
+                                        <div id="version_childs"></div>
+                                        <div class="py-5">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination px-md-4 justify-content-center">
+                                                    <!-- Updated 04 -->
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="LastPrevious">
+                                                            <span aria-hidden="true"><<</span>
+                                                            <span class="sr-only">LastPrevious</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true"><</span>
+                                                            <span class="sr-only">Previous</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">></span>
+                                                            <span class="sr-only">Next</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="LastNext">
+                                                            <span aria-hidden="true">>></span>
+                                                            <span class="sr-only">LastNext</span>
+                                                        </a>
+                                                    </li>
 
-
-
-                        <div id="gallery" class="d-none align-parent row mx-0" style="padding-top: 4.5%; margin-bottom: 3%; width: 100%; height: 100%;">
-                            <div id="right-status" class="col-3 pr-0">
-                                <div id="Left-Menu" class="container-fluid px-0 tab-pane show active fade">
-                                    <!--  -->
-                                    <div id="accordion">
-
-                                        <div class="card mb-md-3" style="background-color: unset!important;">
-                                            <div class="card-header card-header-cust row mx-0 p-0" id="headingOne">
-                                                <div class="col-md-6 col-6 px-0 d-felx align-self-end">
-                                                    <span>اطلاعات نسخه</span>
-                                                </div>
-                                                <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
-                                                    <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
-                                                        <img src="../Images/Arrow-up.svg">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="">
-                                                <div class="card-body-cust">
-                                                    <!--  -->
-
-                                                    <div id="table-one">
-                                                        <div class="py-4">
-                                                            <label>محل نگهداری:</label>
-                                                            <span id="keepplace"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>شماره اموال:</label>
-                                                            <span id="propertynum"></span>
-                                                        </div>
-
-                                                        <div>
-                                                            <label>تعداد صفحات:</label>
-                                                            <span id="countpages"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>پدیدآورندگان:</label>
-                                                            <span id="creators"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>موضوع اثر:</label>
-                                                            <span id="subject"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>تاریخ خلق:</label>
-                                                            <span id="createdate"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>رنگ:</label>
-                                                            <span id="color"></span>
-
-                                                        </div>
-                                                        <div>
-                                                            <label>جنس:</label>
-                                                            <span id="gender"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>تکنیک:</label>
-                                                            <span id="teqnique"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>ابعاد:</label>
-                                                            <span id="demensions"></span>
-
-                                                        </div>
-                                                        <div>
-                                                            <label>واقف:</label>
-                                                            <span id="waqf"></span>
-                                                        </div>
-                                                        <div>
-                                                            <label>محل نگهداری:</label>
-                                                            <span id="Span11"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--  -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card mb-md-3" style="background-color: unset!important;">
-                                            <div class="card-header card-header-cust row mx-0 p-0" id="headingTwo">
-                                                <div class="col-md-6 col-6 px-0 d-felx align-self-end">
-                                                    <span>اطلاعات نسخه</span>
-                                                </div>
-                                                <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
-                                                    <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
-                                                        <img src="../Images/Arrow-up.svg">
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="">
-                                                <div class="card-body-cust">
-                                                    <!--  -->
-                                                    <div id="table-two">
-                                                        <div class="py-3">
-                                                            <span id="tabpage"></span>
-                                                        </div>
-                                                        <div class="pb-3">
-                                                            <label style="display:block;">اطلاعات سوره شناسی:</label>
-                                                            <span id="soreinfo"></span>
-                                                        </div>
-
-                                                        <div>
-                                                            <label style="display: block;">متن آیه:</label>
-                                                            <span id="verseaye"></span>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--  -->
-                                                </div>
-                                            </div>
+                                                </ul>
+                                            </nav>
                                         </div>
                                     </div>
 
-
-
                                 </div>
                             </div>
-                            <div id="left-status" class="col-9 pl-0">
-                                <div id="SliderID" class="swiper-container">
-                                    <div class="swiper-wrapper" id="SwiperSlider"></div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-
+                            <div id="version_childs_show" class="col-md-12 slider-blog" style="padding-top: 2.5%">
+                                <div class="swiper-button-next btn-slider-blog" style="outline: unset; right: 2.8%;"></div>
+                                <div id="version_childs_slider" class="swiper-container swiper-container-cust">
+                                    <div class="swiper-wrapper"></div>
                                 </div>
-                                <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
-                                    <div class="swiper-wrapper" id="SwiperSlider"></div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-prev btn-slider-blog" style="outline: unset; left: 2.8%;"></div>
+                            </div>
+                            <!--</div>-->
+
+
+
+                            <div id="gallery" class="d-none align-parent row mx-0" style="padding-top: 4.5%; margin-bottom: 3%; width: 100%; height: 100%;">
+                                <div id="right-status" class="col-3 pr-0">
+                                    <div id="Left-Menu" class="container-fluid px-0 tab-pane show active fade">
+                                        <!--  -->
+                                        <div id="accordion">
+
+                                            <div class="card mb-md-3" style="background-color: unset!important;">
+                                                <div class="card-header card-header-cust row mx-0 p-0" id="headingOne">
+                                                    <div class="col-md-6 col-6 px-0 d-felx align-self-end">
+                                                        <span>اطلاعات نسخه</span>
+                                                    </div>
+                                                    <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
+                                                        <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
+                                                            <img src="../Images/Arrow-up.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="">
+                                                    <div class="card-body-cust">
+                                                        <!--  -->
+
+                                                        <div id="table-one">
+                                                            <div class="py-4">
+                                                                <label>محل نگهداری:</label>
+                                                                <span id="keepplace"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>شماره اموال:</label>
+                                                                <span id="propertynum"></span>
+                                                            </div>
+
+                                                            <div>
+                                                                <label>تعداد صفحات:</label>
+                                                                <span id="countpages"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>پدیدآورندگان:</label>
+                                                                <span id="creators"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>موضوع اثر:</label>
+                                                                <span id="subject"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>تاریخ خلق:</label>
+                                                                <span id="createdate"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>رنگ:</label>
+                                                                <span id="color"></span>
+
+                                                            </div>
+                                                            <div>
+                                                                <label>جنس:</label>
+                                                                <span id="gender"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>تکنیک:</label>
+                                                                <span id="teqnique"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>ابعاد:</label>
+                                                                <span id="demensions"></span>
+
+                                                            </div>
+                                                            <div>
+                                                                <label>واقف:</label>
+                                                                <span id="waqf"></span>
+                                                            </div>
+                                                            <div>
+                                                                <label>محل نگهداری:</label>
+                                                                <span id="Span11"></span>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card mb-md-3" style="background-color: unset!important;">
+                                                <div class="card-header card-header-cust row mx-0 p-0" id="headingTwo">
+                                                    <div class="col-md-6 col-6 px-0 d-felx align-self-end">
+                                                        <span>اطلاعات نسخه</span>
+                                                    </div>
+                                                    <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
+                                                        <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
+                                                            <img src="../Images/Arrow-up.svg">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="">
+                                                    <div class="card-body-cust">
+                                                        <!--  -->
+                                                        <div id="table-two">
+                                                            <div class="py-3">
+                                                                <span id="tabpage"></span>
+                                                            </div>
+                                                            <div class="pb-3">
+                                                                <label style="display: block;">اطلاعات سوره شناسی:</label>
+                                                                <span id="soreinfo"></span>
+                                                            </div>
+
+                                                            <div>
+                                                                <label style="display: block;">متن آیه:</label>
+                                                                <span id="verseaye"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--  -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                                <div id="left-status" class="col-9 pl-0">
+                                    <div id="SliderID" class="swiper-container">
+                                        <div class="swiper-wrapper" id="SwiperSlider"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="glyphicon glyphicon-camera" onclick="expandgallery()" style="position: absolute; z-index: 100000; bottom: 15px; left: 0; padding-left: 2%;">weee</div>
+
+                                    </div>
+                                    <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
+                                        <div class="swiper-wrapper" id="SwiperSlider"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>
+            <!-- end tabs -->
+            <!-- </div> -->
+            
+            <!-- End-Content-Blog -->
         </div>
-        <!-- end tabs -->
-        <!-- </div> -->
-
-        <!-- End-Content-Blog -->
-
         <!-- Start-Brand -->
         <div class="brand-background">
             <div class="align-parent row mx-0">
@@ -938,6 +939,19 @@
     <script>
 
     </script>
+    <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content" id="expandgallery">
+                    <div class="swiper-wrapper" id="SwiperSliderexpand"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div id="fullpageWithThumbExpand" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
+                    <div class="swiper-wrapper" id="Div1"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
 </body>
 
 </html>

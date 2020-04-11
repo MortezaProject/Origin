@@ -1866,6 +1866,7 @@
     <Content Include="fontawesome-5.12.1\webfonts\fa-brands-400.svg" />
     <Content Include="fontawesome-5.12.1\webfonts\fa-regular-400.svg" />
     <Content Include="fontawesome-5.12.1\webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\IRANSansWeb\1fa5b77b2689aa6b642d9b1a03428a5b.svg" />
     <Content Include="Images\Arrow-blog-left.svg" />
     <Content Include="Images\Arrow-blog-right.svg" />
     <Content Include="Images\Arrow-down-small.svg" />
@@ -1893,12 +1894,16 @@
     <Content Include="Images\design_by.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\facebook.svg" />
+    <Content Include="Images\gallery-view-selected.svg" />
     <Content Include="Images\hi-map.svg" />
     <Content Include="Images\hierarchy.svg" />
     <Content Include="Images\img1.jpg" />
     <Content Include="Images\instagram.png" />
     <Content Include="Images\instagram.svg" />
+    <Content Include="Images\list-view-selected.svg" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\map-tree-view-selected.svg" />
+    <Content Include="Images\map-view-selected.svg" />
     <Content Include="Images\map.svg" />
     <Content Include="Images\ministry.png" />
     <Content Include="Images\Pdf.svg" />
@@ -1908,6 +1913,7 @@
     <Content Include="Images\section.png" />
     <Content Include="Images\Share.svg" />
     <Content Include="Images\twitter.png" />
+    <Content Include="Images\two-row-view-selected.svg" />
     <Content Include="Images\view.svg" />
     <Content Include="jquery\jquery-3.4.1.slim.min.js" />
     <Content Include="pagesHtml\Blog.html" />
@@ -1916,6 +1922,7 @@
     <Content Include="pagesHtml\Home.html" />
     <Content Include="pagesHtml\List.html" />
     <Content Include="pagesHtml\search.html" />
+    <Content Include="pagesHtml\SearchResult.html" />
     <Content Include="Script\Map.js" />
     <Content Include="Script\mdb.min.css" />
     <Content Include="Script\mdb.min.js" />
@@ -1924,6 +1931,59 @@
     <Content Include="Style\Default.css" />
     <Content Include="swiper\swiper.min.css" />
     <Content Include="swiper\swiper.min.js" />
+    <Content Include="vakata-jstree\.gitignore" />
+    <Content Include="vakata-jstree\demo\basic\index.html" />
+    <Content Include="vakata-jstree\dist\jstree.js" />
+    <Content Include="vakata-jstree\dist\jstree.min.js" />
+    <Content Include="vakata-jstree\dist\themes\default-dark\32px.png" />
+    <Content Include="vakata-jstree\dist\themes\default-dark\40px.png" />
+    <Content Include="vakata-jstree\dist\themes\default-dark\style.css" />
+    <Content Include="vakata-jstree\dist\themes\default-dark\style.min.css" />
+    <Content Include="vakata-jstree\dist\themes\default-dark\throbber.gif" />
+    <Content Include="vakata-jstree\dist\themes\default\32px.png" />
+    <Content Include="vakata-jstree\dist\themes\default\40px.png" />
+    <Content Include="vakata-jstree\dist\themes\default\style.css" />
+    <Content Include="vakata-jstree\dist\themes\default\style.min.css" />
+    <Content Include="vakata-jstree\dist\themes\default\throbber.gif" />
+    <Content Include="vakata-jstree\gruntfile.js" />
+    <Content Include="vakata-jstree\src\intro.js" />
+    <Content Include="vakata-jstree\src\jstree.changed.js" />
+    <Content Include="vakata-jstree\src\jstree.checkbox.js" />
+    <Content Include="vakata-jstree\src\jstree.conditionalselect.js" />
+    <Content Include="vakata-jstree\src\jstree.contextmenu.js" />
+    <Content Include="vakata-jstree\src\jstree.dnd.js" />
+    <Content Include="vakata-jstree\src\jstree.js" />
+    <Content Include="vakata-jstree\src\jstree.massload.js" />
+    <Content Include="vakata-jstree\src\jstree.search.js" />
+    <Content Include="vakata-jstree\src\jstree.sort.js" />
+    <Content Include="vakata-jstree\src\jstree.state.js" />
+    <Content Include="vakata-jstree\src\jstree.types.js" />
+    <Content Include="vakata-jstree\src\jstree.unique.js" />
+    <Content Include="vakata-jstree\src\jstree.wholerow.js" />
+    <Content Include="vakata-jstree\src\misc.js" />
+    <Content Include="vakata-jstree\src\outro.js" />
+    <Content Include="vakata-jstree\src\sample.js" />
+    <Content Include="vakata-jstree\src\themes\default-dark\32px.png" />
+    <Content Include="vakata-jstree\src\themes\default-dark\40px.png" />
+    <Content Include="vakata-jstree\src\themes\default-dark\style.css" />
+    <Content Include="vakata-jstree\src\themes\default-dark\throbber.gif" />
+    <Content Include="vakata-jstree\src\themes\default\32px.png" />
+    <Content Include="vakata-jstree\src\themes\default\40px.png" />
+    <Content Include="vakata-jstree\src\themes\default\style.css" />
+    <Content Include="vakata-jstree\src\themes\default\throbber.gif" />
+    <Content Include="vakata-jstree\src\vakata-jstree.js" />
+    <Content Include="vakata-jstree\test\unit\index.html" />
+    <Content Include="vakata-jstree\test\unit\libs\qunit.css" />
+    <Content Include="vakata-jstree\test\unit\libs\qunit.js" />
+    <Content Include="vakata-jstree\test\unit\test.js" />
+    <Content Include="vakata-jstree\test\visual\desktop\index.html" />
+    <Content Include="vakata-jstree\test\visual\mobile\index.html" />
+    <Content Include="vakata-jstree\test\visual\screenshots\desktop\.png" />
+    <Content Include="vakata-jstree\test\visual\screenshots\desktop\desktop.png" />
+    <Content Include="vakata-jstree\test\visual\screenshots\desktop\home.png" />
+    <Content Include="vakata-jstree\test\visual\screenshots\mobile\.png" />
+    <Content Include="vakata-jstree\test\visual\screenshots\mobile\home.png" />
+    <Content Include="vakata-jstree\test\visual\screenshots\mobile\mobile.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2255,6 +2315,10 @@
     <Content Include="fontawesome-5.12.1\webfonts\fa-solid-900.ttf" />
     <Content Include="fontawesome-5.12.1\webfonts\fa-solid-900.woff" />
     <Content Include="fontawesome-5.12.1\webfonts\fa-solid-900.woff2" />
+    <Content Include="fonts\IRANSansWeb\1fa5b77b2689aa6b642d9b1a03428a5b.eot" />
+    <Content Include="fonts\IRANSansWeb\1fa5b77b2689aa6b642d9b1a03428a5b.ttf" />
+    <Content Include="fonts\IRANSansWeb\1fa5b77b2689aa6b642d9b1a03428a5b.woff" />
+    <Content Include="fonts\IRANSansWeb\1fa5b77b2689aa6b642d9b1a03428a5b.woff2" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -2264,6 +2328,21 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="vakata-jstree\bower.json" />
+    <Content Include="vakata-jstree\component.json" />
+    <Content Include="vakata-jstree\composer.json" />
+    <Content Include="vakata-jstree\demo\basic\root.json" />
+    <Content Include="vakata-jstree\demo\README.md" />
+    <Content Include="vakata-jstree\jstree.jquery.json" />
+    <Content Include="vakata-jstree\LICENSE-MIT" />
+    <Content Include="vakata-jstree\package.json" />
+    <Content Include="vakata-jstree\README.md" />
+    <Content Include="vakata-jstree\src\themes\base.less" />
+    <Content Include="vakata-jstree\src\themes\default-dark\style.less" />
+    <Content Include="vakata-jstree\src\themes\default\style.less" />
+    <Content Include="vakata-jstree\src\themes\main.less" />
+    <Content Include="vakata-jstree\src\themes\mixins.less" />
+    <Content Include="vakata-jstree\src\themes\responsive.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
