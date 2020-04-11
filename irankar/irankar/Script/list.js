@@ -701,20 +701,20 @@ let CreateGallery = function(elem){
         loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        on: {
-            click: function (e) {
-                datagallery.forEach(function(itm){
-                    if (itm.id == e.target.attributes.iid.value) {
-                        for (let obj in itm ) {
-                        if (document.getElementById(obj) !=null) {
-                            document.getElementById(obj).innerHTML = itm[obj];
+        //on: {
+        //    click: function (e) {
+        //        datagallery.forEach(function(itm){
+        //            if (itm.id == e.target.attributes.iid.value) {
+        //                for (let obj in itm ) {
+        //                if (document.getElementById(obj) !=null) {
+        //                    document.getElementById(obj).innerHTML = itm[obj];
     
-                        }
-                    }
-                }
-                });
-            },
-        }
+        //                }
+        //            }
+        //        }
+        //        });
+        //    },
+        //}
     });
     var galleryTop = new Swiper('#SliderID', {
         spaceBetween: 150,
@@ -724,20 +724,20 @@ let CreateGallery = function(elem){
         thumbs: {
             swiper: galleryThumbs,
         },
-        on: {
-            click: function (e) {
-                datagallery.forEach(function(itm){
-                    if (itm.id == e.target.attributes.iid.value) {
-                        for (let obj in itm ) {
-                        if (document.getElementById(obj) !=null) {
-                            document.getElementById(obj).innerHTML = itm[obj];
+        //on: {
+        //    click: function (e) {
+        //        datagallery.forEach(function(itm){
+        //            if (itm.id == e.target.attributes.iid.value) {
+        //                for (let obj in itm ) {
+        //                if (document.getElementById(obj) !=null) {
+        //                    document.getElementById(obj).innerHTML = itm[obj];
     
-                        }
-                    }
-                }
-                });
-            },
-        }
+        //                }
+        //            }
+        //        }
+        //        });
+        //    },
+        //}
     });
 
     for (let i = 0; i < datagallery.length; i++) {
@@ -923,4 +923,50 @@ let backto = function(){
     document.querySelectorAll('.show_version_dropdown').forEach(function (el, i) {
         el.classList.remove('d-none');
     })
+}
+
+
+
+
+let expandgallery = function(){
+    var modal = document.getElementById("myModal");
+    var parent = document.getElementById("expandgallery");
+    document.body.style.overflow="hidden";
+    modal.style.display="block";
+
+    //modal.style.height = window.innerHeight;
+
+//    var galleryThumbs = new Swiper("#fullpageWithThumbExpand", {
+//        spaceBetween: 32,
+//        slidesPerView: 5,
+//        navigation: {
+//            nextEl: '.swiper-button-next',
+//            prevEl: '.swiper-button-prev',
+//        },
+//        freeMode: true,
+//        loopedSlides: 5, //looped slides should be the same
+//        watchSlidesVisibility: true,
+//        watchSlidesProgress: true,
+//    });
+//    var galleryTop = new Swiper('#expandgallery', {
+//        spaceBetween: 150,
+     
+//        loopedSlides: 5, //looped slides should be the same
+
+//        thumbs: {
+//            swiper: galleryThumbs,
+//        },
+//    });
+//    for (let i = 0; i < datagallery.length; i++) {
+//        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+//            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
+//        galleryThumbs.appendSlide(slide);
+//        galleryTop.appendSlide(slide);
+//        for (let obj in datagallery[i] ) {
+//            if (document.getElementById(obj) !=null) {
+//            document.getElementById(obj).innerHTML = datagallery[i][obj];
+    
+//        }
+//    }
+//}
 }
