@@ -5,6 +5,8 @@
     const Parent = params.elem,
           TopSlider = Parent.querySelector(".TopSlider"),
           fullpageWithThumb = Parent.querySelector(".fullpageWithThumb");
+    const TopSliderID = params.TopSliderID,
+          BottomSliderID = params.BottomSliderID;
     let data = params.data;
     Parent.querySelector(".gallery-toolbar-AllPages").textContent =
       data.length;
@@ -17,7 +19,7 @@
       mySwiper.slideTo(e.valueAsNumber);
       // e.setAttribute("oldval",e.valueAsNumber)
     };
-    var swiper = new Swiper(".TopSlider", {
+    var swiper = new Swiper(TopSliderID, {
       slidesPerView: 1,
       spaceBetween: 150,
       setWrapperSize: true,
@@ -84,7 +86,7 @@
       fullpageWithThumb.classList.add("d-none");
       TopSlider.querySelector(".swiper-wrapper").innerHTML = "";
       fullpageWithThumb.querySelector(".swiper-wrapper").innerHTML = "";
-      var swiper = new Swiper(".TopSlider", {
+      var swiper = new Swiper(TopSliderID, {
         slidesPerView: 1,
         spaceBetween: 150,
         setWrapperSize: true,
@@ -123,7 +125,7 @@
       fullpageWithThumb.style.height = "15%";
       TopSlider.querySelector(".swiper-wrapper").innerHTML = "";
       fullpageWithThumb.querySelector(".swiper-wrapper").innerHTML = "";
-      let galleryThumbs = new Swiper(".fullpageWithThumb", {
+      let galleryThumbs = new Swiper(BottomSliderID, {
         spaceBetween: 21,
         slidesPerView: 9,
         navigation: {
@@ -134,7 +136,7 @@
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
       });
-      let galleryTop = new Swiper(".TopSlider", {
+      let galleryTop = new Swiper(TopSliderID, {
         spaceBetween: 150,
         navigation: {
           nextEl: ".swiper-button-next",
@@ -163,7 +165,7 @@
       fullpageWithThumb.classList.add("d-none");
       TopSlider.querySelector(".swiper-wrapper").innerHTML = "";
       fullpageWithThumb.querySelector(".swiper-wrapper").innerHTML = "";
-      var swiper = new Swiper(".TopSlider", {
+      var swiper = new Swiper(TopSliderID, {
         slidesPerView: 2,
         spaceBetween: 150,
         setWrapperSize: true,
@@ -199,7 +201,7 @@
       fullpageWithThumb.classList.add("d-none");
       TopSlider.querySelector(".swiper-wrapper").innerHTML = "";
       fullpageWithThumb.querySelector(".swiper-wrapper").innerHTML = "";
-      let swiper = new Swiper(".TopSlider", {
+      let swiper = new Swiper(TopSliderID, {
         slidesPerView: 4,
         slidesPerColumn: 3,
         spaceBetween: 10,
