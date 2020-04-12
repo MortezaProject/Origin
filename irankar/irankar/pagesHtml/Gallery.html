@@ -19,6 +19,7 @@
     <script src="../Script/Utility.js"></script>
     <link rel="stylesheet" href="../swiper/swiper.min.css">
     <script src="../swiper/swiper.min.js"></script>
+    <script src="../Script/Gallery.js"></script>
     <style>
         html,
         body {
@@ -28,22 +29,22 @@
 </head>
 
 <body>
-    <div style="width: 100%; height: 100%;">
+    <div id='soheil' style="width: 100%; height: 100%;">
 
-        <div id="SliderID" class="swiper-container">
-            <div class="swiper-wrapper" id="SwiperSlider"></div>
+        <div class="TopSlider swiper-container">
+            <div class="swiper-wrapper"></div>
             <div class="swiper-button-next btn-shape-Swiper"></div>
             <div class="swiper-button-prev btn-shape-Swiper"></div>
             <!-- <div class="swiper-pagination"></div> -->
             <!-- <div class="swiper-scrollbar "></div> -->
         </div>
-        <div id="fullpageWithThumb" class="swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
-            <div class="swiper-wrapper" id="SwiperSlider"></div>
+        <div class="fullpageWithThumb swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb d-none">
+            <div class="swiper-wrapper"></div>
             <div class="swiper-button-next btn-shape-Thumb"></div>
             <div class="swiper-button-prev btn-shape-Thumb"></div>
         </div>
         <!-- toolbar -->
-        <div class="container-fluid" id="gallery-toolbar">
+        <div class="gallery-toolbar container-fluid">
             <div class="row" style="margin: 0 6rem;">
                 <div class="col-md-2">
                     <div class="gallery-toolbar-desc">الفتح: 29/33 - الفتح: 29/54</div>
@@ -54,36 +55,44 @@
                             <div class="gallery-toolbar-pages-text">برگه</div>
                         </div>
                         <!-- <div class="input-group-prepend"> -->
-                        <input type="number" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn" value="1" onclick="goToSlide_onclick(this)" onkeyup="goToSlide_onkeyup(this)" />
+                        <input type="number" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn" value="1"
+                            onclick="goToSlide_onclick(this)" onkeyup="goToSlide_onkeyup(this)" />
                         <!-- <input type="text" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"/> -->
                         <select class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">
                             <option value="back">پشت</option>
                             <option value="front">رو</option>
                         </select>
                         <div class="gallery-toolbar-pages-text">از</div>
-                        <div id="gallery-toolbar-AllPages" class="gallery-toolbar-pages-text">215</div>
+                        <div class="gallery-toolbar-AllPages gallery-toolbar-pages-text">215</div>
                         <!-- </div> -->
 
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <input type="range" value="0" min="0" max="5" class="form-control-range gallery-toolbar-range" id="formControlRange" onchange="changeRange(this)">
+                    <input type="range" value="0" min="0" max="5"
+                        class="formControlRange form-control-range gallery-toolbar-range" onchange="changeRange(this)">
                 </div>
                 <div class="col-md-2 gallery-toolbar-dropdown">
                     <div class="input-group justify-content-center">
                         <div style="width: 30px;" class="input-group-prepend">
                             <ul class="nav nav-pills" style="padding: unset;" role="tablist">
-                                <!-- id="PillsTab-left" -->
                                 <li class="nav-item" style="width: 30px; height: 30px;">
-                                    <img class="nav-link" style="padding: unset; margin: 0 7px; height: 30px; background-color: unset;" data-toggle="dropdown" href="#"
-                                        role="button" aria-haspopup="true" aria-expanded="true" src="../Images/view.svg">
+                                    <img class="nav-link"
+                                        style="padding: unset; margin: 0 7px; height: 30px; background-color: unset;"
+                                        data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                        aria-expanded="true" src="../Images/view.svg">
                                     <div class="dropdown-menu" x-placement="top-start"
                                         style="background-color: #d6d6d6; min-width: unset; padding: 0; position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one" href="#" onclick="fullpage()"></a>
-                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail" href="#" onclick="fullpageWithThumb()"></a>
-                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under" href="#" onclick=""></a>
-                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two" href="#" onclick="TwoSlide()"></a>
-                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi" href="#" onclick="MultiSlide()"></a>
+                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one"
+                                            href="#" name="fullpage_view"></a>
+                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail"
+                                            href="#" name="fullpageWithThumb_view"></a>
+                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under"
+                                            href="#" name=""></a>
+                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two"
+                                            href="#" name="TwoSlide_view"></a>
+                                        <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi"
+                                            href="#" name="MultiSlide_view"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -94,7 +103,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="gallery-toolbar-license">© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران می‌باشد.</div>
+                    <div class="gallery-toolbar-license">© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران می‌باشد.
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,266 +112,75 @@
         <!-- toolbar -->
     </div>
     <script>
-        let data = [{
-            src: "../Images/blog1.png",
-            title: "1قرآن از نظر دانشمندان غربی",
-            desc: "متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1"
-        },
-            {
-                src: "../Images/blog2.png",
-                title: "2قرآن از نظر دانشمندان غربی",
-                desc: "متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2"
-            },
-            {
-                src: "../Images/blog3.png",
-                title: "3قرآن از نظر دانشمندان غربی",
-                desc: "متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3"
-            },
-            {
-                src: "../Images/blog4.png",
-                title: "4قرآن از نظر دانشمندان غربی",
-                desc: "متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4"
-            },
-            {
-                src: "../Images/blog5.png",
-                title: "5قرآن از نظر دانشمندان غربی",
-                desc: "متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5"
-            },
-            {
-                src: "../Images/blog6.png",
-                title: "6قرآن از نظر دانشمندان غربی",
-                desc: "متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6"
-            },
-            {
-                src: "../Images/blog7.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-            {
-                src: "../Images/blog8.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-            {
-                src: "../Images/blog9.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-            {
-                src: "../Images/blog10.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-            {
-                src: "../Images/blog11.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-            {
-                src: "../Images/blog12.png",
-                title: "7قرآن از نظر دانشمندان غربی",
-                desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7"
-            },
-        ]
-        document.querySelector("#gallery-toolbar-AllPages").textContent = data.length; 
-        document.querySelector("#formControlRange").min= 0;
-        document.querySelector("#formControlRange").max= data.length-1;
-        let changeRange = function(e){
-            let mySwiper = document.querySelector('#SliderID').swiper;
-            // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
-            // else mySwiper.slidePrev();
-            mySwiper.slideTo(e.valueAsNumber);
-            // e.setAttribute("oldval",e.valueAsNumber)            
-        }
-        var swiper = new Swiper('#SliderID', {
-            slidesPerView: 1,
-            spaceBetween: 150,
-            setWrapperSize: true,
-            // init: false,	
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            // breakpoints: {
-            //     640: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 40,
-            //     },
-            //     768: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 40,
-            //     },
-            //     1024: {
-            //         slidesPerView: 4,
-            //         spaceBetween: 50,
-
-            //     },
-            // }
+        debugger;
+        let gallery = new CreateGallery({
+            elem: document.querySelector('#soheil'),
+            // TopSlider:'TopSlider',
+            // BottomSlider:'fullpageWithThumb',
+            // Toolbar:'gallery-toolbar-AllPages',
+            // Range:'formControlRange'
+            data: [{
+                    src: "../Images/blog1.png",
+                    title: "1قرآن از نظر دانشمندان غربی",
+                    desc: "متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1متن1",
+                },
+                {
+                    src: "../Images/blog2.png",
+                    title: "2قرآن از نظر دانشمندان غربی",
+                    desc: "متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2متن2",
+                },
+                {
+                    src: "../Images/blog3.png",
+                    title: "3قرآن از نظر دانشمندان غربی",
+                    desc: "متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3متن3",
+                },
+                {
+                    src: "../Images/blog4.png",
+                    title: "4قرآن از نظر دانشمندان غربی",
+                    desc: "متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4متن4",
+                },
+                {
+                    src: "../Images/blog5.png",
+                    title: "5قرآن از نظر دانشمندان غربی",
+                    desc: "متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5متن5",
+                },
+                {
+                    src: "../Images/blog6.png",
+                    title: "6قرآن از نظر دانشمندان غربی",
+                    desc: "متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6متن6",
+                },
+                {
+                    src: "../Images/blog7.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+                {
+                    src: "../Images/blog8.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+                {
+                    src: "../Images/blog9.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+                {
+                    src: "../Images/blog10.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+                {
+                    src: "../Images/blog11.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+                {
+                    src: "../Images/blog12.png",
+                    title: "7قرآن از نظر دانشمندان غربی",
+                    desc: "متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7متن7",
+                },
+            ]
         });
-
-        for (let i = 0; i < data.length; i++) {
-            // let slide = '<div class="swiper-slide"><img src=' + data[i].src + ' class="blog-image" /></div>'
-            let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-                ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-            swiper.appendSlide(slide);
-        }
-
-        let goToSlide_onkeyup = function(e){
-            if(e.valueAsNumber>data.length){
-                e.value = "";
-                return;
-        }
-            if(window.event.keyCode == 13){
-                let val = parseInt(e.value-1) ;
-                let mySwiper = document.querySelector('#SliderID').swiper;
-                mySwiper.slideTo(val);
-        }
-            
-        }
-
-        let goToSlide_onclick = function(e){
-            e.select();
-        }
-
-            let fullpage = function () {
-                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
-                    el.classList.remove('d-none');
-                })
-                document.querySelector("#SliderID").classList.remove('py-10');
-                document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-                document.querySelector("#fullpageWithThumb").classList.add('d-none');
-                document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-                document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-                var swiper = new Swiper('#SliderID', {
-                    slidesPerView: 1,
-                    spaceBetween: 150,
-                    setWrapperSize: true,
-                    // init: false,	
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
-                });
-
-                for (let i = 0; i < data.length; i++) {
-                    let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-                        ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-                    swiper.appendSlide(slide);
-                }
-            }
-            let fullpageWithThumb = function () {
-                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
-                    el.classList.add('d-none');
-                })
-            document.querySelector("#SliderID").classList.remove('py-10');
-            document.querySelector("#fullpageWithThumb").classList.remove('d-none');
-            document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
-            document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
-            document.querySelector("#SliderID").style.height = "calc(85% - 31.4px)";
-            document.querySelector("#fullpageWithThumb").style.height = "15%";
-            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-            let galleryThumbs = new Swiper('#fullpageWithThumb', {
-                spaceBetween: 21,
-                slidesPerView: 9,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-            });
-            let galleryTop = new Swiper('#SliderID', {
-                spaceBetween: 150,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: galleryThumbs
-                }
-            });
-            for (let i = 0; i < data.length; i++) {
-                let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-                galleryThumbs.appendSlide(slide);
-                galleryTop.appendSlide(slide);
-            }
-        }
-            let TwoSlide = function () {
-                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
-                    el.classList.remove('d-none');
-                })
-            document.querySelector("#SliderID").classList.add('py-10');
-            document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-            document.querySelector("#fullpageWithThumb").classList.add('d-none');
-            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-            var swiper = new Swiper('#SliderID', {
-                slidesPerView: 2,
-                spaceBetween: 150,
-                setWrapperSize: true,
-                // init: false,	
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-            });
-
-            for (let i = 0; i < data.length; i++) {
-                let slide = '<div class="swiper-slide" style="background-image:url(' + data[i].src +
-                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-                swiper.appendSlide(slide);
-            }
-        }
-            let MultiSlide = function () {
-                document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
-                    el.classList.remove('d-none');
-                })
-            document.querySelector("#SliderID").classList.remove('py-10');
-            document.querySelector("#SliderID").style.height = "calc(100% - 31.4px)";
-            document.querySelector("#fullpageWithThumb").classList.add('d-none');
-            document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
-            document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
-            let swiper = new Swiper('#SliderID', {
-                slidesPerView: 4,
-                slidesPerColumn: 3,
-                spaceBetween: 10,
-                // slidesPerGroup:3,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-            for (let i = 0; i < data.length; i++) {
-                let slide = '<div class="swiper-slide swiper-slide-MultiSlide" style="background-image:url(' + data[
-                        i].src +
-                    ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
-                swiper.appendSlide(slide);
-            }
-        }
     </script>
 </body>
 
