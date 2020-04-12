@@ -1,7 +1,7 @@
 (function () {
-  if (window.CreateGallery) return;
+  if (window.CreateSliderGallery) return;
 
-  window.CreateGallery = function (params) {
+  window.CreateSliderGallery = function (params) {
     const Parent = params.elem,
           TopSlider = Parent.querySelector(".TopSlider"),
           fullpageWithThumb = Parent.querySelector(".fullpageWithThumb");
