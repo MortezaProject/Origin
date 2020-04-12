@@ -462,9 +462,9 @@ width:93%!important;
 }
 
     .gallery-toolbar img {
-        width: 15px;
-        height: 15px;
-        margin: 0.5rem;
+        width: 15px!important;
+        height: 15px!important;
+        margin: 0.5rem!important;
     }
 
     .gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-text {
@@ -1914,4 +1914,20 @@ right:0px!important;
 
 .fullpageWithThumb .swiper-slide-thumb-active {
 opacity:1;
+}
+
+.showModal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: block;
+    overflow: hidden;
+    outline: 0;
+}
+.overflow-hidden{
+    overflow: hidden;
+    height: 100%;
 }

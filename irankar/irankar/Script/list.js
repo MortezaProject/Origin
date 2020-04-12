@@ -1,3 +1,33 @@
+let showModal_Onclick = function(e){
+    e.classList.add('d-none')
+    let elem = document.querySelector("#left-status");
+    elem.classList.remove('col-9');
+    elem.classList.remove('pl-0');
+    elem.classList.add('showModal');
+    elem.querySelector('.gallery-toolbar').classList.remove('d-none');
+    elem.querySelector('#fullpageWithThumb').style.height="15%";
+    document.querySelector('body').classList.add('overflow-hidden');
+    document.getElementById('left-status').style.height = "100%";
+
+    var mySwiper = document.querySelector('#SliderID').swiper;
+    mySwiper.update();
+}
+
+let hideModal_Onclick = function(){
+    document.querySelector('#left-status .fa-expand-arrows-alt').classList.remove('d-none');
+    let elem = document.querySelector("#left-status");
+    elem.classList.add('col-9');
+    elem.classList.add('pl-0');
+    elem.classList.remove('showModal');
+    elem.querySelector('.gallery-toolbar').classList.add('d-none');
+    elem.querySelector('#fullpageWithThumb').style.height="15%";
+    document.querySelector('body').classList.remove('overflow-hidden');
+    document.getElementById('left-status').style.height = "668px";
+
+    var mySwiper = document.querySelector('#SliderID').swiper;
+    mySwiper.update();
+}
+
 let imagefilter={
     src:$("#views img")[0].src
 }
@@ -705,7 +735,7 @@ let CreateGallery = function(elem){
     document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
     document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
     document.querySelector("#SliderID").style.height = "calc(85% - 31.4px)";
-    document.querySelector("#fullpageWithThumb").style.height = "20%";
+    document.querySelector("#fullpageWithThumb").style.height = "15%";
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
@@ -913,7 +943,7 @@ let fullpageWithThumb = function () {
     $("#views").css("background-color","#00a693");
     $("#views").children("img").attr("src", "../Images/thumbnail-selected.svg")
     document.querySelector("#fullpageWithThumb").classList.remove('d-none');
-
+    document.querySelector("#SliderID").style.height = "calc(85% - 31.4px)";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
         spaceBetween: 32,
         slidesPerView: 5,
