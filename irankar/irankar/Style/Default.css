@@ -180,31 +180,27 @@ a:hover {
 
 /*Classes Menu*/
 
-/*Classes Sticky*/
+	/*Classes Sticky*/
 .carousel-inner {
-    height: 500px;
+    height: 600px;
 }
-
 .carousel-inner-cust {
     height: 400px !important;
 }
-
 .Indicator-footer {
     /*height: 59.2px;
     background-color: rgb(101,100,98);*/
     position: relative;
-    top: -50px;
+    top: -55px;
     z-index: 1000;
 }
-
 #carousel-sticky {
     font-size: 22px;
-    font-weight: bold;
-    height: 500px;
+    font-weight: 400;
+    height: 600px;
 }
-
     #carousel-sticky .carousel-item img {
-        height: 500px;
+        height: 600px;
     }
 
 .carousel-indicators-Cust {
@@ -233,15 +229,15 @@ a:hover {
     font-size: 22px !important;
 }
 
-.carousel-caption-cust {
+	.carousel-caption-cust {
     background-color: rgb(0,0,0,0.6);
     right: 0%;
     padding-right: 5%;
     padding-left: 5%;
     bottom: 0%;
     left: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
     color: #fff;
     height: 11.5%;
 }
@@ -324,7 +320,7 @@ a:hover {
 }
 
 #contents p {
-    color: black;
+	    color: #58595b;
 }
 
 .Parent-Tab a {
@@ -388,9 +384,9 @@ a:hover {
 }
 
 
-.carousel-control-next,
+	.carousel-control-next,
 .carousel-control-prev {
-    width: 5% !important;
+    width: 9% !important;
 }
 
 /*#Content-Blog .carousel-item {
@@ -436,9 +432,10 @@ width:93%!important;
             background-color: #00a693;
         }
 
-#description-blog {
+	#description-blog {
     color: black;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
+    padding-top:40px;
     text-align: justify;
 }
 
@@ -620,7 +617,9 @@ width:93%!important;
     --swiper-theme-color: #636261;
     outline: unset;
 }
-
+	.btn-slider-home {
+   top: 39%!important;
+}
 /* fullpageWithThumb */
 .fullpageWithThumb {
     background-color: rgba(0, 0, 0, 0.8);
@@ -715,7 +714,7 @@ hr.line {
 }
 
 .peyvandha {
-    padding-right: 3rem;
+	    padding-right: 1.6rem;
 }
 
 .about-menu {
@@ -835,7 +834,25 @@ hr.line {
 .three-logo a {
     margin: 0 3px;
 }
-
+	.icon-instagram {
+  mask: url(../Images/instagram.svg);
+}
+.icon-twitter {
+  mask: url(../Images/twitter.svg);
+}
+.icon-facebook {
+  mask: url(../Images/facebook.svg);
+}
+.icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  fill: #d2d3d5;
+}
+.icon:hover,
+.icon:focus {
+  fill: #00a693;
+}
 /*classes content-brand*/
 
 
@@ -843,6 +860,7 @@ hr.line {
 .footer {
     height: 53.9px;
     background-color: #00a693;
+    	        font-size: 14px;
 }
 
     .footer img {
@@ -875,7 +893,7 @@ hr.line {
 
 /* Classes content-right*/
 .image-post {
-    height: 240px;
+    height: 300px;
 }
 
     .image-post img {
@@ -910,7 +928,7 @@ hr.line {
     text-align: justify;
     display: table-cell;
     position: absolute;
-    height: 116px;
+    height: 106px;
 }
 
     .short-desc p {
@@ -935,13 +953,13 @@ hr.line {
         float: left;
     }
 
-.footer-post {
+	.footer-post {
     color: #929292 !important;
     font-weight: bold;
-    font-size: 12pt;
-    padding-top: .5rem;
+    font-size: 10pt;
+    /*padding-top: .5rem;*/
     position: absolute;
-    top: 76%;
+    top: 74%;
 }
 
     .footer-post img {
@@ -1000,7 +1018,8 @@ hr.line {
 }
 
 #collapsecommentsuser h4 {
-    color: #939598;
+	    color: #939598;
+        font-size: 14px;
 }
 
 #collapsecommentsuser p {
@@ -1050,6 +1069,7 @@ hr.line {
 }
 
 #Description-Post {
+	margin-bottom: 50px;
     margin-top: 50px;
     text-align: justify;
     line-height: 1.8;
@@ -1130,8 +1150,8 @@ hr.line {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 40px 0 40px 0 !important;
-    font-size: 10pt;
-    font-weight: bold;
+	    font-size: 11pt;
+    font-weight: 400;
 }
 
 .form-control-comment {
@@ -1349,7 +1369,7 @@ hr.line {
         /* Added 04 - jaygozine kelas haye edit shodeye khode bootstrap */
         border-color: #00a693 !important;
         outline: 0;
-        box-shadow: 0 0 0 0.1rem #00a693 !important;
+	        box-shadow: inset 0 0 0 0.1rem #00a693 !important;
     }
 
     .form-control-navbar-search::-webkit-input-placeholder {
@@ -1639,7 +1659,8 @@ border:0;
         padding-left: 0;
     }*/
     .carousel-caption-cust {
-        height: 17.5%;
+  	padding-top:13px;
+padding-bottom:13px;
     }
 
     .dropdown-btn {
@@ -1952,4 +1973,11 @@ opacity:1;
 .overflow-hidden{
     overflow: hidden;
     height: 100%;
+}
+		
+.jstree-wholerow-hovered {
+    background:unset!important;
+}
+.jstree-default .jstree-wholerow-clicked {
+        background:unset!important;
 }
