@@ -458,7 +458,7 @@ width:93%!important;
 /* swiper */
 .gallery-toolbar {
     height: 31.4px;
-    background-color: rgba(66, 66, 66, 0.6);
+    background-color: rgba(66, 66, 66, 1);
 }
 
     .gallery-toolbar img {
@@ -564,7 +564,7 @@ width:93%!important;
 .TopSlider {
     width: 100%;
     height: calc(100% - 31.4px);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     margin: auto;
 }
 
@@ -622,7 +622,7 @@ width:93%!important;
 
 /* fullpageWithThumb */
 .fullpageWithThumb {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .fullpageWithThumb-swiper-slide .swiper-slide {
