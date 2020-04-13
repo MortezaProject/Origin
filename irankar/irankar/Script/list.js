@@ -944,6 +944,8 @@ let fullpageWithThumb = function () {
     $("#views").children("img").attr("src", "../Images/thumbnail-selected.svg")
     document.querySelector("#fullpageWithThumb").classList.remove('d-none');
     document.querySelector("#SliderID").style.height = "calc(85% - 31.4px)";
+    document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
+    document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
         spaceBetween: 32,
         slidesPerView: 5,
