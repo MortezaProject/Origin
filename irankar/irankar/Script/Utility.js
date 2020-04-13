@@ -1,4 +1,12 @@
 ﻿let datablog=[];
+
+//set images page
+//document.getElementsByName('designBy').src = '../Images/design_by.png';
+
+
+//set image page
+
+
 ShowDescriptionBlog = function (param) {
     let bid = param.attributes.bid.value || "";
     datablog.forEach(function(itm){
@@ -103,7 +111,7 @@ LoadCommentsUsers =function(data_comments){
     for (var i = 0; i < parent.length; i++) {
         for (var j = 0; j < $(parent[i]).find(".media").length; j++) {
             if(j%2 == 0)
-                $(parent[i]).find(".media")[j].style.backgroundColor = "#d1d3d4"
+                $(parent[i]).find(".media")[j].style.backgroundColor = "#eceaea"
             else $(parent[i]).find(".media")[j].style.backgroundColor = "#f5f3f0"
         }  
     }
