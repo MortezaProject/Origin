@@ -654,19 +654,19 @@ width:93%!important;
     padding: 1.5% 3%;
 }
 #left-status .swiper-container-rtl .swiper-button-prev {
-    right: 1px;
+    right: 1.5rem;
     outline: unset;
 }
 #left-status .swiper-button-prev::after  {
-font-size:18px!important;
+font-size:2rem!important;
 color:white!important;
 }
 #left-status .swiper-button-next::after {
-font-size:18px!important;
+font-size:2rem!important;
 color:white!important;
 }
 #left-status .swiper-container-rtl .swiper-button-next {
-    left: 1px;
+    left: 1.5rem;
     outline: unset;
 }
 #left-status .swiper-slide-thumb-active {

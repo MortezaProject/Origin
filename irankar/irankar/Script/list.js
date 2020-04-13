@@ -894,9 +894,10 @@ let TwoSlide = function () {
         }
         let _img = document.createElement('img');
         _img.src = datagallery[i].src;
-        _img.style.width="50%";
+        _img.style.width="48%";
         _img.style.height="100%";
-        _img.style.margin="1rem";
+        _img.style.marginLeft="0.5rem";
+        _img.style.marginRight="0.5rem";
         swiperSlide.append(_img);
         // let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
         //     ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;"></div>'
