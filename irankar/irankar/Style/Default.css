@@ -556,7 +556,7 @@ width:93%!important;
 }
 
 .gallery-toolbar-dropdown .gallery-toolbar-dropdown-multi {
-    background-image: url(../Images/view.svg);
+    background-image: url(../Images/multi.svg);
 }
 #left-status .TopSlider {
     padding: 2rem 3rem
@@ -1919,6 +1919,21 @@ right:0px!important;
 
 .fullpageWithThumb .swiper-slide-thumb-active {
 opacity:1;
+}
+
+.showModalIcon{
+    position: absolute;
+    z-index: 100000;
+    bottom: 2rem;
+    left: 3rem;
+    /* padding-left: 2%; */
+    /* color: white; */
+    background-image: url(../images/Expand.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
 }
 
 .showModal{

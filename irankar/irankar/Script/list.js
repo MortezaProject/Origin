@@ -15,7 +15,7 @@ let showModal_Onclick = function(e){
 }
 
 let hideModal_Onclick = function(){
-    document.querySelector('#left-status .fa-expand-arrows-alt').classList.remove('d-none');
+    document.querySelector('#left-status .showModalIcon').classList.remove('d-none');
     let elem = document.querySelector("#left-status");
     elem.classList.add('col-9');
     elem.classList.add('pl-0');
