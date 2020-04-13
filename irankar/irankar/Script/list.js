@@ -6,7 +6,7 @@ let showModal_Onclick = function(e){
     elem.classList.add('showModal');
     elem.querySelector('.gallery-toolbar').classList.remove('d-none');
     elem.querySelector('#fullpageWithThumb').style.height="15%";
-    elem.querySelector('#fullpageWithThumb').classList.add("fullpageWithThumb-swiper-slide");
+    // elem.querySelector('#fullpageWithThumb').classList.add("fullpageWithThumb-swiper-slide");
     document.querySelector('body').classList.add('overflow-hidden');
     document.getElementById('left-status').style.height = "100%";
     
@@ -22,7 +22,7 @@ let hideModal_Onclick = function(){
     elem.classList.remove('showModal');
     elem.querySelector('.gallery-toolbar').classList.add('d-none');
     elem.querySelector('#fullpageWithThumb').style.height="15%";
-    elem.querySelector('#fullpageWithThumb').classList.remove("fullpageWithThumb-swiper-slide");
+    // elem.querySelector('#fullpageWithThumb').classList.remove("fullpageWithThumb-swiper-slide");
     document.querySelector('body').classList.remove('overflow-hidden');
     document.getElementById('left-status').style.height = "668px";
 
