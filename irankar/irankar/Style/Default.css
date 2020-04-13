@@ -968,7 +968,9 @@ hr.line {
         margin-bottom: 3px;
         padding-right: 7px;
     }
-
+    .footer-post a {
+    font-size:10pt!important;
+    }
 .page-link {
     background-color: unset !important;
     border: unset !important;
