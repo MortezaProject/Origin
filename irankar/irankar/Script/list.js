@@ -340,6 +340,8 @@ let version_childs = function () {
 
 
 let version_childs_slider = function (versionData) {
+    document.querySelector(".formControlRange").min = 0;
+    document.querySelector(".formControlRange").max = versionData.length - 1;
     let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
         itemChild = "";
     for (let i = 0; i < versionData.length; i++) {
@@ -722,13 +724,6 @@ let CreateGallery = function(elem){
         verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     ]
-    let changeRange = function(e){
-        let mySwiper = document.querySelector('#SliderID').swiper;
-        // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
-        // else mySwiper.slidePrev();
-        mySwiper.slideTo(e.valueAsNumber);
-        // e.setAttribute("oldval",e.valueAsNumber)            
-    }
 
     document.querySelector("#SliderID").classList.remove('py-10');
     document.querySelector("#fullpageWithThumb").classList.remove('d-none');
@@ -828,6 +823,14 @@ let goToSlide_onclick = function(e){
 
 
 
+}
+
+let changeRange = function(e){
+    let mySwiper = document.querySelector('#SliderID').swiper;
+    // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
+    // else mySwiper.slidePrev();
+    mySwiper.slideTo(e.valueAsNumber);
+    // e.setAttribute("oldval",e.valueAsNumber)            
 }
 
 let fullpage = function () {
