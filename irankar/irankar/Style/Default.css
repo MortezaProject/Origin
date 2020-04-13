@@ -458,7 +458,7 @@ width:93%!important;
 /* swiper */
 .gallery-toolbar {
     height: 31.4px;
-    background-color: rgba(66, 66, 66, 1);
+    background-color: rgba(93, 95, 98, 1);
 }
 
     .gallery-toolbar img {
@@ -489,7 +489,7 @@ width:93%!important;
         font-style: normal;
         line-height: 1.53;
         letter-spacing: normal;
-        /* text-align: left; */
+        text-align: left;
         color: #f5f5f5;
     }
 
@@ -501,13 +501,13 @@ width:93%!important;
         margin: 5px;
         font-family: BYekan;
         font-size: 14px;
-        font-weight: normal;
+        font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.54;
         letter-spacing: normal;
         text-align: right;
-        color: #333333;
+        color: black;
     }
 
     .gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-btn {
@@ -559,7 +559,8 @@ width:93%!important;
     background-image: url(../Images/multi.svg);
 }
 #left-status .TopSlider {
-    padding: 2rem 3rem
+    /* padding: 2rem 3rem; */
+    padding: 3rem 5rem;
 }
 .TopSlider {
     width: 100%;
@@ -651,7 +652,8 @@ width:93%!important;
     width: 100%;
 }
 #left-status .gallery-thumbs-fullpageWithThumb {
-    padding: 1.5% 3%;
+    /* padding: 1.5% 3%; */
+    padding: 1.5% 3rem;
 }
 #left-status .swiper-container-rtl .swiper-button-prev {
     right: 1.5rem;
@@ -1932,8 +1934,8 @@ opacity:1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
 }
 
 .showModal{
