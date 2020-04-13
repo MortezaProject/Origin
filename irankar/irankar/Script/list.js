@@ -24,7 +24,7 @@ let hideModal_Onclick = function(){
     elem.querySelector('#fullpageWithThumb').style.height="15%";
     // elem.querySelector('#fullpageWithThumb').classList.remove("fullpageWithThumb-swiper-slide");
     document.querySelector('body').classList.remove('overflow-hidden');
-    document.getElementById('left-status').style.height = "668px";
+    document.getElementById('left-status').style.height = "791px";
 
     var mySwiper = document.querySelector('#SliderID').swiper;
     mySwiper.update();
@@ -504,7 +504,7 @@ let CreateGallery = function(elem){
     document.getElementById('version_childs_show').classList.add('d-none')
     document.getElementById('version_childs_parent').classList.add('d-none')
     document.getElementById('gallery').classList.remove('d-none')
-    document.getElementById('left-status').style.height = "668px";
+    document.getElementById('left-status').style.height = "791px";
     document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
         el.classList.add('d-none');
     })
