@@ -626,6 +626,10 @@ width:93%!important;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.fullpageWithThumb-swiper-slide .swiper-slide {
+    width: 8rem!important;
+}
+
 .swiper-container-fullpageWithThumb {
     width: 100%;
     height: 300px;
