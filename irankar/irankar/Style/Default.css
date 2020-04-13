@@ -31,9 +31,9 @@
     font-style: normal;
 }
 
-.py-10 {
-    padding-top: 10rem!important;
-    padding-bottom: 10rem!important;
+.py-15 {
+    padding-top: 15rem!important;
+    padding-bottom: 15rem!important;
 }
 /*a {
     color: #929292!important;
@@ -559,14 +559,13 @@ width:93%!important;
     background-image: url(../Images/view.svg);
 }
 #left-status .TopSlider {
-    padding: 20px;
+    padding: 2rem 3rem
 }
 .TopSlider {
     width: 100%;
     height: calc(100% - 31.4px);
     background-color: rgba(0, 0, 0, 0.8);
     margin: auto;
-    padding: 52px 141px!important;
 }
 
     .TopSlider .swiper-button-next {
