@@ -31,9 +31,9 @@
     font-style: normal;
 }
 
-.py-10 {
-    padding-top: 10rem!important;
-    padding-bottom: 10rem!important;
+.py-15 {
+    padding-top: 15rem!important;
+    padding-bottom: 15rem!important;
 }
 /*a {
     color: #929292!important;
@@ -458,7 +458,7 @@ width:93%!important;
 /* swiper */
 .gallery-toolbar {
     height: 31.4px;
-    background-color: rgba(66, 66, 66, 0.6);
+    background-color: rgba(93, 95, 98, 1);
 }
 
     .gallery-toolbar img {
@@ -470,11 +470,11 @@ width:93%!important;
     .gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-text {
         margin: 5px;
         font-family: BYekan;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
-        line-height: 1.4;
+        line-height: 1.8;
         letter-spacing: normal;
         text-align: right;
         color: #f5f5f5;
@@ -483,7 +483,7 @@ width:93%!important;
     .gallery-toolbar .gallery-toolbar-license {
         margin: 5px;
         font-family: BYekan;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -501,19 +501,19 @@ width:93%!important;
         margin: 5px;
         font-family: BYekan;
         font-size: 14px;
-        font-weight: normal;
+        font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.54;
         letter-spacing: normal;
         text-align: right;
-        color: #333333;
+        color: black;
     }
 
     .gallery-toolbar .gallery-toolbar-pages .gallery-toolbar-pages-btn {
         /* background-color: #f5f5f5; */
         width: 50px;
-        height: 16px;
+        height: 19px;
         color: #929292;
         text-align: center;
     }
@@ -556,17 +556,17 @@ width:93%!important;
 }
 
 .gallery-toolbar-dropdown .gallery-toolbar-dropdown-multi {
-    background-image: url(../Images/view.svg);
+    background-image: url(../Images/multi.svg);
 }
 #left-status .TopSlider {
-    padding: 20px;
+    /* padding: 2rem 3rem; */
+    padding: 3rem 5rem;
 }
 .TopSlider {
     width: 100%;
     height: calc(100% - 31.4px);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     margin: auto;
-    padding: 52px 141px!important;
 }
 
     .TopSlider .swiper-button-next {
@@ -623,7 +623,11 @@ width:93%!important;
 
 /* fullpageWithThumb */
 .fullpageWithThumb {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fullpageWithThumb-swiper-slide .swiper-slide {
+    width: 8rem!important;
 }
 
 .swiper-container-fullpageWithThumb {
@@ -648,26 +652,28 @@ width:93%!important;
     width: 100%;
 }
 #left-status .gallery-thumbs-fullpageWithThumb {
-    padding: 1.5% 3%;
+    /* padding: 1.5% 3%; */
+    padding: 1.5% 3rem;
 }
 #left-status .swiper-container-rtl .swiper-button-prev {
-    right: 1px;
+    right: 1.5rem;
     outline: unset;
 }
 #left-status .swiper-button-prev::after  {
-font-size:18px!important;
+font-size:2rem!important;
 color:white!important;
 }
 #left-status .swiper-button-next::after {
-font-size:18px!important;
+font-size:2rem!important;
 color:white!important;
 }
 #left-status .swiper-container-rtl .swiper-button-next {
-    left: 1px;
+    left: 1.5rem;
     outline: unset;
 }
 #left-status .swiper-slide-thumb-active {
-opacity:1;
+    filter: brightness(100%);
+/* opacity:1; */
 }
 .gallery-thumbs-fullpageWithThumb {
     height: 15%;
@@ -678,7 +684,8 @@ opacity:1;
     .gallery-thumbs-fullpageWithThumb .swiper-slide {
         width: 25%;
         height: 100%;
-        opacity: 0.4;
+        filter: brightness(60%);
+        /* opacity: 0.4; */
     }
 /* .gallery-thumbs-fullpageWithThumb .swiper-slide {
     opacity: 1;
@@ -1914,6 +1921,21 @@ right:0px!important;
 
 .fullpageWithThumb .swiper-slide-thumb-active {
 opacity:1;
+}
+
+.showModalIcon{
+    position: absolute;
+    z-index: 100000;
+    bottom: 2rem;
+    left: 3rem;
+    /* padding-left: 2%; */
+    /* color: white; */
+    background-image: url(../images/Expand.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 45px;
 }
 
 .showModal{
