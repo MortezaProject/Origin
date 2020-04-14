@@ -184,11 +184,9 @@ a:hover {
 .carousel-inner {
     height: 600px;
 }
-
 .carousel-inner-cust {
     height: 400px !important;
 }
-
 .Indicator-footer {
     /*height: 59.2px;
     background-color: rgb(101,100,98);*/
@@ -196,13 +194,11 @@ a:hover {
     top: -55px;
     z-index: 1000;
 }
-
 #carousel-sticky {
     font-size: 22px;
     font-weight: 400;
     height: 600px;
 }
-
     #carousel-sticky .carousel-item img {
         height: 600px;
     }
@@ -620,8 +616,6 @@ width:93%!important;
 .btn-slider-blog {
     --swiper-theme-color: #636261;
     outline: unset;
-
-
 }
 	.btn-slider-home {
    top: 39%!important;
@@ -854,13 +848,11 @@ hr.line {
   width: 35px;
   height: 35px;
   fill: #d2d3d5;
-
 }
 .icon:hover,
 .icon:focus {
   fill: #00a693;
 }
-
 /*classes content-brand*/
 
 
@@ -978,9 +970,7 @@ hr.line {
         margin-bottom: 3px;
         padding-right: 7px;
     }
-    .footer-post a {
-    font-size:10pt!important;
-    }
+
 .page-link {
     background-color: unset !important;
     border: unset !important;
@@ -1991,7 +1981,6 @@ opacity:1;
 .jstree-wholerow-hovered {
     background:unset!important;
 }
-
 .jstree-default .jstree-wholerow-clicked {
         background:unset!important;
 }
