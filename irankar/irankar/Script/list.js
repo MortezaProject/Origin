@@ -736,7 +736,7 @@ let CreateGallery = function(elem){
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
-        spaceBetween: 32,
+        spaceBetween: 10,
         slidesPerView: 5,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -970,7 +970,7 @@ let fullpageWithThumb = function () {
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
-        spaceBetween: 32,
+        spaceBetween: 10,
         slidesPerView: 5,
         navigation: {
             nextEl: '.swiper-button-next',
