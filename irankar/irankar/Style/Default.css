@@ -1950,8 +1950,8 @@ opacity:1;
 .showModalIcon{
     position: absolute;
     z-index: 100000;
-    bottom: 2rem;
-    left: 3rem;
+    bottom: 3rem;
+    left: 5rem;
     /* padding-left: 2%; */
     /* color: white; */
     background-image: url(../images/Expand.svg);
