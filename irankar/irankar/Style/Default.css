@@ -642,7 +642,8 @@ width:93%!important;
 }
 /* fullpageWithThumb */
 .fullpageWithThumb {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(80, 80, 80, 0.6)
+    backdrop-filter: blur(1px);
 }
 
 .fullpageWithThumb-swiper-slide .swiper-slide {
