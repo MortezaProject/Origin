@@ -418,7 +418,7 @@
                                 </div>
                                 <div id="left-status" class="col-9 pl-0">
                                     <div id='TestSlider' style="width: 100%; height: 100%;">
-                                        <div id="SliderIDHeight" style="padding: 1rem 2rem;background-color: rgba(0, 0, 0, 0.9);">
+                                        <div id="SliderIDHeight" style="padding: 1rem 2rem;background-color: rgba(0, 0, 0, 0.9);backdrop-filter: blur(1px)">
                                             <div id="SliderID" class="TopSlider swiper-container">
                                                 <div class="swiper-wrapper" id="SwiperSlider"></div>
                                                 <div class="swiper-button-next btn-shape-Swiper"></div>
@@ -426,7 +426,7 @@
                                                 <div class="showModalIcon" onclick="showModal_Onclick(this)"></div>
                                             </div>
                                         </div>
-                                        <div id="fullpageWithThumbHeight" style="padding: 1rem 2rem;background-color: rgba(0, 0, 0, 0.8);">
+                                        <div id="fullpageWithThumbHeight" style="padding: 1rem 2rem;background-color: rgba(27, 26, 26, 0.86);backdrop-filter: blur(1px)">
                                             <div id="fullpageWithThumb" class="fullpageWithThumb-swiper-slide fullpageWithThumb swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb">
                                                 <div class="swiper-wrapper" id="SwiperSlider" style="background-color: rgba(80, 80, 80, 0.6)"></div>
                                                 <div class="swiper-button-next btn-shape-Swiper-bottom"></div>
@@ -435,7 +435,7 @@
                                         </div>
                                              <!-- toolbar -->
                                         <div id="gallery-toolbar-height" style="background-color: rgba(93, 95, 98, 1)">
-                                            <div  class="gallery-toolbar container-fluid d-none">
+                                            <div style="width:85%"  class="gallery-toolbar container-fluid d-none">
                                                 <div class="row" style="margin: 0 3rem;">
                                                     <div class="col-md-2">
                                                         <div class="gallery-toolbar-desc">الفتح: 29/33 - الفتح: 29/54</div>
@@ -465,28 +465,24 @@
                                                     </div>
                                                     <div class="col-md-2 gallery-toolbar-dropdown">
                                                         <div class="input-group justify-content-center">
-                                                            <div style="width: 30px;" class="input-group-prepend">
-                                                                <ul class="nav nav-pills" style="padding: unset;" role="tablist">
-                                                                    <li class="nav-item" style="width: 30px; height: 30px;">
-                                                                        <img class="nav-link"
-                                                                            style="padding: unset; margin: 0 7px; height: 30px; background-color: unset;"
-                                                                            data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                                                                            aria-expanded="true" src="../Images/view.svg">
-                                                                        <div class="dropdown-menu" x-placement="top-start"
-                                                                            style="background-color: #d6d6d6; min-width: unset; padding: 0; position: absolute; transform: translate3d(123px, 33px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                                                            <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one"
-                                                                                href="#" onclick="fullpage(this)"></a>
-                                                                            <a id="ThumbnailMaximise" view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail"
-                                                                                 href="#" onclick="fullpageWithThumb(this)"></a>
-                                                                            <!-- <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under"
-                                                                                href="#" onclick=""></a> -->
-                                                                            <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two"
-                                                                                href="#" onclick="TwoSlide(this)"></a>
-                                                                            <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi"
-                                                                                href="#" onclick="MultiSlide(this)"></a>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
+                                                            <div class="dropup" style="width: 30px; height: 30px;">
+                                                                <img class="dropdown-toggle"
+                                                                    style="padding: unset; margin: 0 7px; height: 30px; background-color: unset;"
+                                                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                                                    aria-expanded="false" src="../Images/view.svg">
+                                                                <div class="dropdown-menu dropdown-menu-right" x-placement="top-start"
+                                                                    style="background-color: #d6d6d6; min-width: unset; padding: 0;">
+                                                                    <a id="ThumbnailMaximise" view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail"
+                                                                         href="#" onclick="fullpageWithThumb(this)"></a>
+                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one"
+                                                                        href="#" onclick="fullpage(this)"></a>
+                                                                    <!-- <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under"
+                                                                        href="#" onclick=""></a> -->
+                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two"
+                                                                        href="#" onclick="TwoSlide(this)"></a>
+                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi"
+                                                                        href="#" onclick="MultiSlide(this)"></a>
+                                                                </div>
                                                             </div>
                                                             <img class="img" onclick="hideModal_Onclick()" src="../Images/minimize.svg" type="button" data-toggle="modal" data-target="#exampleModalCenter"/>
                                                             <img class="img" src="../Images/magnifier.svg" />

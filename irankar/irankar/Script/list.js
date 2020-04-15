@@ -159,7 +159,7 @@ let collection_childs = function () {
             '</div>' +
             '</div>' +
             '</div></div>' +
-            '<div class="col-md-6 versin-detail-data-text">' +
+            '<div class="col-md-6 versin-detail-data-text '+(i%2==0?"padding-pic-list":"")+'">' +
             '<div class="container-fluid">' +
             '<div class="row mb-3"><div>' + dt.title + '</div></div>' +
             '<div class="row"><div class="versin-detail-data-text-subject"> تاسیس: </div><div>' + dt
@@ -1021,10 +1021,12 @@ let fullpageWithThumb = function (e) {
         },
     });
     for (let i = 0; i < datagallery.length; i++) {
-        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
+        let slide1 = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
             ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
-        galleryThumbs.appendSlide(slide);
-        galleryTop.appendSlide(slide);
+        let slide2 = '<div class="swiper-slide" onclick="thumbnailSlide_onClick(this)" style="background-image:url(' + datagallery[i].src +
+            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
+        galleryTop.appendSlide(slide1);
+        galleryThumbs.appendSlide(slide2);
         for (let obj in datagallery[i] ) {
             if (document.getElementById(obj) !=null) {
             document.getElementById(obj).innerHTML = datagallery[i][obj];
@@ -1033,6 +1035,15 @@ let fullpageWithThumb = function (e) {
     }
 }
         
+}
+
+let thumbnailSlide_onClick = function(e){
+    debugger;
+    var child = e;
+    var parent = child.parentNode;
+    // The equivalent of parent.children.indexOf(child)
+    var index = Array.prototype.indexOf.call(parent.children, child);
+    document.querySelector(".formControlRange").value = index;
 }
 
 let backto = function(){

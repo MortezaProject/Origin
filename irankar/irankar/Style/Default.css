@@ -16,6 +16,18 @@
     url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url("../fonts/IRANSansWeb/1fa5b77b2689aa6b642d9b1a03428a5b.svg#IRANSansWeb Medium Regular") format("svg"); /* iOS 4.1- */
 }
+@font-face {
+    font-family: 'DiodrumArabic';
+    src: url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0'); /* IE9 Compat Modes */
+    src: url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('woff2'), /* Modern Browsers */
+    url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('woff'), /* Modern Browsers */
+    url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('opentype'), /* Open Type Font */
+    url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/DiodrumArabic/DiodrumArabic-Medium_0') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 @font-face {
@@ -284,9 +296,10 @@ a:hover {
     min-width: 2.9rem !important;
     background-color: #d1d3d4 !important;
     border-top: 0 !important;
-    border-bottom:1px solid gray;
+    /*border-bottom:1px solid gray;
     border-right:1px solid gray;
-    border-left:1px solid gray;
+    border-left:1px solid gray;*/
+
     border-radius: 0 !important;
     padding:0!important;
     
@@ -642,7 +655,8 @@ width:93%!important;
 }
 /* fullpageWithThumb */
 .fullpageWithThumb {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(80, 80, 80, 0.6)
+    backdrop-filter: blur(1px);
 }
 
 .fullpageWithThumb-swiper-slide .swiper-slide {
@@ -1347,7 +1361,8 @@ hr.line {
         background-color: #d3d2d2 !important;
         border-color: #d3d2d2 !important;
     }*/
-
+.jstree-icon{right: 25px;}
+a.jstree-anchor{width: 0;}
 .jstree-default .jstree-themeicon {
     background-position: -260px -4px;
 }
@@ -1399,7 +1414,25 @@ hr.line {
         /* Added 04 */
         color: #d6d5d5 !important;
     }
+.filter-right {
+    width: 7.4rem;
+}
+.padding-pic-list {
+padding-right:0;
+padding-left:2rem;
+}
+#Right-Content .title-post p {
+margin-bottom:0.5rem!important;
+}
 
+.dropdown .btn:focus {
+    box-shadow:unset;
+}
+
+#verseaye {
+font-family:DiodrumArabic;
+font-size:18px;
+}
 .three-logo {
     /* Added 04 */
     margin-bottom: 20px;
@@ -1451,7 +1484,7 @@ hr.line {
 
 /*searchresult*/
 #Ul1-Sresult .nav-item {
-    width: 21%;
+    width: 7.4rem;
 }
 
     #Ul1-Sresult .nav-item button {
@@ -1486,10 +1519,11 @@ main-tab-searchr {
 .btn-searchresult {
     background-color: unset!important;
     color: #939598!important;
+    font-size:16px;
 }
 
     .btn-searchresult:hover {
-        color: #00a693;
+        color: #00a693!important;
         background-color: unset;
     }
 
@@ -1572,7 +1606,7 @@ main-tab-searchr {
 }
 
 #treeid > ul {
-    background-color: #e7e6e6!important;
+    background-color: #efefef!important;
     height: 100%;
     padding:4% 1.5%;
 }
@@ -1580,7 +1614,19 @@ main-tab-searchr {
 #mapid .leaflet-control-attribution {
 display:none;
 }
-
+.leaflet-bar a:first-child {
+    border-top-left-radius: unset!important; 
+    border-top-right-radius: unset!important;
+}
+.leaflet-bar{
+    border-radius: unset!important;
+}
+.leaflet-left .leaflet-control {
+    margin-left: 20px!important;
+}
+.leaflet-top .leaflet-control {
+    margin-top: 20px!important;
+}
 /*.view-gallery-MultiSlide {
 background-image:url(../Images/view.svg);
 }
@@ -1914,6 +1960,32 @@ padding-bottom:13px;
     }
 }
 
+
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .result-qty {
+justify-content: flex-end!important;
+padding-left:0;
+font-size:11px;
+}
+#Ul1-Sresult .nav-item {
+    width: 4.4rem!important;
+}
+.filter-right {
+    width: 4.4rem;
+        text-align: right;
+}
+    #Ul1-Sresult , #Ul1-Sresult button {
+    font-size:11px;
+    }
+
+.Parent-Tab-cust a {
+    justify-content: right !important;
+    font-size: 10px;
+}
+    .pagenation-search {
+    display:none;
+    }
+}
 /*Responsive  For Mobile*/
 
 
@@ -1938,6 +2010,17 @@ padding-bottom:13px;
     .navbar-light .navbar-toggler {
         border: 0;
     }
+        .pagenation-search {
+    display:none;
+    }
+    .result-qty {
+justify-content: flex-end!important;
+padding-left:0;
+/*font-size:11px;*/
+}
+    .filter-right {
+        text-align: right;
+}
 }
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
