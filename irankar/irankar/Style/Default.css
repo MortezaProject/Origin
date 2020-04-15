@@ -1582,7 +1582,19 @@ main-tab-searchr {
 #mapid .leaflet-control-attribution {
 display:none;
 }
-
+.leaflet-bar a:first-child {
+    border-top-left-radius: unset!important; 
+    border-top-right-radius: unset!important;
+}
+.leaflet-bar{
+    border-radius: unset!important;
+}
+.leaflet-left .leaflet-control {
+    margin-left: 20px!important;
+}
+.leaflet-top .leaflet-control {
+    margin-top: 20px!important;
+}
 /*.view-gallery-MultiSlide {
 background-image:url(../Images/view.svg);
 }
