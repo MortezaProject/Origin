@@ -688,8 +688,20 @@ width:93%!important;
     /* padding: 1.5% 3%; */
     width: 53rem;
 }
-#left-status .swiper-container-rtl .swiper-button-prev {
+#left-status .swiper-button-prev {
+    left: 1.5rem;
+    outline: unset;
+}
+#left-status .swiper-button-next {
     right: 1.5rem;
+    outline: unset;
+}
+#left-status .top-slider-arrow .swiper-button-prev {
+    left: 19rem;
+    outline: unset;
+}
+#left-status .top-slider-arrow .swiper-button-next {
+    right: 19rem;
     outline: unset;
 }
 #left-status .swiper-button-prev::after  {
@@ -700,10 +712,7 @@ color:white!important;
 font-size:2rem!important;
 color:white!important;
 }
-#left-status .swiper-container-rtl .swiper-button-next {
-    left: 1.5rem;
-    outline: unset;
-}
+
 #left-status .swiper-slide-thumb-active {
     filter: brightness(100%);
 /* opacity:1; */

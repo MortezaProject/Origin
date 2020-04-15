@@ -13,6 +13,7 @@ let showModal_Onclick = function(e){
     var mySwiper = document.querySelector('#SliderID').swiper;
     mySwiper.update();
     fullpageWithThumb(document.querySelector('#ThumbnailMaximise'));
+    document.querySelector('#SliderIDHeight').classList.add('top-slider-arrow');
 }
 
 let hideModal_Onclick = function(){
@@ -30,6 +31,7 @@ let hideModal_Onclick = function(){
     var mySwiper = document.querySelector('#SliderID').swiper;
     mySwiper.update();
     fullpageWithThumb(document.querySelector('#ThumbnailMinimise'));
+    document.querySelector('#SliderIDHeight').classList.remove('top-slider-arrow');
 }
 
 let imagefilter={
@@ -741,8 +743,8 @@ let CreateGallery = function(elem){
         spaceBetween: 10,
         slidesPerView: 5,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.bottom-swiper-button-next',
+            prevEl: '.bottom-swiper-button-prev',
         },
         freeMode: true,
         loopedSlides: 5, //looped slides should be the same
@@ -770,6 +772,10 @@ let CreateGallery = function(elem){
 
         thumbs: {
             swiper: galleryThumbs,
+        },
+        navigation: {
+            nextEl: '.top-swiper-button-next',
+            prevEl: '.top-swiper-button-prev',
         },
         //on: {
         //    click: function (e) {
@@ -830,11 +836,14 @@ let goToSlide_onclick = function(e){
 }
 
 let changeRange = function(e){
-    let mySwiper = document.querySelector('#SliderID').swiper;
+    let mySwiper1 = document.querySelector('#SliderID').swiper;
+    mySwiper1.slideTo(e.valueAsNumber);
     // if (e.getAttribute("oldval") > e.valueAsNumber ) mySwiper.slideNext();
     // else mySwiper.slidePrev();
-    mySwiper.slideTo(e.valueAsNumber);
-    // e.setAttribute("oldval",e.valueAsNumber)            
+    // e.setAttribute("oldval",e.valueAsNumber) 
+    // let mySwiper2 = document.querySelector('#fullpageWithThumb').swiper;
+    // mySwiper2.slideTo(e.valueAsNumber);
+               
 }
 
 let remove_class = function(val){
@@ -1003,21 +1012,25 @@ let fullpageWithThumb = function (e) {
         spaceBetween: 10,
         slidesPerView: e.getAttribute("view") ? 9 : 5,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.bottom-swiper-button-next',
+            prevEl: '.bottom-swiper-button-prev',
         },
         freeMode: true,
-        loopedSlides: 5, //looped slides should be the same
+        //loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
     });
     var galleryTop = new Swiper('#SliderID', {
         spaceBetween: 150,
      
-        loopedSlides: 5, //looped slides should be the same
+        //loopedSlides: 5, //looped slides should be the same
 
         thumbs: {
             swiper: galleryThumbs,
+        },
+        navigation: {
+            nextEl: '.top-swiper-button-next',
+            prevEl: '.top-swiper-button-prev',
         },
     });
     for (let i = 0; i < datagallery.length; i++) {
