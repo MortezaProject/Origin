@@ -1361,7 +1361,7 @@ hr.line {
         background-color: #d3d2d2 !important;
         border-color: #d3d2d2 !important;
     }*/
-.jstree-icon{right: 25px;}
+.jstree-icon{right: 0px;}
 a.jstree-anchor{width: 0;}
 .jstree-default .jstree-themeicon {
     background-position: -260px -4px;
@@ -1377,7 +1377,10 @@ a.jstree-anchor{width: 0;}
     background-image: url("../Images/PlusMinus.png");
 }
 
-
+.jstree-default .jstree-node {
+position:relative;
+left:8%;
+}
 
 /*------------------------------------------------------Added*/
 
