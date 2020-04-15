@@ -2087,3 +2087,8 @@ opacity:1;
 .jstree-default .jstree-wholerow-clicked {
         background:unset!important;
 }
+.jstree-default .jstree-node{
+position: relative;
+left: 8%;
+
+}
