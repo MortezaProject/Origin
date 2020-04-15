@@ -697,11 +697,11 @@ width:93%!important;
     outline: unset;
 }
 #left-status .top-slider-arrow .swiper-button-prev {
-    left: 19rem;
+    left: 17%;
     outline: unset;
 }
 #left-status .top-slider-arrow .swiper-button-next {
-    right: 19rem;
+    right: 17%;
     outline: unset;
 }
 #left-status .swiper-button-prev::after  {
