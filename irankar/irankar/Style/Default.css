@@ -1348,7 +1348,8 @@ hr.line {
         background-color: #d3d2d2 !important;
         border-color: #d3d2d2 !important;
     }*/
-
+.jstree-icon{right: 25px;}
+a.jstree-anchor{width: 0;}
 .jstree-default .jstree-themeicon {
     background-position: -260px -4px;
 }
