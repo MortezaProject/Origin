@@ -568,6 +568,7 @@ width:93%!important;
 .gallery-toolbar-dropdown .gallery-toolbar-dropdown-multi {
     background-image: url(../Images/multi.svg);
 }
+.SliderIDBackground{background-color: #58595b!important;}
 #left-status .TopSlider {
     /* padding: 2rem 3rem; */
     /* padding: 3rem 5rem; */

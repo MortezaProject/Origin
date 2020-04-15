@@ -14,6 +14,7 @@ let showModal_Onclick = function(e){
     mySwiper.update();
     fullpageWithThumb(document.querySelector('#ThumbnailMaximise'));
     document.querySelector('#SliderIDHeight').classList.add('top-slider-arrow');
+    document.querySelector('#SliderIDHeight').classList.remove('SliderIDBackground');
 }
 
 let hideModal_Onclick = function(){
@@ -32,6 +33,7 @@ let hideModal_Onclick = function(){
     mySwiper.update();
     fullpageWithThumb(document.querySelector('#ThumbnailMinimise'));
     document.querySelector('#SliderIDHeight').classList.remove('top-slider-arrow');
+    document.querySelector('#SliderIDHeight').classList.add('SliderIDBackground');
 }
 
 let imagefilter={
