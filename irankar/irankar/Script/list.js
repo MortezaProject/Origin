@@ -159,7 +159,7 @@ let collection_childs = function () {
             '</div>' +
             '</div>' +
             '</div></div>' +
-            '<div class="col-md-6 versin-detail-data-text">' +
+            '<div class="col-md-6 versin-detail-data-text '+(i%2==0?"padding-pic-list":"")+'">' +
             '<div class="container-fluid">' +
             '<div class="row mb-3"><div>' + dt.title + '</div></div>' +
             '<div class="row"><div class="versin-detail-data-text-subject"> تاسیس: </div><div>' + dt
