@@ -1371,7 +1371,7 @@ hr.line {
         background-color: #d3d2d2 !important;
         border-color: #d3d2d2 !important;
     }*/
-.jstree-icon{right: 25px;}
+.jstree-icon{right: 32px;}
 a.jstree-anchor{width: 0;}
 .jstree-default .jstree-themeicon {
     background-position: -260px -4px;
@@ -2097,7 +2097,18 @@ opacity:1;
 .jstree-default .jstree-wholerow-clicked {
         background:unset!important;
 }
-.jstree-default .jstree-node{
+.jstree-default .jstree-node[aria-level="1"]{
 position: relative;
 left: 8%;  
+}
+.jstree-default .jstree-node[aria-level="2"]{
+    position: relative;
+    left: 4%;  
+}
+.jstree-default .jstree-node[aria-level="3"]{
+    position: relative;
+    left: 5%;  
+}
+.jstree-default .jstree-node[aria-level="3"] > .jstree-icon{
+    background-image: url(../Images/PlusMinus.png)!important;
 }
