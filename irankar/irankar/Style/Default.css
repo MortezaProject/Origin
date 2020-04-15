@@ -501,10 +501,12 @@ width:93%!important;
         letter-spacing: normal;
         text-align: left;
         color: #f5f5f5;
+        min-width: 250px;
     }
 
     .gallery-toolbar .gallery-toolbar-range {
         margin: 5px;
+        max-width: 143px;
     }
 
     .gallery-toolbar .gallery-toolbar-desc {
