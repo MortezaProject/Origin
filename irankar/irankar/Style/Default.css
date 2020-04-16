@@ -1776,18 +1776,8 @@ background-image:url(../Images/one.svg);
     font-weight: 400;
 }
 
-/*tabld fehrest*/
-
-@media (min-width: 768px) {
-    .carousel-multi-item-2 .col-md-3 {
-        float: left;
-        width: 25%;
-        max-width: 100%;
-    }
-}
-
 /*Responsive  For Mobile*/
-@media screen and (max-width: 600px) and (min-width: 300px) {
+@media screen  and (min-width: 300px) and (max-width: 600px) {
     .align-parent-mob {
         padding-left: 1%;
     }
@@ -2090,8 +2080,18 @@ background-image:url(../Images/one.svg);
     }
 }
 
+/*tabld fehrest*/
+
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%;
+    }
+}
+
 /*Responsive  For Mobile*/
-@media screen and (max-width: 992px) and (min-width: 600px) {
+@media screen  and (min-width: 600px) and (max-width: 992px) {
 
 
     .nav-item-Custom-last {
