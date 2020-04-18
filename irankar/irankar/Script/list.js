@@ -1,14 +1,16 @@
 let showModal_Onclick = function(e){
     e.classList.add('d-none')
     let elem = document.querySelector("#left-status");
-    elem.classList.remove('col-9');
     elem.classList.remove('pl-0');
     elem.classList.add('showModal');
     elem.querySelector('.gallery-toolbar').classList.remove('d-none');
     elem.querySelector('#fullpageWithThumbHeight').style.height="15%";
     // elem.querySelector('#fullpageWithThumb').classList.add("fullpageWithThumb-swiper-slide");
     document.querySelector('body').classList.add('overflow-hidden');
+    // document.getElementById('left-status').classList.remove("left-status-height");
     document.getElementById('left-status').style.height = "100%";
+    document.querySelector('#left-status').classList.remove('col-sm-12');
+    document.querySelector('#left-status').classList.remove('col-md-9');
     
     var mySwiper = document.querySelector('#SliderID').swiper;
     mySwiper.update();
@@ -20,14 +22,16 @@ let showModal_Onclick = function(e){
 let hideModal_Onclick = function(){
     document.querySelector('#left-status .showModalIcon').classList.remove('d-none');
     let elem = document.querySelector("#left-status");
-    elem.classList.add('col-9');
     elem.classList.add('pl-0');
     elem.classList.remove('showModal');
     elem.querySelector('.gallery-toolbar').classList.add('d-none');
     elem.querySelector('#fullpageWithThumbHeight').style.height="15%";
     // elem.querySelector('#fullpageWithThumb').classList.remove("fullpageWithThumb-swiper-slide");
     document.querySelector('body').classList.remove('overflow-hidden');
+    // document.getElementById('left-status').classList.add("left-status-height");
     document.getElementById('left-status').style.height = "791px";
+    document.querySelector('#left-status').classList.add('col-sm-12');
+    document.querySelector('#left-status').classList.add('col-md-9');
 
     var mySwiper = document.querySelector('#SliderID').swiper;
     mySwiper.update();
@@ -510,6 +514,7 @@ let CreateGallery = function(elem){
     document.getElementById('version_childs_show').classList.add('d-none')
     document.getElementById('version_childs_parent').classList.add('d-none')
     document.getElementById('gallery').classList.remove('d-none')
+    //document.getElementById('left-status').classList.add("left-status-height");
     document.getElementById('left-status').style.height = "791px";
     document.querySelectorAll('.btn-shape-Swiper').forEach(function (el, i) {
         el.classList.add('d-none');
@@ -742,16 +747,30 @@ let CreateGallery = function(elem){
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
-        spaceBetween: 10,
-        slidesPerView: 5,
+        // spaceBetween: 10,
+        slidesPerView: 4,
         navigation: {
             nextEl: '.bottom-swiper-button-next',
             prevEl: '.bottom-swiper-button-prev',
         },
         freeMode: true,
-        loopedSlides: 5, //looped slides should be the same
+        // loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            // 640: {	
+            //     slidesPerView: 2,	
+            //     spaceBetween: 20,	
+            // },	
+            1024: {	
+                slidesPerView: 5,	
+                spaceBetween: 40,	
+            },	
+            // 1440: {	
+            //     slidesPerView: 4,	
+            //     spaceBetween: 27,	
+            // },	
+        }
         //on: {
         //    click: function (e) {
         //        datagallery.forEach(function(itm){
@@ -770,7 +789,7 @@ let CreateGallery = function(elem){
     var galleryTop = new Swiper('#SliderID', {
         spaceBetween: 150,
      
-        loopedSlides: 5, //looped slides should be the same
+        // loopedSlides: 5, //looped slides should be the same
 
         thumbs: {
             swiper: galleryThumbs,
@@ -1012,7 +1031,7 @@ let fullpageWithThumb = function (e) {
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
     var galleryThumbs = new Swiper('#fullpageWithThumb', {
         spaceBetween: 10,
-        slidesPerView: e.getAttribute("view") ? 9 : 5,
+        slidesPerView: e.getAttribute("view") ? 4 : 5,
         navigation: {
             nextEl: '.bottom-swiper-button-next',
             prevEl: '.bottom-swiper-button-prev',
@@ -1021,6 +1040,20 @@ let fullpageWithThumb = function (e) {
         //loopedSlides: 5, //looped slides should be the same
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        breakpoints: {
+            640: {	
+                slidesPerView: (e.getAttribute("view") ? 4 : 3),	
+                spaceBetween: 20,	
+            },	
+            1024: {	
+                slidesPerView: (e.getAttribute("view") ? 9 : 5),	
+                spaceBetween: 20,	
+            },	
+            // 1440: {	
+            //     slidesPerView: 4,	
+            //     spaceBetween: 27,	
+            // },	
+        }
     });
     var galleryTop = new Swiper('#SliderID', {
         spaceBetween: 150,

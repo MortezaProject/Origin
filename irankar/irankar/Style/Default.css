@@ -496,7 +496,11 @@ width:93%!important;
 /* swiper */
 .gallery-toolbar {
     height: 31.4px;
+    width:85%;
     background-color: rgba(93, 95, 98, 1);
+}
+.gallery-toolbar>.row {
+    margin: 0 3rem;
 }
 
 .gallery-toolbar img {
@@ -603,11 +607,15 @@ width:93%!important;
     background-color: #58595b !important;
 }
 
+/* .left-status-height{height: 791px;} */
+
 #left-status .TopSlider {
     /* padding: 2rem 3rem; */
     /* padding: 3rem 5rem; */
     width: 53rem;
+    max-width: 100%;
 }
+/* #SliderIDHeight.top-slider-arrow .TopSlider{width: 55%;} */
 
 .one-slider-view,
 .multi-slider-view {
@@ -731,25 +739,26 @@ width:93%!important;
 #left-status .gallery-thumbs-fullpageWithThumb {
     /* padding: 1.5% 3%; */
     width: 53rem;
+    max-width: 100%;
 }
 
 #left-status .swiper-button-prev {
-    left: 1.5rem;
+    left: 0.5rem;
     outline: unset;
 }
 
 #left-status .swiper-button-next {
-    right: 1.5rem;
+    right: 0.5rem;
     outline: unset;
 }
 
 #left-status .top-slider-arrow .swiper-button-prev {
-    left: 17%;
+    left: 10rem;
     outline: unset;
 }
 
 #left-status .top-slider-arrow .swiper-button-next {
-    right: 17%;
+    right: 10rem;
     outline: unset;
 }
 
@@ -2080,16 +2089,6 @@ background-image:url(../Images/one.svg);
     }
 }
 
-/*tabld fehrest*/
-
-@media (min-width: 768px) {
-    .carousel-multi-item-2 .col-md-3 {
-        float: left;
-        width: 25%;
-        max-width: 100%;
-    }
-}
-
 /*Responsive  For Mobile*/
 @media screen  and (min-width: 600px) and (max-width: 992px) {
 
@@ -2131,6 +2130,43 @@ background-image:url(../Images/one.svg);
         padding-right: 0rem !important;
     }
 }
+
+/*table fehrest*/
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) { 
+    #gallery #left-status{
+        order:1;
+        padding: unset;
+    }
+    #gallery #right-status{
+        order:2;
+        padding: unset;
+    }
+    .gallery-toolbar {
+        width:100%;
+    }
+    .gallery-toolbar>.row {
+        margin: unset;
+    }
+    .gallery-toolbar > .row > div{padding: unset;}
+    .gallery-toolbar-pages-text[type="number"]{width:30px!important;}
+    select.gallery-toolbar-pages-text{width:45px!important;}
+    #left-status .top-slider-arrow .swiper-button-next {
+        right: 0.5rem;
+    }
+    #left-status .top-slider-arrow .swiper-button-prev {
+        right: 0.5rem;
+    }
+ }
+
+
 
 /*addede class ali */
 
