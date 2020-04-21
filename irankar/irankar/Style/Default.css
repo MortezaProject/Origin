@@ -403,7 +403,7 @@ a:hover {
     height: 382px;
     max-width: 100%;
     border: solid 2px #d1d3d4;
-    background-color: #f1f2f2;
+    background-color: #ecebeb;
 }
 
 .item-blog img {
@@ -456,7 +456,7 @@ width:93%!important;
     /* IE 9 */
     -webkit-transform: scale(1.5);
     /* Safari 3-8 */
-    transform: scale(1.049);
+    transform: scale(1.024);
     z-index: 10000;
 }
 
@@ -1053,7 +1053,7 @@ hr.line {
 .img-post {
     position: relative;
     float: left;
-    right: 52%;
+    right: 55%;
     bottom: 17%;
 }
 
@@ -1065,7 +1065,7 @@ hr.line {
 
 .footer-post {
     color: #929292 !important;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 10pt;
     /*padding-top: .5rem;*/
     position: absolute;
@@ -1144,9 +1144,9 @@ hr.line {
     cursor: pointer;
 }
 
-.border_comments {
+/*.border_comments {
     border-bottom: 0.35mm solid #d1d3d4;
-}
+}*/
 
 /*--**********************---------------------------------END BLOG CSS---------------------------**************************************--*/
 
@@ -1512,7 +1512,12 @@ a.jstree-anchor {
 #Right-Content .title-post p {
     margin-bottom: 0.5rem !important;
 }
-
+#Right-Content hr {
+margin-bottom: 2.2rem!important;
+}
+.post-body {
+    height: 175px;
+}
 .dropdown .btn:focus {
     box-shadow: unset;
 }
