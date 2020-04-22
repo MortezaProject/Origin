@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.92617 14.95391"><defs><style>.cls-1{fill:none;stroke:#939598;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><title>Asset 5</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polyline class="cls-1" points="0.25 0 0.25 5.687 10.676 5.687 10.676 0"/><path class="cls-1" d="M10.67591,14.95391V9.88066L8.45127,7.656H.25026v7.29789M8.21435,7.86674v2.22463h0Z"/><line class="cls-1" x1="1.98787" y1="12.21066" x2="8.9383" y2="12.21066"/><line class="cls-1" x1="1.98787" y1="13.60601" x2="8.9383" y2="13.60601"/><line class="cls-1" x1="1.98787" y1="0.84242" x2="8.9383" y2="0.84242"/><line class="cls-1" x1="1.98787" y1="2.23777" x2="8.9383" y2="2.23777"/><line class="cls-1" x1="1.98787" y1="3.63312" x2="8.9383" y2="3.63312"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 33.3 45.6" style="enable-background:new 0 0 33.3 45.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#929496;}
+</style>
+<g>
+	<g>
+		<polygon class="st0" points="33.3,18.1 0,18.1 0,0 1.5,0 1.5,16.6 31.8,16.6 31.8,0 33.3,0 		"/>
+	</g>
+	<g>
+		<g>
+			<path class="st0" d="M33.3,45.6h-1.5V31.5h-7.5v-7.4H1.5v21.5H0v-23h26.1l7.2,7.2V45.6z M25.8,30h5.5l-5.5-5.5V30z"/>
+		</g>
+	</g>
+	<g>
+		<rect x="6.1" y="36.5" class="st0" width="21.2" height="1.5"/>
+	</g>
+	<g>
+		<rect x="6.1" y="40.7" class="st0" width="21.2" height="1.5"/>
+	</g>
+	<g>
+		<g>
+			<rect x="6.1" y="1.8" class="st0" width="21.2" height="1.5"/>
+		</g>
+		<g>
+			<rect x="6.1" y="6.1" class="st0" width="21.2" height="1.5"/>
+		</g>
+		<g>
+			<rect x="6.1" y="10.3" class="st0" width="21.2" height="1.5"/>
+		</g>
+	</g>
+</g>
+</svg>
