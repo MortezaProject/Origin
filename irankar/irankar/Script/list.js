@@ -167,7 +167,7 @@ let collection_childs = function () {
             '</div>' +
             '</div>' +
             '</div></div>' +
-            '<div class="col-md-6 versin-detail-data-text '+(i%2==0?"padding-pic-list":"")+'">' +
+            '<div class="col-md-6 versin-detail-data-text '+(i%2==0?"padding-pic-list":" pr-0")+'">' +
             '<div class="container-fluid">' +
             '<div class="row mb-3"><div>' + dt.title + '</div></div>' +
             '<div class="row"><div class="versin-detail-data-text-subject"> تاسیس: </div><div>' + dt
@@ -479,7 +479,7 @@ let Version_OneViewMode_Onclick = function (elem) {
 }
 let Version_TwoViewMode_Onclick = function (elem) {
     $("#views").children("img").attr("src", "../Images/two-row-view-selected.svg")
-    $("#views").css("background-color","#00a693!important");
+    $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     document.querySelector('#version_childs_show').classList.add('d-none');
     document.querySelector('#version_childs_parent').classList.remove('d-none');
