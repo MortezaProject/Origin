@@ -116,7 +116,7 @@ new CreateTree("treeid", setTree, map);
 
 let MapMode_Onclick = function (elem) {
     //$("#views img")[0].src = $(elem).children()[0].src
-    $("#views").children("img").attr("src", "../Images/map-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.mapviewselected)
     $("#views").css("background-color","#00a693");
     document.getElementById('mapid').classList.add('col-12');
     document.getElementById('mapid').classList.remove('col-9');
@@ -125,7 +125,7 @@ let MapMode_Onclick = function (elem) {
     map.invalidateSize();
 }
 let TreeMapMode_Onclick = function (elem) {
-    $("#views").children("img").attr("src", "../Images/map-tree-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.maptreeviewselected)
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     document.getElementById('mapid').classList.remove('col-12');
@@ -246,7 +246,7 @@ let collection_childs_slider = function (collectionData) {
 
 
 let collection_ListViewMode_Onclick = function (elem) {
-    $("#views").children("img").attr("src", "../Images/list-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.listviewselected)
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     let swiper = document.querySelector('#collection_childs_slider')
@@ -260,7 +260,7 @@ let collection_ListViewMode_Onclick = function (elem) {
 
 
 let collection_TwoViewMode_Onclick = function (elem) {
-    $("#views").children("img").attr("src", "../Images/two-row-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.tworowviewselected)
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     document.querySelector('#collection_childs_show').classList.add('d-none');
@@ -417,7 +417,7 @@ let version_childs_slider = function (versionData) {
 let Version_ListViewMode_Onclick = function (elem) {
 
 
-    $("#views").children("img").attr("src", "../Images/list-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.listviewselected)
     //$("#views img")[0].src = $(elem).children()[0].src
     $("#views").css("background-color","#00a693");
     let swiper = document.querySelector('#version_childs_slider')
@@ -432,7 +432,7 @@ let Version_ListViewMode_Onclick = function (elem) {
 let Version_GalleryViewMode_Onclick = function (elem) {
 
 
-    $("#views").children("img").attr("src", "../Images/gallery-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.galleryviewselected)
     //$("#views img")[0].src = $(elem).children()[0].src
     $("#views").css("background-color","#00a693");
     document.querySelector('#version_childs_show').classList.add('d-none');
@@ -456,7 +456,7 @@ let Version_GalleryViewMode_Onclick = function (elem) {
 }
 let Version_OneViewMode_Onclick = function (elem) {
     
-    $("#views").children("img").attr("src", "../Images/one-row-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.onerowviewselected)
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     document.querySelector('#version_childs_show').classList.add('d-none');
@@ -478,7 +478,7 @@ let Version_OneViewMode_Onclick = function (elem) {
     })
 }
 let Version_TwoViewMode_Onclick = function (elem) {
-    $("#views").children("img").attr("src", "../Images/two-row-view-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.tworowviewselected)
     $("#views").css("background-color","#00a693");
     //$("#views img")[0].src = $(elem).children()[0].src
     document.querySelector('#version_childs_show').classList.add('d-none');
@@ -886,7 +886,7 @@ let fullpage = function () {
         el.classList.remove('d-none');
     })
     $("#views").css("background-color","#00a693");
-    $("#views").children("img").attr("src", "../Images/one-selected.svg") 
+    $("#views").children("img").attr("src", window.imagesource.oneselected) 
     // document.querySelector("#SliderID").classList.remove('py-15');
     document.querySelector("#SliderIDHeight").style.height = "calc(100% - 31.4px)";
     remove_class('one-slider-view');
@@ -924,7 +924,7 @@ let TwoSlide = function () {
         el.classList.remove('d-none');
     })
     $("#views").css("background-color","#00a693");
-    $("#views").children("img").attr("src", "../Images/two-selected.svg") 
+    $("#views").children("img").attr("src", window.imagesource.twoselected) 
     // SliderID.classList.add('py-15');
     document.querySelector("#SliderIDHeight").style.height = "calc(100% - 31.4px)";
     remove_class('two-slider-view');
@@ -978,7 +978,7 @@ let MultiSlide = function () {
         el.classList.remove('d-none');
     })
     $("#views").css("background-color","#00a693");
-    $("#views").children("img").attr("src", "../Images/view-selected.svg") 
+    $("#views").children("img").attr("src", window.imagesource.viewselected) 
     // document.querySelector("#SliderID").classList.remove('py-15');
     document.querySelector("#SliderIDHeight").style.height = "calc(100% - 31.4px)";
     remove_class('multi-slider-view');
@@ -1029,7 +1029,7 @@ let fullpageWithThumb = function (e) {
             })
         }
     $("#views").css("background-color","#00a693");
-    $("#views").children("img").attr("src", "../Images/thumbnail-selected.svg")
+    $("#views").children("img").attr("src", window.imagesource.thumbnailselected)
     if(e.getAttribute("view")) document.querySelector("#fullpageWithThumb").style.width = "100%";
     else document.querySelector("#fullpageWithThumb").style.width = "52rem";
     // document.querySelector("#SliderID").classList.remove("py-15");
