@@ -764,7 +764,6 @@ let CreateGallery = function(elem){
             // },	
             1024: {	
                 slidesPerView: 5,	
-                spaceBetween: 40,	
             },	
             // 1440: {	
             //     slidesPerView: 4,	
@@ -1054,11 +1053,9 @@ let fullpageWithThumb = function (e) {
         breakpoints: {
             640: {	
                 slidesPerView: (e.getAttribute("view") ? 4 : 3),	
-                spaceBetween: 20,	
             },	
             1024: {	
                 slidesPerView: (e.getAttribute("view") ? 9 : 5),	
-                spaceBetween: 20,	
             },	
             // 1440: {	
             //     slidesPerView: 4,	
