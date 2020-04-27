@@ -352,8 +352,6 @@ let version_childs = function () {
 
 
 let version_childs_slider = function (versionData) {
-    document.querySelector(".formControlRange").min = 0;
-    document.querySelector(".formControlRange").max = versionData.length - 1;
     let _div = document.querySelector('#version_childs_slider .swiper-wrapper'),
         itemChild = "";
     for (let i = 0; i < versionData.length; i++) {
@@ -737,7 +735,8 @@ let CreateGallery = function(elem){
         verseaye:"قَالَ يَا قَوْمِ لِمَ تَسْتَعْجِلُونَ بِالسَّيِّئَةِ قَبْلَ الْحَسَنَةِ لَوْلَا تَسْتَغْفِرُونَ اللَّهَ لَعَلَّكُمْ تُرْحَمُونَ ووَلَقَدْ أَرْسَلْنَا إِلَى ثَمُودَ أَخَاهُمْ صَالِحًا أَنِ اعْبُدُوا اللَّهَ فَإِذَا هُمْ فَرِيقَانِ يَخْتَصِمُونَ"
     },
     ]
-
+    document.querySelector(".formControlRange").min = 0;
+    document.querySelector(".formControlRange").max = datagallery.length-1;
     // document.querySelector("#SliderID").classList.remove('py-15');
     document.querySelector("#fullpageWithThumbHeight").classList.remove('d-none');
     document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
@@ -1117,88 +1116,76 @@ let backto = function(){
     })
 }
 
+let topSliderNext_Onclick = function(e){
+    let node = document.querySelector('#SliderID .swiper-wrapper'),
+        selected = node.querySelector('.swiper-slide-next');
 
+    // The equivalent of parent.children.indexOf(child)
+    var index = Array.prototype.indexOf.call(node.children, selected);
+    document.querySelector(".formControlRange").value = index;
+}
+let topSliderPrev_Onclick = function(e){
+    let node = document.querySelector('#SliderID .swiper-wrapper'),
+        selected = node.querySelector('.swiper-slide-prev');
 
+    // The equivalent of parent.children.indexOf(child)
+    var index = Array.prototype.indexOf.call(node.children, selected);
+    document.querySelector(".formControlRange").value = index;
+}
+let bottomSliderNext_Onclick = function(e){
+    let node = document.querySelector('#fullpageWithThumb .swiper-wrapper'),
+    selected = node.querySelector('.swiper-slide-next');
 
-let expandgallery = function(){
-    var modal = document.getElementById("myModal");
-    var parent = document.getElementById("expandgallery");
-    document.body.style.overflow="hidden";
-    modal.style.display="block";
+    // The equivalent of parent.children.indexOf(child)
+    var index = Array.prototype.indexOf.call(node.children, selected);
+    document.querySelector(".formControlRange").value = index;
+}
+let bottomSliderPrev_Onclick = function(e){
+    let node = document.querySelector('#fullpageWithThumb .swiper-wrapper'),
+    selected = node.querySelector('.swiper-slide-prev');
 
-    //modal.style.height = window.innerHeight;
-
-//    var galleryThumbs = new Swiper("#fullpageWithThumbExpand", {
-//        spaceBetween: 32,
-//        slidesPerView: 5,
-//        navigation: {
-//            nextEl: '.swiper-button-next',
-//            prevEl: '.swiper-button-prev',
-//        },
-//        freeMode: true,
-//        loopedSlides: 5, //looped slides should be the same
-//        watchSlidesVisibility: true,
-//        watchSlidesProgress: true,
-//    });
-//    var galleryTop = new Swiper('#expandgallery', {
-//        spaceBetween: 150,
-     
-//        loopedSlides: 5, //looped slides should be the same
-
-//        thumbs: {
-//            swiper: galleryThumbs,
-//        },
-//    });
-//    for (let i = 0; i < datagallery.length; i++) {
-//        let slide = '<div class="swiper-slide" style="background-image:url(' + datagallery[i].src +
-//            ');background-position: center;background-size: 100% 100%;background-repeat: no-repeat;" iid="'+datagallery[i].id+'"></div>'
-//        galleryThumbs.appendSlide(slide);
-//        galleryTop.appendSlide(slide);
-//        for (let obj in datagallery[i] ) {
-//            if (document.getElementById(obj) !=null) {
-//            document.getElementById(obj).innerHTML = datagallery[i][obj];
-    
-//        }
-//    }
-//}
+    // The equivalent of parent.children.indexOf(child)
+    var index = Array.prototype.indexOf.call(node.children, selected);
+    document.querySelector(".formControlRange").value = index;
 }
 
-var addZoom = function (target) {
-    // FETCH CONTAINER + IMAGE
-    var container = document.getElementById('SwiperSlider'),
-        imgsrc = container.currentStyle || window.getComputedStyle(container, false),
-        imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, ""),
-        img = new Image();
+
+// var addZoom = function (target) {
+//     // FETCH CONTAINER + IMAGE
+//     var container = document.getElementById('SwiperSlider'),
+//         imgsrc = container.currentStyle || window.getComputedStyle(container, false),
+//         imgsrc = imgsrc.backgroundImage.slice(4, -1).replace(/"/g, ""),
+//         img = new Image();
   
-    // LOAD IMAGE + ATTACH ZOOM
-    img.src = imgsrc;
-    img.onload = function () {
-      var imgWidth = img.naturalWidth,
-          imgHeight = img.naturalHeight,
-          ratio = imgHeight / imgWidth,
-          percentage = ratio * 100 + '%';
+//     // LOAD IMAGE + ATTACH ZOOM
+//     img.src = imgsrc;
+//     img.onload = function () {
+//       var imgWidth = img.naturalWidth,
+//           imgHeight = img.naturalHeight,
+//           ratio = imgHeight / imgWidth,
+//           percentage = ratio * 100 + '%';
   
-      // ZOOM ON MOUSE MOVE
-      container.onmousemove = function (e) {
-        var boxWidth = container.clientWidth,
-            xPos = e.pageX - this.offsetLeft,
-            yPos = e.pageY - this.offsetTop,
-            xPercent = xPos / (boxWidth / 100) + '%',
-            yPercent = yPos / (boxWidth * ratio / 100) + '%';
+//       // ZOOM ON MOUSE MOVE
+//       container.onmousemove = function (e) {
+//         var boxWidth = container.clientWidth,
+//             xPos = e.pageX - this.offsetLeft,
+//             yPos = e.pageY - this.offsetTop,
+//             xPercent = xPos / (boxWidth / 100) + '%',
+//             yPercent = yPos / (boxWidth * ratio / 100) + '%';
   
-        Object.assign(container.style, {
-          backgroundPosition: xPercent + ' ' + yPercent,
-          backgroundSize: imgWidth + 'px'
-        });
-      };
+//         Object.assign(container.style, {
+//           backgroundPosition: xPercent + ' ' + yPercent,
+//           backgroundSize: imgWidth + 'px'
+//         });
+//       };
   
-      // RESET ON MOUSE LEAVE
-      container.onmouseleave = function (e) {
-        Object.assign(container.style, {
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
-        });
-      };
-    }
-  };
-  addZoom()
+//       // RESET ON MOUSE LEAVE
+//       container.onmouseleave = function (e) {
+//         Object.assign(container.style, {
+//           backgroundPosition: 'center',
+//           backgroundSize: 'cover'
+//         });
+//       };
+//     }
+//   };
+//   addZoom()
