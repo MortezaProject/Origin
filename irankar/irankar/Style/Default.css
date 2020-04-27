@@ -2321,6 +2321,9 @@ display:none;
         height: 25%;
         padding: 1rem 1rem;
     }
+    #left-status.showModal .fullpageWithThumbHeight {
+        padding: 1rem 0;
+    }
     #left-status.showModal .SliderIDHeight-thumb {
         height: calc(85% - 31.4px);
     }
@@ -2352,10 +2355,10 @@ display:none;
         padding: 0 1px;
     }
     #left-status .top-slider-arrow .swiper-button-next {
-        right: 0.5rem;
+        right: 0;
     }
     #left-status .top-slider-arrow .swiper-button-prev {
-        left: 0.5rem;
+        left: 0;
     }
 
  }
