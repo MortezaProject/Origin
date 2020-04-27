@@ -11,8 +11,8 @@ ShowDescriptionBlog = function (param) {
     let bid = param.attributes.bid.value || "";
     datablog.forEach(function(itm){
         if (itm.bid == bid) {
-            document.querySelector('#description-blog span').textContent = itm.desc;
-            document.querySelector('#dateblog span').textContent = itm.date;
+            document.querySelector('#description-blog span').innerHTML = itm.desc +'<img class="BHRblog" style="float:left;" src='+ window.imagesource.Arrowblogleft +' />';
+            document.querySelector('#dateblog span').innerHTML = itm.date + '<img class="BHLblog" style="float:left;" src='+ window.imagesource.Arrowblogleft +' />';
         }
     });
     $("#description-blog").removeClass("d-none");
