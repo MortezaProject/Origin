@@ -478,7 +478,16 @@ width:93%!important;
     padding-top: 40px;
     text-align: justify;
 }
-
+#description-blog span{
+line-height:2;
+width:100%;
+}
+.BHLblog {
+display:none;
+}
+.BHRblog {
+display:inline-block;
+}
 #description-blog .space-between {
     display: flex;
     justify-content: space-between;
@@ -2197,7 +2206,12 @@ background-image:url(../Images/one.svg);
 /*Responsive  For Mobile*/
 @media screen  and (min-width: 600px) and (max-width: 992px) {
 
-
+                .BHLblog {
+display:inline-block;
+    }
+           .BHRblog {
+display:none;
+    }   
     .nav-item-Custom-last {
         padding: 0 30px !important;
     }
@@ -2215,6 +2229,7 @@ background-image:url(../Images/one.svg);
 
     .navbar-light .navbar-toggler {
         border: 0;
+        order:3;
     }
 
     .pagenation-search {
@@ -2243,6 +2258,7 @@ background-image:url(../Images/one.svg);
         width: 25%;
         max-width: 100%;
     }
+  
 }
 
 @media (max-width: 767.98px) { 
@@ -2341,6 +2357,7 @@ background-image:url(../Images/one.svg);
     #left-status .top-slider-arrow .swiper-button-prev {
         left: 0.5rem;
     }
+
  }
 
 
