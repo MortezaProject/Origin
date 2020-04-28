@@ -739,10 +739,9 @@ let CreateGallery = function(elem){
     document.querySelector(".formControlRange").max = datagallery.length-1;
     // document.querySelector("#SliderID").classList.remove('py-15');
     document.querySelector("#fullpageWithThumbHeight").classList.remove('d-none');
-    document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
-    document.querySelector("#SliderID").classList.add('gallery-top-fullpageWithThumb');
+    // document.querySelector("#SliderID").classList.add('swiper-container-fullpageWithThumb');
     document.querySelector("#SliderIDHeight").classList.add('SliderIDHeight-thumb');
-    document.querySelector("#SliderID").classList.add('thumb-slider-view');
+    document.querySelector("#SliderIDHeight").classList.add('thumb-slider-view');
     // document.querySelector("#fullpageWithThumbHeight").style.height = "15%";
     document.querySelector("#SliderID .swiper-wrapper").innerHTML = "";
     document.querySelector("#fullpageWithThumb .swiper-wrapper").innerHTML = "";
@@ -867,11 +866,11 @@ let changeRange = function(e){
 }
 
 let remove_class = function(val){
-    document.querySelector("#SliderID").classList.remove('one-slider-view');
-    document.querySelector("#SliderID").classList.remove('two-slider-view');
-    document.querySelector("#SliderID").classList.remove('multi-slider-view');
-    document.querySelector("#SliderID").classList.remove('thumb-slider-view');
-    if (val) document.querySelector("#SliderID").classList.add(val);
+    document.querySelector("#SliderIDHeight").classList.remove('one-slider-view');
+    document.querySelector("#SliderIDHeight").classList.remove('two-slider-view');
+    document.querySelector("#SliderIDHeight").classList.remove('multi-slider-view');
+    document.querySelector("#SliderIDHeight").classList.remove('thumb-slider-view');
+    if (val) document.querySelector("#SliderIDHeight").classList.add(val);
 }
 
 let destroy = function(){
@@ -1030,8 +1029,8 @@ let fullpageWithThumb = function (e) {
         }
     $("#views").css("background-color","#00a693");
     $("#views").children("img").attr("src", window.imagesource.thumbnailselected)
-    if(e.getAttribute("view")) document.querySelector("#fullpageWithThumb").style.width = "100%";
-    else document.querySelector("#fullpageWithThumb").style.width = "52rem";
+    // if(e.getAttribute("view")) document.querySelector("#fullpageWithThumb").style.width = "100%";
+    // else document.querySelector("#fullpageWithThumb").style.width = "52rem";
     // document.querySelector("#SliderID").classList.remove("py-15");
     document.querySelector("#fullpageWithThumbHeight").classList.remove('d-none');
     document.querySelector("#SliderIDHeight").classList.add('SliderIDHeight-thumb');
