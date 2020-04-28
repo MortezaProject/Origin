@@ -4,7 +4,7 @@
     color: white;
     text-align: right;
     font-family: IRANSansWeb;
-    font-family: IRANSansWeb Medium Regular;
+    /* font-family: IRANSansWeb Medium Regular; */
 }
 
 @font-face {
@@ -1665,12 +1665,10 @@ main-tab-searchr {
     filter: brightness(60%);
 }
 
-/* Updated 06 */
 .version_childs_slider_ListMode_text {
-    /*font-family: IRANSansWeb;*/
-    /* Updated 06 */
+    font-family: IRANSansWeb;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.87;
@@ -1681,10 +1679,9 @@ main-tab-searchr {
 }
 
 .collection_childs_slider_ListMode_text {
-    /*font-family: Iransans;*/
-    /* Updated 06 */
+    font-family: IRANSansWeb;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.87;
