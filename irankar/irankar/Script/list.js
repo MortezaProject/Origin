@@ -209,7 +209,7 @@ let collection_childs_slider = function (collectionData) {
         itemChild.append(slide)
     }
     let swiper = new Swiper('#collection_childs_slider', {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 10,
         //setWrapperSize: true,
         //init: false,	
@@ -230,7 +230,7 @@ let collection_childs_slider = function (collectionData) {
                 spaceBetween: 20,	
             },	
             1024: {	
-                slidesPerView: 3,	
+                slidesPerView: 4,	
                 spaceBetween: 40,	
             },	
             1440: {	
@@ -378,7 +378,7 @@ let version_childs_slider = function (versionData) {
 
     }
     let swiper = new Swiper('#version_childs_slider', {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 10,
         // setWrapperSize: true,
         // init: false,	
@@ -399,7 +399,7 @@ let version_childs_slider = function (versionData) {
                 spaceBetween: 20,	
             },	
             1024: {	
-                slidesPerView: 3,	
+                slidesPerView: 4,	
                 spaceBetween: 40,	
             },	
             1440: {	
