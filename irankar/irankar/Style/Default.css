@@ -127,6 +127,9 @@ a:hover {
     font-size: 14pt !important;
     color: black !important;
 }
+#Left-Menu .text-tree-map {
+    font-size: 11pt !important;
+}
 
 .search {
     background-color: #f1f2f2 !important;
@@ -1179,6 +1182,9 @@ hr.line {
     font-weight: 600;
     /* Updated */
 }
+#Left-Menu .card-body-cust {
+    font-size: 9pt;
+}
 
 .deactive-hover-left {
     text-decoration: none !important;
@@ -1498,6 +1504,10 @@ margin-bottom: 2.2rem!important;
 #verseaye {
     font-family: DiodrumArabic;
     font-size: 21px;
+}
+#Left-Menu #verseaye {
+    font-size: 17px;
+    text-align: justify;
 }
 
 .three-logo {
