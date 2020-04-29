@@ -2264,7 +2264,7 @@ display:none;
     }
     /*  */
  }
-@media(max-width:1920px){
+@media (max-width:1920px){
     .SliderIDHeight-thumb {
         height: calc(80% - 31.4px);
         /*  */
@@ -2319,7 +2319,7 @@ display:none;
         left: 15%;
     }
 }
-@media(max-width:1280px){
+@media (max-width:1280px){
     .SliderIDHeight-thumb {
         height: calc(80% - 31.4px);
         /*  */
@@ -2410,7 +2410,13 @@ display:none;
     }
     .gallery-toolbar .row .lic{max-width: 100px;}
 }
-@media(max-width:767.98px){
+@media (max-width:767.98px){
+    #collection_childs .versin-detail-data-parent .versin-detail-data-text > .container-fluid {padding: 0 29px;}
+
+    .collection_childs_slider_ListMode_text {
+    font-size: 12px;
+    line-height: 2.42;
+}
     .SliderIDHeight-thumb {
         height: calc(80% - 31.4px);
         /*  */
