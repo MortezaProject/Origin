@@ -2411,9 +2411,34 @@ display:none;
     .gallery-toolbar .row .lic{max-width: 100px;}
 }
 @media (max-width:767.98px){
+    #collection_childs_show > .swiper-button-next,
+    #version_childs_show > .swiper-button-next {
+        right: -2px!important;
+    }
+    #collection_childs_show > .swiper-button-prev,
+    #version_childs_show > .swiper-button-prev {
+        left: -2px!important;
+    }
+    #collection_childs_show > .swiper-button-prev::after,
+    #collection_childs_show > .swiper-button-next::after,
+    #version_childs_show > .swiper-button-prev::after,
+    #version_childs_show > .swiper-button-next::after {
+        font-size: 27px;
+        font-weight: bold;
+    }
+    #version_childs_parent #version_childs > .row > div{
+        padding: unset;
+    }
+    #version_childs_parent #version_childs > .row {
+        margin: auto;
+    }
+    #collection_childs_parent #collection_childs > .row {
+        margin: auto;
+    }
     #collection_childs .versin-detail-data-parent .versin-detail-data-text > .container-fluid {padding: 0 29px;}
 
-    .collection_childs_slider_ListMode_text {
+    .collection_childs_slider_ListMode_text,
+    .version_childs_slider_ListMode_text {
     font-size: 12px;
     line-height: 2.42;
 }
