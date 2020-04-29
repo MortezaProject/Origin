@@ -20,6 +20,7 @@
     <script src="../Script/Utility.js"></script>
     <link rel="stylesheet" href="../swiper/swiper.min.css">
     <script src="../swiper/swiper.min.js"></script>
+
 </head>
 <body>
     <div id="wrraper-search">
@@ -36,14 +37,14 @@
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-<div class="order-search-navbar" style="order: 3;">
+<div class="order-search-navbar">
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0  d-md-none d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
+                            <input class="form-control mr-sm-2 br-0 py-0 d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
                             <div class="input-group-append">
-                                <img name="search" src="../Images/search.svg" style="height: 26px;"/>
+                                <img name="search" src="../Images/search.svg" class="img-search"/>
                             </div>
-                            <img name="search_advance" src="../Images/search_advance.svg" name="BtnSearch" style="padding-right: 10px!important;height: 26px;" />
+                            <img class="search_advance" src="../Images/search_advance.svg" name="BtnSearch" />
                         </div>
 
 
@@ -90,7 +91,7 @@
 
         <div class="py-5 container-fluid align-parent">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb px-0" style="background-color: unset!important;">
+                <ol class="breadcrumb breadcrumb-search px-0">
                     <img src="../Images/Content.png" />
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">جستجوی پیشرفته</a></li>
@@ -101,7 +102,7 @@
 
         <div id="MainContentSearch" class="px-0 Parent-Tab">
             <!-- Start-Content-->
-            <div class="nav-tabs align-parent" style="border-bottom: 0.35mm solid #dee2e6;">
+            <div class="nav-tabs nav-tabs1-search align-parent">
                 <ul class="nav nav-pills px-0" id="advanced-search-gf" role="tablist">
                     <li class="nav-item mr-md-0 mr-sm-0">
                         <a class="nav-link active" data-toggle="tab" href="#advanced-search-versions" role="tab" aria-controls="menu1" aria-selected="false">نسخه ها</a>
@@ -123,14 +124,14 @@
                     <div id="advanced-search-versions" class="tab-pane show active fade container-fluid align-parent align-parent-mob">
                         <!--  -->
                         <div id="accordion">
-                            <div class="card px-md-3" style="background-color: unset!important;">
+                            <div class="card px-md-3 card-bg-search">
                                 <div class="card-header row p-0 col-md-9" id="headingOne">
                                     <div class="col-md-6 col-6 search-inner-header px-md-0">
                                         <span>شناسه نسخه خطی</span>
                                     </div>
                                     <div class="col-md-6 col-6 px-0 text-left d-flex align-items-end justify-content-end">
                                         <button class="btn btn-link p-0 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
-                                            <img class="key-accardion" src="../Images/Arrow-up.svg" style="height: 10px;">
+                                            <img class="key-accardion Arrowup-img-search" src="../Images/Arrow-up.svg">
                                         </button>
                                     </div>
 
@@ -207,14 +208,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card px-md-3" style="background-color: unset!important;">
+                            <div class="card px-md-3 card-bg-search">
                                 <div class="card-header row p-0 col-md-9" id="headingTwo">
                                     <div class="col-md-6 col-6 search-inner-header px-md-0">
                                         <span>نوع نسخه خطی</span>
                                     </div>
                                     <div class="col-md-6 col-6 px-0 text-left d-flex align-items-end justify-content-end">
                                         <button class="btn btn-link p-0 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
-                                            <img src="../Images/Arrow-up.svg" style="height: 10px;">
+                                            <img src="../Images/Arrow-up.svg" class="Arrowup-img-search">
                                         </button>
                                     </div>
                                 </div>
@@ -244,16 +245,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-md-0" style="background-color: unset!important;">
-                                <div class="card-header row py-0 pl-2 pr-3 col-md-9" id="headingThree" style="border-bottom: unset;">
-                                    <div class="col-md-6 col-6 px-0" style="border-bottom: 1px solid rgba(0,0,0,.125);">
+                            <div class="card mx-md-0 card-bg-search">
+                                <div class="card-header row py-0 pl-2 pr-3 col-md-9 headingThree-search" id="headingThree">
+                                    <div class="col-md-6 col-6 px-0 br-bottom-search">
                                         <div class=" search-inner-header px-md-0">
                                             <span>وصف نسخه خطی</span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-6 px-0 text-left d-flex align-items-end justify-content-end" style="border-bottom: 1px solid rgba(0,0,0,.125);">
+                                    <div class="col-md-6 col-6 px-0 text-left d-flex align-items-end justify-content-end br-bottom-search">
                                         <button class="btn btn-link p-0 ml-1 search-inner-header-arrow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" onclick="ChangeIconCollapse(this)">
-                                            <img src="../Images/Arrow-up.svg" style="height: 10px;">
+                                            <img src="../Images/Arrow-up.svg" class="Arrowup-img-search">
                                         </button>
                                     </div>
                                 </div>
@@ -425,7 +426,7 @@
                                     <div class="col-sm-6 col-8">
                                         <div class="dropdown Parent-Tab-cust">
                                             <!-- Updated 05 -->
-                                            <button class="btn btn-secondary-cust dropdown-toggle col-12" style="text-align: right;" type="button" id="Button1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button class="btn btn-secondary-cust dropdown-toggle col-12 dropdown-serach" type="button" id="Button1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 همه موارد
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-filter col-12 drop-down-color" aria-labelledby="dropdownMenuButton">
@@ -538,7 +539,7 @@
 
         <div id="buttons-advance-search" class="container-fluid mx-0 row py-5 mb-md-4 align-parent">
             <div class="col-md-9 padding-r-l">
-                <div class="col-lg-4 col-6 px-0" style="float: left;">
+                <div class="col-lg-4 col-6 px-0 btns-search">
                     <button type="button" class="btn btn-primary btn-md btn-search-advance ml-1">شروع دوباره</button>
                     <button type="button" class="btn btn-primary btn-md btn-search-advance mr-1">جستجو</button>
                 </div>
@@ -552,7 +553,7 @@
             <div class="brand-background">
                 <div class="align-parent row mx-0">
                     <div class="col-md-3 px-0 mb-4 order2-mob">
-                        <img name="ministry" src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                        <img name="ministry" src="../Images/ministry.png" class="ministry-img" />
                     </div>
                     <div class="col-md-6 text-center order1-mob">
                         <p class="text-tertiary">
@@ -562,8 +563,8 @@
                         </p>
                         <div class="three-logo">
                             <a href="#">
-                                <svg version="1.1" id="icon" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="icon" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
                                     <g>
                                         <g>
                                             <g>
@@ -584,8 +585,8 @@
 
                             </a>
                             <a href="#">
-                                <svg version="1.1" id="Svg1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="Svg1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
 
                                     <g>
                                         <g>
@@ -603,8 +604,8 @@
                                 </svg>
                             </a>
                             <a href="#">
-                                <svg version="1.1" id="Capa_1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="Capa_1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
 
                                     <g>
                                         <g>
@@ -620,23 +621,23 @@
                         </div>
                     </div>
                     <div class="col-md-3 d-flex justify-content-end order2-mob">
-                        <img name="science" src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                        <img name="science" src="../Images/science.png" class="science-img" />
                     </div>
                 </div>
             </div>
             <!-- End-Brand -->
-        <!-- Begin-Footer -->
-        <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
-            <!-- Updated (kolle footer) -->
-            <div class="col-md-8 col-6 px-0">
-                <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+            <!-- Begin-Footer -->
+            <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
+                <!-- Updated (kolle footer) -->
+                <div class="col-md-8 col-6 px-0">
+                    <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+                </div>
+                <div class="col-md-4 col-6 px-0 text-left">
+                    <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+                    <img name="designBy"  src="../Images/design_by.png" class="designby-img">
+                </div>
             </div>
-            <div class="col-md-4 col-6 px-0 text-left">
-                <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
-                <img src="../Images/design_by.png" style="padding-right: 8%;">
-            </div>
-        </div>
-        <!-- End-Footer -->
+            <!-- End-Footer -->
     </div>
     <script>
         window.imagesource = {

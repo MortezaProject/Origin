@@ -20,6 +20,7 @@
     <script src="../Script/Utility.js"></script>
     <link rel="stylesheet" href="../swiper/swiper.min.css">
     <script src="../swiper/swiper.min.js"></script>
+
 </head>
 <body>
     <div id="wrraper">
@@ -35,14 +36,14 @@
                     <br />
                     <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
                 </span>
-                <div class="order-search-navbar" style="order: 3;">
+                <div class="order-search-navbar">
                     <form class="form-inline my-2 my-lg-0">
                         <div class="input-group">
                             <input class="form-control mr-sm-2 br-0 py-0 d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
                             <div class="input-group-append">
-                                <img name="search" src="../Images/search.svg" style="height: 26px;"/>
+                                <img name="search" src="../Images/search.svg" class="img-search"/>
                             </div>
-                            <img name="search_advance" src="../Images/search_advance.svg" name="BtnSearch" style="padding-right: 10px!important;height: 26px;" />
+                            <img class="search_advance" src="../Images/search_advance.svg" name="BtnSearch" />
                         </div>
 
 
@@ -99,12 +100,12 @@
                                 <div class="mask rgba-black-light"></div>
                             </div>
                             <div class="carousel-caption carousel-caption-cust text-right">
-                                <div style="opacity: 1;">
+                                <div class="carousel-caption-text">
                                     ضرورت همکاری ایران برای پیشبرد طرح های تحقیقاتی قرآنی در اروپا
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+<!--                        <div class="carousel-item">
                             <div class="view">
                                 <img class="d-block w-100" src="../Images/blog2.png" alt="Second slide">
                                 <div class="mask rgba-black-light"></div>
@@ -157,7 +158,7 @@
                             <div class="carousel-caption carousel-caption-cust text-right">
                                 ضرورت همکاری ایران برای پیشبرد طرح های تحقیقاتی قرآنی در اروپا
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <!--/.Slides-->
 
@@ -197,7 +198,7 @@
 
         <!-- Begin-Content -->
         <div id="contents" class="">
-            <div style="background-color: #fcfaf7;">
+            <div class="bgcolor-fehr">
 
                 <div class="align-parent py-5 space">
                     <div class="text-secondary titr">
@@ -227,15 +228,15 @@
 
                                     <li class="nav-item mx-md-2 mx-1">
                                         <a class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <img src="../Images/view.svg" style="height: 148%;" /></a>
+                                            <img src="../Images/view.svg" class="view-home" /></a>
                                         <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown">
                                             <a class="dropdown-item  p-0" href="#">
-                                                <img src="../Images/hierarchy.svg" style="width: 40px;" /></a>
+                                                <img src="../Images/hierarchy.svg" class="hierarchy-home" /></a>
                                             <hr />
                                             <a class="dropdown-item p-0" href="#">
-                                                <img src="../Images/map.svg" style="width: 40px;" /></a><hr />
+                                                <img src="../Images/map.svg" class="hierarchy-home" /></a><hr />
                                             <a class="dropdown-item p-0" href="#">
-                                                <img src="../Images/hi-map.svg" style="width: 40px;" /></a>
+                                                <img src="../Images/hi-map.svg" class="hierarchy-home" /></a>
                                         </div>
                                     </li>
                                     <li class="nav-item mr-md-2 mr-1">
@@ -258,15 +259,15 @@
                             </div>
                             <div class="tab-pane fade" id="pills-Collection" role="tabpanel" aria-labelledby="pills-Collection-tab">
                                 <div class="container-fluid align-parent mx-0 d-flex justify-content-start my-4">
-                                    <div name="" class="" style="height: 461px; width: 27%; border: solid 1px green;">
+                                    <div name="" class="maphom1">
                                     </div>
-                                    <div name="" style="height: 461px; width: 65%; border: solid 1px green;">
+                                    <div name="" class="maphom2">
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade show" id="pills-prescription" role="tabpanel" aria-labelledby="pills-prescription-tab">
                                 <div class="container-fluid align-parent mx-0 d-flex justify-content-start my-4">
-                                    <div name="" style="height: 461px; width: 95%; border: solid 1px green;">
+                                    <div name="" class="maphom3">
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +278,7 @@
             </div>
 
             <!-- Begin-Blog -->
-            <div style="background-color: #f5f4f6;">
+            <div class="bgcolor-f5f4f6">
                 <div class="align-parent pt-5">
                     <div class="text-secondary">
                         <img name="ContentIcon" src="../Images/Content.png" />
@@ -288,15 +289,15 @@
                     <!-- Slider--Blog -->
 
                     <div class="col-md-12 slider-blog">
-                        <div class="swiper-button-next btn-slider-blog btn-slider-home" style="outline: unset; right: 2.8%;"></div>
-                        <div id="SliderID" class="TopSlider swiper-container swiper-container-cust" style="height: 436px;">
+                        <div class="swiper-button-next wiper-button-next-cust btn-slider-blog btn-slider-home"></div>
+                        <div id="SliderID" class="TopSlider swiper-container swiper-container-cust swiper-h">
                             <div class="swiper-wrapper" id="SwiperSlider">
                             </div>
                             <!-- <div class="swiper-pagination"></div> -->
 
                             <!-- <div class="swiper-scrollbar "></div> -->
                         </div>
-                        <div class="swiper-button-prev btn-slider-blog btn-slider-home" style="outline: unset; left: 2.8%;"></div>
+                        <div class="swiper-button-prev swiper-button-prev-cust btn-slider-blog btn-slider-home"></div>
                     </div>
 
 
@@ -324,7 +325,7 @@
 
             <!-- testttttt -->
             <!-- Start-About -->
-            <div style="background-color: #fcfaf7;padding-bottom: 35px;">
+            <div class="bgcolor-about">
                 <div class="align-parent py-5">
                     <div class="text-secondary">
                         <img name="ContentIcon" src="../Images/Content.png" />
@@ -339,19 +340,19 @@
                         <div class="container-fluid row about-menu mx-0">
                             <div class="col-md-2 col-6 px-0 about-mob">
                                 <a class="nav-link pr-0" href="#">
-                                    <img name="chevron" src="../Images/chevron.png" style="width: 16px; padding-left: 5px;">معرفی پروژه</a>
+                                    <img name="chevron" src="../Images/chevron.png" class="about-img-menu">معرفی پروژه</a>
                             </div>
                             <div class="col-md-4  col-6 px-0 text-center about-mob">
                                 <a class="nav-link" href="#">
-                                    <img name="chevron" src="../Images/chevron.png" style="width: 16px; padding-left: 5px;">نقشه سایت</a>
+                                    <img name="chevron" src="../Images/chevron.png" class="about-img-menu">نقشه سایت</a>
                             </div>
                             <div class="col-md-4 col-6 px-0 text-center about-mob">
                                 <a class="nav-link pr-0" href="#">
-                                    <img name="chevron" src="../Images/chevron.png" style="width: 16px; padding-left: 5px;">مفاهیم پایه</a>
+                                    <img name="chevron" src="../Images/chevron.png" class="about-img-menu">مفاهیم پایه</a>
                             </div>
                             <div class="col-md-2 col-6 px-0 text-left about-mob">
                                 <a class="nav-link pl-0" href="#">
-                                    <img name="chevron" src="../Images/chevron.png" style="width: 16px; padding-left: 5px;">همکاران</a>
+                                    <img name="chevron" src="../Images/chevron.png" class="about-img-menu">همکاران</a>
                             </div>
                         </div>
 
@@ -378,7 +379,7 @@
             <div class="brand-background">
                 <div class="align-parent row mx-0">
                     <div class="col-md-3 px-0 mb-4 order2-mob">
-                        <img name="ministry" src="../Images/ministry.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                        <img name="ministry" src="../Images/ministry.png" class="ministry-img" />
                     </div>
                     <div class="col-md-6 text-center order1-mob">
                         <p class="text-tertiary">
@@ -388,8 +389,8 @@
                         </p>
                         <div class="three-logo">
                             <a href="#">
-                                <svg version="1.1" id="icon" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="icon" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
                                     <g>
                                         <g>
                                             <g>
@@ -410,8 +411,8 @@
 
                             </a>
                             <a href="#">
-                                <svg version="1.1" id="Svg1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="Svg1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
 
                                     <g>
                                         <g>
@@ -429,8 +430,8 @@
                                 </svg>
                             </a>
                             <a href="#">
-                                <svg version="1.1" id="Capa_1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve">
+                                <svg version="1.1" id="Capa_1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" xml:space="preserve">
 
                                     <g>
                                         <g>
@@ -446,7 +447,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 d-flex justify-content-end order2-mob">
-                        <img name="science" src="../Images/science.png" style="width: 160px; height: 135px; padding-top: 25px;" />
+                        <img name="science" src="../Images/science.png" class="science-img" />
                     </div>
                 </div>
             </div>
@@ -459,7 +460,7 @@
                 </div>
                 <div class="col-md-4 col-6 px-0 text-left">
                     <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
-                    <img name="designBy"  src="../Images/design_by.png" style="padding-right: 8%;">
+                    <img name="designBy"  src="../Images/design_by.png" class="designby-img">
                 </div>
             </div>
             <!-- End-Footer -->
@@ -493,7 +494,7 @@
                    bid:"2",
                    src: "../Images/img1.jpg",	
                    title: "2قرآن از نظر دانشمندان غربی",	
-                   desc: "متن 2متن 2متن2 متن 2متن2 متن2 متن 2متن 2متن 2متن 2متن2 متن 2متن 2مت ن2متن2 متن2 متن2 متن 2متن 2متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن 2",
+                   desc: "متن 2متن 2متن2 متن 2متن2 متن2 متن 2متن 2متن 2متن 2متن2 متن 2متن 2مت ن2متن2 متن2 متن2 متن 2متن 2متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن تن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متنتن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متنتن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متنتن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متنتن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن 2متنتن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن 2متن2 متن متن 2متن2",
                    date:"جمعه24خرداد"
                },	
                {	
