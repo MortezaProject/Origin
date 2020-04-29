@@ -1864,12 +1864,12 @@ background-image:url(../Images/one.svg);
         order: 1;
     }
 
-    .order-search-navbar {
+        .order-search-navbar {
         order: unset !important;
         width: 42%;
         position: sticky;
         /* bottom: 178px; */
-        right: 206px;
+        right: 178px;
     }
 
 
@@ -1886,17 +1886,18 @@ background-image:url(../Images/one.svg);
         height: 31px;
     }
 
-    .navbar-light .navbar-toggler {
+    /*.navbar-light .navbar-toggler {
         border: 0;
-    }
+    }*/
 
     /*#menu {
         padding-right: 0;
         padding-left: 0;
     }*/
     .carousel-caption-cust {
-        padding-top: 13px;
-        padding-bottom: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 42px;
     }
 
     .dropdown-btn {
@@ -2014,9 +2015,9 @@ background-image:url(../Images/one.svg);
         width: 50%;
     }
 
-    #Footer {
+    /*#Footer {
         font-size: 10px !important;
-    }
+    }*/
 
     .peyvandha {
         padding-right: 0rem;
@@ -2027,12 +2028,12 @@ background-image:url(../Images/one.svg);
         text-align: unset !important;
     }
 
-    .send-btn-blog {
+    /*.send-btn-blog {
         width: 50%;
-    }
+    }*/
 
     #carousel-sticky {
-        font-size: 14px;
+        font-size: 12px;
         height: 225px;
     }
 
@@ -2057,9 +2058,9 @@ background-image:url(../Images/one.svg);
         margin-right: .25rem;
     }
 
-    .width-tab-mob-search {
+    /*.width-tab-mob-search {
         width: 90px !important;
-    }
+    }*/
 
     #advanced-search-versions-request {
         padding-left: 4.75% !important;
@@ -2080,9 +2081,9 @@ background-image:url(../Images/one.svg);
         padding-right: 1rem !important;
     }
 
-    .search-inner-content {
+    /*.search-inner-content {
         font-size: 15px;
-    }
+    }*/
 
     .padding-menu,
     .padding-menu .nav-item {
@@ -2119,10 +2120,10 @@ background-image:url(../Images/one.svg);
         padding: 8px 0 0 0 !important;
     }
 
-    .placeholder::-webkit-input-placeholder {
+    /*.placeholder::-webkit-input-placeholder {
         color: #b6b4b4;
         font-size: 13px;
-    }
+    }*/
 
     #MainContentSearch .field-spacing-second {
         margin-top: 28px;
@@ -2134,9 +2135,9 @@ background-image:url(../Images/one.svg);
         font-size: 11px;
     }
 
-    #Ul1-Sresult .nav-item {
+    /*#Ul1-Sresult .nav-item {
         width: 4.4rem !important;
-    }
+    }*/
 
     .filter-right {
         width: 4.4rem;
@@ -2565,5 +2566,228 @@ display:none;
 
  } */
 
+/*inline-style*/
+.order-search-navbar {
+order: 3;
+}
+.img-search {
+height: 26px;
+}
+.search_advance {
+padding-right: 10px!important;
+height: 26px;
+}
+.carousel-caption-text {
+opacity: 1;
+}
+.bgcolor-fehr {
+background-color: #fcfaf7;
+}
+.bgcolor-about {
+background-color: #fcfaf7;
+padding-bottom: 35px;
+}
+.view-home {
+height: 148%;
+}
+.hierarchy-home {
+width: 40px;
+}
+.maphom1 {
+    height: 461px;
+     width: 27%;
+      border: solid 1px green;
+}
+.maphom2 {
+    height: 461px;
+     width: 65%;
+      border: solid 1px green;
+}
+.maphom3 {
+    height: 461px;
+     width: 95%;
+      border: solid 1px green;
+}
+.bgcolor-f5f4f6 {
+background-color: #f5f4f6;
+}
+.wiper-button-next-cust {
+outline: unset;
+right: 2.8%!important;
+}
+.swiper-button-prev-cust {
+outline: unset;
+ left: 2.8%!important;
+}
+.swiper-h {
+height: 436px;
+}
+.about-img-menu {
+width: 16px; 
+padding-left: 5px;
+}
+.ministry-img {
+width: 160px;
+ height: 135px;
+  padding-top: 25px;
+}
+.science-img {
+width: 160px;
+ height: 135px;
+  padding-top: 25px;
+}
+.designby-img {
+padding-right: 8%;
+}
+.icon-cust {
+enable-background: new 0 0 512 512;
+}
 
 
+.breadcrumb-search {
+background-color: unset!important;
+}
+.nav-tabs1-search {
+border-bottom: 0.35mm solid #dee2e6;
+}
+
+.card-bg-search {
+background-color: unset!important;
+}
+.Arrowup-img-search {
+height: 10px;
+}
+.headingThree-search {
+border-bottom: unset;
+}
+.br-bottom-search {
+border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.dropdown-serach {
+    text-align: right;
+}
+.btns-search {
+float: left;
+}
+
+.Arrowup-img-post {
+height: 8px;
+}
+#commentsuser {
+padding-bottom: 50px;
+}
+.modal-text {
+font-size: 14px;
+ font-weight: 400;
+  color: gray;
+}
+.nav-tabs-res-search {
+border-bottom: 0.35mm solid #dee2e6;
+}
+.btndate-search {
+text-align: right;
+}
+.Arrowdown-res-search {
+    height: 6px;
+}
+.lable-num-rec {
+color:#58595b;
+}
+.lable-count-rec {
+    margin-left:8px!important;
+}
+
+.next-btn-search {
+width:8px;
+margin-right: 5px;
+}
+.prev-btn-search {
+width:8px;
+margin-left: 5px;
+}
+.dropdown-res1 {
+width: 4.05rem;
+text-align: right;
+}
+.dropdown-res2 {
+width: 7.15rem;
+text-align: right;
+}
+.Parent-Tab-cust {
+display: inline;
+}
+/*inline-style*/
+
+
+@media screen and (min-width: 320px) and (max-width: 428px) {
+    #Footer {
+        font-size: 8px !important;
+    }
+    .post-body {
+    height: 397px;
+}
+        .send-btn-blog {
+        width: 59%;
+        height: 35px;
+    }
+    .btn-search-advance {
+        width: 46%;
+    font-size: 16px;
+    height: 30px;
+    }
+        .navbar-light .navbar-toggler {
+        border: 0;
+        padding-left: 0;
+    }
+                #Content-Map .nav-pills .nav-link,
+    #MainContentSearch .nav-pills .nav-link {
+        height: 25px;
+        width: 55px;
+        font-size: 12px !important;
+    }
+                .width-tab-mob-search {
+    width: 70px !important;
+}
+                    .placeholder::-webkit-input-placeholder {
+        color: #b6b4b4;
+        font-size: 11px;
+    }
+                        .search-inner-content {
+        font-size: 12px;
+    }
+                        .search-inner-header {
+    font-size: 15px;
+}
+        #Ul1-Sresult .nav-item {
+        width: 4.2rem !important;
+    }
+   .result-qty {
+justify-content: flex-end !important;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 10px;
+    }
+ .filter-right {
+        width: 4.2rem;
+        text-align: right;left: -147px!important;
+    }
+
+}
+@media screen and (min-width: 428px) and (max-width: 629px) {
+    #Footer {
+        font-size: 9px !important;
+    }
+   
+}
+ @media screen and (min-width: 629px) and (max-width: 769px) {
+        #Footer {
+            font-size: 13px !important;
+        }
+            .navbar-light .navbar-toggler {
+        border: 0;
+        order:unset;
+    }
+.search {
+    display: none!important;
+}
+    }
