@@ -81,6 +81,10 @@ CreateBlogHome = function (data) {
                 slidesPerView: 3,	
                 spaceBetween: 40,	
             },	
+            1200: {	
+                slidesPerView: 4,	
+                spaceBetween: 20,	
+            },	
             1440: {	
                 slidesPerView: 4,	
                 spaceBetween: 27,	
