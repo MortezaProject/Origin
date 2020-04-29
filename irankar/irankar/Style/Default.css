@@ -2273,9 +2273,9 @@ display:none;
         height: 20%;
     }
     .fullpageWithThumbHeight {
-        padding: 1rem 7%;
+        padding: 1rem 3%;
     }
-    #SliderIDHeight.thumb-slider-view{padding: 2% 7%;}
+    #SliderIDHeight.thumb-slider-view{padding: 2% 2%;}
     #SliderIDHeight.one-slider-view{
         height: 80%;
         padding: 2% 5%;
@@ -2289,7 +2289,7 @@ display:none;
         padding: 2% 5%;
     }
      /*  */
-    #left-status{height: 593px;}
+    #left-status{height: 800px;}
     #left-status.showModal .SliderIDHeight-thumb {
         padding: 4% 10%;
         height: calc(75% - 31.4px);
