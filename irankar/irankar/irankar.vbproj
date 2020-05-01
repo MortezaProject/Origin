@@ -1954,6 +1954,7 @@
     <Content Include="Script\tree.js" />
     <Content Include="Script\Utility.js" />
     <Content Include="Style\Default.css" />
+    <Content Include="Style\test.css" />
     <Content Include="swiper\swiper.min.css" />
     <Content Include="swiper\swiper.min.js" />
     <Content Include="vakata-jstree\.gitignore" />
@@ -2375,7 +2376,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="fonts\DiodrumArabic\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

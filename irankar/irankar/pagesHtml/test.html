@@ -1,96 +1,101 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Swiper demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
-  <!-- Link Swiper's CSS -->
-  <!-- <link rel="stylesheet" href="../package/css/swiper.min.css"> -->
-  <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <title>جستجوی</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<script src="../jquery/jquery-3.4.1.slim.min.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
+    <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
+    <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../bootstrap-4.0.0/dist/js/bootstrap.js"></script>
+    <link href="../Style/Default.css" rel="stylesheet" />
+    <link href="../fontawesome-5.12.1/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
+    <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
+    <script src="../Script/Utility.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <script src="../swiper/swiper.min.js"></script>
     
-
-  <!-- Demo styles -->
-  <style>
-    html, body {
-      position: relative;
-      height: 100%;
-    }
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color:#000;
-      margin: 0;
-      padding: 0;
-
-    }
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      height: calc((100% - 30px) / 4);
-
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-  </style>
 </head>
 <body>
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
-      <div class="swiper-slide">Slide 11</div>
-      <div class="swiper-slide">Slide 12</div>
-
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Swiper JS -->
-  <!-- <script src="../package/js/swiper.min.js"></script> -->
-  <script src="../swiper/swiper.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4, // or 'auto'
-      slidesPerColumn: 3,
-      slidesPerGroup:3,
-      spaceBetween: 5,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+<div class="nav-tabs nav-tabs-res-search align-parent row mx-0  align-parent">
+                    <ul class="nav nav-pills col-lg-5  col-7 px-0" id="Ul1-Sresult" role="tablist">
+                        <label>ترتیب نمایش:</label>
+                        <li class="nav-item mx-lg-2 mx-1 mx-lg-2">
+                            <div class="dropdown Parent-Tab-cust">
+                                <!-- Updated 05 -->
+                                <button class="btn d-flex justify-content-between align-items-center btndate-search" type="button" id="Button1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    تاریخ
+                                    <img src="../Images/Arrow-down.svg" class="Arrowdown-res-search">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-filter drop-down-color filter-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item px-1" href="#">29/12/1398</a>
+                                    <a class="dropdown-item px-1" href="#">29/06/1398</a>
+                                    <a class="dropdown-item px-1" href="#">29/02/1398 </a>
+                                    <a class="dropdown-item px-1" href="#">29/08/1398 </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mx-lg-2 mx-1 mx-lg-2">
+                            <div class="dropdown Parent-Tab-cust">
+                                <!-- Updated 05 -->
+                                <button class="btn d-flex justify-content-between align-items-center btndate-search" type="button" id="Button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    نزولی
+                                    <img src="../Images/Arrow-down.svg" class="Arrowdown-res-search">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-filter drop-down-color filter-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item px-2" href="#">صعودی</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="col-lg-3 col-5 d-flex justify-content-center result-qty">
+                        <label>تعداد نتایج:</label>
+                        <label class="pr-2 lable-num-rec">58 رکورد از 248 رکورد</label>
+                    </div>
+                    <div class="col-lg-4 px-0 pagenation-search">
+                        <ul class="nav nav-pills px-0 d-flex justify-content-end" id="Ul2-Sresult" role="tablist">
+                            <label class="lable-count-rec">تعداد رکوردها:</label>
+                            <li class="nav-item mr-md-0 mr-sm-0">
+                                
+                                <div class="dropdown Parent-Tab-cust">
+                                    <!-- Updated 05 -->
+                                    <button class="btn d-flex justify-content-between align-items-center btn-qty btndate-search" type="button" id="Button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        50
+                                        <img src="../Images/Arrow-down.svg" class="Arrowdown-res-search">
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-filter drop-down-color dropdown-res1" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item px-2" href="#">60</a>
+                                        <a class="dropdown-item px-2" href="#">70</a>
+                                        <a class="dropdown-item px-2" href="#">80 </a>
+                                        <a class="dropdown-item px-2" href="#">100 </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item mr-auto">
+                                <button class="btn btn-primary btn-md btn-searchresult" ><img src="../Images/Arrow-blog-right.svg" class="prev-btn-search">قبلی</button>
+                                <div class="dropdown Parent-Tab-cust">
+                                    <!-- Updated 05 -->
+                                    <button class="btn justify-content-between align-items-center btndate-search" type="button" id="Button4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        1-50 از 58
+                                        <img src="../Images/Arrow-down.svg" class="Arrowdown-res-search">
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-filter drop-down-color dropdown-res2" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item px-2" href="#">نسخه</a>
+                                        <a class="dropdown-item px-2" href="#">مجموعه</a>
+                                        <a class="dropdown-item px-2" href="#">منابع آنلاین</a>
+                                        <a class="dropdown-item px-2" href="#">همه موارد</a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-md btn-searchresult" >بعدی<img src="../Images/Arrow-blog-left.svg" class="next-btn-search"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 </body>
 </html>
