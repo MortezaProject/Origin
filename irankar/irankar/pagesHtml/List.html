@@ -1,1085 +1,1632 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
+  <head>
     <title>بلاگ</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-     <!--<script src="../jquery/jquery-3.4.1.slim.min.js"></script>--> 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!--<script src="../jquery/jquery-3.4.1.slim.min.js"></script>-->
 
     <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
     <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
-    <link href="../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="../bootstrap-4.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="../bootstrap-4.0.0/dist/js/bootstrap.js"></script>
-    <link href="../Style/Default.css" rel="stylesheet">
-    <link href="../fontawesome-5.12.1/css/fontawesome.min.css" rel="stylesheet">
-    <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet">
-    <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet">
+    <link href="../Style/Default.css" rel="stylesheet" />
+    <link
+      href="../fontawesome-5.12.1/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
     <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
 
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>-->
-    <link href="../vakata-jstree/dist/themes/default/style.min.css" rel="stylesheet" />
+    <link
+      href="../vakata-jstree/dist/themes/default/style.min.css"
+      rel="stylesheet"
+    />
     <script src="../vakata-jstree/dist/jstree.min.js"></script>
-    <link rel="stylesheet" href="../swiper/swiper.min.css">
+    <link rel="stylesheet" href="../swiper/swiper.min.css" />
     <script src="../swiper/swiper.min.js"></script>
 
     <script src="../Script/Map.js"></script>
     <script src="../Script/tree.js"></script>
     <script src="../Script/Utility.js"></script>
     <script src="../Script/Gallery.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
+      <!-- -Begin-Gap-Area -->
+      <div id="Gap_Area" class="sticky-top"></div>
+      <!-- End-Gap-Area -->
 
-        <!-- -Begin-Gap-Area -->
-        <div id="Gap_Area" class="sticky-top"></div>
-        <!-- End-Gap-Area -->
+      <!-- Begin-Menu -->
+      <div id="menu" class="align-parent">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0"
+        >
+          <span class="navbar-brand mx-0">
+            <img src="../Images/logo.png" class="logolist" />
+            <br />
+            <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
+          </span>
+          <div class="order-search-navbar">
+            <form class="form-inline my-2 my-lg-0">
+              <div class="input-group">
+                <input
+                  class="form-control mr-sm-2 br-0 py-0 d-lg-block search form-control-navbar-search"
+                  type="search"
+                  name="TxtSearch"
+                  placeholder="جستجو..."
+                  aria-label="Search"
+                />
+                <div class="input-group-append">
+                  <img
+                    name="search"
+                    src="../Images/search.svg"
+                    class="img-search"
+                  />
+                </div>
+                <img
+                  class="search_advance"
+                  src="../Images/search_advance.svg"
+                  name="BtnSearch"
+                />
+              </div>
 
-        <!-- Begin-Menu -->
-        <div id="menu" class="align-parent">
-            <nav class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0">
-                <span class="navbar-brand mx-0">
-                    <img src="../Images/logo.png" class="logolist"/>
-                    <br />
-                    <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
-                </span>
-                <div class="order-search-navbar">
-                    <form class="form-inline my-2 my-lg-0">
-                        <div class="input-group">
-                            <input class="form-control mr-sm-2 br-0 py-0 d-lg-block search form-control-navbar-search" type="search" name="TxtSearch" placeholder="جستجو..." aria-label="Search">
-                            <div class="input-group-append">
-                                <img name="search" src="../Images/search.svg" class="img-search"/>
-                            </div>
-                            <img class="search_advance" src="../Images/search_advance.svg" name="BtnSearch" />
-                        </div>
-
-
-
-                        <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
+              <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch">
                             <img src="../Images/search_advance.png" />
                         </div> -->
-                    </form>
-                </div>
-                <button class="navbar-toggler order-menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            </form>
+          </div>
+          <button
+            class="navbar-toggler order-menu-navbar"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto padding-menu">
-                        <li class="nav-item nav-item-Custom">
-                            <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active nav-item-Custom">
-                            <a class="nav-link" href="#">فهرست</a>
-                        </li>
-                        <li class="nav-item nav-item-Custom">
-                            <a class="nav-link" href="#">کتابخانه</a>
-                        </li>
-                        <li class="nav-item nav-item-Custom">
-                            <a class="nav-link" href="#">بلاگ</a>
-                        </li>
-                        <li class="nav-item nav-item-Custom-last">
-                            <a class="nav-link" href="#">درباره</a>
-                        </li>
-                    </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto padding-menu">
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#"
+                  >خانه <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item active nav-item-Custom">
+                <a class="nav-link" href="#">فهرست</a>
+              </li>
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#">کتابخانه</a>
+              </li>
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#">بلاگ</a>
+              </li>
+              <li class="nav-item nav-item-Custom-last">
+                <a class="nav-link" href="#">درباره</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End-Menu -->
+      <div id="maincontain">
+        <!-- Begin-Content-Blog -->
 
-
-
-                </div>
-
-
-            </nav>
-
-        </div>
-        <!-- End-Menu -->
-        <div id="maincontain">
-            <!-- Begin-Content-Blog -->
-
-            <div class="py-5 bgcolor-f5f5f5">
-                <nav aria-label="breadcrumb" class=" align-parent">
-                    <ol class="breadcrumb px-0 breadcrumb-search">
-                        <img src="../Images/Content.png">
-                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">خانه</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">فهرست</a></li>
-                        <li class="breadcrumb-item" aria-current="page"><a href="#" class="deactive-hover">ایران</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">تهران</li>
-                    </ol>
-                    <div id="back" class="d-none" onclick="backto()">
-                        <a>بازگشت</a>
-                    </div>
-                </nav>
+        <div class="py-5 bgcolor-f5f5f5">
+          <nav aria-label="breadcrumb" class="align-parent">
+            <ol class="breadcrumb px-0 breadcrumb-search">
+              <img src="../Images/Content.png" />
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="#" class="deactive-hover">خانه</a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="#" class="deactive-hover">فهرست</a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="#" class="deactive-hover">ایران</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">تهران</li>
+            </ol>
+            <div id="back" class="d-none" onclick="backto()">
+              <a>بازگشت</a>
             </div>
+          </nav>
+        </div>
 
-            <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
-            <!-- start tabs -->
-            <div id="Content-Map" class="bgcolor-f5f4f6">
-                <div class="row mx-0">
-                    <div class="container-fluid row mx-0 align-parent border-bottom">
-                        <div class="Parent-Tab col-lg-9 col-7 px-0">
-                            <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
-                                <li class="nav-item mx-lg-2 mx-1" onclick="show_position_dropdown()">
-                                    <a class="nav-link active" href="#pills-Location" data-toggle="pill" role="tab"
-                                        aria-controls="pills-Location" aria-selected="true">موقعیت</a>
-                                </li>
-                                <li class="nav-item mx-lg-2 mx-1" onclick="show_collection_dropdown()">
-                                    <a class="nav-link" href="#pills-Collection" data-toggle="pill" role="tab"
-                                        aria-controls="pills-Collection" aria-selected="false">مجموعه</a>
-                                </li>
-                                <li class="nav-item mx-lg-2 mx-1" onclick="show_version_dropdown()">
-                                    <a class="nav-link" href="#pills-prescription" data-toggle="pill" role="tab"
-                                        aria-controls="pills-prescription" aria-selected="false">نسخه</a>
-                                </li>
-                            </ul>
+        <!-- <div id="MainContentBlog" class="container-fluid container-fluid-blog row mx-0 justify-content-between" style="background-color: #f5f5f5;"> -->
+        <!-- start tabs -->
+        <div id="Content-Map" class="bgcolor-f5f4f6">
+          <div class="row mx-0">
+            <div class="container-fluid row mx-0 align-parent border-bottom">
+              <div class="Parent-Tab col-lg-9 col-7 px-0">
+                <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
+                  <li
+                    class="nav-item mx-lg-2 mx-1"
+                    onclick="show_position_dropdown()"
+                  >
+                    <a
+                      class="nav-link active"
+                      href="#pills-Location"
+                      data-toggle="pill"
+                      role="tab"
+                      aria-controls="pills-Location"
+                      aria-selected="true"
+                      >موقعیت</a
+                    >
+                  </li>
+                  <li
+                    class="nav-item mx-lg-2 mx-1"
+                    onclick="show_collection_dropdown()"
+                  >
+                    <a
+                      class="nav-link"
+                      href="#pills-Collection"
+                      data-toggle="pill"
+                      role="tab"
+                      aria-controls="pills-Collection"
+                      aria-selected="false"
+                      >مجموعه</a
+                    >
+                  </li>
+                  <li
+                    class="nav-item mx-lg-2 mx-1"
+                    onclick="show_version_dropdown()"
+                  >
+                    <a
+                      class="nav-link"
+                      href="#pills-prescription"
+                      data-toggle="pill"
+                      role="tab"
+                      aria-controls="pills-prescription"
+                      aria-selected="false"
+                      >نسخه</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="Parent-Tab col-lg-3 col-5 d-flex justify-content-end">
+                <ul class="nav nav-pills pr-0" role="tablist">
+                  <li class="nav-item mx-lg-2 mx-1">
+                    <a
+                      id="views"
+                      class="nav-link dropdown-btn"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="../Images/view.svg" class="icoviewlist"
+                    /></a>
 
-                        </div>
-                        <div class="Parent-Tab col-lg-3 col-5 d-flex justify-content-end">
-                            <ul class="nav nav-pills pr-0" role="tablist">
+                    <div
+                      class="dropdown-menu dropdown-menu-filter margin-item-dropdown dropdown-menu-list"
+                      x-placement="bottom-start"
+                    >
+                      <!-- موقعیت -->
+                      <a
+                        class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="MapMode_Onclick(this)"
+                      >
+                        <img src="../Images/map.svg" class="ico-drop-list"
+                      /></a>
+                      <a
+                        class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="TreeMapMode_Onclick(this)"
+                      >
+                        <img src="../Images/hi-map.svg" class="ico-drop-list"
+                      /></a>
+                      <!-- مجموعه -->
+                      <a
+                        class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="collection_ListViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/list-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <a
+                        class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="collection_TwoViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/two-row-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <!-- نسخه -->
+                      <a
+                        class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="Version_ListViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/list-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <a
+                        class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="Version_GalleryViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/gallery-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <a
+                        class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="Version_OneViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/one-row-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <a
+                        class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img"
+                        href="#"
+                        onclick="Version_TwoViewMode_Onclick(this)"
+                      >
+                        <img
+                          src="../Images/two-row-view.svg"
+                          class="ico-drop-list"
+                        />
+                      </a>
+                      <!-- گالری -->
+                      <a
+                        id="ThumbnailMinimise"
+                        class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none"
+                        href="#"
+                        onclick="fullpageWithThumb(this)"
+                      >
+                        <img
+                          src="../Images/thumbnail.svg"
+                          class="ico-gallery-list"
+                        />
+                      </a>
+                      <a
+                        class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none"
+                        href="#"
+                        onclick="fullpage(this)"
+                      >
+                        <img src="../Images/one.svg" class="ico-gallery-list" />
+                      </a>
 
-                                <li class="nav-item mx-lg-2 mx-1">
-                                    <a id="views" class="nav-link dropdown-btn" data-toggle="dropdown" href="#" role="button"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        <img src="../Images/view.svg" class="icoviewlist"></a>
-                                    <div class="dropdown-menu dropdown-menu-filter margin-item-dropdown dropdown-menu-list"
-                                        x-placement="bottom-start">
-                                        <!-- موقعیت -->
-                                        <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
-                                            onclick="MapMode_Onclick(this)">
-                                            <img src="../Images/map.svg" class="ico-drop-list" /></a>
-                                        <a class="dropdown-item p-0 show_position_dropdown gallery-dropdown-img" href="#"
-                                            onclick="TreeMapMode_Onclick(this)">
-                                            <img src="../Images/hi-map.svg" class="ico-drop-list"  /></a>
-                                        <!-- مجموعه -->
-                                        <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
-                                            onclick="collection_ListViewMode_Onclick(this)">
-                                            <img src="../Images/list-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <a class="dropdown-item p-0 d-none show_collection_dropdown gallery-dropdown-img" href="#"
-                                            onclick="collection_TwoViewMode_Onclick(this)">
-                                            <img src="../Images/two-row-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <!-- نسخه -->
-                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                            onclick="Version_ListViewMode_Onclick(this)">
-                                            <img src="../Images/list-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                            onclick="Version_GalleryViewMode_Onclick(this)">
-                                            <img src="../Images/gallery-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                            onclick="Version_OneViewMode_Onclick(this)">
-                                            <img src="../Images/one-row-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <a class="dropdown-item p-0 d-none show_version_dropdown gallery-dropdown-img" href="#"
-                                            onclick="Version_TwoViewMode_Onclick(this)">
-                                            <img src="../Images/two-row-view.svg" class="ico-drop-list"  />
-                                        </a>
-                                        <!-- گالری -->
-                                        <a id="ThumbnailMinimise" class="dropdown-item view-gallery-Thumb gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpageWithThumb(this)">
-                                            <img src="../Images/thumbnail.svg" class="ico-gallery-list" />
-                                        </a>
-                                        <a class="dropdown-item view-gallery-fullpage gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="fullpage(this)">
-                                             <img src="../Images/one.svg" class="ico-gallery-list"  />
-                                        </a>
-                                        
-                                        <a class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="TwoSlide(this)">
-                                             <img src="../Images/two.svg" class="ico-gallery-list"  />
-                                        </a>
-                                        <a class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none" href="#" onclick="MultiSlide(this)">
-                                             <img src="../Images/multi.svg" class="ico-gallery-list"  />
-                                        </a>
-                                        <!--  -->
-                                    </div>
-                                </li>
-                                <li class="nav-item mr-lg-2 mr-1">
-                                    <a class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between active show"
-                                        href="#pills-filter" data-toggle="pill" role="tab" aria-controls="pills-filter"
-                                        aria-selected="true">
-                                        <div class="pl-lg-3 pl-0">فیلتر</div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
+                      <a
+                        class="dropdown-item view-gallery-TwoSlide gallery-dropdown-img show-dropdown-gallery d-none"
+                        href="#"
+                        onclick="TwoSlide(this)"
+                      >
+                        <img src="../Images/two.svg" class="ico-gallery-list" />
+                      </a>
+                      <a
+                        class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none"
+                        href="#"
+                        onclick="MultiSlide(this)"
+                      >
+                        <img
+                          src="../Images/multi.svg"
+                          class="ico-gallery-list"
+                        />
+                      </a>
+                      <!--  -->
                     </div>
-                    <div class="tab-content text-tree-map w-100">
-                        <!-- Updated 06 -->
+                  </li>
+                  <li class="nav-item mr-lg-2 mr-1">
+                    <a
+                      class="nav-link dropdown-toggle pr-lg-4 px-1 d-flex justify-content-between active show"
+                      href="#pills-filter"
+                      data-toggle="pill"
+                      role="tab"
+                      aria-controls="pills-filter"
+                      aria-selected="true"
+                    >
+                      <div class="pl-lg-3 pl-0">فیلتر</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content text-tree-map w-100">
+              <!-- Updated 06 -->
 
-                        <div class="tab-pane fade show active align-parent" id="pills-Location" role="tabpanel"
-                            aria-labelledby="pills-Location-tab">
-                            <div class="container-fluid px-0 d-flex justify-content-center tab-pills-fehrest">
-                                <div id="treeid" class="swiper-container"></div>
-                                <div id="mapid" name="maps" class="col-12"></div>
+              <div
+                class="tab-pane fade show active align-parent"
+                id="pills-Location"
+                role="tabpanel"
+                aria-labelledby="pills-Location-tab"
+              >
+                <div
+                  class="container-fluid px-0 d-flex justify-content-center tab-pills-fehrest"
+                >
+                  <div id="treeid" class="swiper-container"></div>
+                  <div id="mapid" name="maps" class="col-12"></div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show active"
+                id="pills-Collection"
+                role="tabpanel"
+                aria-labelledby="pills-Collection-tab"
+              >
+                <div id="collection_childs_parent" class="d-none">
+                  <div
+                    class="container-fluid d-flex justify-content-start pills-Collection-tab"
+                  >
+                    <div class="width-100">
+                      <div id="collection_childs"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="collection_childs_show" class="col-md-12 slider-blog">
+                  <div
+                    class="swiper-button-next btn-slider-blog btn-slider-blog-right"
+                  ></div>
+                  <div
+                    id="collection_childs_slider"
+                    class="swiper-container swiper-container-cust"
+                  >
+                    <div class="swiper-wrapper"></div>
+                  </div>
+                  <div
+                    class="swiper-button-prev btn-slider-blog btn-slider-blog-right"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show active"
+                id="pills-prescription"
+                role="tabpanel"
+                aria-labelledby="pills-prescription-tab"
+              >
+                <!--<div id="main-noskhe" class="">-->
+                <div id="version_childs_parent">
+                  <div
+                    class="container-fluid d-flex justify-content-start version_childs_parent-tab"
+                  >
+                    <div class="width-100">
+                      <div id="version_childs"></div>
+                      <div class="py-5">
+                        <nav aria-label="Page navigation example">
+                          <ul class="pagination px-md-4 justify-content-center">
+                            <!-- Updated 04 -->
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="LastPrevious"
+                              >
+                                <span aria-hidden="true"><<</span>
+                                <span class="sr-only">LastPrevious</span>
+                              </a>
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="Previous"
+                              >
+                                <span aria-hidden="true"><</span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                              <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                aria-label="LastNext"
+                              >
+                                <span aria-hidden="true">>></span>
+                                <span class="sr-only">LastNext</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="version_childs_show" class="col-md-12 slider-blog">
+                  <div
+                    class="swiper-button-next btn-slider-blog btn-slider-blog-right"
+                  ></div>
+                  <div
+                    id="version_childs_slider"
+                    class="swiper-container swiper-container-cust"
+                  >
+                    <div class="swiper-wrapper"></div>
+                  </div>
+                  <div
+                    class="swiper-button-prev btn-slider-blog btn-slider-blog-left"
+                  ></div>
+                </div>
+                <!--</div>-->
+
+                <div id="gallery" class="d-none align-parent row mx-0">
+                  <div id="right-status" class="col-sm-12 col-md-3 pr-0">
+                    <div
+                      id="Left-Menu"
+                      class="container-fluid px-0 tab-pane show active fade"
+                    >
+                      <!--  -->
+                      <span class="d-none"
+                        >© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران
+                        می‌باشد.</span
+                      >
+                      <div id="accordion">
+                        <div class="card mb-md-3 card-bg-search">
+                          <div
+                            class="card-header card-header-cust row mx-0 p-0"
+                            id="headingOne"
+                          >
+                            <div
+                              class="col-md-6 col-6 px-0 d-felx align-self-end"
+                            >
+                              <span>اطلاعات نسخه</span>
                             </div>
+                            <div
+                              class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
+                            >
+                              <button
+                                class="btn btn-link collapsed p-0 d-flex align-items-end"
+                                data-toggle="collapse"
+                                data-target="#collapseOne"
+                                aria-expanded="false"
+                                aria-controls="collapseOne"
+                                onclick="ChangeIconCollapse(this)"
+                              >
+                                <img src="../Images/Arrow-up.svg" />
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseOne"
+                            class="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent=""
+                          >
+                            <div class="card-body-cust">
+                              <!--  -->
+
+                              <div id="table-one">
+                                <div class="py-4">
+                                  <label>محل نگهداری:</label>
+                                  <span id="keepplace"></span>
+                                </div>
+                                <div>
+                                  <label>شماره اموال:</label>
+                                  <span id="propertynum"></span>
+                                </div>
+
+                                <div>
+                                  <label>تعداد صفحات:</label>
+                                  <span id="countpages"></span>
+                                </div>
+                                <div>
+                                  <label>پدیدآورندگان:</label>
+                                  <span id="creators"></span>
+                                </div>
+                                <div>
+                                  <label>موضوع اثر:</label>
+                                  <span id="subject"></span>
+                                </div>
+                                <div>
+                                  <label>تاریخ خلق:</label>
+                                  <span id="createdate"></span>
+                                </div>
+                                <div>
+                                  <label>رنگ:</label>
+                                  <span id="color"></span>
+                                </div>
+                                <div>
+                                  <label>جنس:</label>
+                                  <span id="gender"></span>
+                                </div>
+                                <div>
+                                  <label>تکنیک:</label>
+                                  <span id="teqnique"></span>
+                                </div>
+                                <div>
+                                  <label>ابعاد:</label>
+                                  <span id="demensions"></span>
+                                </div>
+                                <div>
+                                  <label>واقف:</label>
+                                  <span id="waqf"></span>
+                                </div>
+                                <div>
+                                  <label>محل نگهداری:</label>
+                                  <span id="Span11"></span>
+                                </div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
                         </div>
-                        <div class="tab-pane fade show active" id="pills-Collection" role="tabpanel"
-                            aria-labelledby="pills-Collection-tab">
-                            <div id="collection_childs_parent" class="d-none">
-                                <div class="container-fluid d-flex justify-content-start pills-Collection-tab">
-                                    <div class="width-100">
-                                        <div id="collection_childs"></div>
+                        <div class="card mb-md-3 card-bg-search">
+                          <div
+                            class="card-header card-header-cust row mx-0 p-0"
+                            id="headingTwo"
+                          >
+                            <div
+                              class="col-md-6 col-6 px-0 d-felx align-self-end"
+                            >
+                              <span>اطلاعات برگه</span>
+                            </div>
+                            <div
+                              class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
+                            >
+                              <button
+                                class="btn btn-link collapsed p-0 d-flex align-items-end"
+                                data-toggle="collapse"
+                                data-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                                onclick="ChangeIconCollapse(this)"
+                              >
+                                <img src="../Images/Arrow-up.svg" />
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseTwo"
+                            class="collapse show"
+                            aria-labelledby="headingTwo"
+                            data-parent=""
+                          >
+                            <div class="card-body-cust">
+                              <!--  -->
+                              <div id="table-two">
+                                <div class="py-3">
+                                  <span id="tabpage"></span>
+                                </div>
+                                <div class="pb-3">
+                                  <label class="d-block"
+                                    >اطلاعات سوره شناسی:</label
+                                  >
+                                  <span id="soreinfo"></span>
+                                </div>
 
-                                    </div>
+                                <div>
+                                  <label class="d-block">متن آیه:</label>
+                                  <span id="verseaye"></span>
                                 </div>
+                              </div>
+
+                              <!--  -->
                             </div>
-                            <div id="collection_childs_show" class="col-md-12 slider-blog">
-                                <div class="swiper-button-next btn-slider-blog btn-slider-blog-right"></div>
-                                <div id="collection_childs_slider" class="swiper-container swiper-container-cust">
-                                    <div class="swiper-wrapper"></div>
-                                </div>
-                                <div class="swiper-button-prev btn-slider-blog btn-slider-blog-right"></div>
-                            </div>
+                          </div>
                         </div>
-                        <div class="tab-pane fade show active" id="pills-prescription" role="tabpanel"
-                            aria-labelledby="pills-prescription-tab">
-                            <!--<div id="main-noskhe" class="">-->
-                            <div id="version_childs_parent">
-                                <div class="container-fluid d-flex justify-content-start version_childs_parent-tab">
-                                    <div class="width-100">
-                                        <div id="version_childs"></div>
-                                        <div class="py-5">
-                                            <nav aria-label="Page navigation example">
-                                                <ul class="pagination px-md-4 justify-content-center">
-                                                    <!-- Updated 04 -->
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="LastPrevious">
-                                                            <span aria-hidden="true"><<</span>
-                                                            <span class="sr-only">LastPrevious</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Previous">
-                                                            <span aria-hidden="true"><</span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="Next">
-                                                            <span aria-hidden="true">></span>
-                                                            <span class="sr-only">Next</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#" aria-label="LastNext">
-                                                            <span aria-hidden="true">>></span>
-                                                            <span class="sr-only">LastNext</span>
-                                                        </a>
-                                                    </li>
-
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-
-                                </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="left-status" class="col-sm-12 col-md-9 pl-0">
+                    <div id="TestSlider" style="width: 100%; height: 100%;">
+                      <div
+                        id="SliderIDHeight"
+                        class="SliderIDHeight SliderIDBackground"
+                      >
+                        <div
+                          class="swiper-button-next btn-shape-Swiper top-swiper-button-next"
+                          onclick="topSliderNext_Onclick(this)"
+                        ></div>
+                        <div id="SliderID" class="swiper-container">
+                          <div class="swiper-wrapper" id="SwiperSlider"></div>
+                          <div
+                            class="showModalIcon"
+                            onclick="showModal_Onclick(this)"
+                          ></div>
+                        </div>
+                        <div
+                          class="swiper-button-prev btn-shape-Swiper top-swiper-button-prev"
+                          onclick="topSliderPrev_Onclick(this)"
+                        ></div>
+                      </div>
+                      <div
+                        id="fullpageWithThumbHeight"
+                        class="fullpageWithThumbHeight"
+                      >
+                        <div
+                          class="swiper-button-next btn-shape-Swiper-bottom bottom-swiper-button-next"
+                          onclick="bottomSliderNext_Onclick(this)"
+                        ></div>
+                        <div
+                          id="fullpageWithThumb"
+                          class="fullpageWithThumb-swiper-slide fullpageWithThumb swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb"
+                        >
+                          <div class="swiper-wrapper" id="SwiperSlider"></div>
+                          <!-- style="background-color: rgba(80, 80, 80, 0.6)" -->
+                        </div>
+                        <div
+                          class="swiper-button-prev btn-shape-Swiper-bottom bottom-swiper-button-prev"
+                          onclick="bottomSliderPrev_Onclick(this)"
+                        ></div>
+                      </div>
+                      <!-- toolbar -->
+                      <div id="gallery-toolbar-height">
+                        <div class="gallery-toolbar container-fluid d-none">
+                          <div class="row">
+                            <div class="info col-4 col-md-2">
+                              <div
+                                class="gallery-toolbar-desc gallery-toolbar-desc-list"
+                              >
+                                الفتح: 29/33 - الفتح: 29/54
+                              </div>
                             </div>
-                            <div id="version_childs_show" class="col-md-12 slider-blog">
-                                <div class="swiper-button-next btn-slider-blog btn-slider-blog-right"></div>
-                                <div id="version_childs_slider" class="swiper-container swiper-container-cust">
-                                    <div class="swiper-wrapper"></div>
+                            <div class="page col-4 col-md-3">
+                              <div
+                                class="input-group gallery-toolbar-pages gallery-toolbar-pages-list justify-content-center"
+                              >
+                                <div class="input-group-prepend">
+                                  <div class="gallery-toolbar-pages-text">
+                                    برگه
+                                  </div>
                                 </div>
-                                <div class="swiper-button-prev btn-slider-blog btn-slider-blog-left"></div>
+                                <!-- <div class="input-group-prepend"> -->
+                                <input
+                                  type="number"
+                                  class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"
+                                  value="1"
+                                  onclick="goToSlide_onclick(this)"
+                                  onkeyup="goToSlide_onkeyup(this)"
+                                />
+                                <!-- <input type="text" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"/> -->
+                                <select
+                                  class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"
+                                >
+                                  <option value="back">پشت</option>
+                                  <option value="front">رو</option>
+                                </select>
+                                <div class="gallery-toolbar-pages-text">از</div>
+                                <div
+                                  class="gallery-toolbar-AllPages gallery-toolbar-pages-text"
+                                >
+                                  215
+                                </div>
+                                <!-- </div> -->
+                              </div>
                             </div>
-                            <!--</div>-->
-
-
-
-                            <div id="gallery" class="d-none align-parent row mx-0">
-                                <div id="right-status" class="col-sm-12 col-md-3 pr-0">
-                                    <div id="Left-Menu" class="container-fluid px-0 tab-pane show active fade">
-                                        <!--  -->
-                                        <span class="d-none">© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران می‌باشد.</span>
-                                        <div id="accordion">
-
-                                            <div class="card mb-md-3 card-bg-search">
-                                                <div class="card-header card-header-cust row mx-0 p-0" id="headingOne">
-                                                    <div class="col-md-6 col-6 px-0 d-felx align-self-end">
-                                                        <span>اطلاعات نسخه</span>
-                                                    </div>
-                                                    <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
-                                                        <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="ChangeIconCollapse(this)">
-                                                            <img src="../Images/Arrow-up.svg">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="">
-                                                    <div class="card-body-cust">
-                                                        <!--  -->
-
-                                                        <div id="table-one">
-                                                            <div class="py-4">
-                                                                <label>محل نگهداری:</label>
-                                                                <span id="keepplace"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>شماره اموال:</label>
-                                                                <span id="propertynum"></span>
-                                                            </div>
-
-                                                            <div>
-                                                                <label>تعداد صفحات:</label>
-                                                                <span id="countpages"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>پدیدآورندگان:</label>
-                                                                <span id="creators"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>موضوع اثر:</label>
-                                                                <span id="subject"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>تاریخ خلق:</label>
-                                                                <span id="createdate"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>رنگ:</label>
-                                                                <span id="color"></span>
-
-                                                            </div>
-                                                            <div>
-                                                                <label>جنس:</label>
-                                                                <span id="gender"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>تکنیک:</label>
-                                                                <span id="teqnique"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>ابعاد:</label>
-                                                                <span id="demensions"></span>
-
-                                                            </div>
-                                                            <div>
-                                                                <label>واقف:</label>
-                                                                <span id="waqf"></span>
-                                                            </div>
-                                                            <div>
-                                                                <label>محل نگهداری:</label>
-                                                                <span id="Span11"></span>
-                                                            </div>
-                                                        </div>
-                                                        <!--  -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card mb-md-3 card-bg-search">
-                                                <div class="card-header card-header-cust row mx-0 p-0" id="headingTwo">
-                                                    <div class="col-md-6 col-6 px-0 d-felx align-self-end">
-                                                        <span>اطلاعات برگه</span>
-                                                    </div>
-                                                    <div class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end">
-                                                        <button class="btn btn-link collapsed p-0 d-flex align-items-end" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="ChangeIconCollapse(this)">
-                                                            <img src="../Images/Arrow-up.svg">
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="">
-                                                    <div class="card-body-cust">
-                                                        <!--  -->
-                                                        <div id="table-two">
-                                                            <div class="py-3">
-                                                                <span id="tabpage"></span>
-                                                            </div>
-                                                            <div class="pb-3">
-                                                                <label class="d-block">اطلاعات سوره شناسی:</label>
-                                                                <span id="soreinfo"></span>
-                                                            </div>
-
-                                                            <div>
-                                                                <label class="d-block">متن آیه:</label>
-                                                                <span id="verseaye"></span>
-                                                            </div>
-                                                        </div>
-
-                                                        <!--  -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-                                <div id="left-status" class="col-sm-12 col-md-9 pl-0">
-                                    <div id='TestSlider' style="width: 100%; height: 100%;">
-                                        <div id="SliderIDHeight" class="SliderIDHeight SliderIDBackground">
-                                            <div class="swiper-button-next btn-shape-Swiper top-swiper-button-next" onclick="topSliderNext_Onclick(this)"></div>
-                                            <div id="SliderID" class="swiper-container">
-                                                <div class="swiper-wrapper" id="SwiperSlider"></div>
-                                                <div class="showModalIcon" onclick="showModal_Onclick(this)"></div>
-                                            </div>
-                                            <div class="swiper-button-prev btn-shape-Swiper top-swiper-button-prev" onclick="topSliderPrev_Onclick(this)"></div>
-                                        </div>
-                                        <div id="fullpageWithThumbHeight" class="fullpageWithThumbHeight">
-                                            <div class="swiper-button-next btn-shape-Swiper-bottom bottom-swiper-button-next" onclick="bottomSliderNext_Onclick(this)"></div>
-                                            <div id="fullpageWithThumb" class="fullpageWithThumb-swiper-slide fullpageWithThumb swiper-container-fullpageWithThumb gallery-thumbs-fullpageWithThumb">
-                                                <div class="swiper-wrapper" id="SwiperSlider" ></div>
-                                                <!-- style="background-color: rgba(80, 80, 80, 0.6)" -->
-                                            </div>
-                                            <div class="swiper-button-prev btn-shape-Swiper-bottom bottom-swiper-button-prev" onclick="bottomSliderPrev_Onclick(this)"></div>
-                                        </div>
-                                             <!-- toolbar -->
-                                        <div id="gallery-toolbar-height">
-                                            <div class="gallery-toolbar container-fluid d-none">
-                                                <div class="row">
-                                                    <div class="info col-4 col-md-2">
-                                                        <div class="gallery-toolbar-desc gallery-toolbar-desc-list">الفتح: 29/33 - الفتح: 29/54</div>
-                                                    </div>
-                                                    <div class="page col-4 col-md-3">
-                                                        <div class="input-group gallery-toolbar-pages gallery-toolbar-pages-list justify-content-center">
-                                                            <div class="input-group-prepend">
-                                                                <div class="gallery-toolbar-pages-text">برگه</div>
-                                                            </div>
-                                                            <!-- <div class="input-group-prepend"> -->
-                                                            <input type="number" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn" value="1"
-                                                                onclick="goToSlide_onclick(this)" onkeyup="goToSlide_onkeyup(this)" />
-                                                            <!-- <input type="text" class="gallery-toolbar-pages-text gallery-toolbar-pages-btn"/> -->
-                                                            <select class="gallery-toolbar-pages-text gallery-toolbar-pages-btn">
-                                                                <option value="back">پشت</option>
-                                                                <option value="front">رو</option>
-                                                            </select>
-                                                            <div class="gallery-toolbar-pages-text">از</div>
-                                                            <div class="gallery-toolbar-AllPages gallery-toolbar-pages-text">215</div>
-                                                            <!-- </div> -->
-        
-                                                        </div>
-                                                    </div>
-                                                    <div class="range d-none d-md-block col-md-2">
-                                                        <input type="range" value="0" min="0" max="5"
-                                                            class="formControlRange form-control-range gallery-toolbar-range" onchange="changeRange(this)">
-                                                    </div>
-                                                    <div class="opt col-4 col-md-2 gallery-toolbar-dropdown">
-                                                        <div class="input-group justify-content-center">
-                                                            <div class="dropup">
-                                                                <img class="dropdown-toggle ico-list-1"
-                                                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                                                                    aria-expanded="false" src="../Images/view.svg">
-                                                                <div class="dropdown-menu dropdown-menu-right ico-list-2" x-placement="top-start">
-                                                                    <a id="ThumbnailMaximise" view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail"
-                                                                         href="#" onclick="fullpageWithThumb(this)"></a>
-                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one"
-                                                                        href="#" onclick="fullpage(this)"></a>
-                                                                    <!-- <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under"
+                            <div class="range d-none d-md-block col-md-2">
+                              <input
+                                type="range"
+                                value="0"
+                                min="0"
+                                max="5"
+                                class="formControlRange form-control-range gallery-toolbar-range"
+                                onchange="changeRange(this)"
+                              />
+                            </div>
+                            <div
+                              class="opt col-4 col-md-2 gallery-toolbar-dropdown"
+                            >
+                              <div class="input-group justify-content-center">
+                                <div class="dropup">
+                                  <img
+                                    class="dropdown-toggle ico-list-1"
+                                    data-toggle="dropdown"
+                                    href="#"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    src="../Images/view.svg"
+                                  />
+                                  <div
+                                    class="dropdown-menu dropdown-menu-right ico-list-2"
+                                    x-placement="top-start"
+                                  >
+                                    <a
+                                      id="ThumbnailMaximise"
+                                      view="fullMode"
+                                      class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-thumbnail"
+                                      href="#"
+                                      onclick="fullpageWithThumb(this)"
+                                    ></a>
+                                    <a
+                                      view="fullMode"
+                                      class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-one"
+                                      href="#"
+                                      onclick="fullpage(this)"
+                                    ></a>
+                                    <!-- <a class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-under"
                                                                         href="#" onclick=""></a> -->
-                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two"
-                                                                        href="#" onclick="TwoSlide(this)"></a>
-                                                                    <a view="fullMode" class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi"
-                                                                        href="#" onclick="MultiSlide(this)"></a>
-                                                                </div>
-                                                            </div>
-                                                            <img class="img" onclick="hideModal_Onclick()" src="../Images/minimize.svg" type="button" data-toggle="modal" data-target="#exampleModalCenter"/>
-                                                            <img class="img" src="../Images/magnifier.svg" />
-                                                            <img class="img" src="../Images/i.svg" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="lic d-none d-md-block col-md-3">
-                                                        <div class="gallery-toolbar-license">© کلیه حقوق مادی و معنوی این تصاویر متعلق به ایرانکران می‌باشد.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- toolbar -->
-                                    </div>
+                                    <a
+                                      view="fullMode"
+                                      class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-two"
+                                      href="#"
+                                      onclick="TwoSlide(this)"
+                                    ></a>
+                                    <a
+                                      view="fullMode"
+                                      class="dropdown-item gallery-toolbar-dropdown-img gallery-toolbar-dropdown-multi"
+                                      href="#"
+                                      onclick="MultiSlide(this)"
+                                    ></a>
+                                  </div>
                                 </div>
+                                <img
+                                  class="img"
+                                  onclick="hideModal_Onclick()"
+                                  src="../Images/minimize.svg"
+                                  type="button"
+                                  data-toggle="modal"
+                                  data-target="#exampleModalCenter"
+                                />
+                                <img
+                                  class="img"
+                                  src="../Images/magnifier.svg"
+                                />
+                                <img class="img" src="../Images/i.svg" />
+                              </div>
                             </div>
-
-
+                            <div class="lic d-none d-md-block col-md-3">
+                              <div class="gallery-toolbar-license">
+                                © کلیه حقوق مادی و معنوی این تصاویر متعلق به
+                                ایرانکران می‌باشد.
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
+                      <!-- toolbar -->
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <!-- end tabs -->
-            <!-- </div> -->
-            
-            <!-- End-Content-Blog -->
+          </div>
         </div>
-            <!-- Start-Brand -->
-            <div class="brand-background">
-                <div class="align-parent row mx-0">
-                    <div class="col-md-3 px-0 mb-4 order2-mob">
-                        <img name="ministry" src="../Images/ministry.png" class="ministry-img" />
-                    </div>
-                    <div class="col-md-6 text-center order1-mob">
-                        <p class="text-tertiary">
-                            فرهنگستان علوم برلین - برندبورگ<br />
-                            جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
-                            تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
-                        </p>
-                        <div class="three-logo">
-                            <a href="#">
-                                <svg version="1.1" id="icon" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" xml:space="preserve">
-                                    <g>
-                                        <g>
-                                            <g>
-                                                <g>
-                                                    <path d="M256,307.2c28.2,0,51.3-23,51.3-51.2c0-11.2-3.7-21.5-9.7-29.9c-9.3-12.9-24.4-21.4-41.5-21.4
-					c-17.1,0-32.2,8.5-41.6,21.4c-6.1,8.4-9.7,18.7-9.7,29.9C204.7,284.3,227.7,307.2,256,307.2L256,307.2z" />
-                                                    <path class="st0" d="M367.9,193.3v-43V144l-6.4,0l-42.9,0.1l0.2,49.4L367.9,193.3z" />
-                                                    <path class="st0" d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256
+        <!-- end tabs -->
+        <!-- </div> -->
+
+        <!-- End-Content-Blog -->
+      </div>
+      <!-- Start-Brand -->
+      <div class="brand-background">
+        <div class="align-parent row mx-0">
+          <div class="col-md-3 px-0 mb-4 order2-mob">
+            <img
+              name="ministry"
+              src="../Images/ministry.png"
+              class="ministry-img"
+            />
+          </div>
+          <div class="col-md-6 text-center order1-mob">
+            <p class="text-tertiary">
+              فرهنگستان علوم برلین - برندبورگ<br />
+              جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷<br />
+              تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
+            </p>
+            <div class="three-logo">
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="icon"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <path
+                            d="M256,307.2c28.2,0,51.3-23,51.3-51.2c0-11.2-3.7-21.5-9.7-29.9c-9.3-12.9-24.4-21.4-41.5-21.4
+					c-17.1,0-32.2,8.5-41.6,21.4c-6.1,8.4-9.7,18.7-9.7,29.9C204.7,284.3,227.7,307.2,256,307.2L256,307.2z"
+                          />
+                          <path
+                            class="st0"
+                            d="M367.9,193.3v-43V144l-6.4,0l-42.9,0.1l0.2,49.4L367.9,193.3z"
+                          />
+                          <path
+                            class="st0"
+                            d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256
 					C512,114.8,397.2,0,256,0z M401.6,226.1v119.2c0,31-25.2,56.3-56.3,56.3H166.7c-31,0-56.3-25.2-56.3-56.3V226.1v-59.4
-					c0-31,25.2-56.3,56.3-56.3h178.6c31,0,56.3,25.2,56.3,56.3V226.1z" />
-                                                    <path class="st0" d="M335.6,256c0,43.9-35.7,79.6-79.6,79.6s-79.6-35.7-79.6-79.6c0-10.6,2.1-20.7,5.9-29.9h-43.5v119.2
-					c0,15.4,12.5,27.9,27.9,27.9h178.6c15.4,0,27.9-12.5,27.9-27.9V226.1h-43.5C333.5,235.3,335.6,245.4,335.6,256L335.6,256z" />
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-
-                            </a>
-                            <a href="#">
-                                <svg version="1.1" id="Svg1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" xml:space="preserve">
-
-                                    <g>
-                                        <g>
-                                            <g>
-                                                <path d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
+					c0-31,25.2-56.3,56.3-56.3h178.6c31,0,56.3,25.2,56.3,56.3V226.1z"
+                          />
+                          <path
+                            class="st0"
+                            d="M335.6,256c0,43.9-35.7,79.6-79.6,79.6s-79.6-35.7-79.6-79.6c0-10.6,2.1-20.7,5.9-29.9h-43.5v119.2
+					c0,15.4,12.5,27.9,27.9,27.9h178.6c15.4,0,27.9-12.5,27.9-27.9V226.1h-43.5C333.5,235.3,335.6,245.4,335.6,256L335.6,256z"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="Svg1"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
 				z M370.2,197.4c0.1,2.5,0.2,5.1,0.2,7.7c0,77.9-59.3,167.6-167.7,167.6c-33.3,0-64.3-9.7-90.3-26.4c4.6,0.5,9.3,0.8,14.1,0.8
 				c27.6,0,53-9.4,73.2-25.2c-25.8-0.5-47.5-17.5-55-40.9c3.6,0.7,7.3,1.1,11.1,1.1c5.4,0,10.6-0.7,15.5-2.1
 				c-27-5.4-47.3-29.2-47.3-57.8c0-0.2,0-0.5,0-0.7c7.9,4.4,17,7.1,26.7,7.4c-15.8-10.5-26.2-28.6-26.2-49c0-10.8,2.9-20.9,8-29.6
 				c29,35.7,72.5,59.1,121.4,61.6c-1-4.3-1.5-8.8-1.5-13.4c0-32.5,26.4-58.9,58.9-58.9c17,0,32.2,7.2,43,18.6
 				c13.4-2.6,26-7.5,37.4-14.3c-4.4,13.8-13.7,25.3-25.9,32.6c11.9-1.4,23.3-4.6,33.8-9.3C391.7,178.7,381.7,189.1,370.2,197.4
-				L370.2,197.4z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="#">
-                                <svg version="1.1" id="Capa_1" class="icon icon-cust" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 512 512" xml:space="preserve">
-
-                                    <g>
-                                        <g>
-                                            <g>
-                                                <path d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
+				L370.2,197.4z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
 				z M319.7,265H278v148.4h-61.7c0,0,0-81.1,0-148.4H187v-52.5h29.3v-33.9c0-24.3,11.5-62.3,62.3-62.3l45.7,0.2v50.9
-				c0,0-27.8,0-33.2,0c-5.4,0-13.1,2.7-13.1,14.3v30.8h47L319.7,265z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 d-flex justify-content-end order2-mob">
-                        <img name="science" src="../Images/science.png" class="science-img" />
-                    </div>
-                </div>
+				c0,0-27.8,0-33.2,0c-5.4,0-13.1,2.7-13.1,14.3v30.8h47L319.7,265z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
             </div>
-            <!-- End-Brand -->
-            <!-- Begin-Footer -->
-            <div id="Footer" name="Footer" class="container-fluid row footer d-flex align-items-center align-parent mx-0">
-                <!-- Updated (kolle footer) -->
-                <div class="col-md-8 col-7 px-0">
-                    <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
-                </div>
-                <div class="col-md-4 col-5 px-0 text-left">
-                    <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
-                    <img name="designBy"  src="../Images/design_by.png" class="designby-img">
-                </div>
-            </div>
-            <!-- End-Footer -->
+          </div>
+          <div class="col-md-3 d-flex justify-content-end order2-mob">
+            <img
+              name="science"
+              src="../Images/science.png"
+              class="science-img"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- End-Brand -->
+      <!-- Begin-Footer -->
+      <div
+        id="Footer"
+        name="Footer"
+        class="container-fluid row footer d-flex align-items-center align-parent mx-0"
+      >
+        <!-- Updated (kolle footer) -->
+        <div class="col-md-8 col-7 px-0">
+          <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+        </div>
+        <div class="col-md-4 col-5 px-0 text-left">
+          <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+          <img
+            name="designBy"
+            src="../Images/design_by.png"
+            class="designby-img"
+          />
+        </div>
+      </div>
+      <!-- End-Footer -->
     </div>
     <script src="../Script/list.js"></script>
 
     <script>
-       
-    window.imagesource = {
+      window.imagesource = {
         Arrowdown: "../Images/Arrow-down.svg",
         Arrowup: "../Images/Arrow-up.svg",
         Arrowdownsmall: "../Images/Arrow-down-small.svg",
         Arrowupsmall: "../Images/Arrow-up-small.svg",
-        mapviewselected:"../Images/map-view-selected.svg",
-        maptreeviewselected:"../Images/map-tree-view-selected.svg",
-        listviewselected:"../Images/list-view-selected.svg",
-        tworowviewselected:"../Images/two-row-view-selected.svg",
-        galleryviewselected:"../Images/gallery-view-selected.svg",
-        onerowviewselected:"../Images/one-row-view-selected.svg",
-        tworowviewselected:"../Images/two-row-view-selected.svg",
-        oneselected:"../Images/one-selected.svg",
-        twoselected:"../Images/two-selected.svg",
-        viewselected:"../Images/view-selected.svg",
-        thumbnailselected:"../Images/thumbnail-selected.svg",
-
-    }
-
-        let collectionData = [{
-            "title": "آکادمی سلطانی هنر",
-            "established": "1768 میلادی",
-            "position": "پیکادلی،لندن،انگلند",
-            "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-            "src": "../Images/blog1.png",
+        mapviewselected: "../Images/map-view-selected.svg",
+        maptreeviewselected: "../Images/map-tree-view-selected.svg",
+        listviewselected: "../Images/list-view-selected.svg",
+        tworowviewselected: "../Images/two-row-view-selected.svg",
+        galleryviewselected: "../Images/gallery-view-selected.svg",
+        onerowviewselected: "../Images/one-row-view-selected.svg",
+        tworowviewselected: "../Images/two-row-view-selected.svg",
+        oneselected: "../Images/one-selected.svg",
+        twoselected: "../Images/two-selected.svg",
+        viewselected: "../Images/view-selected.svg",
+        thumbnailselected: "../Images/thumbnail-selected.svg",
+      };
+      let entries = [];
+      let collectionData = [
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog1.png",
         },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog4.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog5.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog6.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog7.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog8.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog9.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog10.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog11.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog12.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog12.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog12.png",
-    },
-
-
-
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog4.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog5.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog6.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog7.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog8.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog9.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog10.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog11.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog12.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog12.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog12.png",
+        },
 
         {
-            "title": "آکادمی سلطانی هنر",
-            "established": "1768 میلادی",
-            "position": "پیکادلی،لندن،انگلند",
-            "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-            "src": "../Images/blog2.png",
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
         },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "title": "آکادمی سلطانی هنر",
-        "established": "1768 میلادی",
-        "position": "پیکادلی،لندن،انگلند",
-        "desc": "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
-        "src": "../Images/blog3.png",
-    },
-
-
-        ]
-
-
-
-
-        let versionData = [{
-            "id": "4257",
-            "place": "ایران/تهران/موزه ملک",
-            "state": "1393/04/06037",
-            "pages": "256 صفحه",
-            "creator": "عبدالرحمن",
-            "subject": "نجوم اسلامی",
-            "date": "1 ذیحجه 1006قمری",
-            "color": "نخودی",
-            "material": "دست ساز",
-            "technique": "دست ساز آهار مهره",
-            "dimension": "طول (26 سانتیمتر)",
-            "benefactor": "حاج حسین آقا ملک",
-            "src": "../Images/blog1.png",
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
         },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog2.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog3.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog4.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog5.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog6.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog7.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog8.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog9.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog10.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog11.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog12.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog12.png",
-    },
-    {
-        "id": "4257",
-        "place": "ایران/تهران/موزه ملک",
-        "state": "1393/04/06037",
-        "pages": "256 صفحه",
-        "creator": "عبدالرحمن",
-        "subject": "نجوم اسلامی",
-        "date": "1 ذیحجه 1006قمری",
-        "color": "نخودی",
-        "material": "دست ساز",
-        "technique": "دست ساز آهار مهره",
-        "dimension": "طول (26 سانتیمتر)",
-        "benefactor": "حاج حسین آقا ملک",
-        "src": "../Images/blog12.png",
-    },
-        ]
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog2.png",
+        },
+        {
+          title: "آکادمی سلطانی هنر",
+          established: "1768 میلادی",
+          position: "پیکادلی،لندن،انگلند",
+          desc:
+            "یکی از انجمن‌های اصلی هنرمندان در بریتانیا است که توسط جرج سوم در 1768 بنیان گذاشته شد. دفتر مرکزی، موزهٔ هنری و بخش‌های آموزشی این آکادمی در برلینگتون هاوس در وست‌مینستر لندن قرار دارد.",
+          src: "../Images/blog3.png",
+        },
+      ];
 
-        collection_childs_slider(collectionData);
-        version_childs_slider(versionData);
+      let versionData = [
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog1.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog2.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog3.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog4.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog5.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog6.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog7.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog8.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog9.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog10.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog11.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog12.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog12.png",
+        },
+        {
+          id: "4257",
+          place: "ایران/تهران/موزه ملک",
+          state: "1393/04/06037",
+          pages: "256 صفحه",
+          creator: "عبدالرحمن",
+          subject: "نجوم اسلامی",
+          date: "1 ذیحجه 1006قمری",
+          color: "نخودی",
+          material: "دست ساز",
+          technique: "دست ساز آهار مهره",
+          dimension: "طول (26 سانتیمتر)",
+          benefactor: "حاج حسین آقا ملک",
+          src: "../Images/blog12.png",
+        },
+      ];
+      entries = [
+        {
+          id: "1",
+          parent: "0",
+          text: "ازبکستان",
+          level: "1",
+        },
+        {
+          id: "2",
+          parent: "0",
+          text: "آلمان",
+          level: "1",
+        },
+        {
+          id: "3",
+          parent: "0",
+          text: "آمریکا",
+          level: "1",
+        },
+        {
+          id: "4",
+          parent: "0",
+          text: "انگلیس",
+          level: "1",
+        },
+        {
+          id: "5",
+          parent: "0",
+          text: "ایران",
+          level: "1",
+        },
+        {
+          id: "51",
+          parent: "5",
+          text: "تهران",
+          level: "2",
+          setMap: {
+            view: { lat: 35.7034, lon: 51.3881, scale: 11 },
+            marker: [
+              {
+                val: 31,
+                mlat: 35.7415,
+                mlon: 51.4524,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+              {
+                val: 6,
+                mlat: 35.7376,
+                mlon: 51.484,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+              {
+                val: 12,
+                mlat: 35.7264,
+                mlon: 51.3776,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+              {
+                val: 27,
+                mlat: 35.717,
+                mlon: 51.5067,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+              {
+                val: 21,
+                mlat: 35.7108,
+                mlon: 51.4339,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+              {
+                val: 9,
+                mlat: 35.683,
+                mlon: 51.2334,
+                Desc:
+                  "تهران (ایران) + موزۀ ملی ایران (۳۰)، کتابخانه ملی ایران (۵)، موزه ملک (۴۵)، موزه ملی قرآن کریم (۵۲)، ...",
+              },
+            ],
+          },
+        },
+        {
+          id: "511",
+          parent: "51",
+          text: "موزه ملک",
+          level: "3",
+        },
+        {
+          id: "512",
+          parent: "51",
+          text: "موزه ملی ایران",
+          level: "3",
+        },
+        {
+          id: "513",
+          parent: "51",
+          text: "موزه قرآن کریم",
+          level: "3",
+        },
+        // {
+        //     "id": "52",
+        //     "parent": "5",
+        //     "text": "مشهد",
+        //     "level": "2"
+        // },
+        // {
+        //     "id": "53",
+        //     "parent": "5",
+        //     "text": "اردبیل",
+        //     "level": "2"
+        // },
+        // {
+        //     "id": "54",
+        //     "parent": "5",
+        //     "text": "اصفهان",
+        //     "level": "2"
+        // },
+        {
+          id: "6",
+          parent: "0",
+          text: "ایرلند",
+          level: "1",
+        },
+        {
+          id: "7",
+          parent: "0",
+          text: "بحرین",
+          level: "1",
+        },
+        {
+          id: "8",
+          parent: "0",
+          text: "ترکیه",
+          level: "1",
+        },
+      ];
+      debugger;
+      CreateTreeMap(entries);
+      collection_childs_slider(collectionData);
+      version_childs_slider(versionData);
     </script>
- 
-    </body>
-
+  </body>
 </html>
