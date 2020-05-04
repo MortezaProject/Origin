@@ -1707,7 +1707,55 @@ main-tab-searchr {
     color: #000000;
     cursor: pointer;
 }
-
+#treeid.treeblog {
+height:100%;
+}
+#treeid.treeblog ul {
+background-color:unset!important;
+    padding: 1% 1.5%;
+}
+#treeid.treeblog .jstree-node .jstree-icon {
+    background-image:unset;
+}
+#treeid.treeblog .jstree-hovered {
+    background: unset!important;
+    border-radius: unset!important;
+    box-shadow:unset!important;
+}
+#treeid.treeblog .jstree-clicked {
+        background: unset!important;
+    border-radius: unset!important;
+    box-shadow:unset!important;
+}
+#treeid.treeblog .jstree-icon:empty {
+width:11px;
+}
+#treeid.treeblog .jstree-open .jstree-children .jstree-themeicon {
+       width: 18px;
+    margin-right: -3px;
+    background-position: -2px -23px !important;
+    background-image: url(../Images/PlusMinus.png)!important;
+        right: 9px;
+    position: relative;
+}
+    #treeid.treeblog a.jstree-anchor {
+        width: 0;
+    }
+#treeid.treeblog .jstree-anchor>.jstree-themeicon {
+    margin-left: 2px;
+    margin-right: 0;
+}
+#treeid.treeblog .jstree-node {
+    background-position: -245% 0px!important;
+}
+/*#treeid.treeblog .jstree-open[aria-level="2"] .jstree-ocl {
+    background-position: -3px -2px !important;
+    background-image: url(../Images/PlusMinus.png);
+}*/
+#treeid.treeblog .jstree-open>.jstree-ocl {
+    background-position: -3px -23px !important;
+    background-image: url(../Images/PlusMinus.png)!important;
+}
 #treeid>ul {
     background-color: #efefef !important;
     height: 100%;
@@ -2030,6 +2078,9 @@ height: 8px;
 #commentsuser {
 padding-bottom: 50px;
 }
+.comment-error {
+color:#a20d1b;
+}
 .modal-text {
 font-size: 14px;
  font-weight: 400;
@@ -2133,12 +2184,12 @@ background-color: #d6d6d6;
         padding-right: 0;
         padding-left: 0;
     }*/
-    .carousel-caption-cust {
+    /*.carousel-caption-cust {
         padding-top: 10px;
         padding-bottom: 10px;
         height: 42px;
         padding-left: 4%;
-    }
+    }*/
 
     .dropdown-btn {
         width: 26px !important;
@@ -2173,13 +2224,11 @@ background-color: #d6d6d6;
         border-color: unset;
     }
 
-    .carousel-inner {
+    /*.carousel-inner {
         height: 223px;
-    }
+    }*/
 
-    .carousel-indicators.carousel-indicators-Cust {
-        display: none;
-    }
+
 
     .indicator-padding {
         font-size: 15px !important;
@@ -2217,12 +2266,12 @@ background-color: #d6d6d6;
             padding: 0 1%!important;
         }*/
 
-    #Content-Map .nav-pills .nav-link,
+    /*#Content-Map .nav-pills .nav-link,
     #MainContentSearch .nav-pills .nav-link {
         height: 25px;
         width: 68px;
         font-size: 16px !important;
-    }
+    }*/
 
     #Content-Map #Pills-Tab {
         padding: 0 4%;
@@ -2272,14 +2321,14 @@ background-color: #d6d6d6;
         width: 50%;
     }*/
 
-    #carousel-sticky {
+    /*#carousel-sticky {
         font-size: 12px;
         height: 225px;
-    }
+    }*/
 
-    #carousel-sticky .carousel-item img {
+    /*#carousel-sticky .carousel-item img {
         height: 225px !important;
-    }
+    }*/
 
     .swiper-slide-cust {
         padding: 27px;
@@ -2841,12 +2890,12 @@ display:none;
     font-size: 10px;
     height: 225px;
 }
-    #Content-Map .nav-pills .nav-link,
+    /*#Content-Map .nav-pills .nav-link,
     #MainContentSearch .nav-pills .nav-link {
         height: 24px;
         width: 46px;
         font-size: 12px !important;
-    }
+    }*/
     .footer {
     height: 32.9px;
     background-color: #00a693;
@@ -2878,6 +2927,7 @@ display:none;
     width: 100%;
 }
 }
+
 @media screen and (min-width: 320.2px) and (max-width: 428px) {
     .order-search-navbar {
     width: 39%;
@@ -2903,12 +2953,7 @@ display:none;
         border: 0;
         padding-left: 0;
     }
-                #Content-Map .nav-pills .nav-link,
-    #MainContentSearch .nav-pills .nav-link {
-        height: 25px;
-        width: 55px;
-        font-size: 12px !important;
-    }
+
                 .width-tab-mob-search {
     width: 70px !important;
 }
@@ -2967,11 +3012,7 @@ justify-content: flex-end !important;
     .nav-item-Custom-last {
     padding: 0 5px !important;
 }
-    .indicator-shape {
-    width: 8px !important;
-    height: 8px !important;
-    border-radius: 8px;
-}
+
     #carousel-sticky {
     height: 358px;
      font-size: 17px;
@@ -2987,9 +3028,7 @@ justify-content: flex-end !important;
     padding-bottom: 34.5px;
     height: 9.5%;
 }
-    .Indicator-footer {
-    top: -43px;
-}
+
     }
  @media (max-width: 426px) {
     .w-border {
@@ -3074,5 +3113,85 @@ font-size:13px;
 }
     #SearchResult label {
 font-size:13px;
+}
+}
+
+
+@media (max-width:769px) {
+    #Content-Map .nav-pills .nav-link,
+    #MainContentSearch .nav-pills .nav-link {
+        height: 25px;
+        width: 67px;
+        font-size: 16px !important;
+    }
+        #carousel-sticky {
+        font-size: 16px;
+        height: 320px;
+    }
+        .carousel-caption-cust {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 42px;
+        padding-left: 4%;
+    }
+            #carousel-sticky .carousel-item img {
+        height: 320px !important;
+    }
+
+    .indicator-shape {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 8px;
+}
+}
+
+@media (max-width:426px) {
+    .carousel-inner {
+        height: 223px;
+    }
+    #Content-Map .nav-pills .nav-link,
+    #MainContentSearch .nav-pills .nav-link {
+        height: 25px;
+        width: 49px;
+        font-size: 12px !important;
+    }
+    #carousel-sticky {
+        font-size: 12px;
+        height: 225px;
+    }
+        .carousel-caption-cust {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 42px;
+        padding-left: 4%;
+    }
+            #carousel-sticky .carousel-item img {
+        height: 225px !important;
+    }
+    .carousel-indicators.carousel-indicators-Cust {
+        display: none;
+    }
+}
+
+
+
+/*position reletive*/
+
+@media screen and (min-width:426px) and (max-width:600px) {
+                    .Indicator-footer {
+    top: -330px;
+}
+                        .carousel-indicators.carousel-indicators-Cust {
+        display: none;
+    }
+}
+@media screen and (min-width:601px) and (max-width:629px) {
+                    .Indicator-footer {
+    top: -320px;
+}
+}
+@media screen and (min-width:630px) and (max-width:768px) {
+                    .Indicator-footer {
+    top: -78px;
 }
 }
