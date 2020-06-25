@@ -154,9 +154,9 @@
               </li>
               <li class="breadcrumb-item active" aria-current="page">تهران</li>
             </ol>
-            <div id="back" class="d-none" onclick="backto()">
+            <!-- <div id="back" class="d-none" onclick="backto()">
               <a>بازگشت</a>
-            </div>
+            </div> -->
           </nav>
         </div>
 
@@ -172,6 +172,7 @@
                     onclick="show_position_dropdown()"
                   >
                     <a
+                    id="pills-Location-tabs"
                       class="nav-link active"
                       href="#pills-Location"
                       data-toggle="pill"
@@ -186,7 +187,8 @@
                     onclick="show_collection_dropdown()"
                   >
                     <a
-                      class="nav-link"
+                    id="pills-Collection-tabs"
+                      class="nav-link "
                       href="#pills-Collection"
                       data-toggle="pill"
                       role="tab"
@@ -200,7 +202,8 @@
                     onclick="show_version_dropdown()"
                   >
                     <a
-                      class="nav-link"
+                    id="pills-prescription-tabs"
+                      class="nav-link "
                       href="#pills-prescription"
                       data-toggle="pill"
                       role="tab"
@@ -395,7 +398,7 @@
                 </div>
                 <div id="collection_childs_show" class="col-md-12 slider-blog">
                   <div
-                    class="swiper-button-next btn-slider-blog btn-slider-blog-right"
+                    class="swiper-button-next btn-slider-blog btn-slider-blog-right btn-right-slider"
                   ></div>
                   <div
                     id="collection_childs_slider"
@@ -404,7 +407,7 @@
                     <div class="swiper-wrapper"></div>
                   </div>
                   <div
-                    class="swiper-button-prev btn-slider-blog btn-slider-blog-right"
+                    class="swiper-button-prev btn-slider-blog btn-slider-blog-right btn-left-slider"
                   ></div>
                 </div>
               </div>
@@ -672,6 +675,12 @@
                           onclick="topSliderPrev_Onclick(this)"
                         ></div>
                       </div>
+                      <span
+                        id="closegallerylist"
+                        class="close-gallery-list d-none"
+                        onclick="hideModal_Onclick()"
+                        >X</span
+                      >
                       <div
                         id="fullpageWithThumbHeight"
                         class="fullpageWithThumbHeight"
