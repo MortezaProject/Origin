@@ -126,7 +126,8 @@ a:hover {
 
 .text-tree-map {
   font-weight: regular !important;
-  font-size: 14pt !important;
+  font-size: 12pt !important;
+  font-weight: 500;
   color: black !important;
 }
 #Left-Menu .text-tree-map {
@@ -400,7 +401,13 @@ a:hover {
   width: 90% !important;
   padding: 0 0.5% !important;
 }
-
+.breadcrumb-search .breadcrumb-item::before {
+  padding-right: 0.1rem !important;
+  padding-left: 0.1rem !important;
+}
+.breadcrumb-search img {
+  margin-left: 3px;
+}
 .item-blog {
   height: 382px;
   max-width: 100%;
@@ -623,7 +630,7 @@ width:93%!important;
 }
 
 .SliderIDBackground {
-  background-color: #58595b !important;
+  background-color: rgba(98, 97, 96, 0.86) !important;
 }
 
 #left-status {
@@ -641,7 +648,7 @@ width:93%!important;
   height: calc(85% - 31.4px) !important;
 }
 .fullpageWithThumbHeight {
-  background-color: rgba(27, 26, 26, 0.86);
+  background-color: rgb(190, 189, 188);
   backdrop-filter: blur(1px);
   height: 15%;
 }
@@ -712,7 +719,13 @@ width:93%!important;
 }
 .btn-slider-blog-right {
   outline: unset;
-  right: 2.8%;
+  /* right: 2.8%; */
+}
+.btn-right-slider {
+  right: 40px !important;
+}
+.btn-left-slider {
+  left: 40px !important;
 }
 .btn-slider-blog-left {
   outline: unset;
@@ -781,10 +794,18 @@ width:93%!important;
 .gallery-thumbs-fullpageWithThumb .swiper-slide {
   width: 25%;
   height: 100%;
-  filter: brightness(60%);
+  filter: brightness(42%);
   /* opacity: 0.4; */
 }
-
+.close-gallery-list {
+  position: absolute;
+  top: 0;
+  padding-right: 35px;
+  padding-top: 20px;
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
 .swiper-slide-MultiSlide {
   height: calc((100% - 30px) / 3) !important;
 }
@@ -1095,7 +1116,9 @@ hr.line {
   height: 18px;
   padding: 0 3px;
 }
-
+#Comment {
+  margin-bottom: 30px;
+}
 #Comment-Card .col-md-6 {
   padding: 0px !important;
 }
@@ -1669,7 +1692,7 @@ main-tab-searchr {
 }
 
 .versin-detail-data-img[mode="gallery"]:hover img {
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 
 .version_childs_slider_ListMode_text {
@@ -1852,6 +1875,7 @@ background-image:url(../Images/one.svg);
   z-index: 100000;
   bottom: 0;
   left: 0;
+  background-color: rgb(153, 154, 154);
   /* padding-left: 2%; */
   /* color: white; */
   background-image: url(../images/Expand.svg);
@@ -2581,10 +2605,10 @@ background-image:url(../Images/one.svg);
     padding: 8% 20%;
   }
   #left-status.showModal .top-slider-arrow .swiper-button-next {
-    right: 15%;
+    right: 17%;
   }
   #left-status.showModal .top-slider-arrow .swiper-button-prev {
-    left: 15%;
+    left: 17%;
   }
 }
 @media (max-width: 1280px) {
