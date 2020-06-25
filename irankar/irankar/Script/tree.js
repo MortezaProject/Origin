@@ -70,8 +70,12 @@
             "mapid",
             data.instance.element.find("li[aria-selected=true]").prop("setMap")
           );
+          // CreateMap.prototype.buggyFunc(
+          //   "mapid",
+          //   data.instance.element.find("li[aria-selected=true]").prop("setMap")
+          // );
         }
-
+        if (data.node.text == "تهران") show_collection_dropdown("tree");
         // $('#event_result').html('Selected: ' + r.join(', '));
       })
       .on("open_node.jstree", function (e, data) {
