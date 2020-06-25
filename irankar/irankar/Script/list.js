@@ -1,4 +1,5 @@
 let showModal_Onclick = function (e) {
+  document.getElementById("closegallerylist").classList.remove("d-none");
   e.classList.add("d-none");
   let elem = document.querySelector("#left-status");
   elem.classList.remove("pl-0");
@@ -25,6 +26,7 @@ let hideModal_Onclick = function () {
   document
     .querySelector("#left-status .showModalIcon")
     .classList.remove("d-none");
+  document.getElementById("closegallerylist").classList.add("d-none");
   let elem = document.querySelector("#left-status");
   elem.classList.add("pl-0");
   elem.classList.remove("showModal");
@@ -58,7 +60,7 @@ let show_position_dropdown = function () {
       .forEach(function (el, i) {
         el.classList.add("d-none");
       });
-    document.querySelector("#back").classList.add("d-none");
+    // document.querySelector("#back").classList.add("d-none");
   }
   $("#views img")[0].src = imagefilter.src;
   $("#views").css("background-color", "#d6d6d6");
@@ -72,14 +74,22 @@ let show_position_dropdown = function () {
     el.classList.add("d-none");
   });
 };
-let show_collection_dropdown = function () {
+let show_collection_dropdown = function (type) {
+  if (type == "tree") {
+    document
+      .getElementById("pills-Location")
+      .classList.remove("active", "show");
+    document.getElementById("pills-Collection").classList.add("active", "show");
+    document.getElementById("pills-Location-tabs").classList.remove("active");
+    document.getElementById("pills-Collection-tabs").classList.add("active");
+  }
   if (!$("#gallery").hasClass("d-none")) {
     document
       .querySelectorAll(".show-dropdown-gallery")
       .forEach(function (el, i) {
         el.classList.add("d-none");
       });
-    document.querySelector("#back").classList.add("d-none");
+    //  document.querySelector("#back").classList.add("d-none");
   }
   $("#views img")[0].src = imagefilter.src;
   $("#views").css("background-color", "#d6d6d6");
@@ -581,7 +591,7 @@ let CreateGallery = function (elem) {
   document.querySelectorAll(".show_version_dropdown").forEach(function (el, i) {
     el.classList.add("d-none");
   });
-  document.querySelector("#back").classList.remove("d-none");
+  // document.querySelector("#back").classList.remove("d-none");
   document.getElementById("version_childs_show").classList.add("d-none");
   document.getElementById("version_childs_parent").classList.add("d-none");
   document.getElementById("gallery").classList.remove("d-none");
