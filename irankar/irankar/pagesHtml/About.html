@@ -1,0 +1,899 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>درباره ما</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<script src="../jquery/jquery-3.4.1.slim.min.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../jquery/jquery-3.4.1.slim.min.js"></script>
+    <script src="../bootstrap-4.0.0/assets/js/vendor/popper.min.js"></script>
+    <script src="../bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <link
+      href="../bootstrap-4.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../bootstrap-4.0.0/dist/js/bootstrap.js"></script>
+    <link href="../Style/Default.css" rel="stylesheet" />
+    <link
+      href="../fontawesome-5.12.1/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="../fontawesome-5.12.1/css/brands.css" rel="stylesheet" />
+    <link href="../fontawesome-5.12.1/css/solid.css" rel="stylesheet" />
+    <script src="../fontawesome-5.12.1/js/fontawesome.min.js"></script>
+    <script src="../Script/Utility.js"></script>
+    <link rel="stylesheet" href="../swiper/swiper.min.css" />
+    <script src="../swiper/swiper.min.js"></script>
+  </head>
+  <body>
+    <div id="parent-blog">
+      <!-- -Begin-Gap-Area -->
+      <div id="Gap_Area" class="sticky-top"></div>
+      <!-- End-Gap-Area -->
+      <!-- Begin-Menu -->
+      <div id="menu" class="align-parent">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-wight order-brand-navbar mx-0 px-0"
+        >
+          <span class="navbar-brand mx-0">
+            <img src="../Images/logo.png" />
+            <br />
+            <span>فهرستوارۀ دست‌نوشت‌های ایرانی قرآن</span>
+          </span>
+          <div class="order-search-navbar">
+            <form class="form-inline my-2 my-lg-0">
+              <div class="input-group">
+                <input
+                  class="form-control mr-sm-2 br-0 py-0 d-lg-block search form-control-navbar-search"
+                  type="search"
+                  name="TxtSearch"
+                  placeholder="جستجو..."
+                  aria-label="Search"
+                />
+                <div class="input-group-append">
+                  <img
+                    name="search"
+                    src="../Images/search.svg"
+                    class="img-search"
+                  />
+                </div>
+                <img
+                  class="search_advance"
+                  src="../Images/search_advance.svg"
+                  name="BtnSearch"
+                />
+              </div>
+              <!-- <div class="my-2 my-sm-0 br-0 py-0 mx-3" name="BtnSearch"><img src="../Images/search_advance.png" /></div> -->
+            </form>
+          </div>
+          <button
+            class="navbar-toggler order-menu-navbar"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto padding-menu">
+              <li class="nav-item active nav-item-Custom">
+                <a class="nav-link" href="#"
+                  >خانه
+
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#">فهرست</a>
+              </li>
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#">کتابخانه</a>
+              </li>
+              <li class="nav-item nav-item-Custom">
+                <a class="nav-link" href="#">بلاگ</a>
+              </li>
+              <li class="nav-item nav-item-Custom-last">
+                <a class="nav-link" href="#">درباره</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End-Menu -->
+      <!-- Begin-Content-Search -->
+      <div class="py-5 container-fluid align-parent">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-search px-0">
+            <img src="../Images/Content.png" />
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="#" class="deactive-hover">خانه</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="#" class="deactive-hover">درباره</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">معرفی</li>
+          </ol>
+        </nav>
+      </div>
+      <div id="MainContentSearch" class="px-0 Parent-Tab">
+        <!-- Start-Content-->
+        <div class="nav-tabs nav-tabs1-search align-parent">
+          <ul class="nav nav-pills px-0" id="advanced-search-gf" role="tablist">
+            <li class="nav-item mr-md-0 mr-sm-0">
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#advanced-search-versions"
+                role="tab"
+                aria-controls="menu1"
+                aria-selected="false"
+                >معرفی</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#advanced-search-library"
+                role="tab"
+                aria-controls="menu2"
+                aria-selected="true"
+                >مفاهیم پایه</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#advanced-search-blog"
+                role="tab"
+                aria-controls="menu3"
+                aria-selected="false"
+                >همکاران</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="tab-content">
+            <div
+              id="advanced-search-versions"
+              class="tab-pane show active fade container-fluid align-parent align-parent-mob"
+            >
+              <!-- First-Tab  -->
+              <div id="accordion">
+                <div id="MainContentBlog" class="row mx-0">
+                  <!-- Start-Content-Right -->
+                  <div id="Right-Content" class="col-lg-8 pr-0 pl-lg-4">
+                    <div id="PostMain" class="mainpost">
+                      <div id="Description-Post">
+                        <p>
+                          پروژۀ ایرانکران در سال 2017 میلادی، با حمایت مالی
+                          وزارت آموزش و پرورش آلمان و در فرهنگستان علوم برلین –
+                          برندنبورگ، آغاز به کار کرد. هدف اصلی پروژه تحقیق و نشر
+                          دیجیتال دست‌نوشت‌های کهن قرآنی است که در موزه‌ها،
+                          کتابخانه‌ها و مجموعه‌های عمومی یا خصوصی ایرانی نگهداری
+                          می‌شوند. ایرانکران پروژۀ کرپوس کرانیکوم را تکمیل
+                          می‌کند که از سال 2009 نخستین فهرست جامع دست‌نوشت‌های
+                          کهن قرآنی را که عموماً در کتابخانه‌ها و موزه‌های
+                          اروپایی و آمریکایی نگهداری می‌شوند به صورت آنلاین در
+                          اختیار محققان گذاشته است. <br /><br />
+
+                          طی سی سال گذشته، پژوهش دربارۀ دست‌نوشت‌های قرآنی
+                          پیشرفت شایان توجهی داشته و تحقیقاتی بنیادین دربارۀ
+                          نسخه‌شناسی، خط‌شناسی و تاریخ‌گذاری دست‌نوشت‌های کهن
+                          قرآنی انجام گرفته است. خاستگاه عمدۀ دست‌نوشت‌های قرآنی
+                          که تا به حال مورد تحقیق قرار گرفته‌اند بخش غربی دنیای
+                          اسلام است، یعنی فسطاط (قاهرۀ قدیم)، دمشق و صنعاء. برای
+                          دستیابی به تصویری کامل از تاریخ متنی قرآن، ضروری است
+                          دست‌نوشت‌های قرآنی از بخش شرقی جهان اسلام نیز بررسی و
+                          تحلیل شوند. تا به امروز، دست‌نوشت‌های قرآنی که در
+                          کشورهای عراق، ایران، افغانستان، پاکستان و آسیای مرکزی
+                          نگهداری می‌شوند به‌ندرت مورد توجه محققان این حوزه قرار
+                          گرفته‌اند. دلیل اصلی آن هم معمولاً دشواری در دسترسی به
+                          این دست‌نوشت‌هاست. در مورد ایران، فهرست‌های موجود
+                          (هرچند ناقص و گاه تاریخ‌گذشته) از انبوه دست‌نوشت‌های
+                          قرآنی در کتابخانه‌ها، موزه‌ها، و حتی مجموعه‌های شخصی
+                          حکایت دارند. تعداد دست‌نوشت‌های کهن قرآنی که تاریخ
+                          آنها به سه سدۀ آغازین اسلامی بازمی‌گردد به احتمال زیاد
+                          بسیار بیشتر از آن چیزی است که فهرست‌ها نشان می‌دهند.
+                          <br /><br />
+
+                          پروژۀ ایرانکران درصدد است با جمع اطلاعات دربارۀ
+                          دست‌نوشت‌های قرآنی در ایران، اولاً فهرست جامعی در
+                          اختیار محققان بگذارد و ثانیاً با همکاری مؤسسه‌ها و
+                          مجموعه‌هایی که این دست‌نوشت‌ها آنجا نگهداری می‌شوند و
+                          نیز اشخاصی که بنا به علایق شخصی دست‌نوشت‌های قرآنی را
+                          گردآوری می‌کنند دسترسی به نسخۀ دیجیتال دست‌نوشت‌ها را
+                          برای محققان از سراسر دنیا فراهم کند. گام بعدی،
+                          دیجیتال‌سازی دست‌نوشت‌های قرآنی، به‌ویژه دست‌نوشت‌های
+                          کوفی، است که با همکاری محققان و پژوهشگران جوان ایرانی
+                          انجام می‌شود که عبارتست از حرفنویسی متن قرآن و
+                          بازنمایی قرائات قرآن شمارش آیات سوره‌ها چنانکه در
+                          دست‌نوشت‌ها ظاهر شده‌اند. این اطلاعات بعداً می‌تواند
+                          مبنای تحلیل روشن‌تری از تاریخ متن قرآن قرار گیرد. برای
+                          تاریخ‌گذاری دست‌نوشت‌های قرآنی، علاوه بر روش‌های مرسوم
+                          نسخه‌شناسی و خط‌شناسی، با همکاری مؤسسه فناوری فدرال
+                          زوریخ از آزمایش رادیوکربن نیز بهره گرفته می‌شود.
+                          <br /><br />
+
+                          ایرانکران یک پروژۀ تحقیقاتی میان‌رشته‌ای است که در آن
+                          هم از تحلیل‌های متن‌شناختی و نسخه‌شناختی بر روی
+                          دست‌نوشت‌های قرآنی و هم آزمایش‌های علمی از جمله
+                          سالیابی به روش تحلیل رادیوکربن استفاده می‌شود. نتایج
+                          ایرانکران به صورت آنلاین منتشر خواهد شد. هدف اصلی این
+                          پروژه ترغیب مسئولان در مؤسسه‌ها، کتابخانه ها و
+                          مجموعه‌های دارندۀ دست‌نوشت‌های قرآنی به نشر دیجیتال و
+                          فراهم کردن زمینۀ تحقیقات بیشتر بر روی آنها از سوی
+                          محققان و پژوهشگران داخلی و خارجی است.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End-Content-Right -->
+                  <!-- Start-Menu-Left -->
+                  <div
+                    id="Left-Content"
+                    class="col-lg-4 pl-0 pr-0 pr-lg-5 mb-5"
+                  >
+                    <div
+                      id="Left-Menu"
+                      class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
+                    >
+                      <!--  -->
+                      <div id="accordion">
+                        <div class="card mb-md-3">
+                          <div
+                            class="card-header card-header-cust row mx-0 p-0"
+                            id="headingOne"
+                          >
+                            <div
+                              class="col-md-6 col-6 px-0 d-felx align-self-end"
+                            >
+                              <span>پیوندها</span>
+                            </div>
+                            <div
+                              class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
+                            >
+                              <button
+                                class="btn btn-link collapsed p-0 d-flex align-items-end"
+                                data-toggle="collapse"
+                                data-target="#collapseOne"
+                                aria-expanded="false"
+                                aria-controls="collapseOne"
+                                onclick="ChangeIconCollapse(this)"
+                              >
+                                <img src="../Images/Arrow-down.svg" />
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseOne"
+                            class="collapse show"
+                            aria-labelledby="headingOne"
+                            data-parent=""
+                          >
+                            <div class="card-body-cust">
+                              <ul class="item-ul">
+                                <li>
+                                  <a href="#">کرپوس کرانیوم</a>
+                                </li>
+                                <li>
+                                  <a href="#">وبگاه رسمی قرآن کریم</a>
+                                </li>
+                                <li>
+                                  <a href="#">پرتال جامع علوم انسانی</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End-Menu-Left -->
+                </div>
+              </div>
+              <!-- End-First-Tab -->
+            </div>
+            <div
+              id="advanced-search-library"
+              class="tab-pane fade container-fluid align-parent align-parent-mob"
+            >
+              <!-- Second-Tab -->
+              <div id="MainContentBlog" class="row mx-0">
+                <!-- Start-Content-Right -->
+                <div id="Right-Content" class="col-lg-8 pr-0 pl-lg-4">
+                  <div id="PostMain" class="mainpost">
+                    <div id="Description-Post">
+                      <p>
+                        دیتا موجود نیست
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- End-Content-Right -->
+                <!-- Start-Menu-Left -->
+                <div id="Left-Content" class="col-lg-4 pl-0 pr-0 pr-lg-5 mb-5">
+                  <div
+                    id="Left-Menu"
+                    class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
+                  >
+                    <!--  -->
+                    <div id="accordion">
+                      <div class="card mb-md-3">
+                        <div
+                          class="card-header card-header-cust row mx-0 p-0"
+                          id="headingOne"
+                        >
+                          <div
+                            class="col-md-6 col-6 px-0 d-felx align-self-end"
+                          >
+                            <span>پیوندها</span>
+                          </div>
+                          <div
+                            class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
+                          >
+                            <button
+                              class="btn btn-link collapsed p-0 d-flex align-items-end"
+                              data-toggle="collapse"
+                              data-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                              onclick="ChangeIconCollapse(this)"
+                            >
+                              <img src="../Images/Arrow-down.svg" />
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          id="collapseTwo"
+                          class="collapse show"
+                          aria-labelledby="headingTwo"
+                          data-parent=""
+                        >
+                          <div class="card-body-cust">
+                            <ul class="item-ul">
+                              <li>
+                                <a href="#">کرپوس کرانیوم</a>
+                              </li>
+                              <li>
+                                <a href="#">وبگاه رسمی قرآن کریم</a>
+                              </li>
+                              <li>
+                                <a href="#">پرتال جامع علوم انسانی</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End-Menu-Left -->
+              </div>
+            </div>
+            <!-- End-Second-Tab  -->
+            <div
+              id="advanced-search-blog"
+              class="tab-pane fade container-fluid align-parent align-parent-mob"
+            >
+              <!-- Third-Tab -->
+              <div id="MainContentBlog" class="row mx-0">
+                <!-- Start-Content-Right -->
+                <div id="Right-Content" class="col-lg-8 pr-0 pl-lg-4">
+                  <div id="PostMain" class="mainpost">
+                    <div id="Description-Post">
+                      <div id="Comment">
+                        <div
+                          id="Comment-Header"
+                          class="tab-pane show active fade"
+                        >
+                          <!--  -->
+                          <div id="accordion-comment">
+                            <div class="card">
+                              <div
+                                class="card-header card-header-cust row mx-0 p-0 pt-3"
+                                id="Comment-Card"
+                              >
+                                <div class="col-md-6">
+                                  <span>مدیر</span>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                  <button
+                                    class="btn btn-link collapsed px-md-1"
+                                    data-toggle="collapse"
+                                    data-target="#collapsecomment"
+                                    aria-expanded="false"
+                                    aria-controls="collapsecomment"
+                                    onclick="ChangeIconCollapse(this)"
+                                  >
+                                    <img
+                                      src="../Images/Arrow-down.svg"
+                                      class="Arrowup-img-post"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                id="collapsecomment"
+                                class="collapse"
+                                aria-labelledby="Comment-Card"
+                                data-parent="#accordion-comment"
+                              >
+                                <div class="card-body-comment">
+                                  <div id="Other-Image-Post">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <img
+                                          class="Image-Post"
+                                          src="../Images/blog10.png"
+                                        />
+                                      </div>
+                                      <div
+                                        class="col-md-3 d-flex align-items-center"
+                                      >
+                                        علی آقایی
+                                        <br />
+                                        مدیر پروژه
+                                        <br />
+                                        برلین
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+
+                                  <p>
+                                    علی آقایی دانش‌آموختۀ رشتۀ الهیات شاخۀ علوم
+                                    قرآن و حدیث است. او مقطع کارشناسی‌ارشد را در
+                                    دانشکدۀ اصول‌الدین قم (1381) و مقطع دکتری را
+                                    از دانشگاه آزاد اسلامی، مرکز علوم و تحقیقات
+                                    تهران (1391) گذراند. آقایی از سال 1383 به
+                                    عنوان عضو هیئت علمی با بنیاد دایرةالمعارف
+                                    اسلامی مشغول به کار شد و تاکنون در تألیف و
+                                    ویرایش مدخل‌های دانشنامۀ جهان اسلام همکاری
+                                    داشته است. او در سال تحصیلی 1392-1393 موفق
+                                    به اخذ فرصت مطالعاتی از مرکز مطالعات پیشرفتۀ
+                                    برلین شد و سپس به عنوان پژوهشگر مهمان در
+                                    فرهنگستان علوم برلین ـ برندنبورگ نخست در
+                                    پروژۀ کرپوس کرانیکوم در زمینۀ شرح ادبی ـ
+                                    تحلیلی قرآن (1393-1394) و بعد در پروژۀ
+                                    فرانسوی ـ آلمانی پالئوکران در زمینۀ تحلیل
+                                    نسخه‌شناختی و متن‌شناختی دست‌نوشت‌های کهن
+                                    قرآنی (1395-1396) پژوهش کرد. وی از سال 1397،
+                                    با حمایت مالی وزارت آموزش و پژوهش آلمان،
+                                    مدیریت پروژۀ ایرانکران را برعهده دارد. موضوع
+                                    محوری در دو پروژۀ اخیر، توسعۀ شناخت علمی از
+                                    تاریخ متن قرآن از طریق مطالعۀ همزمان منابع
+                                    اسلامی و دست‌نوشت‌های قرآنی است.
+                                  </p>
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <!-- Comment -->
+                      </div>
+                      <div id="Comment">
+                        <div
+                          id="Comment-Header"
+                          class="tab-pane show active fade"
+                        >
+                          <!--  -->
+                          <div id="accordion-comment-2">
+                            <div class="card">
+                              <div
+                                class="card-header card-header-cust row mx-0 p-0 pt-3"
+                                id="Comment-Card"
+                              >
+                                <div class="col-md-6">
+                                  <span>پژوهشگران ارشد</span>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                  <button
+                                    class="btn btn-link collapsed px-md-1"
+                                    data-toggle="collapse"
+                                    data-target="#collapsecomment-2"
+                                    aria-expanded="false"
+                                    aria-controls="collapsecomment"
+                                    onclick="ChangeIconCollapse(this)"
+                                  >
+                                    <img
+                                      src="../Images/Arrow-down.svg"
+                                      class="Arrowup-img-post"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                id="collapsecomment-2"
+                                class="collapse"
+                                aria-labelledby="Comment-Card"
+                                data-parent="#accordion-comment-2"
+                              >
+                                <div class="card-body-comment">
+                                  <!--  -->
+                                  <div id="Other-Image-Post">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <img
+                                          class="Image-Post"
+                                          src="../Images/blog10.png"
+                                        />
+                                      </div>
+                                      <div
+                                        class="col-md-3 d-flex align-items-center"
+                                      >
+                                        محمد علی خوانین زاده
+                                        <br />
+                                        همکار پروژه
+                                        <br />
+                                        تهران
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+
+                                  <p>
+                                    محمّدعلی خوانین‌زاده استادیار گروه آموزشی
+                                    علوم قرآن و حدیث در دانشگاه خوارزمی است. وی
+                                    دانش‌آموختۀ کارشناسی ارشد پیوستۀ علوم قرآن و
+                                    حدیث از دانشگاه امام صادق (1385) و دکترای
+                                    تخصصی در همین رشته از پردیس فارابی دانشگاه
+                                    تهران (1394) است. خوانین‌زاده در سال‌های
+                                    1384 و 1385 به عنوان پژوهشگر با بنیاد
+                                    دائرةالمعارف اسلامی همکاری داشت و از آن زمان
+                                    تا کنون در تألیف مدخل‌های دانشنامۀ جهان
+                                    اسلام با این بنیاد و نیز در تألیف مدخل‌های
+                                    دائرةالمعارف بزرگ اسلامی با مرکز
+                                    دائرةالمعارف بزرگ اسلامی همکاری دارد. وی از
+                                    سال 1390 به تدریس در دانشگاه‌ها و مؤسسات
+                                    آموزش عالی اشتغال داشته است. خوانین‌زاده از
+                                    سال 1398 در زمینۀ آوانویسی قرائات قرآنی با
+                                    پروژۀ کرپوس کرانیکوم و پروژۀ ایرانکران
+                                    (فرهنگستان علوم برلین ـ برندنبورگ) همکاری
+                                    دارد.
+                                  </p>
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <!-- Comment -->
+                      </div>
+                      <div id="Comment">
+                        <div
+                          id="Comment-Header"
+                          class="tab-pane show active fade"
+                        >
+                          <!--  -->
+                          <div id="accordion-comment-3">
+                            <div class="card">
+                              <div
+                                class="card-header card-header-cust row mx-0 p-0 pt-3"
+                                id="Comment-Card"
+                              >
+                                <div class="col-md-6">
+                                  <span>پژوهشگران</span>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                  <button
+                                    class="btn btn-link collapsed px-md-1"
+                                    data-toggle="collapse"
+                                    data-target="#collapsecomment-3"
+                                    aria-expanded="false"
+                                    aria-controls="collapsecomment"
+                                    onclick="ChangeIconCollapse(this)"
+                                  >
+                                    <img
+                                      src="../Images/Arrow-down.svg"
+                                      class="Arrowup-img-post"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                id="collapsecomment-3"
+                                class="collapse"
+                                aria-labelledby="Comment-Card"
+                                data-parent="#accordion-comment-3"
+                              >
+                                <div class="card-body-comment">
+                                  <!--  -->
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <!-- Comment -->
+                      </div>
+                      <div id="Comment">
+                        <div
+                          id="Comment-Header"
+                          class="tab-pane show active fade"
+                        >
+                          <!--  -->
+                          <div id="accordion-comment-4">
+                            <div class="card">
+                              <div
+                                class="card-header card-header-cust row mx-0 p-0 pt-3"
+                                id="Comment-Card"
+                              >
+                                <div class="col-md-6">
+                                  <span>موسسه ها</span>
+                                </div>
+                                <div class="col-md-6 text-left">
+                                  <button
+                                    class="btn btn-link collapsed px-md-1"
+                                    data-toggle="collapse"
+                                    data-target="#collapsecomment-4"
+                                    aria-expanded="false"
+                                    aria-controls="collapsecomment"
+                                    onclick="ChangeIconCollapse(this)"
+                                  >
+                                    <img
+                                      src="../Images/Arrow-down.svg"
+                                      class="Arrowup-img-post"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                              <div
+                                id="collapsecomment-4"
+                                class="collapse"
+                                aria-labelledby="Comment-Card"
+                                data-parent="#accordion-comment-4"
+                              >
+                                <div class="card-body-comment">
+                                  <!--  -->
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <!-- Comment -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End-Content-Right -->
+                <!-- Start-Menu-Left -->
+                <div id="Left-Content" class="col-lg-4 pl-0 pr-0 pr-lg-5 mb-5">
+                  <div
+                    id="Left-Menu"
+                    class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
+                  >
+                    <!--  -->
+                    <div id="accordion">
+                      <div class="card mb-md-3">
+                        <div
+                          class="card-header card-header-cust row mx-0 p-0"
+                          id="headingOne"
+                        >
+                          <div
+                            class="col-md-6 col-6 px-0 d-felx align-self-end"
+                          >
+                            <span>پیوندها</span>
+                          </div>
+                          <div
+                            class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
+                          >
+                            <button
+                              class="btn btn-link collapsed p-0 d-flex align-items-end"
+                              data-toggle="collapse"
+                              data-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                              onclick="ChangeIconCollapse(this)"
+                            >
+                              <img src="../Images/Arrow-down.svg" />
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          id="collapseThree"
+                          class="collapse show"
+                          aria-labelledby="headingThree"
+                          data-parent=""
+                        >
+                          <div class="card-body-cust">
+                            <ul class="item-ul">
+                              <li>
+                                <a href="#">کرپوس کرانیوم</a>
+                              </li>
+                              <li>
+                                <a href="#">وبگاه رسمی قرآن کریم</a>
+                              </li>
+                              <li>
+                                <a href="#">پرتال جامع علوم انسانی</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End-Menu-Left -->
+              </div>
+            </div>
+            <!-- End-Third-Tab  -->
+          </div>
+        </div>
+        <!-- End-Content-Blog -->
+      </div>
+      <!-- Start-Brand -->
+      <div class="brand-background">
+        <div class="align-parent row mx-0">
+          <div class="col-md-3 px-0 mb-4 order2-mob">
+            <img
+              name="ministry"
+              src="../Images/ministry.png"
+              class="ministry-img"
+            />
+          </div>
+          <div class="col-md-6 text-center order1-mob">
+            <p class="text-tertiary">
+              فرهنگستان علوم برلین - برندبورگ
+
+              <br />
+              جمهوری فدرال آلمان، پستدام، کد پستی ۱۴۴۶۷
+
+              <br />
+              تلفن: ۰۰۴۹۰۳۳۱۲۷۹۶۱۰۰
+            </p>
+            <div class="three-logo">
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="icon"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <path
+                            d="M256,307.2c28.2,0,51.3-23,51.3-51.2c0-11.2-3.7-21.5-9.7-29.9c-9.3-12.9-24.4-21.4-41.5-21.4
+        c-17.1,0-32.2,8.5-41.6,21.4c-6.1,8.4-9.7,18.7-9.7,29.9C204.7,284.3,227.7,307.2,256,307.2L256,307.2z"
+                          />
+                          <path
+                            class="st0"
+                            d="M367.9,193.3v-43V144l-6.4,0l-42.9,0.1l0.2,49.4L367.9,193.3z"
+                          />
+                          <path
+                            class="st0"
+                            d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256
+        C512,114.8,397.2,0,256,0z M401.6,226.1v119.2c0,31-25.2,56.3-56.3,56.3H166.7c-31,0-56.3-25.2-56.3-56.3V226.1v-59.4
+        c0-31,25.2-56.3,56.3-56.3h178.6c31,0,56.3,25.2,56.3,56.3V226.1z"
+                          />
+                          <path
+                            class="st0"
+                            d="M335.6,256c0,43.9-35.7,79.6-79.6,79.6s-79.6-35.7-79.6-79.6c0-10.6,2.1-20.7,5.9-29.9h-43.5v119.2
+        c0,15.4,12.5,27.9,27.9,27.9h178.6c15.4,0,27.9-12.5,27.9-27.9V226.1h-43.5C333.5,235.3,335.6,245.4,335.6,256L335.6,256z"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="Svg1"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
+    z M370.2,197.4c0.1,2.5,0.2,5.1,0.2,7.7c0,77.9-59.3,167.6-167.7,167.6c-33.3,0-64.3-9.7-90.3-26.4c4.6,0.5,9.3,0.8,14.1,0.8
+    c27.6,0,53-9.4,73.2-25.2c-25.8-0.5-47.5-17.5-55-40.9c3.6,0.7,7.3,1.1,11.1,1.1c5.4,0,10.6-0.7,15.5-2.1
+    c-27-5.4-47.3-29.2-47.3-57.8c0-0.2,0-0.5,0-0.7c7.9,4.4,17,7.1,26.7,7.4c-15.8-10.5-26.2-28.6-26.2-49c0-10.8,2.9-20.9,8-29.6
+    c29,35.7,72.5,59.1,121.4,61.6c-1-4.3-1.5-8.8-1.5-13.4c0-32.5,26.4-58.9,58.9-58.9c17,0,32.2,7.2,43,18.6
+    c13.4-2.6,26-7.5,37.4-14.3c-4.4,13.8-13.7,25.3-25.9,32.6c11.9-1.4,23.3-4.6,33.8-9.3C391.7,178.7,381.7,189.1,370.2,197.4
+    L370.2,197.4z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  class="icon icon-cust"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <g>
+                        <path
+                          d="M256,0C114.8,0,0,114.8,0,256c0,141.1,114.8,256,256,256c141.1,0,256-114.9,256-256C512,114.8,397.2,0,256,0
+    z M319.7,265H278v148.4h-61.7c0,0,0-81.1,0-148.4H187v-52.5h29.3v-33.9c0-24.3,11.5-62.3,62.3-62.3l45.7,0.2v50.9
+    c0,0-27.8,0-33.2,0c-5.4,0-13.1,2.7-13.1,14.3v30.8h47L319.7,265z"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-end order2-mob">
+            <img
+              name="science"
+              src="../Images/science.png"
+              class="science-img"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- End-Brand -->
+      <!-- Begin-Footer -->
+      <div
+        id="Footer"
+        name="Footer"
+        class="container-fluid row footer d-flex align-items-center align-parent mx-0"
+      >
+        <!-- Updated (kolle footer) -->
+        <div class="col-md-8 col-7 px-0">
+          <span>کلیه حقوق مادی و معنوی برای ایرانکران محفوظ است.</span>
+        </div>
+        <div class="col-md-4 col-5 px-0 text-left">
+          <span>طراحی سایت:&zwnj; گروه هنری نقطه</span>
+          <img
+            name="designBy"
+            src="../Images/design_by.png"
+            class="designby-img"
+          />
+        </div>
+      </div>
+      <!-- End-Footer -->
+    </div>
+    <script>
+      window.imagesource = {
+        Arrowdown: "../Images/Arrow-down.svg",
+        Arrowup: "../Images/Arrow-up.svg",
+        Arrowdownsmall: "../Images/Arrow-down-small.svg",
+        Arrowupsmall: "../Images/Arrow-up-small.svg",
+      };
+    </script>
+  </body>
+</html>
