@@ -249,52 +249,12 @@
                       class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
                     >
                       <!--  -->
-                      <div id="accordion">
-                        <div class="card mb-md-3">
-                          <div
-                            class="card-header card-header-cust row mx-0 p-0"
-                            id="headingOne"
-                          >
-                            <div
-                              class="col-md-6 col-6 px-0 d-felx align-self-end"
-                            >
-                              <span>پیوندها</span>
-                            </div>
-                            <div
-                              class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
-                            >
-                              <button
-                                class="btn btn-link collapsed p-0 d-flex align-items-end"
-                                data-toggle="collapse"
-                                data-target="#collapseOne"
-                                aria-expanded="false"
-                                aria-controls="collapseOne"
-                                onclick="ChangeIconCollapse(this)"
-                              >
-                                <img src="../Images/Arrow-down.svg" />
-                              </button>
-                            </div>
-                          </div>
-                          <div
-                            id="collapseOne"
-                            class="collapse show"
-                            aria-labelledby="headingOne"
-                            data-parent=""
-                          >
-                            <div class="card-body-cust">
-                              <ul class="item-ul">
-                                <li>
-                                  <a href="#">کرپوس کرانیوم</a>
-                                </li>
-                                <li>
-                                  <a href="#">وبگاه رسمی قرآن کریم</a>
-                                </li>
-                                <li>
-                                  <a href="#">پرتال جامع علوم انسانی</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+                      <div class="peyvandha">
+                        <div class="peyvandha-header">پیوندها</div>
+                        <div class="peyvandha-content">
+                          <div>کرپوس کرانیوم</div>
+                          <div>وبگاه رسمی قرآن کریم</div>
+                          <div>پرتال جامع علوم انسانی</div>
                         </div>
                       </div>
                     </div>
@@ -328,52 +288,12 @@
                     class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
                   >
                     <!--  -->
-                    <div id="accordion">
-                      <div class="card mb-md-3">
-                        <div
-                          class="card-header card-header-cust row mx-0 p-0"
-                          id="headingOne"
-                        >
-                          <div
-                            class="col-md-6 col-6 px-0 d-felx align-self-end"
-                          >
-                            <span>پیوندها</span>
-                          </div>
-                          <div
-                            class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
-                          >
-                            <button
-                              class="btn btn-link collapsed p-0 d-flex align-items-end"
-                              data-toggle="collapse"
-                              data-target="#collapseTwo"
-                              aria-expanded="false"
-                              aria-controls="collapseTwo"
-                              onclick="ChangeIconCollapse(this)"
-                            >
-                              <img src="../Images/Arrow-down.svg" />
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          id="collapseTwo"
-                          class="collapse show"
-                          aria-labelledby="headingTwo"
-                          data-parent=""
-                        >
-                          <div class="card-body-cust">
-                            <ul class="item-ul">
-                              <li>
-                                <a href="#">کرپوس کرانیوم</a>
-                              </li>
-                              <li>
-                                <a href="#">وبگاه رسمی قرآن کریم</a>
-                              </li>
-                              <li>
-                                <a href="#">پرتال جامع علوم انسانی</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
+                    <div class="peyvandha">
+                      <div class="peyvandha-header">پیوندها</div>
+                      <div class="peyvandha-content">
+                        <div>کرپوس کرانیوم</div>
+                        <div>وبگاه رسمی قرآن کریم</div>
+                        <div>پرتال جامع علوم انسانی</div>
                       </div>
                     </div>
                   </div>
@@ -429,8 +349,8 @@
                                 aria-labelledby="Comment-Card"
                                 data-parent="#accordion-comment"
                               >
-                                <div class="card-body-comment">
-                                  <div id="Other-Image-Post">
+                                <div class="about-body">
+                                  <div id="about-image">
                                     <div class="row">
                                       <div class="col-md-3">
                                         <img
@@ -439,13 +359,15 @@
                                         />
                                       </div>
                                       <div
-                                        class="col-md-3 d-flex align-items-center"
+                                        class="col-md-3 pr-5 mr-4 d-flex align-items-center"
                                       >
-                                        علی آقایی
-                                        <br />
-                                        مدیر پروژه
-                                        <br />
-                                        برلین
+                                        <span style="line-height: 30px;">
+                                          <p class="about-name">علی آقایی</p>
+
+                                          <p class="about-desc">
+                                            مدیر پروژه<br />برلین
+                                          </p>
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -474,6 +396,26 @@
                                     محوری در دو پروژۀ اخیر، توسعۀ شناخت علمی از
                                     تاریخ متن قرآن از طریق مطالعۀ همزمان منابع
                                     اسلامی و دست‌نوشت‌های قرآنی است.
+                                  </p>
+                                  <p class="about-bold">
+                                    گزیدۀ آثار پژوهشی و علمی:
+                                  </p>
+                                  <p class="about-en">
+                                    „Sure 37 Verse 99-113: Abraham soll seinen
+                                    Sohn opfern”, in Koran Erklärt 2: Wichtige
+                                    Verse kurz und verständlich erläutert, ed.
+                                    Andreas-Peter Weber (Berlin, 2019) “The
+                                    Morphology of the narrative exegesis of the
+                                    Qur’an: The case of the cow of the Banū
+                                    Isrāʾīl (Q2:67-74)”, in Reading the Bible in
+                                    Islamic Context Qur'anic Conversations, eds.
+                                    Daniel J Crowther, Shirin Shafaie, Ida
+                                    Glaser, and Shabbir Akhtar (London and New
+                                    York, 2018)
+                                  </p>
+                                  <p>
+                                    تاریخ‌گذاری حدیث: روش‌ها و نمونه‌ها (تهران:
+                                    انتشارات حکمت، 1393)
                                   </p>
                                   <!--  -->
                                 </div>
@@ -521,9 +463,9 @@
                                 aria-labelledby="Comment-Card"
                                 data-parent="#accordion-comment-2"
                               >
-                                <div class="card-body-comment">
+                                <div class="about-body">
                                   <!--  -->
-                                  <div id="Other-Image-Post">
+                                  <div id="about-image">
                                     <div class="row">
                                       <div class="col-md-3">
                                         <img
@@ -532,13 +474,17 @@
                                         />
                                       </div>
                                       <div
-                                        class="col-md-3 d-flex align-items-center"
+                                        class="col-md-3 pr-5 mr-4 d-flex align-items-center"
                                       >
-                                        محمد علی خوانین زاده
-                                        <br />
-                                        همکار پروژه
-                                        <br />
-                                        تهران
+                                        <span style="line-height: 30px;">
+                                          <p class="about-name">
+                                            محمّدعلی خوانین‌زاده
+                                          </p>
+
+                                          <p class="about-desc">
+                                            همکار پروژه<br />تهران
+                                          </p>
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
@@ -563,6 +509,31 @@
                                     پروژۀ کرپوس کرانیکوم و پروژۀ ایرانکران
                                     (فرهنگستان علوم برلین ـ برندنبورگ) همکاری
                                     دارد.
+                                  </p>
+                                  <p class="about-bold">
+                                    گزیدۀ آثار پژوهشی و علمی:
+                                  </p>
+                                  <p>
+                                    1400 سال پادشاهی در عربستان پیش از اسلام
+                                    (گزیدۀ مقالات کریستین روبن)، در دست چاپ
+                                    «معناشناسی ساختگرای مفهوم سیّئه در قرآن
+                                    کریم»، مطالعات قرآن و حدیث، ش26 (بهار و
+                                    تابستان 99): 271-301 (همکار با فاطمه عشقی و
+                                    فاطمه سادات تهامی) «بررسی معناشناختی کاربرد
+                                    مفهوم رزق در قرآن کریم»، پژوهش‌های
+                                    زبان‌شناختی قرآن، ش12 (پاییز و زمستان 96):
+                                    103-118 (همکار با روشن دهقانی و اصغر هادوی)
+                                    «بررسی معناشناختی کاربرد اسم فاطر در قرآن
+                                    کریم»، رهیافت‌هایی در علوم قرآن و حدیث، ش94
+                                    (بهار و تابستان 94): 9-22 «معناشناسی تاریخی
+                                    واژۀ ربّ»، پژوهش‌های زبان‌شناختی قرآن، ش8
+                                    (پاییز و زمستان 94): 77-120 «بازخوانی
+                                    دیدگاه‌های دانشمندان مسلمان در معنا و اشتقاق
+                                    ربّ»، مطالعات قرآن و حدیث، ش15 (پاییز و
+                                    زمستان 93): 33-68 (با همکاری فتح‌اله
+                                    نجارزادگان) معناشناسی اسماء الحسنی در قرآن
+                                    کریم (تهران: انتشارات دانشگاه امام صادق،
+                                    1390)
                                   </p>
                                   <!--  -->
                                 </div>
@@ -610,7 +581,7 @@
                                 aria-labelledby="Comment-Card"
                                 data-parent="#accordion-comment-3"
                               >
-                                <div class="card-body-comment">
+                                <div class="about-body">
                                   <!--  -->
                                   <!--  -->
                                 </div>
@@ -658,8 +629,65 @@
                                 aria-labelledby="Comment-Card"
                                 data-parent="#accordion-comment-4"
                               >
-                                <div class="card-body-comment">
+                                <div class="about-body">
                                   <!--  -->
+                                  <div id="about-image">
+                                    <div class="row about-border-bottom">
+                                      <div class="col-md-3">
+                                        <img
+                                          class="Image-Post"
+                                          src="../Images/blog10.png"
+                                        />
+                                      </div>
+                                      <div
+                                        class="col-md-6 pr-5 mr-4 d-flex align-items-center"
+                                      >
+                                        <span style="line-height: 30px;">
+                                          <p class="about-name">
+                                            کرپوس کرانیکوم
+                                          </p>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div id="about-image">
+                                    <div class="row about-border-bottom">
+                                      <div class="col-md-3">
+                                        <img
+                                          class="Image-Post"
+                                          src="../Images/blog10.png"
+                                        />
+                                      </div>
+                                      <div
+                                        class="col-md-6 pr-5 mr-4 d-flex align-items-center"
+                                      >
+                                        <span style="line-height: 30px;">
+                                          <p class="about-name">
+                                            موزۀ ملی ایران
+                                          </p>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div id="about-image">
+                                    <div class="row">
+                                      <div class="col-md-3">
+                                        <img
+                                          class="Image-Post"
+                                          src="../Images/blog10.png"
+                                        />
+                                      </div>
+                                      <div
+                                        class="col-md-6 pr-5 mr-4 d-flex align-items-center"
+                                      >
+                                        <span style="line-height: 30px;">
+                                          <p class="about-name">
+                                            کتابخانۀ مرکزی دانشگاه تهران
+                                          </p>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
                                   <!--  -->
                                 </div>
                               </div>
@@ -680,52 +708,12 @@
                     class="container-fluid pl-0 pr-0 pr-lg-5 mt-5 pt-3 tab-pane show active fade"
                   >
                     <!--  -->
-                    <div id="accordion">
-                      <div class="card mb-md-3">
-                        <div
-                          class="card-header card-header-cust row mx-0 p-0"
-                          id="headingOne"
-                        >
-                          <div
-                            class="col-md-6 col-6 px-0 d-felx align-self-end"
-                          >
-                            <span>پیوندها</span>
-                          </div>
-                          <div
-                            class="col-md-6 col-6 px-0 text-left pb-1 d-flex align-items-end justify-content-end"
-                          >
-                            <button
-                              class="btn btn-link collapsed p-0 d-flex align-items-end"
-                              data-toggle="collapse"
-                              data-target="#collapseThree"
-                              aria-expanded="false"
-                              aria-controls="collapseThree"
-                              onclick="ChangeIconCollapse(this)"
-                            >
-                              <img src="../Images/Arrow-down.svg" />
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          id="collapseThree"
-                          class="collapse show"
-                          aria-labelledby="headingThree"
-                          data-parent=""
-                        >
-                          <div class="card-body-cust">
-                            <ul class="item-ul">
-                              <li>
-                                <a href="#">کرپوس کرانیوم</a>
-                              </li>
-                              <li>
-                                <a href="#">وبگاه رسمی قرآن کریم</a>
-                              </li>
-                              <li>
-                                <a href="#">پرتال جامع علوم انسانی</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
+                    <div class="peyvandha">
+                      <div class="peyvandha-header">پیوندها</div>
+                      <div class="peyvandha-content">
+                        <div>کرپوس کرانیوم</div>
+                        <div>وبگاه رسمی قرآن کریم</div>
+                        <div>پرتال جامع علوم انسانی</div>
                       </div>
                     </div>
                   </div>
