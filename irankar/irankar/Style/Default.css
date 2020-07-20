@@ -3321,3 +3321,49 @@ background-image:url(../Images/one.svg);
     width: 4.4rem;
   }
 }
+
+#about-image img {
+  width: 15rem;
+  height: 15rem;
+  padding: 15px 0 30px 0;
+  margin: 0px 0px 10px 0px;
+}
+
+.about-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about-desc {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 40px 0 40px 0 !important;
+  font-size: 13pt;
+  font-weight: 400;
+}
+.about-bold {
+  font-weight: 700;
+}
+.about-en {
+  direction: ltr !important;
+}
+
+.about-border-bottom {
+  border-bottom-style: solid;
+  border-color: #d3d3d5;
+  border-bottom-width: 1px;
+  margin-bottom: 23px;
+}
+.peyvandha-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: #666666;
+}
+.peyvandha-content {
+  color: black !important;
+}
