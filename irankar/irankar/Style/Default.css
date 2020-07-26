@@ -736,7 +736,7 @@ width:93%!important;
 }
 
 .fullpageWithThumb {
-  background-color: rgba(80, 80, 80, 0.6);
+  background-color: rgb(190, 189, 188);
   backdrop-filter: blur(1px);
 }
 
@@ -799,6 +799,7 @@ width:93%!important;
 }
 .close-gallery-list {
   position: absolute;
+  height: 38px;
   top: 0;
   padding-right: 35px;
   padding-top: 20px;
@@ -1971,6 +1972,18 @@ background-image:url(../Images/one.svg);
 }
 .ico-gallery-list {
   width: 26px;
+}
+.ico-gallery-list-thumbnail {
+  width: 35px;
+}
+.ico-gallery-list-one {
+  width: 22px;
+}
+.ico-gallery-list-two {
+  width: 39px;
+}
+.ico-gallery-list-multi {
+  width: 25px;
 }
 .tab-pills-fehrest {
   padding: 4.5% 0 0 5%;
