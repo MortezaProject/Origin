@@ -322,7 +322,7 @@
                       >
                         <img
                           src="../Images/thumbnail.svg"
-                          class="ico-gallery-list"
+                          class="ico-gallery-list-thumbnail"
                         />
                       </a>
                       <a
@@ -330,7 +330,10 @@
                         href="#"
                         onclick="fullpage(this)"
                       >
-                        <img src="../Images/one.svg" class="ico-gallery-list" />
+                        <img
+                          src="../Images/one.svg"
+                          class="ico-gallery-list-one"
+                        />
                       </a>
 
                       <a
@@ -338,7 +341,10 @@
                         href="#"
                         onclick="TwoSlide(this)"
                       >
-                        <img src="../Images/two.svg" class="ico-gallery-list" />
+                        <img
+                          src="../Images/two.svg"
+                          class="ico-gallery-list-two"
+                        />
                       </a>
                       <a
                         class="dropdown-item view-gallery-MultiSlide gallery-dropdown-img show-dropdown-gallery d-none"
@@ -347,7 +353,7 @@
                       >
                         <img
                           src="../Images/multi.svg"
-                          class="ico-gallery-list"
+                          class="ico-gallery-list-multi"
                         />
                       </a>
                       <!--  -->
@@ -678,12 +684,13 @@
                           onclick="topSliderPrev_Onclick(this)"
                         ></div>
                       </div>
-                      <span
+                      <img
+                        src="../Images/close.svg"
                         id="closegallerylist"
                         class="close-gallery-list d-none"
                         onclick="hideModal_Onclick()"
-                        >X</span
-                      >
+                      />
+
                       <div
                         id="fullpageWithThumbHeight"
                         class="fullpageWithThumbHeight"
