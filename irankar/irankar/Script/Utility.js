@@ -27,7 +27,15 @@ ShowDescriptionBlog = function (param) {
       $("#SwiperSlider").children()[i].style.opacity = "0.4";
   }
 };
-
+ShowPostBlog = function (param) {
+  debugger;
+  let bid = param.attributes.bid.value || "";
+  datablog.forEach(function (itm) {
+    if (itm.bid == bid) {
+      window.location.href = itm.link;
+    }
+  });
+};
 HideDescriptionBlog = function (param) {
   //morteza $("#description-blog").removeClass("d-none");
   //$("#description-blog").addClass("d-none")
@@ -59,7 +67,7 @@ CreateBlogHome = function (data) {
     div.innerHTML =
       '<div class="view zoom" bid=' +
       datablog[i].bid +
-      ' onmouseover="ShowDescriptionBlog(this)" onmouseout="HideDescriptionBlog(this)"><div class="item-blog d-flex flex-column justify-content-between"><div><img src=' +
+      ' onclick="ShowPostBlog(this)" onmouseover="ShowDescriptionBlog(this)" onmouseout="HideDescriptionBlog(this)"><div class="item-blog d-flex flex-column justify-content-between"><div><img src=' +
       datablog[i].src +
       ' class="blog-image" /></div><div class="p-2 text-center item-blog-desc"><p>' +
       datablog[i].title +
