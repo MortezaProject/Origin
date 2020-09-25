@@ -3385,3 +3385,39 @@ background-image:url(../Images/one.svg);
 .navbar-brand-cust {
   color: black;
 }
+
+/* New class for library*/
+.item-Book-desc {
+  height: 75px;
+}
+.zoom:hover .item-Book-desc {
+  background-color: #00a693;
+}
+
+.item-book {
+  height: 382px;
+  max-width: 100%;
+  border: solid 1px #d1d3d4;
+  background-color: #ecebeb;
+}
+
+.item-book img {
+  height: 304.5px;
+}
+#table-list-book {
+  font-size: 9pt;
+}
+#table-list-book label {
+  color: #939598 !important;
+}
+#table-list-book span {
+  font-weight: 400;
+}
+.imgBook {
+  height: 226px;
+  width: 174px;
+}
+.border-list-book {
+  display: block;
+  border-bottom: solid 1px gray;
+}
