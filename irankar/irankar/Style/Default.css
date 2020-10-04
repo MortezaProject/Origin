@@ -3392,6 +3392,7 @@ background-image:url(../Images/one.svg);
 }
 .zoom:hover .item-Book-desc {
   background-color: #00a693;
+  color: white;
 }
 
 .item-book {
@@ -3413,11 +3414,48 @@ background-image:url(../Images/one.svg);
 #table-list-book span {
   font-weight: 400;
 }
+.lib-font {
+  font-weight: regular !important;
+  font-size: 12pt !important;
+  color: black !important;
+}
+.DefineBook {
+  font-size: 10pt;
+  text-align: justify;
+  line-height: 1.7;
+}
+.imgBook-flex {
+  display: flex;
+}
 .imgBook {
-  height: 226px;
-  width: 174px;
+  height: 280px;
+  width: 230px;
+  border-style: solid;
+  border-width: 0.5px;
+  padding: 7px;
+  border-color: #d3d3d5;
 }
 .border-list-book {
   display: block;
   border-bottom: solid 1px gray;
+}
+.nav-pill-lib {
+  width: 180px !important;
+}
+/* new 990713*/
+.img-share {
+  height: 20px;
+}
+.img-pdf {
+  height: 20px;
+}
+.cust-tabs-article {
+  text-align: end;
+}
+.btn-cust-article {
+  background-color: #01a693 !important;
+  color: white !important;
+}
+.btn-cust-article:hover {
+  color: white !important;
 }
