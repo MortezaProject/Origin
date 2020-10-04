@@ -8,6 +8,7 @@ CreateBookLists = function (lists) {
       Row.classList.add("row");
       Row.classList.add("m-0");
       Row.classList.add("p-0");
+      Row.classList.add("pb-4");
       parent.appendChild(Row);
     }
     Child = document.createElement("div");
@@ -80,4 +81,66 @@ ShowListBooksDetails = function (id) {
   $("#Book-lists-detail .Size").html(Lists.Size);
   $("#Book-lists-detail .imgBook").attr("src", Lists.src);
   //   elLists.classList.add("row")
+};
+ShowArticles = function (items) {
+  let parent = document.getElementById("Articles");
+  for (let i = 0; i < items.length; i++) {
+    let div = document.createElement("div");
+    div.innerHTML =
+      '<div class="row">' +
+      "<span>&#9679; " +
+      items[i].title +
+      "</span>" +
+      "</div>" +
+      '<div class="row">' +
+      items[i].titr +
+      "</div>" +
+      '<div class="row articles-list">' +
+      '<div class="col-md-12 cust-tabs-article">' +
+      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-articl' +
+      i +
+      '" role="button" aria-expanded="false" aria-controls="collapse-articl">' +
+      "کلید واژه ها" +
+      "</a>" +
+      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-Abstract' +
+      i +
+      '" role="button" aria-expanded="false" aria-controls="collapse-Abstract">' +
+      "چکیده" +
+      "</a>" +
+      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-Related-Articles' +
+      i +
+      '" role="button" aria-expanded="false" aria-controls="collapse-Related-Articles">' +
+      "چکیده" +
+      "</a>" +
+      '<a class=" mx-2" href="#">' +
+      '<img class="img-share" src="../Images/Share.svg"/>' +
+      "</a>" +
+      '<a class=" mx-2" href="#">' +
+      '<img class="img-pdf" src="../Images/Pdf.svg"/>' +
+      "</a>" +
+      "</div>" +
+      '<div class="collapse col-md-12" id="collapse-articl' +
+      i +
+      '">' +
+      '<div class="card card-body">' +
+      items[i].contentArticle +
+      "</div>" +
+      "</div>" +
+      '<div class="collapse col-md-12" id="collapse-Abstract' +
+      i +
+      '">' +
+      '<div class="card card-body">' +
+      items[i].contentChekide +
+      "</div>" +
+      "</div>" +
+      '<div class="collapse col-md-12" id="collapse-Related-Articles' +
+      i +
+      '">' +
+      '<div class="card card-body">' +
+      items[i].contentRelatedArticle +
+      "</div>" +
+      "</div>" +
+      "</div>";
+    parent.appendChild(div);
+  }
 };
