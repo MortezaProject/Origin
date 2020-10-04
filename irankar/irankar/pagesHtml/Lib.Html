@@ -150,7 +150,7 @@
                   >
                     <a
                       id="pills-Books-tabs"
-                      class="nav-link active"
+                      class="nav-link active nav-pill-lib"
                       href="#pills-Books"
                       data-toggle="pill"
                       role="tab"
@@ -165,7 +165,7 @@
                   >
                     <a
                       id="pills-Articles-tabs"
-                      class="nav-link"
+                      class="nav-link nav-pill-lib"
                       href="#pills-Articles"
                       data-toggle="pill"
                       role="tab"
@@ -180,7 +180,7 @@
                   >
                     <a
                       id="pills-Resources-tabs"
-                      class="nav-link"
+                      class="nav-link nav-pill-lib"
                       href="#pills-Resources"
                       data-toggle="pill"
                       role="tab"
@@ -228,7 +228,7 @@
                 </ul>
               </div>
             </div>
-            <div class="tab-content text-tree-map w-100">
+            <div class="tab-content lib-font w-100">
               <!-- Updated 06 -->
 
               <div
@@ -247,7 +247,7 @@
                       id="Book-lists-detail"
                       class="container-fluid p-0 d-none"
                     >
-                      <div class="row">
+                      <div class="row pb-3">
                         <div class="col-md-8">
                           <div id="table-list-book">
                             <div>
@@ -296,7 +296,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 imgBook-flex justify-content-end">
                           <img class="imgBook" src="" />
                         </div>
                       </div>
@@ -305,7 +305,7 @@
                         style="display: block; border-bottom: solid 1px gray"
                       ></div>
                       <div class="row">
-                        <div class="DefineBook">
+                        <div class="DefineBook pt-3 col-12">
                           <div>معرفی کتاب</div>
                         </div>
                       </div>
@@ -402,7 +402,7 @@
                 </div>
               </div>
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade align-parent"
                 id="pills-Articles"
                 role="tabpanel"
                 aria-labelledby="pills-Articles-tab"
@@ -412,7 +412,7 @@
                   class="container-fluid px-0 d-flex justify-content-center tab-pills-fehrest"
                 >
                   <div class="col-9">
-                    <div id="book-lists" class="container-fluid p-0"></div>
+                    <div id="Articles" class="container-fluid p-0"></div>
                   </div>
                   <div class="col-3">
                     <!--  -->
@@ -505,7 +505,7 @@
                 </div>
               </div>
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade"
                 id="pills-Resources"
                 role="tabpanel"
                 aria-labelledby="pills-Resources-tab"
@@ -1185,8 +1185,62 @@
             Size: "4/5MB",
             src: "../Images/blog1.png",
           },
+        ],
+        Articles = [
+          {
+            title: "کهن ترین نسخه های خطی قرآن",
+            titr: "مجله: گلستان تهران آیه 98632-65",
+            contentChekide:
+              "سیلیب شلتسقلپ شلتخلش نشخنش نش خشخ نشن نشخ نشخن شنقنش شمل شخنل شنلنش نشملوشملش شلش نشنل",
+            contentArticle:
+              "غقفغفضض ق صغ صص الذزرذط           ف سلسبلس بلسلص ق لسل سبیلسبلس لس",
+            contentRelatedArticle:
+              " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
+          },
+          {
+            title: "2کهن ترین نسخه های خطی قرآن",
+            titr: "مجله: گلستان تهران آیه 98632-65",
+            contentChekide:
+              "سیلیب شلتسقلپ شلتخلش نشخنش نش خشخ نشن نشخ نشخن شنقنش شمل شخنل شنلنش نشملوشملش شلش نشنل",
+            contentArticle:
+              "غقفغفضض ق صغ صص الذزرذط           ف سلسبلس بلسلص ق لسل سبیلسبلس لس",
+            contentRelatedArticle:
+              " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
+          },
+          {
+            title: "3کهن ترین نسخه های خطی قرآن",
+            titr: "مجله: گلستان تهران آیه 98632-65",
+            contentChekide:
+              "سیلیب شلتسقلپ شلتخلش نشخنش نش خشخ نشن نشخ نشخن شنقنش شمل شخنل شنلنش نشملوشملش شلش نشنل",
+            contentArticle:
+              "غقفغفضض ق صغ صص الذزرذط           ف سلسبلس بلسلص ق لسل سبیلسبلس لس",
+            contentRelatedArticle:
+              " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
+          },
+          {
+            title: "4کهن ترین نسخه های خطی قرآن",
+            titr: "مجله: گلستان تهران آیه 98632-65",
+            contentChekide:
+              "سیلیب شلتسقلپ شلتخلش نشخنش نش خشخ نشن نشخ نشخن شنقنش شمل شخنل شنلنش نشملوشملش شلش نشنل",
+            contentArticle:
+              "غقفغفضض ق صغ صص الذزرذط           ف سلسبلس بلسلص ق لسل سبیلسبلس لس",
+            contentRelatedArticle:
+              " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
+          },
+          {
+            title: "5کهن ترین نسخه های خطی قرآن",
+            titr: "مجله: گلستان تهران آیه 98632-65",
+            contentChekide:
+              "سیلیب شلتسقلپ شلتخلش نشخنش نش خشخ نشن نشخ نشخن شنقنش شمل شخنل شنلنش نشملوشملش شلش نشنل",
+            contentArticle:
+              "غقفغفضض ق صغ صص الذزرذط           ف سلسبلس بلسلص ق لسل سبیلسبلس لس",
+            contentRelatedArticle:
+              " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
+          },
         ];
+
       CreateBookLists(listOfBooks);
+      ShowArticles(Articles);
     </script>
   </body>
 </html>
