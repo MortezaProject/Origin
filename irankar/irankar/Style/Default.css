@@ -3394,7 +3394,9 @@ background-image:url(../Images/one.svg);
   background-color: #00a693;
   color: white;
 }
-
+.zoom-book:hover {
+  z-index: 0 !important;
+}
 .item-book {
   height: 382px;
   max-width: 100%;
@@ -3406,7 +3408,7 @@ background-image:url(../Images/one.svg);
   height: 304.5px;
 }
 #table-list-book {
-  font-size: 9pt;
+  font-size: 10pt;
 }
 #table-list-book label {
   color: #939598 !important;
@@ -3469,8 +3471,11 @@ background-image:url(../Images/one.svg);
 .collapse-article {
   background-color: #01a693 !important;
 }
+.collapse-article-title {
+  color: #01a693 !important;
+}
 .article-titr {
-  color: #939598 !important;
+  color: #6c6c6d !important;
   font-size: 12px;
   font-weight: 500;
 }
@@ -3480,4 +3485,16 @@ background-image:url(../Images/one.svg);
 }
 .article-img {
   padding: 6px;
+}
+.card-article {
+  background-color: #e8e7e6 !important;
+}
+.titr-content-article {
+  font-size: 15px;
+  color: #939598 !important;
+  font-weight: 400;
+  display: contents;
+}
+.img-book-cust {
+  margin: 0px 8px !important;
 }
