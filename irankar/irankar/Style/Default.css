@@ -3453,9 +3453,31 @@ background-image:url(../Images/one.svg);
   text-align: end;
 }
 .btn-cust-article {
-  background-color: #01a693 !important;
+  background-color: #d6d6d6 !important;
   color: white !important;
 }
+.btn-cust-article:focus {
+  box-shadow: unset !important;
+}
+/* background-color: #01a693 !important; */
 .btn-cust-article:hover {
   color: white !important;
+}
+.expand-article {
+  background-color: #d6d6d6 !important;
+}
+.collapse-article {
+  background-color: #01a693 !important;
+}
+.article-titr {
+  color: #939598 !important;
+  font-size: 12px;
+  font-weight: 500;
+}
+.article-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+.article-img {
+  padding: 6px;
 }
