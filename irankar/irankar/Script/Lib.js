@@ -88,52 +88,78 @@ ShowArticles = function (items) {
     let div = document.createElement("div");
     div.innerHTML =
       '<div class="row">' +
-      "<span>&#9679; " +
+      '<span class="article-title">&#9679; ' +
       items[i].title +
       "</span>" +
       "</div>" +
-      '<div class="row">' +
+      '<div class="row article-titr">' +
       items[i].titr +
       "</div>" +
       '<div class="row articles-list">' +
       '<div class="col-md-12 cust-tabs-article">' +
-      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-articl' +
+      '<a class="btn btn-primary btn-cust-article mx-2 rows' +
       i +
-      '" role="button" aria-expanded="false" aria-controls="collapse-articl">' +
+      '" data-toggle="collapse" href="#collapse-articl' +
+      i +
+      '" role="button" aria-expanded="false" rows="' +
+      i +
+      '" aria-controls="collapse-articl" onclick="changestyle(this)">' +
       "کلید واژه ها" +
       "</a>" +
-      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-Abstract' +
+      '<a class="btn btn-primary btn-cust-article mx-2 rows' +
       i +
-      '" role="button" aria-expanded="false" aria-controls="collapse-Abstract">' +
+      '" data-toggle="collapse" href="#collapse-Abstract' +
+      i +
+      '" role="button" aria-expanded="false" rows="' +
+      i +
+      '" aria-controls="collapse-Abstract" onclick="changestyle(this)">' +
       "چکیده" +
       "</a>" +
-      '<a class="btn btn-primary btn-cust-article mx-2" data-toggle="collapse" href="#collapse-Related-Articles' +
+      '<a class="btn btn-primary btn-cust-article mx-2 rows' +
       i +
-      '" role="button" aria-expanded="false" aria-controls="collapse-Related-Articles">' +
+      '" data-toggle="collapse" href="#collapse-Related-Articles' +
+      i +
+      '" role="button" aria-expanded="false" rows="' +
+      i +
+      '" aria-controls="collapse-Related-Articles" onclick="changestyle(this)">' +
       "چکیده" +
       "</a>" +
-      '<a class=" mx-2" href="#">' +
+      '<a class=" mx-2 btn-cust-article article-img rows' +
+      i +
+      '" href="#" onclick="changestyle(this) rows="' +
+      i +
+      '" >' +
       '<img class="img-share" src="../Images/Share.svg"/>' +
       "</a>" +
-      '<a class=" mx-2" href="#">' +
+      '<a class=" mx-2 btn-cust-article article-img rows' +
+      i +
+      '" href="#" onclick="changestyle(this) rows="' +
+      i +
+      '">' +
       '<img class="img-pdf" src="../Images/Pdf.svg"/>' +
       "</a>" +
       "</div>" +
-      '<div class="collapse col-md-12" id="collapse-articl' +
+      '<div class="collapse col-md-12 collapse' +
+      i +
+      '" id="collapse-articl' +
       i +
       '">' +
       '<div class="card card-body">' +
       items[i].contentArticle +
       "</div>" +
       "</div>" +
-      '<div class="collapse col-md-12" id="collapse-Abstract' +
+      '<div class="collapse col-md-12 collapse' +
+      i +
+      '" id="collapse-Abstract' +
       i +
       '">' +
       '<div class="card card-body">' +
       items[i].contentChekide +
       "</div>" +
       "</div>" +
-      '<div class="collapse col-md-12" id="collapse-Related-Articles' +
+      '<div class="collapse col-md-12 collapse' +
+      i +
+      '" id="collapse-Related-Articles' +
       i +
       '">' +
       '<div class="card card-body">' +
@@ -143,4 +169,17 @@ ShowArticles = function (items) {
       "</div>";
     parent.appendChild(div);
   }
+};
+changestyle = function (e) {
+  debugger;
+  let classname = ".rows" + $(e).attr("rows"),
+    collapse = ".collapse" + $(e).attr("rows");
+  document.querySelectorAll(classname).forEach(function (el, i) {
+    el.classList.add("expand-article");
+    el.classList.remove("collapse-article");
+  });
+  document.querySelectorAll(collapse).forEach(function (el, i) {
+    el.classList.remove("show");
+  });
+  e.classList.add("collapse-article");
 };
