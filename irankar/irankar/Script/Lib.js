@@ -15,6 +15,7 @@ CreateBookLists = function (lists) {
     Child.classList.add("col-md-4");
     Child.classList.add("view");
     Child.classList.add("zoom");
+    Child.classList.add("zoom-book");
     Child.classList.add("p-0");
     Child.innerHTML =
       '<div CodeBook="' +
@@ -88,7 +89,9 @@ ShowArticles = function (items) {
     let div = document.createElement("div");
     div.innerHTML =
       '<div class="row">' +
-      '<span class="article-title">&#9679; ' +
+      '<span class="article-title article-title' +
+      i +
+      '">&#9679; ' +
       items[i].title +
       "</span>" +
       "</div>" +
@@ -121,48 +124,52 @@ ShowArticles = function (items) {
       i +
       '" role="button" aria-expanded="false" rows="' +
       i +
-      '" aria-controls="collapse-Related-Articles" onclick="changestyle(this)">' +
-      "چکیده" +
+      '" aria-controls="collapse-Related-Articles"  onclick="changestyle(this)">' +
+      "مقالات مرتبط" +
       "</a>" +
       '<a class=" mx-2 btn-cust-article article-img rows' +
       i +
       '" href="#" onclick="changestyle(this) rows="' +
       i +
       '" >' +
-      '<img class="img-share" src="../Images/Share.svg"/>' +
+      '<img class="img-share" src="../Images/Share-white.svg"/>' +
       "</a>" +
       '<a class=" mx-2 btn-cust-article article-img rows' +
       i +
       '" href="#" onclick="changestyle(this) rows="' +
       i +
       '">' +
-      '<img class="img-pdf" src="../Images/Pdf.svg"/>' +
+      '<img class="img-pdf" src="../Images/Pdf-white.svg"/>' +
       "</a>" +
       "</div>" +
-      '<div class="collapse col-md-12 collapse' +
+      '<hr style="width: 98%;margin: 8px 0 0 0;">' +
+      '<div class="collapse col-md-12 pr-0 collapse' +
       i +
-      '" id="collapse-articl' +
+      '" style="font-size: 14px;" id="collapse-articl' +
       i +
       '">' +
-      '<div class="card card-body">' +
+      '<div class="card card-body card-article">' +
+      '<div class="titr-content-article">کلید واژه ها:</div>' +
       items[i].contentArticle +
       "</div>" +
       "</div>" +
-      '<div class="collapse col-md-12 collapse' +
+      '<div class="collapse col-md-12 pr-0 collapse' +
       i +
-      '" id="collapse-Abstract' +
+      '" style="font-size: 14px;" id="collapse-Abstract' +
       i +
       '">' +
-      '<div class="card card-body">' +
+      '<div class="card card-body card-article">' +
+      '<div class="titr-content-article">چکیده:</div>' +
       items[i].contentChekide +
       "</div>" +
       "</div>" +
-      '<div class="collapse col-md-12 collapse' +
+      '<div class="collapse col-md-12 pr-0 collapse' +
       i +
-      '" id="collapse-Related-Articles' +
+      '" style="font-size: 14px;" id="collapse-Related-Articles' +
       i +
       '">' +
-      '<div class="card card-body">' +
+      '<div class="card card-body card-article">' +
+      '<div class="titr-content-article">مقالات مرتبط:</div>' +
       items[i].contentRelatedArticle +
       "</div>" +
       "</div>" +
@@ -173,13 +180,20 @@ ShowArticles = function (items) {
 changestyle = function (e) {
   debugger;
   let classname = ".rows" + $(e).attr("rows"),
-    collapse = ".collapse" + $(e).attr("rows");
+    collapse = ".collapse" + $(e).attr("rows"),
+    title = ".article-title" + $(e).attr("rows"),
+    id = $(e).attr("href").replace("#", "");
   document.querySelectorAll(classname).forEach(function (el, i) {
     el.classList.add("expand-article");
     el.classList.remove("collapse-article");
   });
   document.querySelectorAll(collapse).forEach(function (el, i) {
-    el.classList.remove("show");
+    if ($(el).attr("id") != id) el.classList.remove("show");
   });
-  e.classList.add("collapse-article");
+  document.querySelectorAll(title).forEach(function (el, i) {
+    el.classList.add("collapse-article-title");
+  });
+  if (e.classList.contains("collapse-article"))
+    el.classList.remove("expand-article");
+  else e.classList.add("collapse-article");
 };
