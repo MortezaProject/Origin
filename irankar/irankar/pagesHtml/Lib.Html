@@ -145,7 +145,7 @@
               <div class="Parent-Tab col-lg-9 col-7 px-0">
                 <ul class="nav nav-pills px-0" id="Pills-Tab" role="tablist">
                   <li
-                    class="nav-item mx-lg-2 ml-1"
+                    class="nav-item ml-lg-2 ml-1"
                     onclick="show_position_dropdown()"
                   >
                     <a
@@ -311,9 +311,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-3 pl-0">
                     <!--  -->
-                    <div id="accordion">
+                    <div id="accordion" class="pr-5">
                       <div class="card mb-md-3">
                         <div
                           class="card-header card-header-cust row mx-0 p-0"
@@ -411,10 +411,10 @@
                   id="Left-Menu"
                   class="container-fluid px-0 d-flex justify-content-center tab-pills-fehrest"
                 >
-                  <div class="col-9">
+                  <div class="col-8">
                     <div id="Articles" class="container-fluid p-0"></div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-4 pl-0 pr-5">
                     <!--  -->
                     <div id="accordion">
                       <div class="card mb-md-3">
@@ -1238,7 +1238,12 @@
               " لسیبلسب فقسسابسبااش شاسا سا ساس اسافسفبلس سلسقل لشقلتن حخلبت ثلقی شثفسغیت یغتیایلیلیل ا",
           },
         ];
-
+        window.imagesource = {
+            Arrowdown: "../Images/Arrow-down.svg",
+            Arrowup: "../Images/Arrow-up.svg",
+            Arrowdownsmall: "../Images/Arrow-down-small.svg",
+            Arrowupsmall: "../Images/Arrow-up-small.svg"
+        }
       CreateBookLists(listOfBooks);
       ShowArticles(Articles);
     </script>
